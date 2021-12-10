@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D9A20043-F640-4AE7-9AF8-942D2C4D558E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Project_ACS</RootNamespace>
+    <AssemblyName>Project_ACS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Licensing">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.1.5.3">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGauge">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGroupBox">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuGroupBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRating">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuRating.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSeparator">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuSeparator.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShapes">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuShapes.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSnackbar">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextBox">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToggleSwitch">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuToggleSwitch.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl">
+      <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\app\chris\product\18.0.0\dbhomeXE\ODP.NET\bin\4\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DB.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Delivery_History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Delivery_History.Designer.cs">
+      <DependentUpon>Delivery_History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Delivery_Keluar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Delivery_Keluar.Designer.cs">
+      <DependentUpon>Delivery_Keluar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Delivery_Masuk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Delivery_Masuk.Designer.cs">
+      <DependentUpon>Delivery_Masuk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Inventory_Barang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Inventory_Barang.Designer.cs">
+      <DependentUpon>Inventory_Barang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Inventory_Opname.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Inventory_Opname.Designer.cs">
+      <DependentUpon>Inventory_Opname.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Inventory_Rak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Inventory_Rak.Designer.cs">
+      <DependentUpon>Inventory_Rak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Inventory_Tracking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Inventory_Tracking.Designer.cs">
+      <DependentUpon>Inventory_Tracking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\MainMenu_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\MainMenu_Manager.Designer.cs">
+      <DependentUpon>MainMenu_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Manager_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Manager_Dashboard.Designer.cs">
+      <DependentUpon>Manager_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Warehouse_Access.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Warehouse_Access.Designer.cs">
+      <DependentUpon>Warehouse_Access.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Warehouse_History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Warehouse_History.Designer.cs">
+      <DependentUpon>Warehouse_History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Warehouse_Request.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Warehouse_Request.Designer.cs">
+      <DependentUpon>Warehouse_Request.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\MainMenu_Master.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\MainMenu_Master.Designer.cs">
+      <DependentUpon>MainMenu_Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Master_Akun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Master_Akun.Designer.cs">
+      <DependentUpon>Master_Akun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Master_Barang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Master_Barang.Designer.cs">
+      <DependentUpon>Master_Barang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Master_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Master_Dashboard.Designer.cs">
+      <DependentUpon>Master_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Master_Kategori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Master_Kategori.Designer.cs">
+      <DependentUpon>Master_Kategori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Master_Merk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Master_Merk.Designer.cs">
+      <DependentUpon>Master_Merk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Master_Warehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Master_Warehouse.Designer.cs">
+      <DependentUpon>Master_Warehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="res_icons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>res_icons.resx</DependentUpon>
+    </Compile>
+    <Compile Include="res_images.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>res_images.resx</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Delivery_History.resx">
+      <DependentUpon>Delivery_History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Delivery_Keluar.resx">
+      <DependentUpon>Delivery_Keluar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Delivery_Masuk.resx">
+      <DependentUpon>Delivery_Masuk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Inventory_Barang.resx">
+      <DependentUpon>Inventory_Barang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Inventory_Opname.resx">
+      <DependentUpon>Inventory_Opname.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Inventory_Rak.resx">
+      <DependentUpon>Inventory_Rak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Inventory_Tracking.resx">
+      <DependentUpon>Inventory_Tracking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\MainMenu_Manager.resx">
+      <DependentUpon>MainMenu_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Manager_Dashboard.resx">
+      <DependentUpon>Manager_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Warehouse_Access.resx">
+      <DependentUpon>Warehouse_Access.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Warehouse_History.resx">
+      <DependentUpon>Warehouse_History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Warehouse_Request.resx">
+      <DependentUpon>Warehouse_Request.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\MainMenu_Master.resx">
+      <DependentUpon>MainMenu_Master.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Master_Akun.resx">
+      <DependentUpon>Master_Akun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Master_Barang.resx">
+      <DependentUpon>Master_Barang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Master_Dashboard.resx">
+      <DependentUpon>Master_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Master_Kategori.resx">
+      <DependentUpon>Master_Kategori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Master_Merk.resx">
+      <DependentUpon>Master_Merk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Master_Warehouse.resx">
+      <DependentUpon>Master_Warehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="res_icons.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>res_icons.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="res_images.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>res_images.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boxes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boxes-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\briefcase-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caret-down-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caret-up-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\code-branch-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copyright-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye-slash-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\truck-moving-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warehouse-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-wavyline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tools-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box_in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box_out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard-list-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard-solid.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

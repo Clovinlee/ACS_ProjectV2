@@ -1,0 +1,208 @@
+﻿using Project_ACS.Master;
+using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Bunifu.Framework.UI;
+
+namespace Project_ACS
+{
+    public partial class MainMenu_Master : Form
+    {
+        Login frm_login;
+
+        public MainMenu_Master()
+        {
+            InitializeComponent();
+            btn_master.IdleIconRightImage = new Bitmap(res_icons.caret_down_solid);
+        }
+
+        public MainMenu_Master(Login frm_login) : this()
+        {
+            this.frm_login = frm_login;
+        }
+
+        Timer master_collapse;
+        Timer barang_collapse;
+
+        private void collapseBarang(object sender, EventArgs e)
+        {
+            Boolean reverse = false;
+            if (pl_submenu_barang.Tag.ToString() == "-1")
+            {
+                if (pl_submenu_barang.Height < pl_submenu_barang.MaximumSize.Height)
+                {
+                    pl_submenu_barang.Height += 15;
+                    pl_submenu_master.Height += 15;
+                }
+                else
+                {
+                    reverse = true;
+                    pl_submenu_barang.Height = pl_submenu_barang.MaximumSize.Height;
+                    pl_submenu_barang.Height = pl_submenu_barang.MaximumSize.Height;
+                    barang_collapse.Stop();
+                }
+            }
+            else
+            {
+                if (pl_submenu_barang.Height > 0)
+                {
+                    pl_submenu_barang.Height -= 15;
+                    pl_submenu_master.Height -= 15;
+                }
+                else
+                {
+                    reverse = true;
+                    pl_submenu_barang.Height = 0;
+                    pl_submenu_master.Height = pl_submenu_master.MaximumSize.Height - pl_submenu_barang.MaximumSize.Height;
+                    barang_collapse.Stop();
+                }
+            }
+            if (reverse)
+            {
+                pl_submenu_barang.Tag = Convert.ToInt32(pl_submenu_barang.Tag) * -1;
+            }
+        }
+
+        private void collapseMaster(object sender, EventArgs e)
+        {
+            Boolean reverse = false;
+            if (pl_submenu_master.Tag.ToString() == "-1")
+            {
+                int maxH = pl_submenu_master.MaximumSize.Height - pl_submenu_barang.MaximumSize.Height + pl_submenu_barang.Height;
+                if (pl_submenu_master.Height < maxH)
+                {
+                    pl_submenu_master.Height += 15;
+                }
+                else
+                {
+                    reverse = true;
+                    pl_submenu_master.Height = maxH;
+                    master_collapse.Stop();
+                }
+            }
+            else
+            {
+                if (pl_submenu_master.Height > 0)
+                {
+                    if(pl_submenu_barang.Height > 0)
+                    {
+                        pl_submenu_master.Height -= 30;
+                    }
+                    else
+                    {
+                        pl_submenu_master.Height -= 15;
+                    }
+                }
+                else
+                {
+                    reverse = true;
+                    pl_submenu_master.Height = 0;
+                    master_collapse.Stop();
+                }
+            }
+            if (reverse)
+            {
+                pl_submenu_master.Tag = Convert.ToInt32(pl_submenu_master.Tag) * -1;
+            }
+
+        }
+
+        private void btn_master_Click(object sender, EventArgs e)
+        {
+            if (!master_collapse.Enabled)
+            {
+                master_collapse.Start();
+                if (pl_submenu_master.Tag.ToString() == "1")
+                {
+                    btn_master.IdleIconRightImage = new Bitmap(res_icons.caret_down_solid);
+                }
+                else
+                {
+                    btn_master.IdleIconRightImage = new Bitmap(res_icons.caret_up_solid);
+                }
+                btn_master.Reset();
+            }
+        }
+
+        private void btn_master_inventory_Click(object sender, EventArgs e)
+        {
+            if (!barang_collapse.Enabled)
+            {
+                barang_collapse.Start();
+                if (pl_submenu_barang.Tag.ToString() == "1")
+                {
+                    btn_master_inventory.IdleIconRightImage = new Bitmap(res_icons.caret_down_solid);
+                }
+                else
+                {
+                    btn_master_inventory.IdleIconRightImage = new Bitmap(res_icons.caret_up_solid);
+                }
+                btn_master_inventory.Reset();
+            }
+        }
+
+        private void MainMenu_Master_Load(object sender, EventArgs e)
+        {
+            master_collapse = new Timer();
+            master_collapse.Interval = 1;
+            master_collapse.Tick += new EventHandler(collapseMaster);
+
+            barang_collapse = new Timer();
+            barang_collapse.Interval = 1;
+            barang_collapse.Tick += new EventHandler(collapseBarang);
+
+            pl_submenu_master.Height = 0;
+            pl_submenu_barang.Height = 0;
+
+            initSubForm();
+            buttonPress(btn_dashboard,e);
+            lbl_nama.Text = "Welcome, " + User.User_login.Nama;
+        }
+
+        Master_Dashboard frm_dashboard;
+        Master_Warehouse frm_warehouse;
+        Master_Akun frm_akun;
+        Master_Barang frm_barang;
+        Master_Kategori frm_kategori;
+        Master_Merk frm_merk;
+        ArrayList listPanel;
+
+        public void initSubForm()
+        {
+            frm_dashboard = new Master_Dashboard();
+            frm_warehouse = new Master_Warehouse();
+            frm_akun = new Master_Akun();
+            frm_barang = new Master_Barang();
+            frm_kategori = new Master_Kategori();
+            frm_merk = new Master_Merk();
+
+            listPanel = new ArrayList();
+            listPanel.Add(frm_dashboard.getPl());
+            listPanel.Add(frm_barang.getPl());
+            listPanel.Add(frm_kategori.getPl());
+            listPanel.Add(frm_merk.getPl());
+            listPanel.Add(frm_warehouse.getPl());
+            listPanel.Add(frm_akun.getPl());
+        }
+
+        private void buttonPress(Object sender, EventArgs e)
+        {
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton b = (Bunifu.UI.WinForms.BunifuButton.BunifuButton)sender;
+            pl_main.Controls.Clear();
+            initSubForm();
+            pl_main.Controls.Add((Panel)listPanel[Convert.ToInt32(b.Tag)]);
+        }
+
+        private void MainMenu_Master_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frm_login.Show();
+            this.Dispose();
+        }
+    }
+}
