@@ -195,7 +195,6 @@ namespace Project_ACS
         {
             Bunifu.UI.WinForms.BunifuButton.BunifuButton b = (Bunifu.UI.WinForms.BunifuButton.BunifuButton)sender;
             pl_main.Controls.Clear();
-            initSubForm();
             pl_main.Controls.Add((Panel)listPanel[Convert.ToInt32(b.Tag)]);
         }
 
