@@ -160,7 +160,7 @@
             this.btnUpdate.OnPressedState.IconLeftImage = null;
             this.btnUpdate.OnPressedState.IconRightImage = null;
             this.btnUpdate.Size = new System.Drawing.Size(272, 41);
-            this.btnUpdate.TabIndex = 17;
+            this.btnUpdate.TabIndex = 3;
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnUpdate.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnUpdate.TextMarginLeft = 0;
@@ -234,7 +234,7 @@
             this.txtNama.ShortcutsEnabled = true;
             this.txtNama.Size = new System.Drawing.Size(161, 28);
             this.txtNama.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtNama.TabIndex = 15;
+            this.txtNama.TabIndex = 0;
             this.txtNama.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNama.TextMarginBottom = 0;
             this.txtNama.TextMarginLeft = 3;
@@ -309,7 +309,7 @@
             this.txtTelpon.ShortcutsEnabled = true;
             this.txtTelpon.Size = new System.Drawing.Size(161, 28);
             this.txtTelpon.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtTelpon.TabIndex = 14;
+            this.txtTelpon.TabIndex = 2;
             this.txtTelpon.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTelpon.TextMarginBottom = 0;
             this.txtTelpon.TextMarginLeft = 3;
@@ -384,7 +384,7 @@
             this.txtAlamat.ShortcutsEnabled = true;
             this.txtAlamat.Size = new System.Drawing.Size(161, 28);
             this.txtAlamat.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtAlamat.TabIndex = 13;
+            this.txtAlamat.TabIndex = 1;
             this.txtAlamat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtAlamat.TextMarginBottom = 0;
             this.txtAlamat.TextMarginLeft = 3;

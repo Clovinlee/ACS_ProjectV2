@@ -21,5 +21,15 @@ namespace Project_ACS.Manager
         {
             return pl;
         }
+
+        private void Inventory_Barang_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_next_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
