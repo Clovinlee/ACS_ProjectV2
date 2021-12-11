@@ -168,7 +168,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Barang.cs" />
     <Compile Include="DB.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -247,12 +246,6 @@
     </Compile>
     <Compile Include="Manager\Warehouse_Request.Designer.cs">
       <DependentUpon>Warehouse_Request.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\Detail_Master_Barang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\Detail_Master_Barang.Designer.cs">
-      <DependentUpon>Detail_Master_Barang.cs</DependentUpon>
     </Compile>
     <Compile Include="Master\EditMasterWarehouse.cs">
       <SubType>Form</SubType>
@@ -353,9 +346,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\Warehouse_Request.resx">
       <DependentUpon>Warehouse_Request.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\Detail_Master_Barang.resx">
-      <DependentUpon>Detail_Master_Barang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\EditMasterWarehouse.resx">
       <DependentUpon>EditMasterWarehouse.cs</DependentUpon>
