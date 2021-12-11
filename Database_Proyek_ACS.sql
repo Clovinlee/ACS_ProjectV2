@@ -68,6 +68,7 @@ CREATE TABLE WAREHOUSE(
     NAMA VARCHAR2(40) NOT NULL,
     ALAMAT VARCHAR2(70) NOT NULL,
     TELEPON VARCHAR2(15) NOT NULL,
+    ID_USER NUMBER,
     STATUS NUMBER CHECK(STATUS = 1 OR STATUS = 0)
 );
 
@@ -156,10 +157,12 @@ INSERT INTO JABATAN VALUES(3, 'Pegawai Warehouse');
 INSERT INTO USERS VALUES(1, 'Enrico', 'Enrico12', 'Enrico12', 2, 'Jalan Maju Nomor 2', 'enrico@gmail.com',1);
 INSERT INTO USERS VALUES(2, 'Chrisanto', 'c', 'c', 1, 'Jalan Mundur Nomor 18', 'chris@gmail.com',1);
 INSERT INTO USERS VALUES(3, 'Michael', 'Michael1', 'Michael1', 2, 'Jalan Tegak Maju Gerak Nomor 11', 'michael@gmail.com',1);
-INSERT INTO USERS VALUES(4, 'Kevin', 'Kevin123', 'Kevin123', 2, 'Jalan Apel Hijau Nomor 42', 'michael@gmail.com', 1);
+INSERT INTO USERS VALUES(4, 'Kevin', 'Kevin123', 'Kevin123', 2, 'Jalan Apel Hijau Nomor 42', 'kevin@gmail.com', 1);
 INSERT INTO USERS VALUES(5, 'Steven', 'Steven12', 'Steven12', 2, 'Jalan Mangga Nomor 54', 'steven@gmail.com', 0);
 INSERT INTO USERS VALUES(6, 'Bambang', 'Bambang1', 'Bambang1', 1, 'Jalan Jalan Kesana Kemari Nomor 9', 'bambang@gmail.com', 1);
 INSERT INTO USERS VALUES(7, 'Budi', 'Budi12345', 'Budi12345', 1, 'Jalan Santuy Nomor 8', 'budi@gmail.com', 1);
+INSERT INTO USERS VALUES(8, 'Agus', 'Agus1', 'Agus1', 2, 'Jalan Kemana Aja Bisa Sih Nomor 152', 'agus@gmail.com',1);
+INSERT INTO USERS VALUES(9, 'Valentino', 'Valentino1', 'Valentino1', 2, 'Jalan Tepi Laut Nomor 253', 'valentino@gmail.com', 1);
 
 -- MERK
 INSERT INTO Merk VALUES(1, 'ASUS');
@@ -184,11 +187,11 @@ INSERT INTO KATEGORI VALUES(7, 'RAM');
 INSERT INTO KATEGORI VALUES(8, 'VGA');
 
 -- WAREHOUSE
-INSERT INTO WAREHOUSE VALUES(1, 'Warehouse 1', 'Jalan Monyet Nomor 1', '081357630987', 1);
-INSERT INTO WAREHOUSE VALUES(2, 'Warehouse 2', 'Jalan Harimau Nomor 12', '081398819927', 1);
-INSERT INTO WAREHOUSE VALUES(3, 'Warehouse 3', 'Jalan Singa Nomor 98', '081157483981', 1);
-INSERT INTO WAREHOUSE VALUES(4, 'Warehouse 4', 'Jalan Kuda Nomor 23', '081147630230', 1);
-INSERT INTO WAREHOUSE VALUES(5, 'Warehouse 5', 'Jalan Raja Nomor 99', '081262580920', 1);
+INSERT INTO WAREHOUSE VALUES(1, 'Warehouse 1', 'Jalan Monyet Nomor 1', '081357630987', 1, 1);
+INSERT INTO WAREHOUSE VALUES(2, 'Warehouse 2', 'Jalan Harimau Nomor 12', '081398819927', 3, 1);
+INSERT INTO WAREHOUSE VALUES(3, 'Warehouse 3', 'Jalan Singa Nomor 98', '081157483981', 4, 1);
+INSERT INTO WAREHOUSE VALUES(4, 'Warehouse 4', 'Jalan Kuda Nomor 23', '081147630230', 8, 1);
+INSERT INTO WAREHOUSE VALUES(5, 'Warehouse 5', 'Jalan Raja Nomor 99', '081262580920', 9, 1);
 
 -- BUSINESS PARTNER
 INSERT INTO BUSSINESS_PARTNER VALUES(1, 'SU0001', 'PT Mega', '087487293012', 'Jalan Sejahtera Jaya Nomor 3');
