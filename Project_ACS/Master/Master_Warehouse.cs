@@ -17,7 +17,7 @@ namespace Project_ACS
         {
             InitializeComponent();
             loadWareHouse();
-            cmbSort.SelectedIndex = 0;
+            //cmbSort.SelectedIndex = 0;
         }
 
         DataSet dataset;
@@ -176,23 +176,23 @@ namespace Project_ACS
 
         private void cmbSort_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int idx = cmbSort.SelectedIndex;
-            if (idx == 0)
-            {
-                dgvWarehouse.Sort(dgvWarehouse.Columns[0], ListSortDirection.Ascending);
-            }
-            else if (idx == 1)
-            {
-                dgvWarehouse.Sort(dgvWarehouse.Columns[0], ListSortDirection.Descending);
-            }
-            else if (idx == 2)
-            {
-                dgvWarehouse.Sort(dgvWarehouse.Columns[1], ListSortDirection.Ascending);
-            }
-            else if (idx == 3)
-            {
-                dgvWarehouse.Sort(dgvWarehouse.Columns[1], ListSortDirection.Descending);
-            }
+            //int idx = cmbSort.SelectedIndex;
+            //if (idx == 0)
+            //{
+            //    dgvWarehouse.Sort(dgvWarehouse.Columns[0], ListSortDirection.Ascending);
+            //}
+            //else if (idx == 1)
+            //{
+            //    dgvWarehouse.Sort(dgvWarehouse.Columns[0], ListSortDirection.Descending);
+            //}
+            //else if (idx == 2)
+            //{
+            //    dgvWarehouse.Sort(dgvWarehouse.Columns[1], ListSortDirection.Ascending);
+            //}
+            //else if (idx == 3)
+            //{
+            //    dgvWarehouse.Sort(dgvWarehouse.Columns[1], ListSortDirection.Descending);
+            //}
         }
     }
 }

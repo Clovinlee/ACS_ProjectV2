@@ -162,23 +162,24 @@
   </data>
   <data name="txtAlamat.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAKEAAAAkCAYAAADhLFrdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACYSURBVHhe7dKxDQIxAARB91+VXy6DMigAZMkJDXgJZqRL
+        iVBORw0KGgoAAAANSUhEUgAAAKEAAAAaCAYAAADfXDwAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB/SURBVHhe7dKxDQIxAARB91+VXy6DMigAZMkJDXgJZqRL
         Lt4Bf2Gt9Zpzfsxubnd3EhxjH3Db7u4kKEIaIiQnQnIiJCdCciIkJ0JyIiQnQnIiJCdCciIkJ0JyIiQn
-        QnIiJCdCciIkJ0JyIiQnQnIiJCdCciIkJ0JyIiQnQnIiJCdCciIkJ0JyPxE+z/Peh9nN7e5OglAa4wsZ
-        4A4Y4Q7fEAAAAABJRU5ErkJggg==
+        QnIiJCdCciIkJ0JyIiQnQnI/ET7P896H2c3t7k6CUBrjC2NqXD2hhz5hAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="txtNama.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAKEAAAAjCAYAAAD8KWplAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACVSURBVHhe7dKxDQIxAARB91+VXy6DMigAZMkJDXgJZqRL
+        iVBORw0KGgoAAAANSUhEUgAAAKEAAAAbCAYAAAAUAO+lAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACBSURBVHhe7dKxDQIxAARB91+VXy6DMigAZMkJDXgJZqRL
         Lt4Bf2Gt9Zpzfsxubnd3EhxjH3Db7u4kKEIaIiQnQnIiJCdCciIkJ0JyIiQnQnIiJCdCciIkJ0JyIiQn
-        QnIiJCdCciIkJ0JyIiQnQnIiJCdCciIkJ0JyIiQnQnIiJCdCciIk9xPh8zzvfZjd3O7uJAilMb7mOpXh
-        CrjckgAAAABJRU5ErkJggg==
+        QnIiJCdCciIkJ0JyIiQnQnIiJPcT4fM8732Y3dzu7iQIpTG+VE7UZQWVVBgAAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="elipseDgvWarehouse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>51</value>
   </metadata>
 </root>

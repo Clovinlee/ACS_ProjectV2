@@ -48,13 +48,10 @@
             this.btnInsert = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnDelete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnUpdate = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.cmbSort = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtAlamat = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtNama = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvWarehouse = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.elipseDgvWarehouse = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -68,19 +65,16 @@
             this.pl.Controls.Add(this.btnInsert);
             this.pl.Controls.Add(this.btnDelete);
             this.pl.Controls.Add(this.btnUpdate);
-            this.pl.Controls.Add(this.cmbSort);
-            this.pl.Controls.Add(this.label5);
             this.pl.Controls.Add(this.txtAlamat);
             this.pl.Controls.Add(this.txtNama);
             this.pl.Controls.Add(this.label4);
             this.pl.Controls.Add(this.label3);
-            this.pl.Controls.Add(this.label2);
             this.pl.Controls.Add(this.label1);
             this.pl.Controls.Add(this.dgvWarehouse);
             this.pl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pl.Location = new System.Drawing.Point(0, 0);
             this.pl.Name = "pl";
-            this.pl.Size = new System.Drawing.Size(832, 453);
+            this.pl.Size = new System.Drawing.Size(742, 369);
             this.pl.TabIndex = 1;
             // 
             // btnInsert
@@ -88,6 +82,7 @@
             this.btnInsert.AllowAnimations = true;
             this.btnInsert.AllowMouseEffects = true;
             this.btnInsert.AllowToggling = false;
+            this.btnInsert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnInsert.AnimationSpeed = 200;
             this.btnInsert.AutoGenerateColors = false;
             this.btnInsert.AutoRoundBorders = false;
@@ -130,7 +125,7 @@
             this.btnInsert.IdleIconLeftImage = global::Project_ACS.res_icons.plus;
             this.btnInsert.IdleIconRightImage = null;
             this.btnInsert.IndicateFocus = false;
-            this.btnInsert.Location = new System.Drawing.Point(16, 198);
+            this.btnInsert.Location = new System.Drawing.Point(570, 58);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnInsert.OnDisabledState.BorderRadius = 15;
@@ -178,6 +173,7 @@
             this.btnDelete.AllowAnimations = true;
             this.btnDelete.AllowMouseEffects = true;
             this.btnDelete.AllowToggling = false;
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.AnimationSpeed = 200;
             this.btnDelete.AutoGenerateColors = false;
             this.btnDelete.AutoRoundBorders = false;
@@ -220,7 +216,7 @@
             this.btnDelete.IdleIconLeftImage = global::Project_ACS.res_icons.trash;
             this.btnDelete.IdleIconRightImage = null;
             this.btnDelete.IndicateFocus = false;
-            this.btnDelete.Location = new System.Drawing.Point(120, 198);
+            this.btnDelete.Location = new System.Drawing.Point(674, 58);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDelete.OnDisabledState.BorderRadius = 15;
@@ -268,6 +264,7 @@
             this.btnUpdate.AllowAnimations = true;
             this.btnUpdate.AllowMouseEffects = true;
             this.btnUpdate.AllowToggling = false;
+            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUpdate.AnimationSpeed = 200;
             this.btnUpdate.AutoGenerateColors = false;
             this.btnUpdate.AutoRoundBorders = false;
@@ -310,7 +307,7 @@
             this.btnUpdate.IdleIconLeftImage = global::Project_ACS.res_icons.pencil;
             this.btnUpdate.IdleIconRightImage = null;
             this.btnUpdate.IndicateFocus = false;
-            this.btnUpdate.Location = new System.Drawing.Point(68, 198);
+            this.btnUpdate.Location = new System.Drawing.Point(622, 58);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnUpdate.OnDisabledState.BorderRadius = 15;
@@ -353,35 +350,6 @@
             this.btnUpdate.UseDefaultRadiusAndThickness = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // cmbSort
-            // 
-            this.cmbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSort.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSort.FormattingEnabled = true;
-            this.cmbSort.Items.AddRange(new object[] {
-            "Nama Acsending",
-            "Nama Descending",
-            "Alamat Acsending",
-            "Alamat Descending"});
-            this.cmbSort.Location = new System.Drawing.Point(356, 93);
-            this.cmbSort.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbSort.Name = "cmbSort";
-            this.cmbSort.Size = new System.Drawing.Size(162, 27);
-            this.cmbSort.TabIndex = 15;
-            this.cmbSort.SelectedIndexChanged += new System.EventHandler(this.cmbSort_SelectedIndexChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(352, 59);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 21);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Sort :";
-            // 
             // txtAlamat
             // 
             this.txtAlamat.AcceptsReturn = false;
@@ -409,7 +377,7 @@
             this.txtAlamat.IconRight = null;
             this.txtAlamat.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAlamat.Lines = new string[0];
-            this.txtAlamat.Location = new System.Drawing.Point(104, 132);
+            this.txtAlamat.Location = new System.Drawing.Point(193, 72);
             this.txtAlamat.Margin = new System.Windows.Forms.Padding(2);
             this.txtAlamat.MaxLength = 32767;
             this.txtAlamat.MinimumSize = new System.Drawing.Size(1, 1);
@@ -446,7 +414,7 @@
             this.txtAlamat.SelectionLength = 0;
             this.txtAlamat.SelectionStart = 0;
             this.txtAlamat.ShortcutsEnabled = true;
-            this.txtAlamat.Size = new System.Drawing.Size(161, 36);
+            this.txtAlamat.Size = new System.Drawing.Size(161, 26);
             this.txtAlamat.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtAlamat.TabIndex = 12;
             this.txtAlamat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -485,7 +453,7 @@
             this.txtNama.IconRight = null;
             this.txtNama.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNama.Lines = new string[0];
-            this.txtNama.Location = new System.Drawing.Point(103, 93);
+            this.txtNama.Location = new System.Drawing.Point(15, 72);
             this.txtNama.Margin = new System.Windows.Forms.Padding(2);
             this.txtNama.MaxLength = 32767;
             this.txtNama.MinimumSize = new System.Drawing.Size(1, 1);
@@ -522,7 +490,7 @@
             this.txtNama.SelectionLength = 0;
             this.txtNama.SelectionStart = 0;
             this.txtNama.ShortcutsEnabled = true;
-            this.txtNama.Size = new System.Drawing.Size(161, 35);
+            this.txtNama.Size = new System.Drawing.Size(161, 27);
             this.txtNama.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtNama.TabIndex = 11;
             this.txtNama.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -537,38 +505,26 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(30, 137);
+            this.label4.Location = new System.Drawing.Point(191, 52);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 21);
+            this.label4.Size = new System.Drawing.Size(59, 21);
             this.label4.TabIndex = 10;
-            this.label4.Text = "Alamat :";
+            this.label4.Text = "Alamat";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(39, 97);
+            this.label3.Location = new System.Drawing.Point(12, 52);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 21);
+            this.label3.Size = new System.Drawing.Size(52, 21);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Nama :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(13, 59);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 21);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Search :";
+            this.label3.Text = "Nama";
             // 
             // label1
             // 
@@ -642,7 +598,7 @@
             this.dgvWarehouse.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgvWarehouse.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvWarehouse.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvWarehouse.Location = new System.Drawing.Point(16, 245);
+            this.dgvWarehouse.Location = new System.Drawing.Point(15, 116);
             this.dgvWarehouse.Margin = new System.Windows.Forms.Padding(2);
             this.dgvWarehouse.Name = "dgvWarehouse";
             this.dgvWarehouse.ReadOnly = true;
@@ -651,7 +607,7 @@
             this.dgvWarehouse.RowTemplate.DividerHeight = 3;
             this.dgvWarehouse.RowTemplate.Height = 40;
             this.dgvWarehouse.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvWarehouse.Size = new System.Drawing.Size(798, 184);
+            this.dgvWarehouse.Size = new System.Drawing.Size(707, 217);
             this.dgvWarehouse.TabIndex = 3;
             this.dgvWarehouse.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvWarehouse.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWarehouse_CellClick);
@@ -665,7 +621,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(832, 453);
+            this.ClientSize = new System.Drawing.Size(742, 369);
             this.Controls.Add(this.pl);
             this.Name = "Master_Warehouse";
             this.Text = "Master_Warehouse";
@@ -682,13 +638,10 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnInsert;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDelete;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnUpdate;
-        private System.Windows.Forms.ComboBox cmbSort;
-        private System.Windows.Forms.Label label5;
         private Bunifu.UI.WinForms.BunifuTextBox txtAlamat;
         private Bunifu.UI.WinForms.BunifuTextBox txtNama;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvWarehouse;
         private Bunifu.Framework.UI.BunifuElipse elipseDgvWarehouse;
