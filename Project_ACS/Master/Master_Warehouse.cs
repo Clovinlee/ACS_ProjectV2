@@ -160,5 +160,39 @@ namespace Project_ACS
                 MessageBox.Show("Pilih Warehouse dulu", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+            if (f != null)
+            {
+                MessageBox.Show("Masih ada form yang terbuka");
+            }
+            else
+            {
+                f = new EditMasterWarehouse("Insert", this);
+                f.Show();
+            }
+        }
+
+        private void cmbSort_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int idx = cmbSort.SelectedIndex;
+            if (idx == 0)
+            {
+                dgvWarehouse.Sort(dgvWarehouse.Columns[0], ListSortDirection.Ascending);
+            }
+            else if (idx == 1)
+            {
+                dgvWarehouse.Sort(dgvWarehouse.Columns[0], ListSortDirection.Descending);
+            }
+            else if (idx == 2)
+            {
+                dgvWarehouse.Sort(dgvWarehouse.Columns[1], ListSortDirection.Ascending);
+            }
+            else if (idx == 3)
+            {
+                dgvWarehouse.Sort(dgvWarehouse.Columns[1], ListSortDirection.Descending);
+            }
+        }
     }
 }
