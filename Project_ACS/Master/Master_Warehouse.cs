@@ -33,7 +33,7 @@ namespace Project_ACS
         public void loadWareHouse()
         {
             dataset = new DataSet();
-            querystr = "SELECT NAMA AS \"Nama\", ALAMAT AS \"Alamat\", TELEPON AS \"Nomor Telepon\", ID FROM WAREHOUSE WHERE STATUS = 1";
+            querystr = "SELECT ID, NAMA AS \"Nama\", ALAMAT AS \"Alamat\", TELEPON AS \"Nomor Telepon\" FROM WAREHOUSE WHERE STATUS = 1 ORDER BY 1 DESC";
             DB.executeDataSet(dataset, querystr, null, "WAREHOUSE");
             dgvWarehouse.DataMember = "WAREHOUSE";
             dgvWarehouse.DataSource = dataset;
@@ -42,10 +42,10 @@ namespace Project_ACS
 
         void settingDgv()
         {
-            dgvWarehouse.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
-            dgvWarehouse.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
-            dgvWarehouse.Columns[2].SortMode = DataGridViewColumnSortMode.NotSortable;
-            dgvWarehouse.Columns[3].Visible = false;
+            //dgvWarehouse.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;
+            //dgvWarehouse.Columns[1].SortMode = DataGridViewColumnSortMode.NotSortable;
+            //dgvWarehouse.Columns[2].SortMode = DataGridViewColumnSortMode.NotSortable;
+            //dgvWarehouse.Columns[3].Visible = false;
             dgvWarehouse.DefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 102, 204);
             dgvWarehouse.DefaultCellStyle.SelectionForeColor = Color.White;
             dgvWarehouse.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(44, 135, 224);
@@ -54,38 +54,41 @@ namespace Project_ACS
 
         void keyUp()
         {
-            dataset = new DataSet();
+            //dataset = new DataSet();
             int status = 0;
             string nama = txtNama.Text;
             string alamat = txtAlamat.Text;
-            List<object[]> listParam = new List<object[]>();
-            if (nama != "" && alamat == "")
-            {
-                listParam.Add(new object[] { nama, "varchar" });
-                querystr = "SELECT NAMA AS \"Nama\", ALAMAT AS \"Alamat\", TELEPON AS \"Nomor Telepon\", ID FROM WAREHOUSE WHERE STATUS = 1 AND LOWER(NAMA) LIKE '%' || :0 || '%'";
-            }
-            else if (nama == "" && alamat != "")
-            {
-                listParam.Add(new object[] { alamat, "varchar" });
-                querystr = "SELECT NAMA AS \"Nama\", ALAMAT AS \"Alamat\", TELEPON AS \"Nomor Telepon\", ID FROM WAREHOUSE WHERE STATUS = 1 AND LOWER(ALAMAT) LIKE '%' || :0 || '%'";
-            }
-            else if (nama != "" && alamat != "")
-            {
-                listParam.Add(new object[] { nama, "varchar" });
-                listParam.Add(new object[] { alamat, "varchar" });
-                querystr = "SELECT NAMA AS \"Nama\", ALAMAT AS \"Alamat\", TELEPON AS \"Nomor Telepon\", ID FROM WAREHOUSE WHERE STATUS = 1 AND LOWER(NAMA) LIKE '%' || :0 || '%' AND LOWER(ALAMAT) LIKE '%' || :1 || '%'";
-            }
-            else
-            {
-                loadWareHouse();
-                status = 1;
-            }
-            if (status == 0)
-            {
-                DB.executeDataSet(dataset, querystr, listParam, "WAREHOUSE");
-                dgvWarehouse.DataMember = "WAREHOUSE";
-                dgvWarehouse.DataSource = dataset;
-            }
+            //List<object[]> listParam = new List<object[]>();
+            //if (nama != "" && alamat == "")
+            //{
+            //    listParam.Add(new object[] { nama, "varchar" });
+            //    querystr = "SELECT ID, NAMA AS \"Nama\", ALAMAT AS \"Alamat\", TELEPON AS \"Nomor Telepon\" FROM WAREHOUSE WHERE STATUS = 1 AND LOWER(NAMA) LIKE '%' || :0 || '%'";
+            //}
+            //else if (nama == "" && alamat != "")
+            //{
+            //    listParam.Add(new object[] { alamat, "varchar" });
+            //    querystr = "SELECT ID, NAMA AS \"Nama\", ALAMAT AS \"Alamat\", TELEPON AS \"Nomor Telepon\" FROM WAREHOUSE WHERE STATUS = 1 AND LOWER(ALAMAT) LIKE '%' || :0 || '%'";
+            //}
+            //else if (nama != "" && alamat != "")
+            //{
+            //    listParam.Add(new object[] { nama, "varchar" });
+            //    listParam.Add(new object[] { alamat, "varchar" });
+            //    querystr = "SELECT ID, NAMA AS \"Nama\", ALAMAT AS \"Alamat\", TELEPON AS \"Nomor Telepon\" FROM WAREHOUSE WHERE STATUS = 1 AND LOWER(NAMA) LIKE '%' || :0 || '%' AND LOWER(ALAMAT) LIKE '%' || :1 || '%'";
+            //}
+            //else
+            //{
+            //    loadWareHouse();
+            //    status = 1;
+            //}
+            //if (status == 0)
+            //{
+            //    DB.executeDataSet(dataset, querystr, listParam, "WAREHOUSE");
+            //    dgvWarehouse.DataMember = "WAREHOUSE";
+            //    dgvWarehouse.DataSource = dataset;
+            //}
+            DataView dv = dataset.Tables[0].DefaultView;
+            dv.RowFilter = string.Format("Nama LIKE '%{0}%' and Alamat LIKE '%{1}%'", nama, alamat);
+            dgvWarehouse.DataSource = dv;
         }
 
         private void txtSearch(object sender, KeyEventArgs e)
@@ -141,10 +144,11 @@ namespace Project_ACS
         {
             if (selectedRow >= 0 && selectedRow <= dgvWarehouse.Rows.Count)
             {
-                string nama = dgvWarehouse.Rows[selectedRow].Cells[0].Value.ToString();
-                string alamat = dgvWarehouse.Rows[selectedRow].Cells[1].Value.ToString();
-                string telp = dgvWarehouse.Rows[selectedRow].Cells[2].Value.ToString();
-                string id = dgvWarehouse.Rows[selectedRow].Cells[3].Value.ToString();
+                string id = dgvWarehouse.Rows[selectedRow].Cells[0].Value.ToString();
+                string nama = dgvWarehouse.Rows[selectedRow].Cells[1].Value.ToString();
+                string alamat = dgvWarehouse.Rows[selectedRow].Cells[2].Value.ToString();
+                string telp = dgvWarehouse.Rows[selectedRow].Cells[3].Value.ToString();
+                
                 if (f != null)
                 {
                     MessageBox.Show("Masih ada form yang terbuka", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -170,29 +174,8 @@ namespace Project_ACS
             else
             {
                 f = new EditMasterWarehouse("Insert", this);
-                f.Show();
+                f.ShowDialog();
             }
-        }
-
-        private void cmbSort_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //int idx = cmbSort.SelectedIndex;
-            //if (idx == 0)
-            //{
-            //    dgvWarehouse.Sort(dgvWarehouse.Columns[0], ListSortDirection.Ascending);
-            //}
-            //else if (idx == 1)
-            //{
-            //    dgvWarehouse.Sort(dgvWarehouse.Columns[0], ListSortDirection.Descending);
-            //}
-            //else if (idx == 2)
-            //{
-            //    dgvWarehouse.Sort(dgvWarehouse.Columns[1], ListSortDirection.Ascending);
-            //}
-            //else if (idx == 3)
-            //{
-            //    dgvWarehouse.Sort(dgvWarehouse.Columns[1], ListSortDirection.Descending);
-            //}
         }
     }
 }

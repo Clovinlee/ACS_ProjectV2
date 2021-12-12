@@ -600,6 +600,7 @@
             this.dgvWarehouse.HeaderForeColor = System.Drawing.Color.White;
             this.dgvWarehouse.Location = new System.Drawing.Point(15, 116);
             this.dgvWarehouse.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvWarehouse.MultiSelect = false;
             this.dgvWarehouse.Name = "dgvWarehouse";
             this.dgvWarehouse.ReadOnly = true;
             this.dgvWarehouse.RowHeadersVisible = false;
