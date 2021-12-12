@@ -25,7 +25,7 @@ namespace Project_ACS.Master
         public void queryDataset()
         {
             ds = new DataSet();
-            DB.executeDataSet(ds, "SELECT b.kode, b.nama, b.deskripsi, b.harga, k.nama as kategori, m.nama as merk, b.MULTIPLIER, b.QTY FROM barang b join kategori k on b.ID_KATEGORI = k.id join merk m on b.ID_MERK = m.id WHERE B.status <> 0", null, "tbarang");
+            DB.executeDataSet(ds, "SELECT b.kode, b.nama, b.deskripsi, b.harga, k.nama as kategori, m.nama as merk, b.MULTIPLIER, b.QTY FROM barang b join kategori k on b.ID_KATEGORI = k.id join merk m on b.ID_MERK = m.id WHERE B.status <> 0 order by b.id desc", null, "tbarang");
             loadDGV();
             DB.executeDataSet(ds, "SELECT id,nama from kategori", null, "tkategori");
             DB.executeDataSet(ds, "SELECT id,nama from merk", null, "tmerk");
@@ -38,8 +38,9 @@ namespace Project_ACS.Master
             }
             textbox_searchkode.AutoCompleteCustomSource = cm;
             idxclicked = -1;
-            labeljumlah.Text = "Showing " + dgv_barang.RowCount + " data from Barang";
-            btn_refresh_Click(null, null);
+            labeljumlah.Text = "Showing " + dgv_barang.RowCount + " data from Barang"; 
+            cbb_kategori.Text = "";   cbb_merk.Text = "";
+            textbox_searchkode.Text = "";
             dgv_barang.ClearSelection();
             dgvDefColor();
         }
@@ -91,8 +92,7 @@ namespace Project_ACS.Master
         }
 
         private void btn_update_Click(object sender, EventArgs e)
-        {
-
+        { 
             if (idxclicked < 0)
             {
                 MessageBox.Show("Anda harus memilih data yang mau diperbaharui", "Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -160,6 +160,7 @@ namespace Project_ACS.Master
             cbb_kategori.Text = "";
             cbb_merk.Text = "";
             textbox_searchkode.Text = "";
+            queryDataset();
             reloadDGVWithFilter(); 
         }
 

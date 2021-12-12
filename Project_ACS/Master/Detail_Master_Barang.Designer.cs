@@ -146,7 +146,7 @@ namespace Project_ACS.Master
             this.txtNama.Margin = new System.Windows.Forms.Padding(2);
             this.txtNama.Name = "txtNama";
             this.txtNama.Size = new System.Drawing.Size(104, 21);
-            this.txtNama.TabIndex = 38;
+            this.txtNama.TabIndex = 1;
             // 
             // txtKode
             // 
@@ -156,7 +156,7 @@ namespace Project_ACS.Master
             this.txtKode.Name = "txtKode";
             this.txtKode.ReadOnly = true;
             this.txtKode.Size = new System.Drawing.Size(104, 21);
-            this.txtKode.TabIndex = 37;
+            this.txtKode.TabIndex = 0;
             // 
             // numMulti
             // 
@@ -170,7 +170,7 @@ namespace Project_ACS.Master
             0});
             this.numMulti.Name = "numMulti";
             this.numMulti.Size = new System.Drawing.Size(103, 21);
-            this.numMulti.TabIndex = 35;
+            this.numMulti.TabIndex = 2;
             // 
             // numHarga
             // 
@@ -184,7 +184,7 @@ namespace Project_ACS.Master
             0});
             this.numHarga.Name = "numHarga";
             this.numHarga.Size = new System.Drawing.Size(110, 21);
-            this.numHarga.TabIndex = 34;
+            this.numHarga.TabIndex = 3;
             // 
             // cbb_merk
             // 
@@ -196,7 +196,7 @@ namespace Project_ACS.Master
             this.cbb_merk.Margin = new System.Windows.Forms.Padding(2);
             this.cbb_merk.Name = "cbb_merk";
             this.cbb_merk.Size = new System.Drawing.Size(111, 20);
-            this.cbb_merk.TabIndex = 33;
+            this.cbb_merk.TabIndex = 5;
             // 
             // cbb_kategori
             // 
@@ -208,7 +208,7 @@ namespace Project_ACS.Master
             this.cbb_kategori.Margin = new System.Windows.Forms.Padding(2);
             this.cbb_kategori.Name = "cbb_kategori";
             this.cbb_kategori.Size = new System.Drawing.Size(111, 20);
-            this.cbb_kategori.TabIndex = 32;
+            this.cbb_kategori.TabIndex = 4;
             // 
             // label1
             // 
@@ -379,7 +379,7 @@ namespace Project_ACS.Master
             this.txtDeskripsi.ShortcutsEnabled = true;
             this.txtDeskripsi.Size = new System.Drawing.Size(298, 69);
             this.txtDeskripsi.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtDeskripsi.TabIndex = 36;
+            this.txtDeskripsi.TabIndex = 6;
             this.txtDeskripsi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtDeskripsi.TextMarginBottom = 0;
             this.txtDeskripsi.TextMarginLeft = 3;
