@@ -171,6 +171,7 @@ namespace Project_ACS
         Master_Barang frm_barang;
         Master_Kategori frm_kategori;
         Master_Merk frm_merk;
+        Master_BusinessPartner frm_bp;
         ArrayList listPanel;
 
         public void initSubForm()
@@ -181,6 +182,7 @@ namespace Project_ACS
             frm_barang = new Master_Barang();
             frm_kategori = new Master_Kategori();
             frm_merk = new Master_Merk();
+            frm_bp = new Master_BusinessPartner();
 
             listPanel = new ArrayList();
             listPanel.Add(frm_dashboard.getPl());
@@ -189,6 +191,7 @@ namespace Project_ACS
             listPanel.Add(frm_merk.getPl());
             listPanel.Add(frm_warehouse.getPl());
             listPanel.Add(frm_akun.getPl());
+            listPanel.Add(frm_bp.getPl());
         }
 
         private void buttonPress(Object sender, EventArgs e)

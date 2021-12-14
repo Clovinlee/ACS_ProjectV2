@@ -119,10 +119,10 @@
             this.pl_submenu_master.Controls.Add(this.btn_master_inventory);
             this.pl_submenu_master.Dock = System.Windows.Forms.DockStyle.Top;
             this.pl_submenu_master.Location = new System.Drawing.Point(0, 182);
-            this.pl_submenu_master.MaximumSize = new System.Drawing.Size(0, 240);
+            this.pl_submenu_master.MaximumSize = new System.Drawing.Size(0, 279);
             this.pl_submenu_master.MinimumSize = new System.Drawing.Size(200, 0);
             this.pl_submenu_master.Name = "pl_submenu_master";
-            this.pl_submenu_master.Size = new System.Drawing.Size(200, 240);
+            this.pl_submenu_master.Size = new System.Drawing.Size(200, 279);
             this.pl_submenu_master.TabIndex = 7;
             this.pl_submenu_master.Tag = "-1";
             // 
@@ -210,11 +210,13 @@
             this.btn_master_bp.OnPressedState.IconRightImage = null;
             this.btn_master_bp.Size = new System.Drawing.Size(200, 39);
             this.btn_master_bp.TabIndex = 35;
+            this.btn_master_bp.Tag = "6";
             this.btn_master_bp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_master_bp.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_master_bp.TextMarginLeft = 0;
             this.btn_master_bp.TextPadding = new System.Windows.Forms.Padding(51, 0, 0, 0);
             this.btn_master_bp.UseDefaultRadiusAndThickness = true;
+            this.btn_master_bp.Click += new System.EventHandler(this.buttonPress);
             // 
             // btn_master_akun
             // 

@@ -278,6 +278,12 @@
     <Compile Include="Master\Master_Barang.Designer.cs">
       <DependentUpon>Master_Barang.cs</DependentUpon>
     </Compile>
+    <Compile Include="Master\Master_BusinessPartner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Master_BusinessPartner.Designer.cs">
+      <DependentUpon>Master_BusinessPartner.cs</DependentUpon>
+    </Compile>
     <Compile Include="Master\Master_Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -368,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Master\Master_Barang.resx">
       <DependentUpon>Master_Barang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Master_BusinessPartner.resx">
+      <DependentUpon>Master_BusinessPartner.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\Master_Dashboard.resx">
       <DependentUpon>Master_Dashboard.cs</DependentUpon>
