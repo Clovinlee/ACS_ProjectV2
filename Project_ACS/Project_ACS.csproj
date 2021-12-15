@@ -254,6 +254,12 @@
     <Compile Include="Master\Detail_Master_Barang.Designer.cs">
       <DependentUpon>Detail_Master_Barang.cs</DependentUpon>
     </Compile>
+    <Compile Include="Master\Detail_Master_BusinessPartner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Detail_Master_BusinessPartner.Designer.cs">
+      <DependentUpon>Detail_Master_BusinessPartner.cs</DependentUpon>
+    </Compile>
     <Compile Include="Master\EditMasterWarehouse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -362,6 +368,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Master\Detail_Master_Barang.resx">
       <DependentUpon>Detail_Master_Barang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Detail_Master_BusinessPartner.resx">
+      <DependentUpon>Detail_Master_BusinessPartner.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\EditMasterWarehouse.resx">
       <DependentUpon>EditMasterWarehouse.cs</DependentUpon>
@@ -507,6 +516,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logothanos.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

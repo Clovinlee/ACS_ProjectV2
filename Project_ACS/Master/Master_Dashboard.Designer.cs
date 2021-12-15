@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Master_Dashboard));
             this.pl = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.bunifuPanel4 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
             this.lbl_jmlmerk = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -54,8 +54,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pl.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
@@ -82,6 +82,17 @@
             this.panel2.Size = new System.Drawing.Size(866, 300);
             this.panel2.TabIndex = 2;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.bunifuPanel3);
+            this.panel3.Controls.Add(this.bunifuPanel2);
+            this.panel3.Controls.Add(this.bunifuPanel1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(499, 300);
+            this.panel3.TabIndex = 10;
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.bunifuPanel4);
@@ -107,17 +118,6 @@
             this.bunifuPanel4.ShowBorders = true;
             this.bunifuPanel4.Size = new System.Drawing.Size(330, 269);
             this.bunifuPanel4.TabIndex = 10;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.bunifuPanel3);
-            this.panel3.Controls.Add(this.bunifuPanel2);
-            this.panel3.Controls.Add(this.bunifuPanel1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(499, 300);
-            this.panel3.TabIndex = 10;
             // 
             // bunifuPanel3
             // 
@@ -345,11 +345,15 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Location = new System.Drawing.Point(0, 306);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(866, 511);
+            this.panel1.Size = new System.Drawing.Size(866, 182);
             this.panel1.TabIndex = 1;
             // 
             // Master_Dashboard
@@ -364,8 +368,8 @@
             this.Load += new System.EventHandler(this.Master_Dashboard_Load);
             this.pl.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.bunifuPanel3.ResumeLayout(false);
             this.bunifuPanel3.PerformLayout();
             this.bunifuPanel2.ResumeLayout(false);
@@ -380,7 +384,6 @@
 
         private System.Windows.Forms.Panel pl;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel4;
         private System.Windows.Forms.Panel panel3;
@@ -401,5 +404,6 @@
         private System.Windows.Forms.Label lbl_lastakun;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl_jmlakun;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -32,9 +32,9 @@ namespace Project_ACS
 
         private void loadForm()
         {
-            jml_akun = Convert.ToInt32(DB.executeScalar("SELECT COUNT(*) from users", null));
-            jml_warehouse = Convert.ToInt32(DB.executeScalar("SELECT COUNT(*) from warehouse", null));
-            jml_barang = Convert.ToInt32(DB.executeScalar("SELECT COUNT(*) from barang", null));
+            jml_akun = Convert.ToInt32(DB.executeScalar("SELECT COUNT(*) from users where status = 1", null));
+            jml_warehouse = Convert.ToInt32(DB.executeScalar("SELECT COUNT(*) from warehouse where status = 1", null));
+            jml_barang = Convert.ToInt32(DB.executeScalar("SELECT COUNT(*) from barang where status = 1", null));
             jml_kategori = Convert.ToInt32(DB.executeScalar("SELECT COUNT(*) from kategori", null));
             jml_merk = Convert.ToInt32(DB.executeScalar("SELECT COUNT(*) from merk", null));
 
