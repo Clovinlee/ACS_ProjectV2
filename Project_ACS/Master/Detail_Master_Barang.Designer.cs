@@ -43,7 +43,6 @@ namespace Project_ACS.Master
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNama = new System.Windows.Forms.TextBox();
-            this.txtKode = new System.Windows.Forms.TextBox();
             this.numMulti = new System.Windows.Forms.NumericUpDown();
             this.numHarga = new System.Windows.Forms.NumericUpDown();
             this.cbb_merk = new System.Windows.Forms.ComboBox();
@@ -51,6 +50,7 @@ namespace Project_ACS.Master
             this.label1 = new System.Windows.Forms.Label();
             this.btn_ok = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtDeskripsi = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.txtKode = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numMulti)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHarga)).BeginInit();
             this.SuspendLayout();
@@ -141,26 +141,16 @@ namespace Project_ACS.Master
             // 
             // txtNama
             // 
-            this.txtNama.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNama.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNama.Location = new System.Drawing.Point(114, 101);
             this.txtNama.Margin = new System.Windows.Forms.Padding(2);
             this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(104, 21);
+            this.txtNama.Size = new System.Drawing.Size(104, 23);
             this.txtNama.TabIndex = 1;
-            // 
-            // txtKode
-            // 
-            this.txtKode.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKode.Location = new System.Drawing.Point(114, 57);
-            this.txtKode.Margin = new System.Windows.Forms.Padding(2);
-            this.txtKode.Name = "txtKode";
-            this.txtKode.ReadOnly = true;
-            this.txtKode.Size = new System.Drawing.Size(104, 21);
-            this.txtKode.TabIndex = 0;
             // 
             // numMulti
             // 
-            this.numMulti.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numMulti.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numMulti.Location = new System.Drawing.Point(114, 150);
             this.numMulti.Margin = new System.Windows.Forms.Padding(2);
             this.numMulti.Maximum = new decimal(new int[] {
@@ -169,12 +159,12 @@ namespace Project_ACS.Master
             0,
             0});
             this.numMulti.Name = "numMulti";
-            this.numMulti.Size = new System.Drawing.Size(103, 21);
+            this.numMulti.Size = new System.Drawing.Size(103, 23);
             this.numMulti.TabIndex = 2;
             // 
             // numHarga
             // 
-            this.numHarga.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numHarga.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numHarga.Location = new System.Drawing.Point(302, 57);
             this.numHarga.Margin = new System.Windows.Forms.Padding(2);
             this.numHarga.Maximum = new decimal(new int[] {
@@ -183,31 +173,31 @@ namespace Project_ACS.Master
             0,
             0});
             this.numHarga.Name = "numHarga";
-            this.numHarga.Size = new System.Drawing.Size(110, 21);
+            this.numHarga.Size = new System.Drawing.Size(110, 23);
             this.numHarga.TabIndex = 3;
             // 
             // cbb_merk
             // 
             this.cbb_merk.BackColor = System.Drawing.SystemColors.HighlightText;
             this.cbb_merk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbb_merk.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbb_merk.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbb_merk.FormattingEnabled = true;
             this.cbb_merk.Location = new System.Drawing.Point(302, 147);
             this.cbb_merk.Margin = new System.Windows.Forms.Padding(2);
             this.cbb_merk.Name = "cbb_merk";
-            this.cbb_merk.Size = new System.Drawing.Size(111, 20);
+            this.cbb_merk.Size = new System.Drawing.Size(111, 23);
             this.cbb_merk.TabIndex = 5;
             // 
             // cbb_kategori
             // 
             this.cbb_kategori.BackColor = System.Drawing.SystemColors.HighlightText;
             this.cbb_kategori.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbb_kategori.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbb_kategori.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbb_kategori.FormattingEnabled = true;
             this.cbb_kategori.Location = new System.Drawing.Point(302, 101);
             this.cbb_kategori.Margin = new System.Windows.Forms.Padding(2);
             this.cbb_kategori.Name = "cbb_kategori";
-            this.cbb_kategori.Size = new System.Drawing.Size(111, 20);
+            this.cbb_kategori.Size = new System.Drawing.Size(111, 23);
             this.cbb_kategori.TabIndex = 4;
             // 
             // label1
@@ -330,7 +320,7 @@ namespace Project_ACS.Master
             this.txtDeskripsi.BorderThickness = 1;
             this.txtDeskripsi.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtDeskripsi.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDeskripsi.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtDeskripsi.DefaultFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDeskripsi.DefaultText = "";
             this.txtDeskripsi.FillColor = System.Drawing.Color.White;
             this.txtDeskripsi.HideSelection = true;
@@ -388,12 +378,23 @@ namespace Project_ACS.Master
             this.txtDeskripsi.UseSystemPasswordChar = false;
             this.txtDeskripsi.WordWrap = true;
             // 
+            // txtKode
+            // 
+            this.txtKode.AutoSize = true;
+            this.txtKode.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKode.Location = new System.Drawing.Point(111, 58);
+            this.txtKode.Name = "txtKode";
+            this.txtKode.Size = new System.Drawing.Size(15, 15);
+            this.txtKode.TabIndex = 47;
+            this.txtKode.Text = "- ";
+            // 
             // Detail_Master_Barang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(475, 380);
+            this.Controls.Add(this.txtKode);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -403,7 +404,6 @@ namespace Project_ACS.Master
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_ok);
             this.Controls.Add(this.txtNama);
-            this.Controls.Add(this.txtKode);
             this.Controls.Add(this.txtDeskripsi);
             this.Controls.Add(this.numMulti);
             this.Controls.Add(this.numHarga);
@@ -433,12 +433,12 @@ namespace Project_ACS.Master
         private System.Windows.Forms.Label label2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_ok;
         private System.Windows.Forms.TextBox txtNama;
-        private System.Windows.Forms.TextBox txtKode;
         private Bunifu.UI.WinForms.BunifuTextBox txtDeskripsi;
         private System.Windows.Forms.NumericUpDown numMulti;
         private System.Windows.Forms.NumericUpDown numHarga;
         private System.Windows.Forms.ComboBox cbb_merk;
         private System.Windows.Forms.ComboBox cbb_kategori;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label txtKode;
     }
 }
