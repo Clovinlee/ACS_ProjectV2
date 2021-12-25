@@ -37,8 +37,12 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.pl = new System.Windows.Forms.Panel();
-            this.dgv_bp = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tb_telpon = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tb_nama = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dgv_bp = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.lbl_jml = new System.Windows.Forms.Label();
             this.btn_refresh = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_update = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -47,11 +51,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.tb_nama = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.pl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_bp)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_bp)).BeginInit();
             this.SuspendLayout();
             // 
             // pl
@@ -63,6 +65,75 @@
             this.pl.Name = "pl";
             this.pl.Size = new System.Drawing.Size(866, 511);
             this.pl.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
+            this.panel1.Controls.Add(this.tb_telpon);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.tb_nama);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.dgv_bp);
+            this.panel1.Controls.Add(this.lbl_jml);
+            this.panel1.Controls.Add(this.btn_refresh);
+            this.panel1.Controls.Add(this.btn_update);
+            this.panel1.Controls.Add(this.btn_insert);
+            this.panel1.Controls.Add(this.tb_kode);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(866, 511);
+            this.panel1.TabIndex = 1;
+            // 
+            // tb_telpon
+            // 
+            this.tb_telpon.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.tb_telpon.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.tb_telpon.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_telpon.Location = new System.Drawing.Point(523, 70);
+            this.tb_telpon.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_telpon.Name = "tb_telpon";
+            this.tb_telpon.Size = new System.Drawing.Size(138, 21);
+            this.tb_telpon.TabIndex = 32;
+            this.tb_telpon.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tb_nama_KeyUp);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label4.Location = new System.Drawing.Point(519, 49);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(113, 15);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Search by Telepon";
+            // 
+            // tb_nama
+            // 
+            this.tb_nama.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.tb_nama.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.tb_nama.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_nama.Location = new System.Drawing.Point(376, 70);
+            this.tb_nama.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_nama.Name = "tb_nama";
+            this.tb_nama.Size = new System.Drawing.Size(138, 21);
+            this.tb_nama.TabIndex = 30;
+            this.tb_nama.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tb_nama_KeyUp);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label3.Location = new System.Drawing.Point(372, 49);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(103, 15);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Search by Nama";
             // 
             // dgv_bp
             // 
@@ -131,25 +202,7 @@
             this.dgv_bp.Size = new System.Drawing.Size(807, 367);
             this.dgv_bp.TabIndex = 28;
             this.dgv_bp.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
-            this.panel1.Controls.Add(this.tb_nama);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.dgv_bp);
-            this.panel1.Controls.Add(this.lbl_jml);
-            this.panel1.Controls.Add(this.btn_refresh);
-            this.panel1.Controls.Add(this.btn_update);
-            this.panel1.Controls.Add(this.btn_insert);
-            this.panel1.Controls.Add(this.tb_kode);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(866, 511);
-            this.panel1.TabIndex = 1;
+            this.dgv_bp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_bp_CellClick);
             // 
             // lbl_jml
             // 
@@ -252,6 +305,7 @@
             this.btn_refresh.TextMarginLeft = 0;
             this.btn_refresh.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_refresh.UseDefaultRadiusAndThickness = true;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
             // 
             // btn_update
             // 
@@ -341,6 +395,7 @@
             this.btn_update.TextMarginLeft = 0;
             this.btn_update.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_update.UseDefaultRadiusAndThickness = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_insert
             // 
@@ -430,6 +485,7 @@
             this.btn_insert.TextMarginLeft = 0;
             this.btn_insert.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_insert.UseDefaultRadiusAndThickness = true;
+            this.btn_insert.Click += new System.EventHandler(this.btn_insert_Click);
             // 
             // tb_kode
             // 
@@ -448,7 +504,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label2.Location = new System.Drawing.Point(224, 43);
+            this.label2.Location = new System.Drawing.Point(224, 49);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 15);
@@ -472,30 +528,6 @@
             this.bunifuElipse1.ElipseRadius = 15;
             this.bunifuElipse1.TargetControl = this.dgv_bp;
             // 
-            // tb_nama
-            // 
-            this.tb_nama.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.tb_nama.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.tb_nama.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_nama.Location = new System.Drawing.Point(384, 70);
-            this.tb_nama.Margin = new System.Windows.Forms.Padding(2);
-            this.tb_nama.Name = "tb_nama";
-            this.tb_nama.Size = new System.Drawing.Size(138, 21);
-            this.tb_nama.TabIndex = 30;
-            this.tb_nama.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tb_nama_KeyUp);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label3.Location = new System.Drawing.Point(380, 43);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 15);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Search by Nama";
-            // 
             // Master_BusinessPartner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -506,9 +538,9 @@
             this.Text = "Master_BusinessPartner";
             this.Load += new System.EventHandler(this.Master_BusinessPartner_Load);
             this.pl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_bp)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_bp)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -528,5 +560,7 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.TextBox tb_nama;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox tb_telpon;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -31,16 +31,30 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Master_Dashboard));
             this.pl = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.bunifuPanel4 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.lbl_jmlmerk = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.lbl_jmlakategori = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lbl_jmlbarang = new System.Windows.Forms.Label();
+            this.lbl_jmlakategori = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.lbl_jmlmerk = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_lastbpalamat = new System.Windows.Forms.Label();
+            this.lbl_lastbptelp = new System.Windows.Forms.Label();
+            this.lbl_lastbp = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lbl_jmlbp = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.lbl_lastwarehouse = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -54,8 +68,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pl.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.bunifuPanel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
@@ -82,17 +97,6 @@
             this.panel2.Size = new System.Drawing.Size(866, 300);
             this.panel2.TabIndex = 2;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.bunifuPanel3);
-            this.panel3.Controls.Add(this.bunifuPanel2);
-            this.panel3.Controls.Add(this.bunifuPanel1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(499, 300);
-            this.panel3.TabIndex = 10;
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.bunifuPanel4);
@@ -113,67 +117,69 @@
             this.bunifuPanel4.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel4.BorderRadius = 25;
             this.bunifuPanel4.BorderThickness = 1;
+            this.bunifuPanel4.Controls.Add(this.label17);
+            this.bunifuPanel4.Controls.Add(this.label16);
+            this.bunifuPanel4.Controls.Add(this.label15);
+            this.bunifuPanel4.Controls.Add(this.label13);
+            this.bunifuPanel4.Controls.Add(this.label12);
+            this.bunifuPanel4.Controls.Add(this.lbl_jmlbarang);
+            this.bunifuPanel4.Controls.Add(this.lbl_jmlakategori);
+            this.bunifuPanel4.Controls.Add(this.label10);
+            this.bunifuPanel4.Controls.Add(this.label14);
+            this.bunifuPanel4.Controls.Add(this.label9);
+            this.bunifuPanel4.Controls.Add(this.lbl_jmlmerk);
+            this.bunifuPanel4.Controls.Add(this.label11);
             this.bunifuPanel4.Location = new System.Drawing.Point(18, 16);
             this.bunifuPanel4.Name = "bunifuPanel4";
             this.bunifuPanel4.ShowBorders = true;
             this.bunifuPanel4.Size = new System.Drawing.Size(330, 269);
             this.bunifuPanel4.TabIndex = 10;
             // 
-            // bunifuPanel3
+            // label17
             // 
-            this.bunifuPanel3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
-            this.bunifuPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel3.BackgroundImage")));
-            this.bunifuPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel3.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel3.BorderRadius = 25;
-            this.bunifuPanel3.BorderThickness = 1;
-            this.bunifuPanel3.Controls.Add(this.lbl_jmlmerk);
-            this.bunifuPanel3.Controls.Add(this.label14);
-            this.bunifuPanel3.Controls.Add(this.lbl_jmlakategori);
-            this.bunifuPanel3.Controls.Add(this.label12);
-            this.bunifuPanel3.Controls.Add(this.lbl_jmlbarang);
-            this.bunifuPanel3.Controls.Add(this.label9);
-            this.bunifuPanel3.Location = new System.Drawing.Point(270, 16);
-            this.bunifuPanel3.Name = "bunifuPanel3";
-            this.bunifuPanel3.ShowBorders = true;
-            this.bunifuPanel3.Size = new System.Drawing.Size(223, 269);
-            this.bunifuPanel3.TabIndex = 11;
+            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label17.Location = new System.Drawing.Point(93, 220);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(219, 19);
+            this.label17.TabIndex = 13;
+            this.label17.Text = "Del Carlo";
             // 
-            // lbl_jmlmerk
+            // label16
             // 
-            this.lbl_jmlmerk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
-            this.lbl_jmlmerk.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_jmlmerk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.lbl_jmlmerk.Location = new System.Drawing.Point(8, 203);
-            this.lbl_jmlmerk.Name = "lbl_jmlmerk";
-            this.lbl_jmlmerk.Size = new System.Drawing.Size(190, 61);
-            this.lbl_jmlmerk.TabIndex = 8;
-            this.lbl_jmlmerk.Text = "15";
-            this.lbl_jmlmerk.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label16.Location = new System.Drawing.Point(93, 199);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(219, 21);
+            this.label16.TabIndex = 12;
+            this.label16.Text = "Computer";
             // 
-            // label14
+            // label15
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
-            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label14.Location = new System.Drawing.Point(12, 178);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(57, 25);
-            this.label14.TabIndex = 9;
-            this.label14.Text = "Merk";
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label15.Location = new System.Drawing.Point(42, 222);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(45, 17);
+            this.label15.TabIndex = 11;
+            this.label15.Text = "Merk :";
             // 
-            // lbl_jmlakategori
+            // label13
             // 
-            this.lbl_jmlakategori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
-            this.lbl_jmlakategori.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_jmlakategori.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.lbl_jmlakategori.Location = new System.Drawing.Point(8, 115);
-            this.lbl_jmlakategori.Name = "lbl_jmlakategori";
-            this.lbl_jmlakategori.Size = new System.Drawing.Size(190, 61);
-            this.lbl_jmlakategori.TabIndex = 6;
-            this.lbl_jmlakategori.Text = "15";
-            this.lbl_jmlakategori.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label13.Location = new System.Drawing.Point(22, 199);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(65, 17);
+            this.label13.TabIndex = 10;
+            this.label13.Text = "Kategori :";
             // 
             // label12
             // 
@@ -181,7 +187,7 @@
             this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label12.Location = new System.Drawing.Point(12, 90);
+            this.label12.Location = new System.Drawing.Point(17, 6);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(85, 25);
             this.label12.TabIndex = 7;
@@ -192,12 +198,50 @@
             this.lbl_jmlbarang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
             this.lbl_jmlbarang.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_jmlbarang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.lbl_jmlbarang.Location = new System.Drawing.Point(8, 31);
+            this.lbl_jmlbarang.Location = new System.Drawing.Point(13, 117);
             this.lbl_jmlbarang.Name = "lbl_jmlbarang";
-            this.lbl_jmlbarang.Size = new System.Drawing.Size(190, 61);
+            this.lbl_jmlbarang.Size = new System.Drawing.Size(223, 61);
             this.lbl_jmlbarang.TabIndex = 3;
             this.lbl_jmlbarang.Text = "15";
             this.lbl_jmlbarang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_jmlakategori
+            // 
+            this.lbl_jmlakategori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.lbl_jmlakategori.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_jmlakategori.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.lbl_jmlakategori.Location = new System.Drawing.Point(13, 31);
+            this.lbl_jmlakategori.Name = "lbl_jmlakategori";
+            this.lbl_jmlakategori.Size = new System.Drawing.Size(137, 61);
+            this.lbl_jmlakategori.TabIndex = 6;
+            this.lbl_jmlakategori.Text = "15";
+            this.lbl_jmlakategori.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoEllipsis = true;
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label10.Location = new System.Drawing.Point(93, 178);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(219, 25);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Laptop Asus GGaming";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label14.Location = new System.Drawing.Point(179, 6);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(57, 25);
+            this.label14.TabIndex = 9;
+            this.label14.Text = "Merk";
             // 
             // label9
             // 
@@ -205,11 +249,164 @@
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label9.Location = new System.Drawing.Point(12, 7);
+            this.label9.Location = new System.Drawing.Point(17, 93);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(72, 25);
             this.label9.TabIndex = 5;
             this.label9.Text = "Barang";
+            // 
+            // lbl_jmlmerk
+            // 
+            this.lbl_jmlmerk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.lbl_jmlmerk.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_jmlmerk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.lbl_jmlmerk.Location = new System.Drawing.Point(175, 31);
+            this.lbl_jmlmerk.Name = "lbl_jmlmerk";
+            this.lbl_jmlmerk.Size = new System.Drawing.Size(137, 61);
+            this.lbl_jmlmerk.TabIndex = 8;
+            this.lbl_jmlmerk.Text = "15";
+            this.lbl_jmlmerk.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label11.Location = new System.Drawing.Point(49, 178);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(38, 17);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Last :";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.bunifuPanel3);
+            this.panel3.Controls.Add(this.bunifuPanel2);
+            this.panel3.Controls.Add(this.bunifuPanel1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(499, 300);
+            this.panel3.TabIndex = 10;
+            // 
+            // bunifuPanel3
+            // 
+            this.bunifuPanel3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.bunifuPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel3.BackgroundImage")));
+            this.bunifuPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel3.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel3.BorderRadius = 25;
+            this.bunifuPanel3.BorderThickness = 1;
+            this.bunifuPanel3.Controls.Add(this.label6);
+            this.bunifuPanel3.Controls.Add(this.label3);
+            this.bunifuPanel3.Controls.Add(this.lbl_lastbpalamat);
+            this.bunifuPanel3.Controls.Add(this.lbl_lastbptelp);
+            this.bunifuPanel3.Controls.Add(this.lbl_lastbp);
+            this.bunifuPanel3.Controls.Add(this.label7);
+            this.bunifuPanel3.Controls.Add(this.lbl_jmlbp);
+            this.bunifuPanel3.Controls.Add(this.label1);
+            this.bunifuPanel3.Location = new System.Drawing.Point(270, 16);
+            this.bunifuPanel3.Name = "bunifuPanel3";
+            this.bunifuPanel3.ShowBorders = true;
+            this.bunifuPanel3.Size = new System.Drawing.Size(223, 269);
+            this.bunifuPanel3.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label6.Location = new System.Drawing.Point(26, 144);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(55, 17);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Alamat :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label3.Location = new System.Drawing.Point(20, 118);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 17);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "No Telp :";
+            // 
+            // lbl_lastbpalamat
+            // 
+            this.lbl_lastbpalamat.AutoEllipsis = true;
+            this.lbl_lastbpalamat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.lbl_lastbpalamat.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_lastbpalamat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.lbl_lastbpalamat.Location = new System.Drawing.Point(87, 142);
+            this.lbl_lastbpalamat.Name = "lbl_lastbpalamat";
+            this.lbl_lastbpalamat.Size = new System.Drawing.Size(133, 78);
+            this.lbl_lastbpalamat.TabIndex = 8;
+            this.lbl_lastbpalamat.Text = "Jl Segowaru Saja";
+            // 
+            // lbl_lastbptelp
+            // 
+            this.lbl_lastbptelp.AutoEllipsis = true;
+            this.lbl_lastbptelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.lbl_lastbptelp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_lastbptelp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.lbl_lastbptelp.Location = new System.Drawing.Point(87, 118);
+            this.lbl_lastbptelp.Name = "lbl_lastbptelp";
+            this.lbl_lastbptelp.Size = new System.Drawing.Size(133, 17);
+            this.lbl_lastbptelp.TabIndex = 7;
+            this.lbl_lastbptelp.Text = "08172911301";
+            // 
+            // lbl_lastbp
+            // 
+            this.lbl_lastbp.AutoEllipsis = true;
+            this.lbl_lastbp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.lbl_lastbp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_lastbp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.lbl_lastbp.Location = new System.Drawing.Point(83, 93);
+            this.lbl_lastbp.Name = "lbl_lastbp";
+            this.lbl_lastbp.Size = new System.Drawing.Size(133, 25);
+            this.lbl_lastbp.TabIndex = 6;
+            this.lbl_lastbp.Text = "Perabotan Rumah";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label7.Location = new System.Drawing.Point(38, 94);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 17);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Last :";
+            // 
+            // lbl_jmlbp
+            // 
+            this.lbl_jmlbp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.lbl_jmlbp.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_jmlbp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.lbl_jmlbp.Location = new System.Drawing.Point(13, 31);
+            this.lbl_jmlbp.Name = "lbl_jmlbp";
+            this.lbl_jmlbp.Size = new System.Drawing.Size(166, 61);
+            this.lbl_jmlbp.TabIndex = 3;
+            this.lbl_jmlbp.Text = "15";
+            this.lbl_jmlbp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label1.Location = new System.Drawing.Point(17, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(152, 25);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Business Partner";
             // 
             // bunifuPanel2
             // 
@@ -364,12 +561,14 @@
             this.Controls.Add(this.pl);
             this.MinimumSize = new System.Drawing.Size(864, 531);
             this.Name = "Master_Dashboard";
-            this.Text = "Master_Dashboard";
+            this.Text = "W";
             this.Load += new System.EventHandler(this.Master_Dashboard_Load);
             this.pl.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.bunifuPanel4.ResumeLayout(false);
+            this.bunifuPanel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.bunifuPanel3.ResumeLayout(false);
             this.bunifuPanel3.PerformLayout();
             this.bunifuPanel2.ResumeLayout(false);
@@ -405,5 +604,19 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl_jmlakun;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbl_lastbp;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbl_jmlbp;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_lastbpalamat;
+        private System.Windows.Forms.Label lbl_lastbptelp;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
     }
 }

@@ -44,8 +44,6 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lb_kode = new System.Windows.Forms.Label();
             this.tb_nama = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -54,6 +52,8 @@
             this.tb_alamat = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btn_update = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_delete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.lbl_kode = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -67,30 +67,6 @@
             this.label1.Size = new System.Drawing.Size(160, 25);
             this.label1.TabIndex = 32;
             this.label1.Text = "Business Partner";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label2.Location = new System.Drawing.Point(12, 52);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 17);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "Kode : ";
-            // 
-            // lb_kode
-            // 
-            this.lb_kode.AutoSize = true;
-            this.lb_kode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_kode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.lb_kode.Location = new System.Drawing.Point(73, 52);
-            this.lb_kode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_kode.Name = "lb_kode";
-            this.lb_kode.Size = new System.Drawing.Size(52, 17);
-            this.lb_kode.TabIndex = 34;
-            this.lb_kode.Text = "BP0001";
             // 
             // tb_nama
             // 
@@ -115,12 +91,12 @@
             this.tb_nama.HideSelection = true;
             this.tb_nama.IconLeft = null;
             this.tb_nama.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_nama.IconPadding = 10;
+            this.tb_nama.IconPadding = 5;
             this.tb_nama.IconRight = null;
             this.tb_nama.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_nama.Lines = new string[0];
-            this.tb_nama.Location = new System.Drawing.Point(16, 112);
-            this.tb_nama.MaxLength = 32767;
+            this.tb_nama.Location = new System.Drawing.Point(17, 92);
+            this.tb_nama.MaxLength = 70;
             this.tb_nama.MinimumSize = new System.Drawing.Size(1, 1);
             this.tb_nama.Modified = false;
             this.tb_nama.Multiline = false;
@@ -171,7 +147,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label4.Location = new System.Drawing.Point(13, 92);
+            this.label4.Location = new System.Drawing.Point(14, 72);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 17);
@@ -183,7 +159,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label5.Location = new System.Drawing.Point(13, 167);
+            this.label5.Location = new System.Drawing.Point(14, 151);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 17);
@@ -213,11 +189,11 @@
             this.tb_telepon.HideSelection = true;
             this.tb_telepon.IconLeft = null;
             this.tb_telepon.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_telepon.IconPadding = 10;
+            this.tb_telepon.IconPadding = 5;
             this.tb_telepon.IconRight = null;
             this.tb_telepon.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_telepon.Lines = new string[0];
-            this.tb_telepon.Location = new System.Drawing.Point(16, 187);
+            this.tb_telepon.Location = new System.Drawing.Point(17, 167);
             this.tb_telepon.MaxLength = 32767;
             this.tb_telepon.MinimumSize = new System.Drawing.Size(1, 1);
             this.tb_telepon.Modified = false;
@@ -269,7 +245,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label6.Location = new System.Drawing.Point(12, 238);
+            this.label6.Location = new System.Drawing.Point(13, 222);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 17);
@@ -299,11 +275,11 @@
             this.tb_alamat.HideSelection = true;
             this.tb_alamat.IconLeft = null;
             this.tb_alamat.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.tb_alamat.IconPadding = 10;
+            this.tb_alamat.IconPadding = 5;
             this.tb_alamat.IconRight = null;
             this.tb_alamat.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tb_alamat.Lines = new string[0];
-            this.tb_alamat.Location = new System.Drawing.Point(15, 258);
+            this.tb_alamat.Location = new System.Drawing.Point(16, 238);
             this.tb_alamat.MaxLength = 32767;
             this.tb_alamat.MinimumSize = new System.Drawing.Size(1, 1);
             this.tb_alamat.Modified = false;
@@ -397,7 +373,7 @@
             this.btn_update.IdleIconLeftImage = null;
             this.btn_update.IdleIconRightImage = null;
             this.btn_update.IndicateFocus = false;
-            this.btn_update.Location = new System.Drawing.Point(16, 383);
+            this.btn_update.Location = new System.Drawing.Point(17, 352);
             this.btn_update.Name = "btn_update";
             this.btn_update.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_update.OnDisabledState.BorderRadius = 1;
@@ -438,6 +414,7 @@
             this.btn_update.TextMarginLeft = 0;
             this.btn_update.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_update.UseDefaultRadiusAndThickness = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_delete
             // 
@@ -486,7 +463,7 @@
             this.btn_delete.IdleIconLeftImage = null;
             this.btn_delete.IdleIconRightImage = null;
             this.btn_delete.IndicateFocus = false;
-            this.btn_delete.Location = new System.Drawing.Point(152, 383);
+            this.btn_delete.Location = new System.Drawing.Point(153, 352);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_delete.OnDisabledState.BorderRadius = 1;
@@ -528,12 +505,36 @@
             this.btn_delete.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_delete.UseDefaultRadiusAndThickness = true;
             // 
+            // lbl_kode
+            // 
+            this.lbl_kode.AutoSize = true;
+            this.lbl_kode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_kode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.lbl_kode.Location = new System.Drawing.Point(65, 42);
+            this.lbl_kode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_kode.Name = "lbl_kode";
+            this.lbl_kode.Size = new System.Drawing.Size(52, 17);
+            this.lbl_kode.TabIndex = 34;
+            this.lbl_kode.Text = "BP0001";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label2.Location = new System.Drawing.Point(13, 42);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 17);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "Kode : ";
+            // 
             // Detail_Master_BusinessPartner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
-            this.ClientSize = new System.Drawing.Size(293, 443);
+            this.ClientSize = new System.Drawing.Size(293, 408);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.label6);
@@ -542,11 +543,13 @@
             this.Controls.Add(this.tb_telepon);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tb_nama);
-            this.Controls.Add(this.lb_kode);
+            this.Controls.Add(this.lbl_kode);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Detail_Master_BusinessPartner";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detail_Master_BusinessPartner";
+            this.Load += new System.EventHandler(this.Detail_Master_BusinessPartner_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -555,8 +558,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lb_kode;
         private Bunifu.UI.WinForms.BunifuTextBox tb_nama;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -565,5 +566,7 @@
         private Bunifu.UI.WinForms.BunifuTextBox tb_alamat;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_update;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_delete;
+        private System.Windows.Forms.Label lbl_kode;
+        private System.Windows.Forms.Label label2;
     }
 }

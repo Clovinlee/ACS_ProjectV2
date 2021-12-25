@@ -160,12 +160,30 @@ namespace Project_ACS
             pl_submenu_master.Height = 0;
             pl_submenu_barang.Height = 0;
 
+            initDS();
             initSubForm();
             buttonPress(btn_dashboard,e);
             lbl_nama.Text = "Welcome, " + User.User_login.Nama;
         }
 
-        Master_Dashboard frm_dashboard;
+        public void initDS()
+        {
+            ds_bp = new DataSet();
+            ds_users = new DataSet();
+            ds_warehouse = new DataSet();
+            ds_barang = new DataSet();
+            ds_kategori = new DataSet();
+            ds_merk = new DataSet();
+
+            DB.executeDataSet(ds_bp, "select * from business_partner", null, "bp");
+            DB.executeDataSet(ds_users, "select * from users", null, "users");
+            DB.executeDataSet(ds_warehouse, "select * from warehouse", null, "warehouse");
+            DB.executeDataSet(ds_barang, "select * from barang", null, "barang");
+            DB.executeDataSet(ds_kategori, "select * from kategori", null, "kategori");
+            DB.executeDataSet(ds_merk, "select * from merk", null, "merk");
+        }
+
+        public Master_Dashboard frm_dashboard;
         Master_Warehouse frm_warehouse;
         Master_Akun frm_akun;
         Master_Barang frm_barang;
@@ -174,15 +192,22 @@ namespace Project_ACS
         Master_BusinessPartner frm_bp;
         ArrayList listPanel;
 
+        DataSet ds_users;
+        DataSet ds_warehouse;
+        DataSet ds_bp;
+        DataSet ds_barang;
+        DataSet ds_kategori;
+        DataSet ds_merk;
+
         public void initSubForm()
         {
-            frm_dashboard = new Master_Dashboard();
+            frm_dashboard = new Master_Dashboard(ds_bp);
             frm_warehouse = new Master_Warehouse();
             frm_akun = new Master_Akun();
             frm_barang = new Master_Barang();
             frm_kategori = new Master_Kategori();
             frm_merk = new Master_Merk();
-            frm_bp = new Master_BusinessPartner();
+            frm_bp = new Master_BusinessPartner(ds_bp, this);
 
             listPanel = new ArrayList();
             listPanel.Add(frm_dashboard.getPl());
