@@ -153,7 +153,7 @@
     </Reference>
     <Reference Include="Oracle.DataAccess, Version=2.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\app\chris\product\18.0.0\dbhomeXE\ODP.NET\bin\4\Oracle.DataAccess.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\app\Kevin\product\18.0.0\dbhomeXE\ODP.NET\bin\4\Oracle.DataAccess.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -248,6 +248,18 @@
     <Compile Include="Manager\Warehouse_Request.Designer.cs">
       <DependentUpon>Warehouse_Request.cs</DependentUpon>
     </Compile>
+	<Compile Include ="Master\Add_Akun.cs">
+	  <SubType>Form</SubType>
+	</Compile>
+	<Compile Include ="Master\Add_Akun.Designer.cs">
+	  <DependentUpon>Add_Akun.cs</DependentUpon>
+	</Compile>
+	<Compile Include ="Master\Detail_Akun.cs">
+      <SubType>Form</SubType>
+	</Compile>
+	<Compile Include ="Master\Detail_Akun.Designer.cs">
+	  <DependentUpon>Detail_Akun.cs</DependentUpon>
+	</Compile>
     <Compile Include="Master\Detail_Master_Barang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -366,6 +378,12 @@
     <EmbeddedResource Include="Manager\Warehouse_Request.resx">
       <DependentUpon>Warehouse_Request.cs</DependentUpon>
     </EmbeddedResource>
+	<EmbeddedResource Include="Master\Add_Akun.resx">
+	  <DependentUpon>Add_Akun.cs</DependentUpon>
+	</EmbeddedResource>
+	<EmbeddedResource Include="Master\Detail_Akun.resx">
+	  <DependentUpon>Detail_Akun.cs</DependentUpon>
+	</EmbeddedResource>
     <EmbeddedResource Include="Master\Detail_Master_Barang.resx">
       <DependentUpon>Detail_Master_Barang.cs</DependentUpon>
     </EmbeddedResource>

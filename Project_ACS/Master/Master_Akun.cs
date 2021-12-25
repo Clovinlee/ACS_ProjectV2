@@ -18,9 +18,11 @@ namespace Project_ACS.Master
             loadAkun();
         }
         DataSet dataset;
-        string querystr = "";
-        
+        string querystr = ""; int idxclicked = -1;
+
         int selectedRow;
+        public static Add_Akun f;
+        public static Detail_Akun g;
         public Panel getPl()
         {
             return pl;
@@ -107,7 +109,47 @@ namespace Project_ACS.Master
         }
         private void btnInsert_Click(object sender, EventArgs e)
         {
+            
+            
+            
+                f = new Add_Akun(this);
+                f.ShowDialog();
+            
+        }
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (idxclicked < 0)
+            {
+                MessageBox.Show("Anda harus memilih data yang mau diperbaharui", "Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                
+                
+                
+                    g = new Detail_Akun(this);
+                    g.username = dgvAkun.Rows[idxclicked].Cells[0].Value.ToString();
+                    g.ShowDialog();
+                
+            }
+        }
+
+        private void dgvAkun_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            idxclicked = e.RowIndex;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show($"Apakah anda yakin untuk menghapus User {dgvAkun.Rows[idxclicked].Cells[0].Value.ToString()} ?", "Delete User", MessageBoxButtons.YesNoCancel);
+            if (dr == DialogResult.Yes)
+            {
+                DB.executeQuery($"UPDATE USERS SET STATUS = 0 WHERE USERNAME = '{dgvAkun.Rows[idxclicked].Cells[0].Value.ToString()}'", null);
+                MessageBox.Show("Deleted!");
+                loadAkun();
+            }
+            
         }
     }
 }
