@@ -21,5 +21,10 @@ namespace Project_ACS.Manager
         {
             return pl;
         }
+
+        private void pl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
