@@ -176,9 +176,9 @@ namespace Project_ACS
             ds_merk = new DataSet();
 
             DB.executeDataSet(ds_bp, "select * from business_partner", null, "bp");
-            DB.executeDataSet(ds_users, "select * from users", null, "users");
-            DB.executeDataSet(ds_warehouse, "select * from warehouse", null, "warehouse");
-            DB.executeDataSet(ds_barang, "select * from barang", null, "barang");
+            DB.executeDataSet(ds_users, "select * from users where status = 1", null, "users");
+            DB.executeDataSet(ds_warehouse, "select * from warehouse where status = 1", null, "warehouse");
+            DB.executeDataSet(ds_barang, "select * from barang where status = 1", null, "barang");
             DB.executeDataSet(ds_kategori, "select * from kategori", null, "kategori");
             DB.executeDataSet(ds_merk, "select * from merk", null, "merk");
         }
