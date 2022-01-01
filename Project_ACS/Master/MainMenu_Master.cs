@@ -201,7 +201,7 @@ namespace Project_ACS
 
         public void initSubForm()
         {
-            frm_dashboard = new Master_Dashboard(ds_bp);
+            frm_dashboard = new Master_Dashboard(ds_bp, ds_users, ds_warehouse, ds_barang, ds_kategori,ds_merk);
             frm_warehouse = new Master_Warehouse();
             frm_akun = new Master_Akun();
             frm_barang = new Master_Barang();

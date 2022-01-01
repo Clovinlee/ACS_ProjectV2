@@ -71,6 +71,7 @@ namespace Project_ACS.Master
 
                     DB.executeQuery("INSERT INTO BUSINESS_PARTNER VALUES(:0, :1, :2, :3, :4)", listParam);
 
+                    //loadDGV selalu dijalankan setiap update / insert / delete. Ingat
                     Frm_masterbp.loadDgv();
 
                     MessageBox.Show("Sukses tambah business partner!","Sukses",MessageBoxButtons.OK,MessageBoxIcon.Information);
@@ -87,6 +88,7 @@ namespace Project_ACS.Master
 
                     DB.executeQuery("UPDATE BUSINESS_PARTNER SET nama = :0, telepon = :1, alamat = :2 WHERE kode = :3", listParam);
 
+                    //loadDGV selalu dijalankan setiap update / insert / delete. Ingat
                     Frm_masterbp.loadDgv();
 
                     MessageBox.Show("Sukses edit business partner!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
