@@ -33,14 +33,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.bunifuPanel4 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lbl_lastbarangmerk = new System.Windows.Forms.Label();
+            this.lbl_lastbarangkategori = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lbl_jmlbarang = new System.Windows.Forms.Label();
             this.lbl_jmlakategori = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lbl_lastbarang = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lbl_jmlmerk = new System.Windows.Forms.Label();
@@ -117,14 +117,14 @@
             this.bunifuPanel4.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel4.BorderRadius = 25;
             this.bunifuPanel4.BorderThickness = 1;
-            this.bunifuPanel4.Controls.Add(this.label17);
-            this.bunifuPanel4.Controls.Add(this.label16);
+            this.bunifuPanel4.Controls.Add(this.lbl_lastbarangmerk);
+            this.bunifuPanel4.Controls.Add(this.lbl_lastbarangkategori);
             this.bunifuPanel4.Controls.Add(this.label15);
             this.bunifuPanel4.Controls.Add(this.label13);
             this.bunifuPanel4.Controls.Add(this.label12);
             this.bunifuPanel4.Controls.Add(this.lbl_jmlbarang);
             this.bunifuPanel4.Controls.Add(this.lbl_jmlakategori);
-            this.bunifuPanel4.Controls.Add(this.label10);
+            this.bunifuPanel4.Controls.Add(this.lbl_lastbarang);
             this.bunifuPanel4.Controls.Add(this.label14);
             this.bunifuPanel4.Controls.Add(this.label9);
             this.bunifuPanel4.Controls.Add(this.lbl_jmlmerk);
@@ -135,27 +135,27 @@
             this.bunifuPanel4.Size = new System.Drawing.Size(330, 269);
             this.bunifuPanel4.TabIndex = 10;
             // 
-            // label17
+            // lbl_lastbarangmerk
             // 
-            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label17.Location = new System.Drawing.Point(93, 220);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(219, 19);
-            this.label17.TabIndex = 13;
-            this.label17.Text = "Del Carlo";
+            this.lbl_lastbarangmerk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.lbl_lastbarangmerk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_lastbarangmerk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.lbl_lastbarangmerk.Location = new System.Drawing.Point(93, 220);
+            this.lbl_lastbarangmerk.Name = "lbl_lastbarangmerk";
+            this.lbl_lastbarangmerk.Size = new System.Drawing.Size(219, 19);
+            this.lbl_lastbarangmerk.TabIndex = 13;
+            this.lbl_lastbarangmerk.Text = "Del Carlo";
             // 
-            // label16
+            // lbl_lastbarangkategori
             // 
-            this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label16.Location = new System.Drawing.Point(93, 199);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(219, 21);
-            this.label16.TabIndex = 12;
-            this.label16.Text = "Computer";
+            this.lbl_lastbarangkategori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.lbl_lastbarangkategori.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_lastbarangkategori.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.lbl_lastbarangkategori.Location = new System.Drawing.Point(93, 199);
+            this.lbl_lastbarangkategori.Name = "lbl_lastbarangkategori";
+            this.lbl_lastbarangkategori.Size = new System.Drawing.Size(219, 21);
+            this.lbl_lastbarangkategori.TabIndex = 12;
+            this.lbl_lastbarangkategori.Text = "Computer";
             // 
             // label15
             // 
@@ -217,19 +217,19 @@
             this.lbl_jmlakategori.Text = "15";
             this.lbl_jmlakategori.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label10
+            // lbl_lastbarang
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lbl_lastbarang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoEllipsis = true;
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label10.Location = new System.Drawing.Point(93, 178);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(219, 25);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "Laptop Asus GGaming";
+            this.lbl_lastbarang.AutoEllipsis = true;
+            this.lbl_lastbarang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.lbl_lastbarang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_lastbarang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.lbl_lastbarang.Location = new System.Drawing.Point(93, 178);
+            this.lbl_lastbarang.Name = "lbl_lastbarang";
+            this.lbl_lastbarang.Size = new System.Drawing.Size(219, 25);
+            this.lbl_lastbarang.TabIndex = 8;
+            this.lbl_lastbarang.Text = "Laptop Asus GGaming";
             // 
             // label14
             // 
@@ -611,12 +611,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_lastbpalamat;
         private System.Windows.Forms.Label lbl_lastbptelp;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbl_lastbarang;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lbl_lastbarangmerk;
+        private System.Windows.Forms.Label lbl_lastbarangkategori;
     }
 }
