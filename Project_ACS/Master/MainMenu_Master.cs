@@ -177,8 +177,8 @@ namespace Project_ACS
 
             DB.executeDataSet(ds_bp, "select * from business_partner", null, "bp");
             DB.executeDataSet(ds_users, "select * from users where status = 1", null, "users");
-            DB.executeDataSet(ds_warehouse, "select * from warehouse where status = 1", null, "warehouse");
-            DB.executeDataSet(ds_barang, "select * from barang where status = 1", null, "barang");
+            DB.executeDataSet(ds_warehouse, "select * from warehouse where status = 1", null, "warehouse"); 
+            //DB.executeDataSet(ds_barang, "SELECT b.kode, b.nama, b.deskripsi, b.harga, k.nama as kategori, m.nama as merk, b.MULTIPLIER, b.QTY FROM barang b join kategori k on b.ID_KATEGORI = k.id join merk m on b.ID_MERK = m.id WHERE B.status <> 0 order by b.id desc", null, "barang");
             DB.executeDataSet(ds_kategori, "select * from kategori", null, "kategori");
             DB.executeDataSet(ds_merk, "select * from merk", null, "merk");
         }
@@ -204,9 +204,9 @@ namespace Project_ACS
             frm_dashboard = new Master_Dashboard(ds_bp);
             frm_warehouse = new Master_Warehouse();
             frm_akun = new Master_Akun();
-            frm_barang = new Master_Barang();
-            frm_kategori = new Master_Kategori();
-            frm_merk = new Master_Merk();
+            frm_barang = new Master_Barang(ds_barang,this);
+            frm_kategori = new Master_Kategori(ds_kategori,this);
+            frm_merk = new Master_Merk(ds_merk,this);
             frm_bp = new Master_BusinessPartner(ds_bp, this);
 
             listPanel = new ArrayList();
@@ -218,7 +218,9 @@ namespace Project_ACS
             listPanel.Add(frm_akun.getPl());
             listPanel.Add(frm_bp.getPl());
         }
-
+        public void refreshFormBarang() {
+            frm_barang.queryDataset();
+        }
         private void buttonPress(Object sender, EventArgs e)
         {
             Bunifu.UI.WinForms.BunifuButton.BunifuButton b = (Bunifu.UI.WinForms.BunifuButton.BunifuButton)sender;

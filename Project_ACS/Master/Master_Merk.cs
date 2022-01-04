@@ -18,18 +18,26 @@ namespace Project_ACS.Master
             queryDataset();
             btn_close_Click(null, null);
         }
-
+        public Master_Merk(DataSet ds_merk, MainMenu_Master frm_master) : this()
+        {
+            InitializeComponent();
+            this.ds_merk = ds_merk;
+            this.frm_menumaster = frm_master;
+            queryDataset();
+            btn_close_Click(null, null);
+        } 
+        public MainMenu_Master frm_menumaster;
         public Panel getPl()
         {
             return pl;
         }
-        DataSet ds = new DataSet(); int idxclicked = -1;
+        DataSet ds_merk = new DataSet(); int idxclicked = -1;
         public void queryDataset()
         {
             dgv_merk.DataSource = null;
-            ds = new DataSet();
-            DB.executeDataSet(ds, "SELECT id,nama from merk order by id desc", null, "tmerk");
-            dgv_merk.DataSource = ds.Tables["tmerk"];
+            ds_merk = new DataSet();
+            DB.executeDataSet(ds_merk, "SELECT id,nama from merk order by id desc", null, "tmerk");
+            dgv_merk.DataSource = ds_merk.Tables["tmerk"];
             settingDGV();
             dgv_merk.Columns["id"].Width = 90;
             setAutoComplete();
@@ -113,11 +121,11 @@ namespace Project_ACS.Master
             try
             {
                 int intsearch = Convert.ToInt32(textbox_searchkode.Text);
-                ds.Tables["tmerk"].DefaultView.RowFilter = string.Format("nama LIKE '%{0}%' or id = {1}", textbox_searchkode.Text, intsearch);
+                ds_merk.Tables["tmerk"].DefaultView.RowFilter = string.Format("nama LIKE '%{0}%' or id = {1}", textbox_searchkode.Text, intsearch);
             }
             catch (Exception exc)
             {
-                ds.Tables["tmerk"].DefaultView.RowFilter = string.Format("nama LIKE '%{0}%'", textbox_searchkode.Text);
+                ds_merk.Tables["tmerk"].DefaultView.RowFilter = string.Format("nama LIKE '%{0}%'", textbox_searchkode.Text);
             }
             idxclicked = -1;
             dgv_merk.ClearSelection();
@@ -137,7 +145,7 @@ namespace Project_ACS.Master
             }
             if (btnExe.Text == "Insert")
             {
-                int idnew = Convert.ToInt32(ds.Tables["tmerk"].Rows[0].ItemArray[0].ToString()) + 1;
+                int idnew = Convert.ToInt32(ds_merk.Tables["tmerk"].Rows[0].ItemArray[0].ToString()) + 1;
                 List<object[]> listParam = new List<object[]>();
                 listParam.Add(new object[] { idnew, "int32" });
                 listParam.Add(new object[] { txtnama.Text, "varchar" });
@@ -145,6 +153,7 @@ namespace Project_ACS.Master
                 queryDataset();
                 MessageBox.Show("Insert success!");
                 txtnama.Text = "";
+                frm_menumaster.refreshFormBarang();
 
             }
             else if (btnExe.Text == "Update")
@@ -157,7 +166,8 @@ namespace Project_ACS.Master
                 DB.executeQuery("UPDATE MERK SET NAMA = :0 WHERE ID = :1 ", listParam);
                 queryDataset();
                 MessageBox.Show("Update success!");
-                modeCRUD("close"); 
+                modeCRUD("close");
+                frm_menumaster.refreshFormBarang();
             }
 
         }

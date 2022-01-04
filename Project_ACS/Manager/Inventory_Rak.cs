@@ -21,5 +21,10 @@ namespace Project_ACS.Manager
         {
             return pl;
         }
+
+        private void btn_insert_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

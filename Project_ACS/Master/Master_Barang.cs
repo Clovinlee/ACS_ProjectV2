@@ -16,19 +16,30 @@ namespace Project_ACS.Master
         {
             InitializeComponent();
             queryDataset();
-        } 
+        }
+        public Master_Barang(DataSet ds_barang, MainMenu_Master frm_master) : this()
+        {
+            InitializeComponent();
+            this.ds_barang = ds_barang;
+            this.frm_menumaster = frm_master;
+            queryDataset();
+        }
+
+        DataSet ds_barang; 
+        public MainMenu_Master frm_menumaster;
         public Panel getPl()
         {
             return pl;
         }
-        DataSet ds; int idxclicked = -1; 
+        //DataSet ds; 
+        int idxclicked = -1; 
         public void queryDataset()
         {
-            ds = new DataSet();
-            DB.executeDataSet(ds, "SELECT b.kode, b.nama, b.deskripsi, b.harga, k.nama as kategori, m.nama as merk, b.MULTIPLIER, b.QTY FROM barang b join kategori k on b.ID_KATEGORI = k.id join merk m on b.ID_MERK = m.id WHERE B.status <> 0 order by b.id desc", null, "tbarang");
+            ds_barang = new DataSet();
+            DB.executeDataSet(ds_barang, "SELECT b.kode, b.nama, b.deskripsi, b.harga, k.nama as kategori, m.nama as merk, b.MULTIPLIER, b.QTY FROM barang b join kategori k on b.ID_KATEGORI = k.id join merk m on b.ID_MERK = m.id WHERE B.status <> 0 order by b.id desc", null, "barang");
             loadDGV();
-            DB.executeDataSet(ds, "SELECT id,nama from kategori", null, "tkategori");
-            DB.executeDataSet(ds, "SELECT id,nama from merk", null, "tmerk");
+            DB.executeDataSet(ds_barang, "SELECT id,nama from kategori", null, "tkategori");
+            DB.executeDataSet(ds_barang, "SELECT id,nama from merk", null, "tmerk");
             fillCBB(); 
             AutoCompleteStringCollection cm = new AutoCompleteStringCollection();
             for (int i = 0; i < dgv_barang.RowCount; i++)
@@ -56,8 +67,8 @@ namespace Project_ACS.Master
             cbb_merk.Items.Clear();
             cbb_kategori.Items.Add("");
             cbb_merk.Items.Add("");
-            DataTable dtkategori = ds.Tables["tkategori"];
-            DataTable dtmerk = ds.Tables["tmerk"];
+            DataTable dtkategori = ds_barang.Tables["tkategori"];
+            DataTable dtmerk = ds_barang.Tables["tmerk"];
             for (int i = 0; i < dtkategori.Rows.Count; i++)
             {
                 cbb_kategori.Items.Add(dtkategori.Rows[i].ItemArray[1].ToString());
@@ -68,10 +79,10 @@ namespace Project_ACS.Master
             }
         }
         private void loadDGV()
-        {
-            dgv_barang.DataSource = null;
-            dgv_barang.DataSource = ds.Tables["tbarang"]; 
-            for (int i = 0; i < 7; i++)
+        { 
+            dgv_barang.DataSource = ds_barang.Tables["barang"];
+ 
+            for (int i = 0; i < dgv_barang.ColumnCount; i++)
             {
                 dgv_barang.Columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
             }
@@ -137,7 +148,7 @@ namespace Project_ACS.Master
         }
         private void reloadDGVWithFilter()
         {//buat reload ulang dgv sesuai kondisi filter
-            ds.Tables["tbarang"].DefaultView.RowFilter = string.Format("(nama LIKE '%{0}%' or kode LIKE '%{1}%') and kategori LIKE '%{2}%' and merk LIKE '%{3}%' ", textbox_searchkode.Text, textbox_searchkode.Text, cbb_kategori.Text, cbb_merk.Text);
+            ds_barang.Tables["barang"].DefaultView.RowFilter = string.Format("(nama LIKE '%{0}%' or kode LIKE '%{1}%') and kategori LIKE '%{2}%' and merk LIKE '%{3}%' ", textbox_searchkode.Text, textbox_searchkode.Text, cbb_kategori.Text, cbb_merk.Text);
             idxclicked = -1; 
             labeljumlah.Text = "Showing " + dgv_barang.RowCount + " data from Barang";
             dgv_barang.ClearSelection();

@@ -18,18 +18,27 @@ namespace Project_ACS.Master
             queryDataset();
             btn_close_Click(null, null);
         }
-
+         
+        public Master_Kategori(DataSet ds_kategori, MainMenu_Master frm_master) : this()
+        {
+            InitializeComponent();
+            this.ds_kategori = ds_kategori;
+            this.frm_menumaster = frm_master;
+            queryDataset();
+            btn_close_Click(null, null);
+        } 
         public Panel getPl()
         {
             return pl;
         }
-        DataSet ds = new DataSet(); int idxclicked = -1; 
+        public MainMenu_Master frm_menumaster;
+        DataSet ds_kategori = new DataSet(); int idxclicked = -1; 
         public void queryDataset()
         {
             dgv_kategori.DataSource = null;
-            ds = new DataSet();
-            DB.executeDataSet(ds, "SELECT id,nama from kategori order by id desc", null, "tkategori");
-            dgv_kategori.DataSource = ds.Tables["tkategori"]; 
+            ds_kategori = new DataSet();
+            DB.executeDataSet(ds_kategori, "SELECT id,nama from kategori order by id desc", null, "tkategori");
+            dgv_kategori.DataSource = ds_kategori.Tables["tkategori"]; 
             settingDGV();
             dgv_kategori.Columns["id"].Width = 90;
             setAutoComplete();
@@ -63,11 +72,11 @@ namespace Project_ACS.Master
             try
             {
                 int intsearch = Convert.ToInt32(textbox_searchkode.Text);
-                ds.Tables["tkategori"].DefaultView.RowFilter = string.Format("nama LIKE '%{0}%' or id = {1}", textbox_searchkode.Text, intsearch); 
+                ds_kategori.Tables["tkategori"].DefaultView.RowFilter = string.Format("nama LIKE '%{0}%' or id = {1}", textbox_searchkode.Text, intsearch); 
             }
             catch (Exception exc)
             {
-                ds.Tables["tkategori"].DefaultView.RowFilter = string.Format("nama LIKE '%{0}%'", textbox_searchkode.Text);
+                ds_kategori.Tables["tkategori"].DefaultView.RowFilter = string.Format("nama LIKE '%{0}%'", textbox_searchkode.Text);
             }
             idxclicked = -1; 
             dgv_kategori.ClearSelection(); 
@@ -135,7 +144,7 @@ namespace Project_ACS.Master
             }
             if (btnExe.Text=="Insert")
             {
-                int idnew = Convert.ToInt32(ds.Tables["tkategori"].Rows[0].ItemArray[0].ToString()) + 1;
+                int idnew = Convert.ToInt32(ds_kategori.Tables["tkategori"].Rows[0].ItemArray[0].ToString()) + 1;
                 List<object[]> listParam = new List<object[]>();
                 listParam.Add(new object[] { idnew, "int32" });
                 listParam.Add(new object[] { txtnama.Text, "varchar" });
@@ -143,6 +152,7 @@ namespace Project_ACS.Master
                 queryDataset();
                 MessageBox.Show("Insert success!");
                 txtnama.Text = "";
+                frm_menumaster.refreshFormBarang();
 
             }
             else if (btnExe.Text=="Update")
@@ -154,7 +164,8 @@ namespace Project_ACS.Master
                 listParam.Add(new object[] { paramid, "int32" });
                 DB.executeQuery("UPDATE KATEGORI SET NAMA = :0 WHERE ID = :1 ", listParam); 
                 queryDataset();
-                MessageBox.Show("Update success!"); 
+                MessageBox.Show("Update success!");
+                frm_menumaster.refreshFormBarang();
                 modeCRUD("close");
 
             }
