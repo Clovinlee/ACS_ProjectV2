@@ -33,19 +33,21 @@
             // 
             // pl
             // 
-            this.pl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.pl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
             this.pl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pl.Location = new System.Drawing.Point(0, 0);
+            this.pl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pl.Name = "pl";
-            this.pl.Size = new System.Drawing.Size(848, 571);
+            this.pl.Size = new System.Drawing.Size(1131, 703);
             this.pl.TabIndex = 0;
             // 
             // Warehouse_Access
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(848, 571);
+            this.ClientSize = new System.Drawing.Size(1131, 703);
             this.Controls.Add(this.pl);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Warehouse_Access";
             this.Text = "Warehouse_Access";
             this.ResumeLayout(false);

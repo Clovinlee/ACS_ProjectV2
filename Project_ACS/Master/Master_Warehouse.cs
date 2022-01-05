@@ -20,7 +20,15 @@ namespace Project_ACS
             //cmbSort.SelectedIndex = 0;
         }
 
+        public Master_Warehouse(DataSet dataset, MainMenu_Master frm_master) : this()
+        {
+            InitializeComponent();
+            this.dataset = dataset;
+            this.frm_menumaster = frm_master;
+        }
+
         DataSet dataset;
+        public MainMenu_Master frm_menumaster;
         string querystr = "";
         public static EditMasterWarehouse f;
         int selectedRow;
