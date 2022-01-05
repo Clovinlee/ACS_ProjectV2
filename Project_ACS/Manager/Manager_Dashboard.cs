@@ -16,6 +16,32 @@ namespace Project_ACS.Manager
         {
             InitializeComponent();
             refreshData();
+            settingDgv();
+        } 
+
+        void settingDgv()
+        {
+            dgv_keluarmasuk.DefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 102, 204);
+            dgv_keluarmasuk.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgv_keluarmasuk.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(44, 135, 224);
+            dgv_keluarmasuk.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(44, 135, 224);
+            DataGridViewColumn column1 = dgv_keluarmasuk.Columns[0];
+            column1.Width = 70;
+            DataGridViewColumn column2 = dgv_keluarmasuk.Columns[1];
+            column2.Width = 50;
+            DataGridViewColumn column3 = dgv_keluarmasuk.Columns[2];
+            column3.Width = 50;
+
+            dgv_adjustment.DefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 102, 204);
+            dgv_adjustment.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgv_adjustment.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(44, 135, 224);
+            dgv_adjustment.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(44, 135, 224);
+            DataGridViewColumn ccolumn1 = dgv_adjustment.Columns[0];
+            ccolumn1.Width = 30;
+            DataGridViewColumn ccolumn2 = dgv_adjustment.Columns[1];
+            ccolumn2.Width = 100;
+            DataGridViewColumn ccolumn3 = dgv_adjustment.Columns[2];
+            ccolumn3.Width = 35;
         }
 
         public Panel getPl()

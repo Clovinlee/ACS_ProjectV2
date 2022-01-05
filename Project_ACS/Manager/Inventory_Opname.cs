@@ -28,6 +28,23 @@ namespace Project_ACS.Manager
             {
                 labelNamaWarehouse.Text = "Warehouse " + User.User_login.Id_warehouse;
             }
+            settingDgv();
+        }
+
+        void settingDgv()
+        {
+            dgv_adjust.DefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 102, 204);
+            dgv_adjust.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgv_adjust.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(44, 135, 224);
+            dgv_adjust.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(44, 135, 224);
+            DataGridViewColumn column1 = dgv_adjust.Columns[0];
+            column1.Width = 50;
+            DataGridViewColumn column2 = dgv_adjust.Columns[1];
+            column2.Width = 100;
+            DataGridViewColumn column3 = dgv_adjust.Columns[2];
+            column3.Width = 100;
+            DataGridViewColumn column5 = dgv_adjust.Columns[3];
+            column5.Width = 140;
         }
 
         public void refreshData()
@@ -110,7 +127,7 @@ namespace Project_ACS.Manager
         private void btn_create_Click(object sender, EventArgs e)
         {
             Detail_Stock_Adjustment frm_adj = new Detail_Stock_Adjustment(ds_barang,ds_adjustment,ds_barangwarehouse,this);
-            frm_adj.Show();
+            frm_adj.ShowDialog();
         }
 
         private void tb_id_KeyUp(object sender, KeyEventArgs e)
