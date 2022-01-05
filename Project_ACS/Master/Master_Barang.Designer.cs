@@ -38,6 +38,12 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.pl = new System.Windows.Forms.Panel();
+            this.dgv_barang = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.labeljumlah = new System.Windows.Forms.Label();
+            this.btn_refresh = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btn_delete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btn_update = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btn_insert = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.textbox_searchkode = new System.Windows.Forms.TextBox();
             this.cbb_merk = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,13 +51,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.labeljumlah = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.dgv_barang = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.btn_refresh = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btn_delete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btn_update = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btn_insert = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_barang)).BeginInit();
             this.SuspendLayout();
@@ -78,110 +78,6 @@
             this.pl.Size = new System.Drawing.Size(832, 453);
             this.pl.TabIndex = 0;
             this.pl.Paint += new System.Windows.Forms.PaintEventHandler(this.pl_Paint);
-            // 
-            // textbox_searchkode
-            // 
-            this.textbox_searchkode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.textbox_searchkode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textbox_searchkode.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textbox_searchkode.Location = new System.Drawing.Point(228, 70);
-            this.textbox_searchkode.Margin = new System.Windows.Forms.Padding(2);
-            this.textbox_searchkode.Name = "textbox_searchkode";
-            this.textbox_searchkode.Size = new System.Drawing.Size(138, 21);
-            this.textbox_searchkode.TabIndex = 22;
-            this.textbox_searchkode.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textbox_searchkode_KeyUp);
-            // 
-            // cbb_merk
-            // 
-            this.cbb_merk.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.cbb_merk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbb_merk.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbb_merk.FormattingEnabled = true;
-            this.cbb_merk.Location = new System.Drawing.Point(532, 70);
-            this.cbb_merk.Margin = new System.Windows.Forms.Padding(2);
-            this.cbb_merk.Name = "cbb_merk";
-            this.cbb_merk.Size = new System.Drawing.Size(126, 20);
-            this.cbb_merk.TabIndex = 21;
-            this.cbb_merk.SelectedIndexChanged += new System.EventHandler(this.cbb_merk_SelectedIndexChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label4.Location = new System.Drawing.Point(529, 43);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 15);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Merk";
-            // 
-            // cbb_kategori
-            // 
-            this.cbb_kategori.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.cbb_kategori.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbb_kategori.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbb_kategori.FormattingEnabled = true;
-            this.cbb_kategori.Location = new System.Drawing.Point(382, 70);
-            this.cbb_kategori.Margin = new System.Windows.Forms.Padding(2);
-            this.cbb_kategori.Name = "cbb_kategori";
-            this.cbb_kategori.Size = new System.Drawing.Size(135, 20);
-            this.cbb_kategori.TabIndex = 19;
-            this.cbb_kategori.SelectedIndexChanged += new System.EventHandler(this.cbb_kategori_SelectedIndexChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label3.Location = new System.Drawing.Point(379, 43);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 15);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Kategori";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label2.Location = new System.Drawing.Point(224, 43);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 15);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Search by Kode, Nama";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label1.Location = new System.Drawing.Point(11, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 32);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Barang";
-            // 
-            // labeljumlah
-            // 
-            this.labeljumlah.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labeljumlah.AutoSize = true;
-            this.labeljumlah.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeljumlah.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.labeljumlah.Location = new System.Drawing.Point(636, 422);
-            this.labeljumlah.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labeljumlah.Name = "labeljumlah";
-            this.labeljumlah.Size = new System.Drawing.Size(144, 15);
-            this.labeljumlah.TabIndex = 27;
-            this.labeljumlah.Text = "Showing n data Barang";
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 15;
-            this.bunifuElipse1.TargetControl = this.dgv_barang;
             // 
             // dgv_barang
             // 
@@ -251,6 +147,19 @@
             this.dgv_barang.TabIndex = 28;
             this.dgv_barang.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgv_barang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_barang_CellClick);
+            // 
+            // labeljumlah
+            // 
+            this.labeljumlah.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labeljumlah.AutoSize = true;
+            this.labeljumlah.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeljumlah.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.labeljumlah.Location = new System.Drawing.Point(636, 422);
+            this.labeljumlah.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labeljumlah.Name = "labeljumlah";
+            this.labeljumlah.Size = new System.Drawing.Size(144, 15);
+            this.labeljumlah.TabIndex = 27;
+            this.labeljumlah.Text = "Showing n data Barang";
             // 
             // btn_refresh
             // 
@@ -611,6 +520,97 @@
             this.btn_insert.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_insert.UseDefaultRadiusAndThickness = true;
             this.btn_insert.Click += new System.EventHandler(this.btn_insert_Click);
+            // 
+            // textbox_searchkode
+            // 
+            this.textbox_searchkode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.textbox_searchkode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.textbox_searchkode.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textbox_searchkode.Location = new System.Drawing.Point(228, 70);
+            this.textbox_searchkode.Margin = new System.Windows.Forms.Padding(2);
+            this.textbox_searchkode.Name = "textbox_searchkode";
+            this.textbox_searchkode.Size = new System.Drawing.Size(138, 21);
+            this.textbox_searchkode.TabIndex = 22;
+            this.textbox_searchkode.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textbox_searchkode_KeyUp);
+            // 
+            // cbb_merk
+            // 
+            this.cbb_merk.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.cbb_merk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbb_merk.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbb_merk.FormattingEnabled = true;
+            this.cbb_merk.Location = new System.Drawing.Point(532, 70);
+            this.cbb_merk.Margin = new System.Windows.Forms.Padding(2);
+            this.cbb_merk.Name = "cbb_merk";
+            this.cbb_merk.Size = new System.Drawing.Size(126, 20);
+            this.cbb_merk.TabIndex = 21;
+            this.cbb_merk.SelectedIndexChanged += new System.EventHandler(this.cbb_merk_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label4.Location = new System.Drawing.Point(529, 43);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 15);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Merk";
+            // 
+            // cbb_kategori
+            // 
+            this.cbb_kategori.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.cbb_kategori.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbb_kategori.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbb_kategori.FormattingEnabled = true;
+            this.cbb_kategori.Location = new System.Drawing.Point(382, 70);
+            this.cbb_kategori.Margin = new System.Windows.Forms.Padding(2);
+            this.cbb_kategori.Name = "cbb_kategori";
+            this.cbb_kategori.Size = new System.Drawing.Size(135, 20);
+            this.cbb_kategori.TabIndex = 19;
+            this.cbb_kategori.SelectedIndexChanged += new System.EventHandler(this.cbb_kategori_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label3.Location = new System.Drawing.Point(379, 43);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 15);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Kategori";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label2.Location = new System.Drawing.Point(224, 43);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 15);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Search by Kode, Nama";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label1.Location = new System.Drawing.Point(11, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 32);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Barang";
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 15;
+            this.bunifuElipse1.TargetControl = this.dgv_barang;
             // 
             // Master_Barang
             // 

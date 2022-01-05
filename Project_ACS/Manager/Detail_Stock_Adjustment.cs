@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Project_ACS.Manager
 {
-    public partial class Inventory_Opname : Form
+    public partial class Detail_Stock_Adjustment : Form
     {
-        public Inventory_Opname()
+        public Detail_Stock_Adjustment()
         {
             InitializeComponent();
-        }
-
-        public Panel getPl()
-        {
-            return pl;
-        }
-
-        private void btn_refresh_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

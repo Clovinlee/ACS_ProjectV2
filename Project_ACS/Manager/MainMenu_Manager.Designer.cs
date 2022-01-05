@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu_Manager));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges29 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges30 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges31 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges32 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges33 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges34 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges35 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges36 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges37 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges38 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges39 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges40 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges41 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges42 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.pl_main = new System.Windows.Forms.Panel();
             this.pl_submenu_inventory = new System.Windows.Forms.Panel();
             this.btn_inventory_tracking = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -52,6 +52,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_nama = new System.Windows.Forms.Label();
             this.pl_logo = new System.Windows.Forms.Panel();
             this.pl_leftbar = new System.Windows.Forms.Panel();
             this.pl_submenu_warehouse = new System.Windows.Forms.Panel();
@@ -66,8 +68,6 @@
             this.btn_delivery = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_inventory = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_dashboard = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lbl_nama = new System.Windows.Forms.Label();
             this.pl_submenu_inventory.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pl_leftbar.SuspendLayout();
@@ -118,11 +118,11 @@
             this.btn_inventory_tracking.ColorContrastOnClick = 45;
             this.btn_inventory_tracking.ColorContrastOnHover = 45;
             this.btn_inventory_tracking.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges29.BottomLeft = true;
-            borderEdges29.BottomRight = true;
-            borderEdges29.TopLeft = true;
-            borderEdges29.TopRight = true;
-            this.btn_inventory_tracking.CustomizableEdges = borderEdges29;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btn_inventory_tracking.CustomizableEdges = borderEdges1;
             this.btn_inventory_tracking.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_inventory_tracking.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_inventory_tracking.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -205,16 +205,16 @@
             this.btn_inventory_opname.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(63)))));
             this.btn_inventory_opname.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_inventory_opname.BackgroundImage")));
             this.btn_inventory_opname.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_inventory_opname.ButtonText = "Stock Opname";
+            this.btn_inventory_opname.ButtonText = "Stock Adjustment";
             this.btn_inventory_opname.ButtonTextMarginLeft = 0;
             this.btn_inventory_opname.ColorContrastOnClick = 45;
             this.btn_inventory_opname.ColorContrastOnHover = 45;
             this.btn_inventory_opname.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges30.BottomLeft = true;
-            borderEdges30.BottomRight = true;
-            borderEdges30.TopLeft = true;
-            borderEdges30.TopRight = true;
-            this.btn_inventory_opname.CustomizableEdges = borderEdges30;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btn_inventory_opname.CustomizableEdges = borderEdges2;
             this.btn_inventory_opname.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_inventory_opname.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_inventory_opname.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -302,11 +302,11 @@
             this.btn_inventory_rak.ColorContrastOnClick = 45;
             this.btn_inventory_rak.ColorContrastOnHover = 45;
             this.btn_inventory_rak.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges31.BottomLeft = true;
-            borderEdges31.BottomRight = true;
-            borderEdges31.TopLeft = true;
-            borderEdges31.TopRight = true;
-            this.btn_inventory_rak.CustomizableEdges = borderEdges31;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btn_inventory_rak.CustomizableEdges = borderEdges3;
             this.btn_inventory_rak.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_inventory_rak.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_inventory_rak.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -394,11 +394,11 @@
             this.btn_inventory_barang.ColorContrastOnClick = 45;
             this.btn_inventory_barang.ColorContrastOnHover = 45;
             this.btn_inventory_barang.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges32.BottomLeft = true;
-            borderEdges32.BottomRight = true;
-            borderEdges32.TopLeft = true;
-            borderEdges32.TopRight = true;
-            this.btn_inventory_barang.CustomizableEdges = borderEdges32;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btn_inventory_barang.CustomizableEdges = borderEdges4;
             this.btn_inventory_barang.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_inventory_barang.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_inventory_barang.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -504,6 +504,30 @@
             this.panel1.Size = new System.Drawing.Size(864, 70);
             this.panel1.TabIndex = 11;
             // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label3.Location = new System.Drawing.Point(601, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(251, 23);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Warehouse Manager";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_nama
+            // 
+            this.lbl_nama.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_nama.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nama.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.lbl_nama.Location = new System.Drawing.Point(601, 11);
+            this.lbl_nama.Name = "lbl_nama";
+            this.lbl_nama.Size = new System.Drawing.Size(251, 23);
+            this.lbl_nama.TabIndex = 9;
+            this.lbl_nama.Text = "Welcome, User";
+            this.lbl_nama.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // pl_logo
             // 
             this.pl_logo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -564,11 +588,11 @@
             this.btn_warehouse_history.ColorContrastOnClick = 45;
             this.btn_warehouse_history.ColorContrastOnHover = 45;
             this.btn_warehouse_history.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges33.BottomLeft = true;
-            borderEdges33.BottomRight = true;
-            borderEdges33.TopLeft = true;
-            borderEdges33.TopRight = true;
-            this.btn_warehouse_history.CustomizableEdges = borderEdges33;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.btn_warehouse_history.CustomizableEdges = borderEdges5;
             this.btn_warehouse_history.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_warehouse_history.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_warehouse_history.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -656,11 +680,11 @@
             this.btn_warehouse_request.ColorContrastOnClick = 45;
             this.btn_warehouse_request.ColorContrastOnHover = 45;
             this.btn_warehouse_request.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges34.BottomLeft = true;
-            borderEdges34.BottomRight = true;
-            borderEdges34.TopLeft = true;
-            borderEdges34.TopRight = true;
-            this.btn_warehouse_request.CustomizableEdges = borderEdges34;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.btn_warehouse_request.CustomizableEdges = borderEdges6;
             this.btn_warehouse_request.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_warehouse_request.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_warehouse_request.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -748,11 +772,11 @@
             this.btn_warehouse_access.ColorContrastOnClick = 45;
             this.btn_warehouse_access.ColorContrastOnHover = 45;
             this.btn_warehouse_access.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges35.BottomLeft = true;
-            borderEdges35.BottomRight = true;
-            borderEdges35.TopLeft = true;
-            borderEdges35.TopRight = true;
-            this.btn_warehouse_access.CustomizableEdges = borderEdges35;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.btn_warehouse_access.CustomizableEdges = borderEdges7;
             this.btn_warehouse_access.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_warehouse_access.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_warehouse_access.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -840,11 +864,11 @@
             this.btn_warehouse.ColorContrastOnClick = 45;
             this.btn_warehouse.ColorContrastOnHover = 45;
             this.btn_warehouse.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges36.BottomLeft = true;
-            borderEdges36.BottomRight = true;
-            borderEdges36.TopLeft = true;
-            borderEdges36.TopRight = true;
-            this.btn_warehouse.CustomizableEdges = borderEdges36;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.btn_warehouse.CustomizableEdges = borderEdges8;
             this.btn_warehouse.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_warehouse.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_warehouse.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -946,11 +970,11 @@
             this.btn_delivery_history.ColorContrastOnClick = 45;
             this.btn_delivery_history.ColorContrastOnHover = 45;
             this.btn_delivery_history.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges37.BottomLeft = true;
-            borderEdges37.BottomRight = true;
-            borderEdges37.TopLeft = true;
-            borderEdges37.TopRight = true;
-            this.btn_delivery_history.CustomizableEdges = borderEdges37;
+            borderEdges9.BottomLeft = true;
+            borderEdges9.BottomRight = true;
+            borderEdges9.TopLeft = true;
+            borderEdges9.TopRight = true;
+            this.btn_delivery_history.CustomizableEdges = borderEdges9;
             this.btn_delivery_history.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_delivery_history.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_delivery_history.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1038,11 +1062,11 @@
             this.btn_delivery_keluar.ColorContrastOnClick = 45;
             this.btn_delivery_keluar.ColorContrastOnHover = 45;
             this.btn_delivery_keluar.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges38.BottomLeft = true;
-            borderEdges38.BottomRight = true;
-            borderEdges38.TopLeft = true;
-            borderEdges38.TopRight = true;
-            this.btn_delivery_keluar.CustomizableEdges = borderEdges38;
+            borderEdges10.BottomLeft = true;
+            borderEdges10.BottomRight = true;
+            borderEdges10.TopLeft = true;
+            borderEdges10.TopRight = true;
+            this.btn_delivery_keluar.CustomizableEdges = borderEdges10;
             this.btn_delivery_keluar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_delivery_keluar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_delivery_keluar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1130,11 +1154,11 @@
             this.btn_delivery_masuk.ColorContrastOnClick = 45;
             this.btn_delivery_masuk.ColorContrastOnHover = 45;
             this.btn_delivery_masuk.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges39.BottomLeft = true;
-            borderEdges39.BottomRight = true;
-            borderEdges39.TopLeft = true;
-            borderEdges39.TopRight = true;
-            this.btn_delivery_masuk.CustomizableEdges = borderEdges39;
+            borderEdges11.BottomLeft = true;
+            borderEdges11.BottomRight = true;
+            borderEdges11.TopLeft = true;
+            borderEdges11.TopRight = true;
+            this.btn_delivery_masuk.CustomizableEdges = borderEdges11;
             this.btn_delivery_masuk.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_delivery_masuk.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_delivery_masuk.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1222,11 +1246,11 @@
             this.btn_delivery.ColorContrastOnClick = 45;
             this.btn_delivery.ColorContrastOnHover = 45;
             this.btn_delivery.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges40.BottomLeft = true;
-            borderEdges40.BottomRight = true;
-            borderEdges40.TopLeft = true;
-            borderEdges40.TopRight = true;
-            this.btn_delivery.CustomizableEdges = borderEdges40;
+            borderEdges12.BottomLeft = true;
+            borderEdges12.BottomRight = true;
+            borderEdges12.TopLeft = true;
+            borderEdges12.TopRight = true;
+            this.btn_delivery.CustomizableEdges = borderEdges12;
             this.btn_delivery.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_delivery.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_delivery.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1314,11 +1338,11 @@
             this.btn_inventory.ColorContrastOnClick = 45;
             this.btn_inventory.ColorContrastOnHover = 45;
             this.btn_inventory.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges41.BottomLeft = true;
-            borderEdges41.BottomRight = true;
-            borderEdges41.TopLeft = true;
-            borderEdges41.TopRight = true;
-            this.btn_inventory.CustomizableEdges = borderEdges41;
+            borderEdges13.BottomLeft = true;
+            borderEdges13.BottomRight = true;
+            borderEdges13.TopLeft = true;
+            borderEdges13.TopRight = true;
+            this.btn_inventory.CustomizableEdges = borderEdges13;
             this.btn_inventory.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_inventory.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_inventory.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1406,11 +1430,11 @@
             this.btn_dashboard.ColorContrastOnClick = 45;
             this.btn_dashboard.ColorContrastOnHover = 45;
             this.btn_dashboard.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges42.BottomLeft = true;
-            borderEdges42.BottomRight = true;
-            borderEdges42.TopLeft = true;
-            borderEdges42.TopRight = true;
-            this.btn_dashboard.CustomizableEdges = borderEdges42;
+            borderEdges14.BottomLeft = true;
+            borderEdges14.BottomRight = true;
+            borderEdges14.TopLeft = true;
+            borderEdges14.TopRight = true;
+            this.btn_dashboard.CustomizableEdges = borderEdges14;
             this.btn_dashboard.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_dashboard.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_dashboard.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1478,30 +1502,6 @@
             this.btn_dashboard.TextPadding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btn_dashboard.UseDefaultRadiusAndThickness = true;
             this.btn_dashboard.Click += new System.EventHandler(this.buttonPress);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label3.Location = new System.Drawing.Point(601, 34);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(251, 23);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Warehouse Manager";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lbl_nama
-            // 
-            this.lbl_nama.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_nama.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nama.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.lbl_nama.Location = new System.Drawing.Point(601, 11);
-            this.lbl_nama.Name = "lbl_nama";
-            this.lbl_nama.Size = new System.Drawing.Size(251, 23);
-            this.lbl_nama.TabIndex = 9;
-            this.lbl_nama.Text = "Welcome, User";
-            this.lbl_nama.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // MainMenu_Manager
             // 

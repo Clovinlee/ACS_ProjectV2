@@ -194,6 +194,12 @@
     <Compile Include="Manager\Delivery_Masuk.Designer.cs">
       <DependentUpon>Delivery_Masuk.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manager\Detail_Stock_Adjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Detail_Stock_Adjustment.Designer.cs">
+      <DependentUpon>Detail_Stock_Adjustment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager\Inventory_Barang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,18 +254,18 @@
     <Compile Include="Manager\Warehouse_Request.Designer.cs">
       <DependentUpon>Warehouse_Request.cs</DependentUpon>
     </Compile>
-	<Compile Include ="Master\Add_Akun.cs">
-	  <SubType>Form</SubType>
-	</Compile>
-	<Compile Include ="Master\Add_Akun.Designer.cs">
-	  <DependentUpon>Add_Akun.cs</DependentUpon>
-	</Compile>
-	<Compile Include ="Master\Detail_Akun.cs">
+    <Compile Include="Master\Add_Akun.cs">
       <SubType>Form</SubType>
-	</Compile>
-	<Compile Include ="Master\Detail_Akun.Designer.cs">
-	  <DependentUpon>Detail_Akun.cs</DependentUpon>
-	</Compile>
+    </Compile>
+    <Compile Include="Master\Add_Akun.Designer.cs">
+      <DependentUpon>Add_Akun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Detail_Akun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Detail_Akun.Designer.cs">
+      <DependentUpon>Detail_Akun.cs</DependentUpon>
+    </Compile>
     <Compile Include="Master\Detail_Master_Barang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -351,6 +357,9 @@
     <EmbeddedResource Include="Manager\Delivery_Masuk.resx">
       <DependentUpon>Delivery_Masuk.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Detail_Stock_Adjustment.resx">
+      <DependentUpon>Detail_Stock_Adjustment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Manager\Inventory_Barang.resx">
       <DependentUpon>Inventory_Barang.cs</DependentUpon>
     </EmbeddedResource>
@@ -378,12 +387,12 @@
     <EmbeddedResource Include="Manager\Warehouse_Request.resx">
       <DependentUpon>Warehouse_Request.cs</DependentUpon>
     </EmbeddedResource>
-	<EmbeddedResource Include="Master\Add_Akun.resx">
-	  <DependentUpon>Add_Akun.cs</DependentUpon>
-	</EmbeddedResource>
-	<EmbeddedResource Include="Master\Detail_Akun.resx">
-	  <DependentUpon>Detail_Akun.cs</DependentUpon>
-	</EmbeddedResource>
+    <EmbeddedResource Include="Master\Add_Akun.resx">
+      <DependentUpon>Add_Akun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Detail_Akun.resx">
+      <DependentUpon>Detail_Akun.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Master\Detail_Master_Barang.resx">
       <DependentUpon>Detail_Master_Barang.cs</DependentUpon>
     </EmbeddedResource>
