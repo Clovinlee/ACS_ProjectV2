@@ -269,7 +269,44 @@ namespace Project_ACS.Manager
         {
             BunifuButton b = (BunifuButton)sender;
             pl_main.Controls.Clear();
-            pl_main.Controls.Add((Panel)listPanel[Convert.ToInt32(b.Tag.ToString())]);
+            int btag = Convert.ToInt32(b.Tag.ToString());
+            switch (btag)
+            {
+                case 1:
+
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+                    frm_inventory_opname.refreshData();
+                    break;
+                case 4:
+
+                    break;
+                case 5:
+
+                    break;
+                case 6:
+
+                    break;
+                case 7:
+
+                    break;
+                case 8:
+
+                    break;
+                case 9:
+
+                    break;
+                case 10:
+
+                    break;
+                case 11:
+
+                    break;
+            }
+            pl_main.Controls.Add((Panel)listPanel[btag]);
         }
 
         private void MainMenu_Manager_FormClosing(object sender, FormClosingEventArgs e)

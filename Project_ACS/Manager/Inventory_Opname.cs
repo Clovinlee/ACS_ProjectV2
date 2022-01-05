@@ -15,13 +15,17 @@ namespace Project_ACS.Manager
         public Inventory_Opname()
         {
             InitializeComponent();
+            refreshData();
+        }
+
+        public void refreshData()
+        {
             ds_adjustment = new DataSet();
             ds_barang = new DataSet();
             ds_barangwarehouse = new DataSet();
             DB.executeDataSet(ds_adjustment, $"select a.id, a.qty, a.real_qty, b.kode, a.keterangan, a.id_barang, a.tanggal from adjustment a, barang b where a.id_barang = b.id and a.id_warehouse = {User.User_login.Id_warehouse} order by a.id desc", null, "adj");
             DB.executeDataSet(ds_barang, "select * from barang", null, "brg");
             loadDgv();
-
         }
 
         public Panel getPl()

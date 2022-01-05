@@ -89,7 +89,7 @@
             this.pl_submenu_inventory.Controls.Add(this.btn_inventory_barang);
             this.pl_submenu_inventory.Dock = System.Windows.Forms.DockStyle.Top;
             this.pl_submenu_inventory.Location = new System.Drawing.Point(0, 182);
-            this.pl_submenu_inventory.MaximumSize = new System.Drawing.Size(200, 156);
+            this.pl_submenu_inventory.MaximumSize = new System.Drawing.Size(200, 121);
             this.pl_submenu_inventory.MinimumSize = new System.Drawing.Size(200, 0);
             this.pl_submenu_inventory.Name = "pl_submenu_inventory";
             this.pl_submenu_inventory.Size = new System.Drawing.Size(200, 121);
