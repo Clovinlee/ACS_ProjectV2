@@ -42,7 +42,6 @@ namespace Project_ACS.Manager
         public void loadUpcomingDelivery() 
         {
             DataRow dr = ds_delivery.Tables[0].Rows[0];
-            lbl_upcomingarrival.Text = dr[]
         }
 
         public void loadLateDelivery()
