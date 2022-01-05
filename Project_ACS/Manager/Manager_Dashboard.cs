@@ -84,7 +84,7 @@ namespace Project_ACS.Manager
         {
             DB.executeDataSet(ds_delivery, $"select h.kode, bp.nama, h.eta, h.status, h.qty, h.id_warehouse, h.grand_total from H_ORDER_SUPPLIER h, BUSINESS_PARTNER bp where h.id_partner = bp.id order by ETA desc",null,"delivery");
 
-            int jml = Convert.ToInt32(DB.executeScalar($"SELECT COUNT(*) FROM H_ORDER_SUPPLIER WHERE ETA < TO_DATE('{System.DateTime.Now.Date.ToShortDateString()}', 'DD/MM/YYYY')",null));
+            int jml = Convert.ToInt32(DB.executeScalar($"SELECT COUNT(*) FROM H_ORDER_SUPPLIER WHERE status = 2",null));
             lbl_latedelivery.Text = jml.ToString();
         }
 
