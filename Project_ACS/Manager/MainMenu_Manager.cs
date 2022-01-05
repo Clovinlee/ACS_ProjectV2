@@ -67,9 +67,15 @@ namespace Project_ACS.Manager
             warehouse_collapse.Tick += new EventHandler(collapseWarehouse);
 
             initSubForm();
+            initDS();
             buttonPress(btn_dashboard, e);
 
             lbl_nama.Text = "Welcome, " + User.User_login.Nama;
+        }
+
+        public void initDS()
+        {
+
         }
 
         public void initSubForm()
