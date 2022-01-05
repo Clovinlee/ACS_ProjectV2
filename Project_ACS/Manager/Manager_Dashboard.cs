@@ -36,10 +36,21 @@ namespace Project_ACS.Manager
             loadDgvKeluarMasuk();
             loadDgvAdjust();
             loadLateDelivery();
+            loadUpcomingDelivery();
+        }
+
+        public void loadUpcomingDelivery() 
+        {
+            DataRow dr = ds_delivery.Tables[0].Rows[0];
+            lbl_upcomingarrival.Text = dr[]
         }
 
         public void loadLateDelivery()
         {
+            DB.executeDataSet(ds_delivery, $"SELECT * FROM H_ORDER_SUPPLIER order by ETA desc",null,"delivery");
+
+            int jml = Convert.ToInt32(DB.executeScalar($"SELECT COUNT(*) FROM H_ORDER_SUPPLIER WHERE ETA < TO_DATE('{System.DateTime.Now.Date.ToShortDateString()}', 'DD/MM/YYYY')",null));
+            lbl_latedelivery.Text = jml.ToString();
         }
 
         public void loadDgvAdjust()
