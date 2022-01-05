@@ -515,7 +515,7 @@
             this.bunifuPanel9.Location = new System.Drawing.Point(12, 148);
             this.bunifuPanel9.Name = "bunifuPanel9";
             this.bunifuPanel9.ShowBorders = true;
-            this.bunifuPanel9.Size = new System.Drawing.Size(881, 485);
+            this.bunifuPanel9.Size = new System.Drawing.Size(881, 475);
             this.bunifuPanel9.TabIndex = 13;
             // 
             // panel8
@@ -527,7 +527,7 @@
             this.panel8.Controls.Add(this.dgv_adjust);
             this.panel8.Location = new System.Drawing.Point(14, 14);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(854, 457);
+            this.panel8.Size = new System.Drawing.Size(854, 447);
             this.panel8.TabIndex = 2;
             // 
             // dgv_adjust
@@ -592,7 +592,7 @@
             this.dgv_adjust.RowHeadersWidth = 51;
             this.dgv_adjust.RowTemplate.Height = 40;
             this.dgv_adjust.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_adjust.Size = new System.Drawing.Size(854, 457);
+            this.dgv_adjust.Size = new System.Drawing.Size(854, 447);
             this.dgv_adjust.TabIndex = 38;
             this.dgv_adjust.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
