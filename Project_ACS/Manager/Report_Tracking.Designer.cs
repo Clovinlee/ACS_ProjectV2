@@ -30,7 +30,7 @@ namespace Project_ACS.Manager
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Report_Tracking));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.dtpAwal = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.dtpAkhir = new Bunifu.UI.WinForms.BunifuDatePicker();
@@ -42,14 +42,15 @@ namespace Project_ACS.Manager
             // crystalReportViewer1
             // 
             this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(3, 57);
-            this.crystalReportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.crystalReportViewer1.Location = new System.Drawing.Point(2, 46);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1262, 647);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(947, 526);
             this.crystalReportViewer1.TabIndex = 0;
-            this.crystalReportViewer1.ToolPanelWidth = 267;
             // 
             // dtpAwal
             // 
@@ -69,12 +70,11 @@ namespace Project_ACS.Manager
             this.dtpAwal.IconColor = System.Drawing.Color.Gray;
             this.dtpAwal.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtpAwal.LeftTextMargin = 5;
-            this.dtpAwal.Location = new System.Drawing.Point(151, 5);
-            this.dtpAwal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpAwal.Location = new System.Drawing.Point(113, 4);
             this.dtpAwal.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
             this.dtpAwal.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtpAwal.Name = "dtpAwal";
-            this.dtpAwal.Size = new System.Drawing.Size(292, 32);
+            this.dtpAwal.Size = new System.Drawing.Size(220, 32);
             this.dtpAwal.TabIndex = 1;
             // 
             // dtpAkhir
@@ -95,12 +95,11 @@ namespace Project_ACS.Manager
             this.dtpAkhir.IconColor = System.Drawing.Color.Gray;
             this.dtpAkhir.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtpAkhir.LeftTextMargin = 5;
-            this.dtpAkhir.Location = new System.Drawing.Point(628, 5);
-            this.dtpAkhir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpAkhir.Location = new System.Drawing.Point(471, 4);
             this.dtpAkhir.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
             this.dtpAkhir.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtpAkhir.Name = "dtpAkhir";
-            this.dtpAkhir.Size = new System.Drawing.Size(292, 32);
+            this.dtpAkhir.Size = new System.Drawing.Size(220, 32);
             this.dtpAkhir.TabIndex = 2;
             // 
             // label1
@@ -108,10 +107,9 @@ namespace Project_ACS.Manager
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(480, 12);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(360, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 28);
+            this.label1.Size = new System.Drawing.Size(104, 21);
             this.label1.TabIndex = 3;
             this.label1.Text = "Tanggal Akhir";
             // 
@@ -120,10 +118,9 @@ namespace Project_ACS.Manager
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(8, 12);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(6, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 28);
+            this.label2.Size = new System.Drawing.Size(101, 21);
             this.label2.TabIndex = 4;
             this.label2.Text = "Tanggal Awal";
             // 
@@ -132,7 +129,7 @@ namespace Project_ACS.Manager
             this.btnShowReport.AllowAnimations = true;
             this.btnShowReport.AllowMouseEffects = true;
             this.btnShowReport.AllowToggling = false;
-            this.btnShowReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnShowReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnShowReport.AnimationSpeed = 200;
             this.btnShowReport.AutoGenerateColors = false;
             this.btnShowReport.AutoRoundBorders = false;
@@ -146,19 +143,19 @@ namespace Project_ACS.Manager
             this.btnShowReport.ButtonTextMarginLeft = 0;
             this.btnShowReport.ColorContrastOnClick = 45;
             this.btnShowReport.ColorContrastOnHover = 45;
-            this.btnShowReport.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnShowReport.CustomizableEdges = borderEdges1;
+            this.btnShowReport.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnShowReport.CustomizableEdges = borderEdges2;
             this.btnShowReport.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnShowReport.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnShowReport.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnShowReport.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnShowReport.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
+            this.btnShowReport.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btnShowReport.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnShowReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnShowReport.ForeColor = System.Drawing.Color.White;
             this.btnShowReport.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnShowReport.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btnShowReport.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
@@ -175,8 +172,7 @@ namespace Project_ACS.Manager
             this.btnShowReport.IdleIconLeftImage = null;
             this.btnShowReport.IdleIconRightImage = null;
             this.btnShowReport.IndicateFocus = false;
-            this.btnShowReport.Location = new System.Drawing.Point(1087, 5);
-            this.btnShowReport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnShowReport.Location = new System.Drawing.Point(800, 4);
             this.btnShowReport.Name = "btnShowReport";
             this.btnShowReport.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnShowReport.OnDisabledState.BorderRadius = 15;
@@ -186,11 +182,11 @@ namespace Project_ACS.Manager
             this.btnShowReport.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnShowReport.OnDisabledState.IconLeftImage = null;
             this.btnShowReport.OnDisabledState.IconRightImage = null;
-            this.btnShowReport.onHoverState.BorderColor = System.Drawing.Color.White;
+            this.btnShowReport.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.btnShowReport.onHoverState.BorderRadius = 15;
             this.btnShowReport.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnShowReport.onHoverState.BorderThickness = 1;
-            this.btnShowReport.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnShowReport.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.btnShowReport.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btnShowReport.onHoverState.IconLeftImage = null;
             this.btnShowReport.onHoverState.IconRightImage = null;
@@ -199,39 +195,39 @@ namespace Project_ACS.Manager
             this.btnShowReport.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnShowReport.OnIdleState.BorderThickness = 1;
             this.btnShowReport.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
-            this.btnShowReport.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnShowReport.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btnShowReport.OnIdleState.IconLeftImage = null;
             this.btnShowReport.OnIdleState.IconRightImage = null;
-            this.btnShowReport.OnPressedState.BorderColor = System.Drawing.Color.White;
+            this.btnShowReport.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btnShowReport.OnPressedState.BorderRadius = 15;
             this.btnShowReport.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnShowReport.OnPressedState.BorderThickness = 1;
-            this.btnShowReport.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnShowReport.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btnShowReport.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnShowReport.OnPressedState.IconLeftImage = null;
             this.btnShowReport.OnPressedState.IconRightImage = null;
-            this.btnShowReport.Size = new System.Drawing.Size(176, 44);
-            this.btnShowReport.TabIndex = 44;
+            this.btnShowReport.Size = new System.Drawing.Size(138, 36);
+            this.btnShowReport.TabIndex = 45;
             this.btnShowReport.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnShowReport.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnShowReport.TextMarginLeft = 0;
             this.btnShowReport.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnShowReport.UseDefaultRadiusAndThickness = true;
-            this.btnShowReport.Click += new System.EventHandler(this.btnShowReport_Click);
+            this.btnShowReport.Click += new System.EventHandler(this.btnShowReport_Click_1);
             // 
             // Report_Tracking
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
-            this.ClientSize = new System.Drawing.Size(1267, 708);
+            this.ClientSize = new System.Drawing.Size(950, 575);
             this.Controls.Add(this.btnShowReport);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpAkhir);
             this.Controls.Add(this.dtpAwal);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(966, 614);
             this.Name = "Report_Tracking";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tracking Report";

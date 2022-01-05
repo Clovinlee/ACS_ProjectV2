@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory_Tracking));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory_Tracking));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.pl = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnShowReport = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgv_barang1 = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.btnTrack = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.textbox_searchkode = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.labeljumlah = new System.Windows.Forms.Label();
+            this.btn_refresh = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.labelNamaWarehouse = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.btnShowReport = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnTrack = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btn_refresh = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pl.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -65,8 +65,9 @@
             this.pl.Controls.Add(this.panel1);
             this.pl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pl.Location = new System.Drawing.Point(0, 0);
+            this.pl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pl.Name = "pl";
-            this.pl.Size = new System.Drawing.Size(848, 571);
+            this.pl.Size = new System.Drawing.Size(1131, 703);
             this.pl.TabIndex = 0;
             // 
             // panel1
@@ -84,9 +85,102 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(848, 571);
+            this.panel1.Size = new System.Drawing.Size(1131, 703);
             this.panel1.TabIndex = 1;
+            // 
+            // btnShowReport
+            // 
+            this.btnShowReport.AllowAnimations = true;
+            this.btnShowReport.AllowMouseEffects = true;
+            this.btnShowReport.AllowToggling = false;
+            this.btnShowReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnShowReport.AnimationSpeed = 200;
+            this.btnShowReport.AutoGenerateColors = false;
+            this.btnShowReport.AutoRoundBorders = false;
+            this.btnShowReport.AutoSizeLeftIcon = true;
+            this.btnShowReport.AutoSizeRightIcon = true;
+            this.btnShowReport.BackColor = System.Drawing.Color.Transparent;
+            this.btnShowReport.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.btnShowReport.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShowReport.BackgroundImage")));
+            this.btnShowReport.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnShowReport.ButtonText = "Generate Report";
+            this.btnShowReport.ButtonTextMarginLeft = 0;
+            this.btnShowReport.ColorContrastOnClick = 45;
+            this.btnShowReport.ColorContrastOnHover = 45;
+            this.btnShowReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnShowReport.CustomizableEdges = borderEdges1;
+            this.btnShowReport.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnShowReport.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnShowReport.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnShowReport.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnShowReport.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
+            this.btnShowReport.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnShowReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnShowReport.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnShowReport.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnShowReport.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnShowReport.IconMarginLeft = 11;
+            this.btnShowReport.IconPadding = 10;
+            this.btnShowReport.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnShowReport.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnShowReport.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnShowReport.IconSize = 25;
+            this.btnShowReport.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnShowReport.IdleBorderRadius = 15;
+            this.btnShowReport.IdleBorderThickness = 1;
+            this.btnShowReport.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.btnShowReport.IdleIconLeftImage = null;
+            this.btnShowReport.IdleIconRightImage = null;
+            this.btnShowReport.IndicateFocus = false;
+            this.btnShowReport.Location = new System.Drawing.Point(648, 614);
+            this.btnShowReport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnShowReport.Name = "btnShowReport";
+            this.btnShowReport.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnShowReport.OnDisabledState.BorderRadius = 15;
+            this.btnShowReport.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnShowReport.OnDisabledState.BorderThickness = 1;
+            this.btnShowReport.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnShowReport.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnShowReport.OnDisabledState.IconLeftImage = null;
+            this.btnShowReport.OnDisabledState.IconRightImage = null;
+            this.btnShowReport.onHoverState.BorderColor = System.Drawing.Color.White;
+            this.btnShowReport.onHoverState.BorderRadius = 15;
+            this.btnShowReport.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnShowReport.onHoverState.BorderThickness = 1;
+            this.btnShowReport.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnShowReport.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnShowReport.onHoverState.IconLeftImage = null;
+            this.btnShowReport.onHoverState.IconRightImage = null;
+            this.btnShowReport.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnShowReport.OnIdleState.BorderRadius = 15;
+            this.btnShowReport.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnShowReport.OnIdleState.BorderThickness = 1;
+            this.btnShowReport.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.btnShowReport.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnShowReport.OnIdleState.IconLeftImage = null;
+            this.btnShowReport.OnIdleState.IconRightImage = null;
+            this.btnShowReport.OnPressedState.BorderColor = System.Drawing.Color.White;
+            this.btnShowReport.OnPressedState.BorderRadius = 15;
+            this.btnShowReport.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnShowReport.OnPressedState.BorderThickness = 1;
+            this.btnShowReport.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnShowReport.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnShowReport.OnPressedState.IconLeftImage = null;
+            this.btnShowReport.OnPressedState.IconRightImage = null;
+            this.btnShowReport.Size = new System.Drawing.Size(176, 44);
+            this.btnShowReport.TabIndex = 43;
+            this.btnShowReport.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnShowReport.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnShowReport.TextMarginLeft = 0;
+            this.btnShowReport.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnShowReport.UseDefaultRadiusAndThickness = true;
+            this.btnShowReport.Click += new System.EventHandler(this.btnShowReport_Click);
             // 
             // groupBox1
             // 
@@ -96,9 +190,11 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(17, 499);
+            this.groupBox1.Location = new System.Drawing.Point(23, 614);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(138, 60);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(184, 74);
             this.groupBox1.TabIndex = 42;
             this.groupBox1.TabStop = false;
             // 
@@ -106,35 +202,39 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(25, 16);
+            this.panel3.Location = new System.Drawing.Point(33, 20);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(13, 13);
+            this.panel3.Size = new System.Drawing.Size(17, 16);
             this.panel3.TabIndex = 44;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(25, 39);
+            this.panel2.Location = new System.Drawing.Point(33, 48);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(13, 13);
+            this.panel2.Size = new System.Drawing.Size(17, 16);
             this.panel2.TabIndex = 43;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(43, 39);
+            this.label4.Location = new System.Drawing.Point(57, 48);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 13);
+            this.label4.Size = new System.Drawing.Size(99, 17);
             this.label4.TabIndex = 1;
             this.label4.Text = "Barang Keluar";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(43, 16);
+            this.label3.Location = new System.Drawing.Point(57, 20);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.Size = new System.Drawing.Size(99, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Barang Masuk";
             // 
@@ -193,8 +293,8 @@
             this.dgv_barang1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgv_barang1.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgv_barang1.HeaderForeColor = System.Drawing.Color.White;
-            this.dgv_barang1.Location = new System.Drawing.Point(16, 155);
-            this.dgv_barang1.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_barang1.Location = new System.Drawing.Point(21, 191);
+            this.dgv_barang1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgv_barang1.MultiSelect = false;
             this.dgv_barang1.Name = "dgv_barang1";
             this.dgv_barang1.ReadOnly = true;
@@ -202,166 +302,10 @@
             this.dgv_barang1.RowHeadersWidth = 51;
             this.dgv_barang1.RowTemplate.Height = 40;
             this.dgv_barang1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_barang1.Size = new System.Drawing.Size(814, 327);
+            this.dgv_barang1.Size = new System.Drawing.Size(1085, 402);
             this.dgv_barang1.TabIndex = 41;
             this.dgv_barang1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgv_barang1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_barang1_CellClick_1);
-            // 
-            // textbox_searchkode
-            // 
-            this.textbox_searchkode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.textbox_searchkode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.textbox_searchkode.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textbox_searchkode.Location = new System.Drawing.Point(17, 116);
-            this.textbox_searchkode.Margin = new System.Windows.Forms.Padding(2);
-            this.textbox_searchkode.Name = "textbox_searchkode";
-            this.textbox_searchkode.Size = new System.Drawing.Size(138, 21);
-            this.textbox_searchkode.TabIndex = 39;
-            this.textbox_searchkode.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textbox_searchkode_KeyUp);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label2.Location = new System.Drawing.Point(13, 89);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 15);
-            this.label2.TabIndex = 38;
-            this.label2.Text = "Search by Kode, Nama";
-            // 
-            // labeljumlah
-            // 
-            this.labeljumlah.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.labeljumlah.AutoSize = true;
-            this.labeljumlah.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeljumlah.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.labeljumlah.Location = new System.Drawing.Point(665, 499);
-            this.labeljumlah.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labeljumlah.Name = "labeljumlah";
-            this.labeljumlah.Size = new System.Drawing.Size(149, 15);
-            this.labeljumlah.TabIndex = 36;
-            this.labeljumlah.Text = "Showing n data Tracking";
-            // 
-            // labelNamaWarehouse
-            // 
-            this.labelNamaWarehouse.AutoSize = true;
-            this.labelNamaWarehouse.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNamaWarehouse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.labelNamaWarehouse.Location = new System.Drawing.Point(13, 46);
-            this.labelNamaWarehouse.Name = "labelNamaWarehouse";
-            this.labelNamaWarehouse.Size = new System.Drawing.Size(156, 21);
-            this.labelNamaWarehouse.TabIndex = 18;
-            this.labelNamaWarehouse.Text = "<Nama Warehouse>";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label1.Location = new System.Drawing.Point(11, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 32);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Inventory Tracking";
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 15;
-            this.bunifuElipse1.TargetControl = this.dgv_barang1;
-            // 
-            // btnShowReport
-            // 
-            this.btnShowReport.AllowAnimations = true;
-            this.btnShowReport.AllowMouseEffects = true;
-            this.btnShowReport.AllowToggling = false;
-            this.btnShowReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnShowReport.AnimationSpeed = 200;
-            this.btnShowReport.AutoGenerateColors = false;
-            this.btnShowReport.AutoRoundBorders = false;
-            this.btnShowReport.AutoSizeLeftIcon = true;
-            this.btnShowReport.AutoSizeRightIcon = true;
-            this.btnShowReport.BackColor = System.Drawing.Color.Transparent;
-            this.btnShowReport.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
-            this.btnShowReport.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnShowReport.BackgroundImage")));
-            this.btnShowReport.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnShowReport.ButtonText = "Generate Report";
-            this.btnShowReport.ButtonTextMarginLeft = 0;
-            this.btnShowReport.ColorContrastOnClick = 45;
-            this.btnShowReport.ColorContrastOnHover = 45;
-            this.btnShowReport.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnShowReport.CustomizableEdges = borderEdges1;
-            this.btnShowReport.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnShowReport.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnShowReport.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnShowReport.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnShowReport.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
-            this.btnShowReport.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnShowReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnShowReport.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShowReport.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnShowReport.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btnShowReport.IconMarginLeft = 11;
-            this.btnShowReport.IconPadding = 10;
-            this.btnShowReport.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnShowReport.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnShowReport.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnShowReport.IconSize = 25;
-            this.btnShowReport.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnShowReport.IdleBorderRadius = 15;
-            this.btnShowReport.IdleBorderThickness = 1;
-            this.btnShowReport.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
-            this.btnShowReport.IdleIconLeftImage = null;
-            this.btnShowReport.IdleIconRightImage = null;
-            this.btnShowReport.IndicateFocus = false;
-            this.btnShowReport.Location = new System.Drawing.Point(486, 499);
-            this.btnShowReport.Name = "btnShowReport";
-            this.btnShowReport.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnShowReport.OnDisabledState.BorderRadius = 15;
-            this.btnShowReport.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnShowReport.OnDisabledState.BorderThickness = 1;
-            this.btnShowReport.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnShowReport.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnShowReport.OnDisabledState.IconLeftImage = null;
-            this.btnShowReport.OnDisabledState.IconRightImage = null;
-            this.btnShowReport.onHoverState.BorderColor = System.Drawing.Color.White;
-            this.btnShowReport.onHoverState.BorderRadius = 15;
-            this.btnShowReport.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnShowReport.onHoverState.BorderThickness = 1;
-            this.btnShowReport.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnShowReport.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnShowReport.onHoverState.IconLeftImage = null;
-            this.btnShowReport.onHoverState.IconRightImage = null;
-            this.btnShowReport.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnShowReport.OnIdleState.BorderRadius = 15;
-            this.btnShowReport.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnShowReport.OnIdleState.BorderThickness = 1;
-            this.btnShowReport.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
-            this.btnShowReport.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnShowReport.OnIdleState.IconLeftImage = null;
-            this.btnShowReport.OnIdleState.IconRightImage = null;
-            this.btnShowReport.OnPressedState.BorderColor = System.Drawing.Color.White;
-            this.btnShowReport.OnPressedState.BorderRadius = 15;
-            this.btnShowReport.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnShowReport.OnPressedState.BorderThickness = 1;
-            this.btnShowReport.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnShowReport.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnShowReport.OnPressedState.IconLeftImage = null;
-            this.btnShowReport.OnPressedState.IconRightImage = null;
-            this.btnShowReport.Size = new System.Drawing.Size(132, 36);
-            this.btnShowReport.TabIndex = 43;
-            this.btnShowReport.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnShowReport.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnShowReport.TextMarginLeft = 0;
-            this.btnShowReport.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btnShowReport.UseDefaultRadiusAndThickness = true;
-            this.btnShowReport.Click += new System.EventHandler(this.btnShowReport_Click);
             // 
             // btnTrack
             // 
@@ -410,7 +354,8 @@
             this.btnTrack.IdleIconLeftImage = null;
             this.btnTrack.IdleIconRightImage = null;
             this.btnTrack.IndicateFocus = false;
-            this.btnTrack.Location = new System.Drawing.Point(693, 101);
+            this.btnTrack.Location = new System.Drawing.Point(924, 124);
+            this.btnTrack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTrack.Name = "btnTrack";
             this.btnTrack.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnTrack.OnDisabledState.BorderRadius = 15;
@@ -444,7 +389,7 @@
             this.btnTrack.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnTrack.OnPressedState.IconLeftImage = null;
             this.btnTrack.OnPressedState.IconRightImage = null;
-            this.btnTrack.Size = new System.Drawing.Size(132, 36);
+            this.btnTrack.Size = new System.Drawing.Size(176, 44);
             this.btnTrack.TabIndex = 40;
             this.btnTrack.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnTrack.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -452,6 +397,41 @@
             this.btnTrack.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnTrack.UseDefaultRadiusAndThickness = true;
             this.btnTrack.Click += new System.EventHandler(this.bunifuButton1_Click);
+            // 
+            // textbox_searchkode
+            // 
+            this.textbox_searchkode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.textbox_searchkode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.textbox_searchkode.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textbox_searchkode.Location = new System.Drawing.Point(23, 143);
+            this.textbox_searchkode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textbox_searchkode.Name = "textbox_searchkode";
+            this.textbox_searchkode.Size = new System.Drawing.Size(183, 25);
+            this.textbox_searchkode.TabIndex = 39;
+            this.textbox_searchkode.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textbox_searchkode_KeyUp);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label2.Location = new System.Drawing.Point(17, 110);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(170, 20);
+            this.label2.TabIndex = 38;
+            this.label2.Text = "Search by Kode, Nama";
+            // 
+            // labeljumlah
+            // 
+            this.labeljumlah.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labeljumlah.AutoSize = true;
+            this.labeljumlah.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeljumlah.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.labeljumlah.Location = new System.Drawing.Point(887, 614);
+            this.labeljumlah.Name = "labeljumlah";
+            this.labeljumlah.Size = new System.Drawing.Size(181, 20);
+            this.labeljumlah.TabIndex = 36;
+            this.labeljumlah.Text = "Showing n data Tracking";
             // 
             // btn_refresh
             // 
@@ -500,7 +480,8 @@
             this.btn_refresh.IdleIconLeftImage = global::Project_ACS.res_icons.history_solid;
             this.btn_refresh.IdleIconRightImage = null;
             this.btn_refresh.IndicateFocus = false;
-            this.btn_refresh.Location = new System.Drawing.Point(634, 101);
+            this.btn_refresh.Location = new System.Drawing.Point(845, 124);
+            this.btn_refresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_refresh.Name = "btn_refresh";
             this.btn_refresh.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_refresh.OnDisabledState.BorderRadius = 15;
@@ -534,7 +515,7 @@
             this.btn_refresh.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn_refresh.OnPressedState.IconLeftImage = null;
             this.btn_refresh.OnPressedState.IconRightImage = null;
-            this.btn_refresh.Size = new System.Drawing.Size(41, 36);
+            this.btn_refresh.Size = new System.Drawing.Size(55, 44);
             this.btn_refresh.TabIndex = 35;
             this.btn_refresh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_refresh.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -543,12 +524,41 @@
             this.btn_refresh.UseDefaultRadiusAndThickness = true;
             this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
             // 
+            // labelNamaWarehouse
+            // 
+            this.labelNamaWarehouse.AutoSize = true;
+            this.labelNamaWarehouse.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNamaWarehouse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.labelNamaWarehouse.Location = new System.Drawing.Point(17, 57);
+            this.labelNamaWarehouse.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelNamaWarehouse.Name = "labelNamaWarehouse";
+            this.labelNamaWarehouse.Size = new System.Drawing.Size(194, 28);
+            this.labelNamaWarehouse.TabIndex = 18;
+            this.labelNamaWarehouse.Text = "<Nama Warehouse>";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label1.Location = new System.Drawing.Point(15, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(284, 41);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Inventory Tracking";
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 15;
+            this.bunifuElipse1.TargetControl = this.dgv_barang1;
+            // 
             // Inventory_Tracking
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(848, 571);
+            this.ClientSize = new System.Drawing.Size(1131, 703);
             this.Controls.Add(this.pl);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Inventory_Tracking";
             this.Text = "Inventory_Tracking";
             this.Load += new System.EventHandler(this.Inventory_Tracking_Load);
