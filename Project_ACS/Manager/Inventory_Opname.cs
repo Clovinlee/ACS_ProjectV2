@@ -134,5 +134,11 @@ namespace Project_ACS.Manager
         {
             search();
         }
+
+        private void btn_generatereport_Click(object sender, EventArgs e)
+        {
+            Report_Adjustment frm_rpt = new Report_Adjustment();
+            frm_rpt.ShowDialog();
+        }
     }
 }
