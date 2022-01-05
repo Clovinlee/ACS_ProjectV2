@@ -65,7 +65,7 @@ namespace Project_ACS.Manager
             {
                 id = dr[0][0].ToString();
             }
-            //ds_adjustment.Tables[0].DefaultView.RowFilter = string.Format("CONVERT(ID, System.String) LIKE '%{0}%' and CONVERT(ID_BARANG, System.String) LIKE '%{1}%' and keterangan LIKE '%{2}%'", tb_id.Text, id, tb_keterangan.Text);
+            ds_adjustment.Tables[0].DefaultView.RowFilter = $"id LIKE '%{tb_id.Text}%' and id_barang like '%{id}%' and keterangan like '%{tb_keterangan.Text}%'";
             dgv_adjust.ClearSelection();
             loadDgvColor();
         }

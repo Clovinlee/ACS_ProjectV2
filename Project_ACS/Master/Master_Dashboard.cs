@@ -74,10 +74,12 @@ namespace Project_ACS
             }
             else if(mode.ToLower() == "barang")
             {
-                jml_barang = Convert.ToInt32(ds_barang.Tables[0].Compute("Count(id)", "5=5"));
+                DataSet ds_temp = new DataSet();
+                DB.executeDataSet(ds_temp, "select * from barang", null, "brg");
+                jml_barang = Convert.ToInt32(ds_temp.Tables[0].Compute("Count(id)", "5=5"));
 
                 lbl_jmlbarang.Text = jml_barang.ToString();
-                DataRow[] tmp = ds_barang.Tables[0].Select("id = max(id)");
+                DataRow[] tmp = ds_temp.Tables[0].Select("id = max(id)");
                 lbl_lastbarang.Text = tmp[0][2].ToString();
                 lbl_lastbarangmerk.Text = (ds_merk.Tables[0].Select($"id = {tmp[0][6]}"))[0][1].ToString();
                 lbl_lastbarangkategori.Text = (ds_kategori.Tables[0].Select($"id = {tmp[0][5]}"))[0][1].ToString();
