@@ -27,10 +27,10 @@ namespace Project_ACS.Manager
         string querystr = "";
         int idx = -1;
 
-        void loadReq()
+        public void loadReq()
         {
             dataset = new DataSet();
-            querystr = "SELECT W1.NAMA AS ASAL, H.TOTAL_QTY || ' Dus' AS TOTAL, H.TANGGAL AS TANGGAL, H.KODE AS KODE FROM H_PINDAH H, WAREHOUSE W1, WAREHOUSE W2 WHERE H.ASAL = W1.ID AND W2.ID = "+ User.User_login.Id_warehouse + " AND W2.ID = H.TUJUAN AND H.STATUS = 0";
+            querystr = "SELECT W1.NAMA AS ASAL, H.TOTAL_QTY || ' Dus' AS TOTAL, H.TANGGAL AS TANGGAL, H.KODE AS KODE FROM H_PINDAH H, WAREHOUSE W1, WAREHOUSE W2 WHERE H.ASAL = W1.ID AND W2.ID = "+ User.User_login.Id_warehouse + " AND H.STATUS = 0 AND H.ASAL != " + User.User_login.Id_warehouse + "";
             //List<object[]> listParam = new List<object[]>();
             //listParam.Add(new object[] { User.User_login.Id_warehouse, "int32" });
             DB.executeDataSet(dataset, querystr, null, "WAREHOUSE");

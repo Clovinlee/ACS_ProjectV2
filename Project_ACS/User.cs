@@ -37,7 +37,7 @@ namespace Project_ACS
 
         public void getIdWarehouse()
         {
-            this.id_warehouse = Convert.ToString(DB.executeScalar($"select id_user from warehouse where id_user = {this.id}",null));
+            this.id_warehouse = Convert.ToString(DB.executeScalar($"select id from warehouse where id_user = {this.id}",null));
         }
 
         private void getNamaJabatan()

@@ -294,10 +294,10 @@ namespace Project_ACS.Manager
 
                     break;
                 case 8:
-
+                    frm_warehouse_access.loadReq();
                     break;
                 case 9:
-                    
+                    frm_warehouse_request.loadBarang();
                     break;
                 case 10:
                     frm_warehouse_history.loadHistory();
