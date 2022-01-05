@@ -143,6 +143,16 @@ namespace Project_ACS {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap check_solid {
+            get {
+                object obj = ResourceManager.GetObject("check_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clipboard_list_solid {
             get {
                 object obj = ResourceManager.GetObject("clipboard_list_solid", resourceCulture);
@@ -286,6 +296,16 @@ namespace Project_ACS {
         internal static System.Drawing.Bitmap search_solid {
             get {
                 object obj = ResourceManager.GetObject("search_solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap times_solid {
+            get {
+                object obj = ResourceManager.GetObject("times_solid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
