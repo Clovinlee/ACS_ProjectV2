@@ -45,12 +45,12 @@ namespace Project_ACS.Manager
         public void loadDgv()
         {
             ds_adjustment.Tables[0].Rows.Clear();
-            DB.executeDataSet(ds_adjustment, "select a.id, a.qty, a.real_qty, b.kode, a.keterangan from adjustment a, barang b where a.id_barang = b.id order by a.id desc", null, "adj");
+            DB.executeDataSet(ds_adjustment, "select a.id, a.qty, a.real_qty, b.kode, a.keterangan, a.id_barang, a.tanggal from adjustment a, barang b where a.id_barang = b.id order by a.id desc", null, "adj");
+            dgv_adjust.DataSource = ds_adjustment.Tables[0];
             dgv_adjust.AllowUserToResizeRows = false;
+            dgv_adjust.Columns[5].Visible = false;
             //ds_bp = new DataSet();
             //DB.executeDataSet(ds_bp, "select id,kode,nama,telepon,alamat from business_partner ORDER BY id DESC", null, "bp");
-            dgv_adjust.DataSource = ds_adjustment.Tables[0];
-            dgv_adjust.Columns[0].Visible = false;
             lbl_jml.Text = "Showing " + dgv_adjust.RowCount + " data from Stock Adjustment";
             dgv_adjust.ClearSelection();
             loadDgvColor();
@@ -59,13 +59,7 @@ namespace Project_ACS.Manager
 
         private void search()
         {//buat reload ulang dgv sesuai kondisi filter
-            DataRow[] dr = ds_barang.Tables[0].Select($"kode LIKE '%{tb_kodebarang.Text}%'");
-            string id = "";
-            if(dr.Length == 1)
-            {
-                id = dr[0][0].ToString();
-            }
-            ds_adjustment.Tables[0].DefaultView.RowFilter = $"id LIKE '%{tb_id.Text}%' and id_barang like '%{id}%' and keterangan like '%{tb_keterangan.Text}%'";
+            ds_adjustment.Tables[0].DefaultView.RowFilter = $"CONVERT(id, System.String) LIKE '%{tb_id.Text}%' and CONVERT(kode, System.String) like '%{tb_kodebarang.Text}%' and keterangan like '%{tb_keterangan.Text}%'";
             dgv_adjust.ClearSelection();
             loadDgvColor();
         }
@@ -87,7 +81,8 @@ namespace Project_ACS.Manager
         private void btn_searchdate_Click(object sender, EventArgs e)
         {
             //BUG
-            ds_adjustment.Tables[0].DefaultView.RowFilter = string.Format("CONVERT(TANGGAL,System.DateTime) = CONVERT({0}, System.DateTime)", dt_picker.Value.Date);
+            string st = dt_picker.Value.ToShortDateString();
+            ds_adjustment.Tables[0].DefaultView.RowFilter = string.Format("CONVERT(TANGGAL,System.DateTime) = CONVERT({0}, System.DateTime)", st);
             dgv_adjust.ClearSelection();
         }
 

@@ -17,6 +17,7 @@ namespace Project_ACS
         private string email;
         private string status;
         private string nama_jabatan;
+        private string id_warehouse;
         private static User user_login = null;
 
         public User(string id, string nama, string username, string password, string id_jabatan, string alamat, string email, string status)
@@ -30,6 +31,13 @@ namespace Project_ACS
             this.email = email;
             this.status = status;
             getNamaJabatan();
+            getIdWarehouse();
+            Console.WriteLine(id_warehouse);
+        }
+
+        public void getIdWarehouse()
+        {
+            this.id_warehouse = Convert.ToString(DB.executeScalar($"select id_user from warehouse where id_user = {this.id}",null));
         }
 
         private void getNamaJabatan()
@@ -37,6 +45,7 @@ namespace Project_ACS
             this.nama_jabatan = (string)DB.executeScalar("select nama from jabatan where id = " + this.id_jabatan,null);
         }
 
+        public string Id_warehouse { get => id_warehouse; }
         public string Id { get => id; }
         public string Nama { get => nama; }
         public string Username { get => username; }
