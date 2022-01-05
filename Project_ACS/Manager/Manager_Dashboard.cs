@@ -32,21 +32,31 @@ namespace Project_ACS.Manager
             ds_adjust = new DataSet();
             ds_keluarmasuk = new DataSet();
             ds_delivery = new DataSet();
-            DB.executeDataSet(ds_keluarmasuk, $"SELECT NVL(tb1.bulan,tb2.bulan) AS bulan, NVL(tb1.totalqty,0) AS keluar, NVL(tb2.totalqty,0) AS masuk FROM(select SUM(QTY) AS totalqty, TO_CHAR(TANGGAL, 'MM') AS bulan from HISTORY_BARANG_KELUAR_MASUK WHERE ID_WAREHOUSE = {User.User_login.Id_warehouse} AND TO_CHAR(TANGGAL, 'YYYY') = TO_CHAR(SYSDATE, 'YYYY') AND status = 0 GROUP BY TO_CHAR(TANGGAL, 'MM') ORDER BY 2) tb1 FULL OUTER JOIN (select SUM(QTY) AS totalqty, TO_CHAR(TANGGAL, 'MM') AS bulan from HISTORY_BARANG_KELUAR_MASUK WHERE ID_WAREHOUSE = {User.User_login.Id_warehouse} AND TO_CHAR(TANGGAL, 'YYYY') = TO_CHAR(SYSDATE, 'YYYY') AND status = 1 GROUP BY TO_CHAR(TANGGAL, 'MM') ORDER BY 2) tb2 ON tb1.bulan = tb2.bulan ORDER BY 1 ASC", null, "data");
+            
             loadDgvKeluarMasuk();
             loadDgvAdjust();
             loadLateDelivery();
             loadUpcomingDelivery();
+            loadWarehouseRequest();
+        }
+
+        public void loadWarehouseRequest()
+        {
+            int jml = Convert.ToInt32(DB.executeScalar($"select count(*) from H_PINDAH where TUJUAN = {User.User_login.Id_warehouse} AND status = 0", null));
+            lbl_warehouserequest.Text = jml.ToString();
         }
 
         public void loadUpcomingDelivery() 
         {
             DataRow dr = ds_delivery.Tables[0].Rows[0];
+            lbl_upcomingname.Text = dr[1].ToString();
+            DateTime arrival = Convert.ToDateTime(dr[2].ToString());
+            lbl_upcomingarrival.Text = arrival.ToString("dd MMMM yyyy");
         }
 
         public void loadLateDelivery()
         {
-            DB.executeDataSet(ds_delivery, $"SELECT * FROM H_ORDER_SUPPLIER order by ETA desc",null,"delivery");
+            DB.executeDataSet(ds_delivery, $"select h.kode, bp.nama, h.eta, h.status, h.qty, h.id_warehouse, h.grand_total from H_ORDER_SUPPLIER h, BUSINESS_PARTNER bp where h.id_partner = bp.id order by ETA desc",null,"delivery");
 
             int jml = Convert.ToInt32(DB.executeScalar($"SELECT COUNT(*) FROM H_ORDER_SUPPLIER WHERE ETA < TO_DATE('{System.DateTime.Now.Date.ToShortDateString()}', 'DD/MM/YYYY')",null));
             lbl_latedelivery.Text = jml.ToString();
@@ -64,6 +74,8 @@ namespace Project_ACS.Manager
 
         public void loadDgvKeluarMasuk()
         {
+            DB.executeDataSet(ds_keluarmasuk, $"SELECT NVL(tb1.bulan,tb2.bulan) AS bulan, NVL(tb1.totalqty,0) AS keluar, NVL(tb2.totalqty,0) AS masuk FROM(select SUM(QTY) AS totalqty, TO_CHAR(TANGGAL, 'MM') AS bulan from HISTORY_BARANG_KELUAR_MASUK WHERE ID_WAREHOUSE = {User.User_login.Id_warehouse} AND TO_CHAR(TANGGAL, 'YYYY') = TO_CHAR(SYSDATE, 'YYYY') AND status = 0 GROUP BY TO_CHAR(TANGGAL, 'MM') ORDER BY 2) tb1 FULL OUTER JOIN (select SUM(QTY) AS totalqty, TO_CHAR(TANGGAL, 'MM') AS bulan from HISTORY_BARANG_KELUAR_MASUK WHERE ID_WAREHOUSE = {User.User_login.Id_warehouse} AND TO_CHAR(TANGGAL, 'YYYY') = TO_CHAR(SYSDATE, 'YYYY') AND status = 1 GROUP BY TO_CHAR(TANGGAL, 'MM') ORDER BY 2) tb2 ON tb1.bulan = tb2.bulan ORDER BY 1 ASC", null, "data");
+
             List<string> listBulan = new List<string>();
             listBulan.Add("Januari");
             listBulan.Add("Februari");
