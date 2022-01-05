@@ -64,7 +64,7 @@ namespace Project_ACS.Manager
                 {
                     listKeluarMasuk.Add(new int[] { 0,0 });
                 }
-                dgv_keluarmasuk.Rows.Add(new object[] { listBulan[i], listKeluarMasuk})
+                dgv_keluarmasuk.Rows.Add(new object[] { listBulan[i], listKeluarMasuk });
             }
         }
 

@@ -26,7 +26,7 @@ namespace Project_ACS.Manager
         DataSet dataset;
         string querystr = "";
 
-        void loadHistory()
+        public void loadHistory()
         {
             dataset = new DataSet();
             querystr = "SELECT W1.NAMA AS \"Asal\", W2.NAMA AS \"Tujuan\", H.TOTAL_QTY AS \"Total Quantity\", H.TANGGAL AS \"Tanggal\", (CASE H.STATUS WHEN 1 THEN 'DITERIMA' WHEN 0 THEN 'PENDING' ELSE 'DITOLAK' END) AS \"Status\" FROM H_PINDAH H, WAREHOUSE W1, WAREHOUSE W2 WHERE H.ASAL = W1.ID AND H.TUJUAN = W2.ID AND (W1.ID = :0 OR W2.ID = :0) ORDER BY Tanggal DESC";

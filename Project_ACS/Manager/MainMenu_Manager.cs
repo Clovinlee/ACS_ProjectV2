@@ -297,10 +297,10 @@ namespace Project_ACS.Manager
 
                     break;
                 case 9:
-
+                    
                     break;
                 case 10:
-
+                    frm_warehouse_history.loadHistory();
                     break;
                 case 11:
 
