@@ -103,8 +103,8 @@ namespace Project_ACS.Manager
             listPanel.Add(frm_inventory_tracking.getPl());
 
             listPanel.Add(frm_delivery_masuk.getPl());
-            listPanel.Add(frm_delivery_history.getPl());
             listPanel.Add(frm_delivery_keluar.getPl());
+            listPanel.Add(frm_delivery_history.getPl());
 
             listPanel.Add(frm_warehouse_access.getPl());
             listPanel.Add(frm_warehouse_request.getPl());
