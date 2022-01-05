@@ -142,6 +142,9 @@
   <data name="caret_up_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\caret-up-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="check_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\check-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="clipboard_list_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\clipboard-list-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -186,6 +189,9 @@
   </data>
   <data name="search_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\search-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="times_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\times-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tools_solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\tools-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

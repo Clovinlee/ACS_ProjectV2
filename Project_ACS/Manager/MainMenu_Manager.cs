@@ -272,17 +272,19 @@ namespace Project_ACS.Manager
             int btag = Convert.ToInt32(b.Tag.ToString());
             switch (btag)
             {
-                case 1:
+                case 0:
                     frm_dashboard.refreshData();
                     break;
+                case 1: 
+                    frm_inventory_barang.queryDataset();
+                    break;
                 case 2:
-
                     break;
                 case 3:
                     frm_inventory_opname.refreshData();
                     break;
                 case 4:
-
+                    frm_inventory_tracking.queryDataset();
                     break;
                 case 5:
 
