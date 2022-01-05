@@ -38,7 +38,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pl = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -49,15 +49,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvCart = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.cbb_partner = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.dgvBarang = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.label10 = new System.Windows.Forms.Label();
+            this.cbb_partner = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pl.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBarang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,20 +72,28 @@
             this.pl.Size = new System.Drawing.Size(1044, 571);
             this.pl.TabIndex = 0;
             // 
-            // label1
+            // panel1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(11, 21);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 30);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Delivery Keluar";
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.btnInsert);
+            this.panel1.Controls.Add(this.bunifuButton1);
+            this.panel1.Controls.Add(this.nudQty);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.dgvCart);
+            this.panel1.Controls.Add(this.dgvBarang);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.cbb_partner);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1044, 571);
+            this.panel1.TabIndex = 10;
             // 
             // label9
             // 
@@ -421,56 +429,6 @@
             this.dgvCart.TabIndex = 45;
             this.dgvCart.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
-            // cbb_partner
-            // 
-            this.cbb_partner.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.cbb_partner.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbb_partner.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbb_partner.FormattingEnabled = true;
-            this.cbb_partner.Location = new System.Drawing.Point(17, 108);
-            this.cbb_partner.Margin = new System.Windows.Forms.Padding(2);
-            this.cbb_partner.Name = "cbb_partner";
-            this.cbb_partner.Size = new System.Drawing.Size(218, 20);
-            this.cbb_partner.TabIndex = 40;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(11, 18);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 30);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Delivery Masuk";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.btnInsert);
-            this.panel1.Controls.Add(this.bunifuButton1);
-            this.panel1.Controls.Add(this.nudQty);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.dgvCart);
-            this.panel1.Controls.Add(this.dgvBarang);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.cbb_partner);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1044, 571);
-            this.panel1.TabIndex = 10;
-            // 
             // dgvBarang
             // 
             this.dgvBarang.AllowCustomTheming = false;
@@ -554,6 +512,48 @@
             this.label10.TabIndex = 41;
             this.label10.Text = "Business Partner";
             // 
+            // cbb_partner
+            // 
+            this.cbb_partner.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.cbb_partner.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbb_partner.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbb_partner.FormattingEnabled = true;
+            this.cbb_partner.Location = new System.Drawing.Point(17, 108);
+            this.cbb_partner.Margin = new System.Windows.Forms.Padding(2);
+            this.cbb_partner.Name = "cbb_partner";
+            this.cbb_partner.Size = new System.Drawing.Size(218, 20);
+            this.cbb_partner.TabIndex = 40;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(11, 18);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(171, 30);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Delivery Keluar";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(11, 21);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(171, 30);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Delivery Keluar";
+            // 
             // Delivery_Keluar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -565,10 +565,10 @@
             this.Load += new System.EventHandler(this.Delivery_Keluar_Load);
             this.pl.ResumeLayout(false);
             this.pl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudQty)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBarang)).EndInit();
             this.ResumeLayout(false);
 

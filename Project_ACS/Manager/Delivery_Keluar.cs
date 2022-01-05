@@ -74,6 +74,25 @@ namespace Project_ACS.Manager
             dgvCart.DataMember = "BARANG";
             dgvCart.DataSource = dataset;
         }
+        void loaddgv2()
+        {
+            dataset = new DataSet();
+            querystr = "SELECT KODE AS Kode, NAMA AS Nama, QTY || ' Dus' AS Qty FROM BARANG";
+            querystr = "SELECT DISTINCT B.KODE AS KODE, B.NAMA AS NAMA, BW.QTY || ' Dus' AS QTY FROM BARANG B, BARANG_WAREHOUSE BW, WAREHOUSE W WHERE B.ID = BW.ID_BARANG AND BW.ID_WAREHOUSE = :0";
+            List<object[]> listParam = new List<object[]>();
+            listParam.Add(new object[] { User.User_login.Id_warehouse, "int32" });
+            DB.executeDataSet(dataset, querystr, listParam, "BARANG");
+            
+            dgvBarang.DataSource = dataset;
+
+
+
+            dataset = new DataSet();
+            querystr = "SELECT KODE AS Kode, NAMA AS Nama, QTY || ' Dus' AS Qty FROM BARANG WHERE 1=2";
+            DB.executeDataSet(dataset, querystr, null, "BARANG");
+            
+            dgvCart.DataSource = dataset;
+        }
 
         private void Delivery_Keluar_Load(object sender, EventArgs e)
         {
@@ -92,7 +111,7 @@ namespace Project_ACS.Manager
                 if (dialogResult == DialogResult.Yes)
                 {
                     String tanggal = Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy"));
-                    string count = (string)DB.executeScalar($"select count(*) from H_KELUAR_BARANG", null);
+                    string count = (string)DB.executeScalar($"select count(*) from H_KELUAR_BARANG", null).ToString();
                     int countdown = Convert.ToInt32(count) + 1;
                     String kode = "HK";
                     if (countdown > 999)
@@ -120,8 +139,8 @@ namespace Project_ACS.Manager
                         DB.executeQuery(querystr, null);
                     }
                     MessageBox.Show("Berhasil Insert!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    dataset.Clear();
-                    loaddgv();
+                    
+                    loaddgv2();
                     totalbarang = 0;
                     label9.Text = totalbarang.ToString();
                 }
@@ -131,8 +150,10 @@ namespace Project_ACS.Manager
         int totalbarang = 0;
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            string kode = dgvBarang.Rows[idx].Cells[1].Value.ToString();
-            int jumlah = Convert.ToInt32(dgvBarang.Rows[idx].Cells[3].Value);
+            string kode = dgvBarang.Rows[idx].Cells[0].Value.ToString();
+            String jumlah1 = dgvBarang.Rows[idx].Cells[2].Value.ToString();
+            jumlah1 = jumlah1.Substring(0, 1);
+            int jumlah = Convert.ToInt32(jumlah1);
             int qty = Convert.ToInt32(nudQty.Value);
             int idxAda = -1;
             for (int i = 0; i < dgvCart.Rows.Count; i++)
