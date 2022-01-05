@@ -118,10 +118,10 @@ namespace Project_ACS.Manager
         {
             //BUG
             ds_adjustment = new DataSet();
-            DB.executeDataSet(ds_adjustment, $"select a.id, a.qty, a.real_qty, b.kode, a.keterangan, a.id_barang, a.tanggal from adjustment a, barang b where a.id_barang = b.id AND a.tanggal = TO_DATE('{dt_picker.Value.ToShortDateString()}', 'DD/MM/YYYY') and a.id_warehouse = {User.User_login.Id_warehouse} order by a.id desc", null, "adj");
-            dgv_adjust.DataSource = ds_adjustment;
+            string st = dt_picker.Value.Date.ToString("dd/MM/yyyy");
+            DB.executeDataSet(ds_adjustment, $"select a.id, a.qty, a.real_qty, b.kode, a.keterangan, a.id_barang, a.tanggal from adjustment a, barang b where a.id_barang = b.id AND a.tanggal = TO_DATE('{st}', 'DD/MM/YYYY') and a.id_warehouse = {User.User_login.Id_warehouse} order by a.id desc", null, "adj");
+            dgv_adjust.DataSource = ds_adjustment.Tables[0];
             search();
-            dgv_adjust.ClearSelection();
         }
 
         private void btn_create_Click(object sender, EventArgs e)

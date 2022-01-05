@@ -122,5 +122,11 @@ namespace Project_ACS.Manager
         {
             idxclicked = e.RowIndex; 
         }
+
+        private void btnShowReport_Click(object sender, EventArgs e)
+        {
+            Report_Tracking rpt = new Report_Tracking(Convert.ToInt32(User.User_login.Id_warehouse),"");
+            rpt.ShowDialog();
+        }
     }
 }

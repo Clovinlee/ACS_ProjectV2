@@ -55,6 +55,7 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Bunifu.Licensing">
       <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.Licensing.dll</HintPath>
     </Reference>
@@ -151,12 +152,27 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuUserControl">
       <HintPath>..\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Oracle.DataAccess, Version=2.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\app\Kevin\product\18.0.0\dbhomeXE\ODP.NET\bin\4\Oracle.DataAccess.dll</HintPath>
     </Reference>
+    <Reference Include="Oracle.ManagedDataAccess">
+      <HintPath>..\..\..\..\..\..\..\..\..\program files (x86)\microsoft visual studio\2019\community\common7\ide\extensions\mb1caqb4.zzj\Assemblies\DataProviders\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -242,6 +258,18 @@
     </Compile>
     <Compile Include="Manager\Manager_Dashboard.Designer.cs">
       <DependentUpon>Manager_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\reportInventory.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reportInventory.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Manager\Report_Tracking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Report_Tracking.Designer.cs">
+      <DependentUpon>Report_Tracking.cs</DependentUpon>
     </Compile>
     <Compile Include="Manager\Warehouse_Access.cs">
       <SubType>Form</SubType>
@@ -339,6 +367,11 @@
     <Compile Include="Master\Master_Warehouse.Designer.cs">
       <DependentUpon>Master_Warehouse.cs</DependentUpon>
     </Compile>
+    <Compile Include="myDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>myDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="res_icons.Designer.cs">
@@ -387,6 +420,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\Manager_Dashboard.resx">
       <DependentUpon>Manager_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\reportInventory.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reportInventory.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Report_Tracking.resx">
+      <DependentUpon>Report_Tracking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\Warehouse_Access.resx">
       <DependentUpon>Warehouse_Access.cs</DependentUpon>
@@ -454,6 +494,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>res_images.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="myDataSet.xsc">
+      <DependentUpon>myDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="myDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>myDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="myDataSet.xss">
+      <DependentUpon>myDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -556,6 +607,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logothanos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
