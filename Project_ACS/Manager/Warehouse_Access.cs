@@ -135,47 +135,92 @@ namespace Project_ACS.Manager
                     for (int i = 0; i < dgvDetail.Rows.Count; i++)
                     {
                         listParam.Clear();
-                        listParam.Add(new object[] { dgvDetail.Rows[i].Cells[3].Value.ToString(), "int32" });
-                        //listParam.Add(new object[] { User.User_login.Id_warehouse, "int32" });
-                        listParam.Add(new object[] { dgvWarehouse.Rows[idx].Cells[4].Value.ToString(), "int32" });
+                        listParam.Add(new object[] { dgvDetail.Rows[i].Cells[3].Value.ToString(), "int32" }); //barang
+                        listParam.Add(new object[] { dgvWarehouse.Rows[idx].Cells[4].Value.ToString(), "int32" }); //warehouse
                         //AMBIL STOK LAMANYA DULU
                         querystr = "SELECT QTY FROM BARANG_WAREHOUSE WHERE ID_BARANG = :0 AND ID_WAREHOUSE = :1";
                         int qty = Convert.ToInt32(DB.executeScalar(querystr, listParam));
                         int qty_akhir = qty - Convert.ToInt32(dgvDetail.Rows[i].Cells[2].Value.ToString());
+                        listParam.Clear();
                         listParam.Add(new object[] { qty_akhir, "int32" });
-                        querystr = "UPDATE BARANG_WAREHOUSE SET QTY = :2 WHERE ID_BARANG = :0 AND ID_WAREHOUSE = :1";
+                        listParam.Add(new object[] { dgvDetail.Rows[i].Cells[3].Value.ToString(), "int32" }); //barang
+                        listParam.Add(new object[] { dgvWarehouse.Rows[idx].Cells[4].Value.ToString(), "int32" }); //warehouse
+                        querystr = "UPDATE BARANG_WAREHOUSE SET QTY = :0 WHERE ID_BARANG = :1 AND ID_WAREHOUSE = :2";
                         DB.executeDataSet(dataset, querystr, listParam, "BARANG_1");
                     }
 
                     //UPDATE STOK BARANG WAREHOUSE PENERIMA
                     for (int i = 0; i < dgvDetail.Rows.Count; i++)
                     {
-                        listParam.Clear();
-                        listParam.Add(new object[] { dgvDetail.Rows[i].Cells[3].Value.ToString(), "int32" });
+                        dataset = new DataSet();
+                        listParam = new List<object[]>();
+                        listParam.Add(new object[] { dgvWarehouse.Rows[idx].Cells[4].Value.ToString(), "int32" });
                         listParam.Add(new object[] { User.User_login.Id_warehouse, "int32" });
-                        //listParam.Add(new object[] { dgvWarehouse.Rows[idx].Cells[4].Value.ToString(), "int32" });
-                        //AMBIL STOK LAMANYA DULU
-                        querystr = "SELECT QTY FROM BARANG_WAREHOUSE WHERE ID_BARANG = :0 AND ID_WAREHOUSE = :1";
-                        int qty = Convert.ToInt32(DB.executeScalar(querystr, listParam));
-                        int qty_akhir = qty + Convert.ToInt32(dgvDetail.Rows[i].Cells[2].Value.ToString());
-                        listParam.Add(new object[] { qty_akhir, "int32" });
-                        querystr = "UPDATE BARANG_WAREHOUSE SET QTY = :2 WHERE ID_BARANG = :0 AND ID_WAREHOUSE = :1";
-                        DB.executeDataSet(dataset, querystr, listParam, "BARANG_2");
+                        querystr = "SELECT COUNT(*) FROM BARANG_WAREHOUSE WHERE ID_BARANG = :0 AND ID_WAREHOUSE = :1";
+                        int cekAda = Convert.ToInt32(DB.executeScalar(querystr, listParam));
+
+                        if (cekAda < 1)
+                        {
+                            querystr = "SELECT COUNT(*) + 1 FROM BARANG_WAREHOUSE";
+                            int totalid = Convert.ToInt32(DB.executeScalar(querystr, null).ToString());
+
+                            dataset = new DataSet();
+                            listParam = new List<object[]>();
+                            listParam.Add(new object[] { totalid, "int32" });
+                            listParam.Add(new object[] { User.User_login.Id_warehouse, "int32" });
+                            listParam.Add(new object[] { dgvDetail.Rows[i].Cells[3].Value.ToString(), "int32" });
+                            listParam.Add(new object[] { dgvDetail.Rows[i].Cells[2].Value.ToString(), "int32" });
+                            listParam.Add(new object[] { 1, "int32" });
+                            querystr = "INSERT INTO BARANG_WAREHOUSE VALUES(:0, :1, :2, :3, :4)";
+                            DB.executeQuery(querystr, listParam);
+                        }
+                        else
+                        {
+                            listParam.Clear();
+                            listParam.Add(new object[] { dgvDetail.Rows[i].Cells[3].Value.ToString(), "int32" });
+                            listParam.Add(new object[] { User.User_login.Id_warehouse, "int32" });
+                            //AMBIL STOK LAMANYA DULU
+                            querystr = "SELECT QTY FROM BARANG_WAREHOUSE WHERE ID_BARANG = :0 AND ID_WAREHOUSE = :1";
+                            int qty = Convert.ToInt32(DB.executeScalar(querystr, listParam));
+                            int qty_akhir = qty + Convert.ToInt32(dgvDetail.Rows[i].Cells[2].Value.ToString());
+                            listParam.Clear();
+                            listParam.Add(new object[] { qty_akhir, "int32" });
+                            listParam.Add(new object[] { dgvDetail.Rows[i].Cells[3].Value.ToString(), "int32" });
+                            listParam.Add(new object[] { User.User_login.Id_warehouse, "int32" });
+                            querystr = "UPDATE BARANG_WAREHOUSE SET QTY = :0 WHERE ID_BARANG = :1 AND ID_WAREHOUSE = :2";
+                            DB.executeDataSet(dataset, querystr, listParam, "BARANG_2");
+                        }
                     }
 
                     //MASUKIN DATA KE HISTORY BARANG KELUAR MASUK -> WAREHOUSE PENGIRIM
-                    //dataset = new DataSet();
-                    //listParam.Clear();
-                    //listParam.Add(new object[] { kode, "varchar" });
-                    //listParam.Add(new object[] { asal, "int32" });
-                    //listParam.Add(new object[] { tujuan, "int32" });
-                    //listParam.Add(new object[] { lblTotal.Text, "int32" });
-                    //listParam.Add(new object[] { System.DateTime.Now.Date, "date" });
-                    //listParam.Add(new object[] { 0, "int32" });
-                    //querystr = "INSERT INTO H_PINDAH VALUES(:0, :1, :2, :3, :4, :5)";
-                    //DB.executeQuery(querystr, listParam);
+                    for (int i = 0; i < dgvDetail.Rows.Count; i++)
+                    {
+                        dataset = new DataSet();
+                        listParam.Clear();
+                        listParam.Add(new object[] { dgvDetail.Rows[i].Cells[3].Value.ToString(), "int32" });
+                        listParam.Add(new object[] { System.DateTime.Now.Date, "date" });
+                        listParam.Add(new object[] { dgvDetail.Rows[i].Cells[2].Value.ToString(), "int32" });
+                        listParam.Add(new object[] { "P-" + User.User_login.Id_warehouse, "varchar" });
+                        listParam.Add(new object[] { dgvWarehouse.Rows[idx].Cells[4].Value.ToString(), "int32" });
+                        listParam.Add(new object[] { 0, "int32" });
+                        querystr = "INSERT INTO HISTORY_BARANG_KELUAR_MASUK VALUES(:0, :1, :2, :3, :4, :5)";
+                        DB.executeQuery(querystr, listParam);
+                    }
 
                     //MASUKIN DATA KE HISTORY BARANG KELUAR MASUK -> WAREHOUSE PENERIMA
+                    for (int i = 0; i < dgvDetail.Rows.Count; i++)
+                    {
+                        dataset = new DataSet();
+                        listParam.Clear();
+                        listParam.Add(new object[] { dgvDetail.Rows[i].Cells[3].Value.ToString(), "int32" });
+                        listParam.Add(new object[] { System.DateTime.Now.Date, "date" });
+                        listParam.Add(new object[] { dgvDetail.Rows[i].Cells[2].Value.ToString(), "int32" });
+                        listParam.Add(new object[] { "P-" + dgvWarehouse.Rows[idx].Cells[4].Value.ToString(), "varchar" });
+                        listParam.Add(new object[] { User.User_login.Id_warehouse, "int32" });
+                        listParam.Add(new object[] { 1, "int32" });
+                        querystr = "INSERT INTO HISTORY_BARANG_KELUAR_MASUK VALUES(:0, :1, :2, :3, :4, :5)";
+                        DB.executeQuery(querystr, listParam);
+                    }
 
                     MessageBox.Show("Berhasil Diterima!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dgvDetail.DataMember = null;
