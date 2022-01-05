@@ -16,6 +16,7 @@ namespace Project_ACS.Manager
         {
             InitializeComponent();
             loadReq();
+            getName();
         }
 
         public Panel getPl()
@@ -63,6 +64,15 @@ namespace Project_ACS.Manager
             //column4.Width = 100;
         }
 
+        void getName()
+        {
+            List<object[]> listParam = new List<object[]>();
+            listParam.Add(new object[] { User.User_login.Id_warehouse, "int32" });
+            string querynama = "SELECT NAMA FROM WAREHOUSE WHERE ID = :0";
+            string nama = DB.executeScalar(querynama, listParam).ToString();
+            lblWarehouse.Text = nama;
+        }
+
         private void dgvWarehouse_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             dgvDetail.DataMember = null;
@@ -70,7 +80,7 @@ namespace Project_ACS.Manager
             dataset = new DataSet();
             idx = e.RowIndex;
             string kode = dgvWarehouse.Rows[idx].Cells[3].Value.ToString();
-            querystr = "SELECT B.KODE AS KODE, B.NAMA AS NAMA, D.QTY || ' Dus' AS QTY FROM D_PINDAH D, BARANG B WHERE D.ID_BARANG = B.ID AND D.KODE_PINDAH = :0";
+            querystr = "SELECT B.KODE AS KODE, B.NAMA AS NAMA, D.QTY || ' Dus' AS QTY, B.ID FROM D_PINDAH D, BARANG B WHERE D.ID_BARANG = B.ID AND D.KODE_PINDAH = :0";
             List<object[]> listParam = new List<object[]>();
             listParam.Add(new object[] { kode, "varchar" });
             DB.executeDataSet(dataset, querystr, listParam, "BARANG");
@@ -80,6 +90,7 @@ namespace Project_ACS.Manager
             dgvDetail.DefaultCellStyle.SelectionForeColor = Color.White;
             dgvDetail.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(44, 135, 224);
             dgvDetail.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(44, 135, 224);
+            dgvDetail.Columns[3].Visible = false;
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
@@ -113,12 +124,60 @@ namespace Project_ACS.Manager
             {
                 if (mode == "acc")
                 {
+                    //UBAH STATUS H_PINDAH
                     dataset = new DataSet();
                     List<object[]> listParam = new List<object[]>();
                     listParam.Add(new object[] { dgvWarehouse.Rows[idx].Cells[3].Value.ToString(), "varchar" });
-                    querystr = "UPDATE H_PINDAH SET STATUS = 1 WHERE ID = :0";
-                    DB.executeDataSet(dataset, querystr, listParam, "WAREHOUSE");
+                    querystr = "UPDATE H_PINDAH SET STATUS = 1 WHERE KODE = :0";
+                    DB.executeDataSet(dataset, querystr, listParam, "H_PINDAH");
+
+                    //UPDATE STOK BARANG WAREHOUSE PENGIRIM
+                    for (int i = 0; i < dgvDetail.Rows.Count; i++)
+                    {
+                        listParam.Clear();
+                        listParam.Add(new object[] { dgvDetail.Rows[i].Cells[3].Value.ToString(), "varchar" });
+                        listParam.Add(new object[] { User.User_login.Id_warehouse, "int32" });
+                        //AMBIL STOK LAMANYA DULU
+                        string qrystr = "SELECT QTY FROM BARANG_WAREHOUSE WHERE ID_BARANG = :0 AND ID_WAREHOUSE = :1";
+                        int qty = Convert.ToInt32(DB.executeScalar(qrystr, listParam));
+                        int qty_akhir = qty - Convert.ToInt32(dgvDetail.Rows[i].Cells[2].Value);
+                        listParam.Add(new object[] { qty_akhir, "int32" });
+                        querystr = "UPDATE BARANG_WAREHOUSE SET QTY = :2 WHERE ID = :0";
+                        DB.executeDataSet(dataset, querystr, listParam, "BARANG");
+                    }
+
+                    //UPDATE STOK BARANG WAREHOUSE PENERIMA
+                    for (int i = 0; i < dgvDetail.Rows.Count; i++)
+                    {
+                        listParam.Clear();
+                        listParam.Add(new object[] { dgvDetail.Rows[i].Cells[3].Value.ToString(), "varchar" });
+                        listParam.Add(new object[] { User.User_login.Id_warehouse, "int32" });
+                        //AMBIL STOK LAMANYA DULU
+                        string qrystr = "SELECT QTY FROM BARANG_WAREHOUSE WHERE ID_BARANG = :0 AND ID_WAREHOUSE = :1";
+                        int qty = Convert.ToInt32(DB.executeScalar(qrystr, listParam));
+                        int qty_akhir = qty + Convert.ToInt32(dgvDetail.Rows[i].Cells[2].Value);
+                        listParam.Add(new object[] { qty_akhir, "int32" });
+                        querystr = "UPDATE BARANG_WAREHOUSE SET QTY = :2 WHERE ID = :0";
+                        DB.executeDataSet(dataset, querystr, listParam, "BARANG");
+                    }
+
+                    //MASUKIN DATA KE HISTORY BARANG KELUAR MASUK -> WAREHOUSE PENGIRIM
+                    //dataset = new DataSet();
+                    //listParam.Clear();
+                    //listParam.Add(new object[] { kode, "varchar" });
+                    //listParam.Add(new object[] { asal, "int32" });
+                    //listParam.Add(new object[] { tujuan, "int32" });
+                    //listParam.Add(new object[] { lblTotal.Text, "int32" });
+                    //listParam.Add(new object[] { System.DateTime.Now.Date, "date" });
+                    //listParam.Add(new object[] { 0, "int32" });
+                    //querystr = "INSERT INTO H_PINDAH VALUES(:0, :1, :2, :3, :4, :5)";
+                    //DB.executeQuery(querystr, listParam);
+
+                    //MASUKIN DATA KE HISTORY BARANG KELUAR MASUK -> WAREHOUSE PENERIMA
+
                     MessageBox.Show("Berhasil Diterima!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvDetail.DataMember = null;
+                    dgvDetail.DataSource = null;
                 }
                 else
                 {
@@ -129,6 +188,7 @@ namespace Project_ACS.Manager
                     DB.executeDataSet(dataset, querystr, listParam, "WAREHOUSE");
                     MessageBox.Show("Berhasil Ditolak!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                loadReq();
             }
         }
     }

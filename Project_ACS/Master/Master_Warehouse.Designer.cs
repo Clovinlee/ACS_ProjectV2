@@ -61,7 +61,7 @@
             // 
             // pl
             // 
-            this.pl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.pl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
             this.pl.Controls.Add(this.btnInsert);
             this.pl.Controls.Add(this.btnDelete);
             this.pl.Controls.Add(this.btnUpdate);
@@ -89,7 +89,7 @@
             this.btnInsert.AutoSizeLeftIcon = true;
             this.btnInsert.AutoSizeRightIcon = true;
             this.btnInsert.BackColor = System.Drawing.Color.Transparent;
-            this.btnInsert.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.btnInsert.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
             this.btnInsert.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnInsert.BackgroundImage")));
             this.btnInsert.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnInsert.ButtonText = "";
@@ -121,7 +121,7 @@
             this.btnInsert.IdleBorderColor = System.Drawing.Color.White;
             this.btnInsert.IdleBorderRadius = 15;
             this.btnInsert.IdleBorderThickness = 1;
-            this.btnInsert.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.btnInsert.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
             this.btnInsert.IdleIconLeftImage = global::Project_ACS.res_icons.plus;
             this.btnInsert.IdleIconRightImage = null;
             this.btnInsert.IndicateFocus = false;
@@ -147,7 +147,7 @@
             this.btnInsert.OnIdleState.BorderRadius = 15;
             this.btnInsert.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnInsert.OnIdleState.BorderThickness = 1;
-            this.btnInsert.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.btnInsert.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
             this.btnInsert.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnInsert.OnIdleState.IconLeftImage = global::Project_ACS.res_icons.plus;
             this.btnInsert.OnIdleState.IconRightImage = null;
@@ -271,7 +271,7 @@
             this.btnUpdate.AutoSizeLeftIcon = true;
             this.btnUpdate.AutoSizeRightIcon = true;
             this.btnUpdate.BackColor = System.Drawing.Color.Transparent;
-            this.btnUpdate.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.btnUpdate.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
             this.btnUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.BackgroundImage")));
             this.btnUpdate.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnUpdate.ButtonText = "";
@@ -303,7 +303,7 @@
             this.btnUpdate.IdleBorderColor = System.Drawing.Color.White;
             this.btnUpdate.IdleBorderRadius = 15;
             this.btnUpdate.IdleBorderThickness = 1;
-            this.btnUpdate.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.btnUpdate.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
             this.btnUpdate.IdleIconLeftImage = global::Project_ACS.res_icons.pencil;
             this.btnUpdate.IdleIconRightImage = null;
             this.btnUpdate.IndicateFocus = false;
@@ -329,7 +329,7 @@
             this.btnUpdate.OnIdleState.BorderRadius = 15;
             this.btnUpdate.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnUpdate.OnIdleState.BorderThickness = 1;
-            this.btnUpdate.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.btnUpdate.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
             this.btnUpdate.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnUpdate.OnIdleState.IconLeftImage = global::Project_ACS.res_icons.pencil;
             this.btnUpdate.OnIdleState.IconRightImage = null;

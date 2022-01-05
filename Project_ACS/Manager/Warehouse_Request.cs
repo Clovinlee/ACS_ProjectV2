@@ -44,7 +44,7 @@ namespace Project_ACS.Manager
             settingDgv();
         }
 
-        void settingDgv()
+        public void settingDgv()
         {
             dgvBarang.DefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 102, 204);
             dgvBarang.DefaultCellStyle.SelectionForeColor = Color.White;
@@ -70,6 +70,7 @@ namespace Project_ACS.Manager
 
         public void loadBarang()
         {
+            dgvBarang.Columns.Clear();
             dataset = new DataSet();
             querystr = "SELECT DISTINCT B.KODE AS KODE, B.NAMA AS NAMA, BW.QTY AS QTY, B.ID FROM BARANG B, BARANG_WAREHOUSE BW, WAREHOUSE W WHERE B.ID = BW.ID_BARANG AND BW.ID_WAREHOUSE = :0";
             List<object[]> listParam = new List<object[]>();
@@ -206,8 +207,9 @@ namespace Project_ACS.Manager
                         DB.executeQuery(querystr, listParam);
                     }
 
-                    MessageBox.Show("Berhasil Insert!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Berhasil Request!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dgvCart.Rows.Clear();
+                    lblTotal.Text = "0";
                 }
             }
         }

@@ -29,43 +29,43 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Warehouse_Request));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Warehouse_Request));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.pl = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnInsert = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.nudQty = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmbWarehouse = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.dgvCart = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.KODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NAMA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvBarang = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.elipseDgvWarehouse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cmbWarehouse = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.nudQty = new System.Windows.Forms.NumericUpDown();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.btnInsert = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.KODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NAMA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBarang)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudQty)).BeginInit();
             this.SuspendLayout();
             // 
             // pl
             // 
-            this.pl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.pl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
             this.pl.Controls.Add(this.label2);
             this.pl.Controls.Add(this.btnInsert);
             this.pl.Controls.Add(this.lblTotal);
@@ -84,6 +84,195 @@
             this.pl.Name = "pl";
             this.pl.Size = new System.Drawing.Size(929, 458);
             this.pl.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(370, 88);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 25);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Dus";
+            // 
+            // btnInsert
+            // 
+            this.btnInsert.AllowAnimations = true;
+            this.btnInsert.AllowMouseEffects = true;
+            this.btnInsert.AllowToggling = false;
+            this.btnInsert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInsert.AnimationSpeed = 200;
+            this.btnInsert.AutoGenerateColors = false;
+            this.btnInsert.AutoRoundBorders = false;
+            this.btnInsert.AutoSizeLeftIcon = true;
+            this.btnInsert.AutoSizeRightIcon = true;
+            this.btnInsert.BackColor = System.Drawing.Color.Transparent;
+            this.btnInsert.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
+            this.btnInsert.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnInsert.BackgroundImage")));
+            this.btnInsert.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnInsert.ButtonText = "Konfirmasi";
+            this.btnInsert.ButtonTextMarginLeft = 0;
+            this.btnInsert.ColorContrastOnClick = 45;
+            this.btnInsert.ColorContrastOnHover = 45;
+            this.btnInsert.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnInsert.CustomizableEdges = borderEdges1;
+            this.btnInsert.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnInsert.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnInsert.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnInsert.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnInsert.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
+            this.btnInsert.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnInsert.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInsert.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnInsert.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnInsert.IconMarginLeft = 11;
+            this.btnInsert.IconPadding = 10;
+            this.btnInsert.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnInsert.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnInsert.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnInsert.IconSize = 25;
+            this.btnInsert.IdleBorderColor = System.Drawing.Color.White;
+            this.btnInsert.IdleBorderRadius = 15;
+            this.btnInsert.IdleBorderThickness = 1;
+            this.btnInsert.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
+            this.btnInsert.IdleIconLeftImage = global::Project_ACS.res_icons.plus;
+            this.btnInsert.IdleIconRightImage = null;
+            this.btnInsert.IndicateFocus = false;
+            this.btnInsert.Location = new System.Drawing.Point(664, 65);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnInsert.OnDisabledState.BorderRadius = 15;
+            this.btnInsert.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnInsert.OnDisabledState.BorderThickness = 1;
+            this.btnInsert.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnInsert.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnInsert.OnDisabledState.IconLeftImage = null;
+            this.btnInsert.OnDisabledState.IconRightImage = null;
+            this.btnInsert.onHoverState.BorderColor = System.Drawing.Color.White;
+            this.btnInsert.onHoverState.BorderRadius = 15;
+            this.btnInsert.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnInsert.onHoverState.BorderThickness = 1;
+            this.btnInsert.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(115)))));
+            this.btnInsert.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnInsert.onHoverState.IconLeftImage = null;
+            this.btnInsert.onHoverState.IconRightImage = null;
+            this.btnInsert.OnIdleState.BorderColor = System.Drawing.Color.White;
+            this.btnInsert.OnIdleState.BorderRadius = 15;
+            this.btnInsert.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnInsert.OnIdleState.BorderThickness = 1;
+            this.btnInsert.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
+            this.btnInsert.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnInsert.OnIdleState.IconLeftImage = global::Project_ACS.res_icons.plus;
+            this.btnInsert.OnIdleState.IconRightImage = null;
+            this.btnInsert.OnPressedState.BorderColor = System.Drawing.Color.White;
+            this.btnInsert.OnPressedState.BorderRadius = 15;
+            this.btnInsert.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnInsert.OnPressedState.BorderThickness = 1;
+            this.btnInsert.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(115)))));
+            this.btnInsert.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnInsert.OnPressedState.IconLeftImage = null;
+            this.btnInsert.OnPressedState.IconRightImage = null;
+            this.btnInsert.Size = new System.Drawing.Size(253, 41);
+            this.btnInsert.TabIndex = 28;
+            this.btnInsert.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnInsert.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnInsert.TextMarginLeft = 0;
+            this.btnInsert.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnInsert.UseDefaultRadiusAndThickness = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.White;
+            this.lblTotal.Location = new System.Drawing.Point(343, 88);
+            this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(23, 25);
+            this.lblTotal.TabIndex = 27;
+            this.lblTotal.Text = "0";
+            // 
+            // nudQty
+            // 
+            this.nudQty.Location = new System.Drawing.Point(458, 203);
+            this.nudQty.Name = "nudQty";
+            this.nudQty.Size = new System.Drawing.Size(38, 20);
+            this.nudQty.TabIndex = 25;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(457, 170);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 21);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "QTY";
+            // 
+            // cmbWarehouse
+            // 
+            this.cmbWarehouse.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.cmbWarehouse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbWarehouse.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbWarehouse.FormattingEnabled = true;
+            this.cmbWarehouse.Location = new System.Drawing.Point(18, 88);
+            this.cmbWarehouse.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbWarehouse.Name = "cmbWarehouse";
+            this.cmbWarehouse.Size = new System.Drawing.Size(151, 23);
+            this.cmbWarehouse.TabIndex = 23;
+            this.cmbWarehouse.SelectedIndexChanged += new System.EventHandler(this.cmbWarehouse_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(344, 65);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(199, 21);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Total Barang akan Dipindah";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(499, 147);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(158, 21);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Daftar Pindah Barang";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(14, 147);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(106, 21);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Daftar Barang";
             // 
             // dgvCart
             // 
@@ -161,6 +350,31 @@
             this.dgvCart.TabIndex = 19;
             this.dgvCart.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvCart.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCart_CellDoubleClick);
+            // 
+            // KODE
+            // 
+            this.KODE.HeaderText = "KODE";
+            this.KODE.Name = "KODE";
+            this.KODE.ReadOnly = true;
+            // 
+            // NAMA
+            // 
+            this.NAMA.HeaderText = "NAMA";
+            this.NAMA.Name = "NAMA";
+            this.NAMA.ReadOnly = true;
+            // 
+            // QTY
+            // 
+            this.QTY.HeaderText = "QTY";
+            this.QTY.Name = "QTY";
+            this.QTY.ReadOnly = true;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
             // 
             // dgvBarang
             // 
@@ -270,220 +484,6 @@
             this.bunifuElipse1.ElipseRadius = 10;
             this.bunifuElipse1.TargetControl = this.dgvCart;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(14, 147);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 21);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Daftar Barang";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(499, 147);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(158, 21);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Daftar Pindah Barang";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(344, 65);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(199, 21);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Total Barang akan Dipindah";
-            // 
-            // cmbWarehouse
-            // 
-            this.cmbWarehouse.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.cmbWarehouse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbWarehouse.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbWarehouse.FormattingEnabled = true;
-            this.cmbWarehouse.Location = new System.Drawing.Point(18, 88);
-            this.cmbWarehouse.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbWarehouse.Name = "cmbWarehouse";
-            this.cmbWarehouse.Size = new System.Drawing.Size(151, 23);
-            this.cmbWarehouse.TabIndex = 23;
-            this.cmbWarehouse.SelectedIndexChanged += new System.EventHandler(this.cmbWarehouse_SelectedIndexChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(457, 170);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 21);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "QTY";
-            // 
-            // nudQty
-            // 
-            this.nudQty.Location = new System.Drawing.Point(458, 203);
-            this.nudQty.Name = "nudQty";
-            this.nudQty.Size = new System.Drawing.Size(38, 20);
-            this.nudQty.TabIndex = 25;
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.ForeColor = System.Drawing.Color.White;
-            this.lblTotal.Location = new System.Drawing.Point(343, 88);
-            this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(23, 25);
-            this.lblTotal.TabIndex = 27;
-            this.lblTotal.Text = "0";
-            // 
-            // btnInsert
-            // 
-            this.btnInsert.AllowAnimations = true;
-            this.btnInsert.AllowMouseEffects = true;
-            this.btnInsert.AllowToggling = false;
-            this.btnInsert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnInsert.AnimationSpeed = 200;
-            this.btnInsert.AutoGenerateColors = false;
-            this.btnInsert.AutoRoundBorders = false;
-            this.btnInsert.AutoSizeLeftIcon = true;
-            this.btnInsert.AutoSizeRightIcon = true;
-            this.btnInsert.BackColor = System.Drawing.Color.Transparent;
-            this.btnInsert.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
-            this.btnInsert.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnInsert.BackgroundImage")));
-            this.btnInsert.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnInsert.ButtonText = "Konfirmasi";
-            this.btnInsert.ButtonTextMarginLeft = 0;
-            this.btnInsert.ColorContrastOnClick = 45;
-            this.btnInsert.ColorContrastOnHover = 45;
-            this.btnInsert.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnInsert.CustomizableEdges = borderEdges1;
-            this.btnInsert.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnInsert.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnInsert.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnInsert.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnInsert.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
-            this.btnInsert.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnInsert.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInsert.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnInsert.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btnInsert.IconMarginLeft = 11;
-            this.btnInsert.IconPadding = 10;
-            this.btnInsert.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnInsert.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnInsert.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnInsert.IconSize = 25;
-            this.btnInsert.IdleBorderColor = System.Drawing.Color.White;
-            this.btnInsert.IdleBorderRadius = 15;
-            this.btnInsert.IdleBorderThickness = 1;
-            this.btnInsert.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
-            this.btnInsert.IdleIconLeftImage = global::Project_ACS.res_icons.plus;
-            this.btnInsert.IdleIconRightImage = null;
-            this.btnInsert.IndicateFocus = false;
-            this.btnInsert.Location = new System.Drawing.Point(664, 65);
-            this.btnInsert.Name = "btnInsert";
-            this.btnInsert.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnInsert.OnDisabledState.BorderRadius = 15;
-            this.btnInsert.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnInsert.OnDisabledState.BorderThickness = 1;
-            this.btnInsert.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnInsert.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnInsert.OnDisabledState.IconLeftImage = null;
-            this.btnInsert.OnDisabledState.IconRightImage = null;
-            this.btnInsert.onHoverState.BorderColor = System.Drawing.Color.White;
-            this.btnInsert.onHoverState.BorderRadius = 15;
-            this.btnInsert.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnInsert.onHoverState.BorderThickness = 1;
-            this.btnInsert.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(115)))));
-            this.btnInsert.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnInsert.onHoverState.IconLeftImage = null;
-            this.btnInsert.onHoverState.IconRightImage = null;
-            this.btnInsert.OnIdleState.BorderColor = System.Drawing.Color.White;
-            this.btnInsert.OnIdleState.BorderRadius = 15;
-            this.btnInsert.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnInsert.OnIdleState.BorderThickness = 1;
-            this.btnInsert.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
-            this.btnInsert.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnInsert.OnIdleState.IconLeftImage = global::Project_ACS.res_icons.plus;
-            this.btnInsert.OnIdleState.IconRightImage = null;
-            this.btnInsert.OnPressedState.BorderColor = System.Drawing.Color.White;
-            this.btnInsert.OnPressedState.BorderRadius = 15;
-            this.btnInsert.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnInsert.OnPressedState.BorderThickness = 1;
-            this.btnInsert.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(115)))));
-            this.btnInsert.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnInsert.OnPressedState.IconLeftImage = null;
-            this.btnInsert.OnPressedState.IconRightImage = null;
-            this.btnInsert.Size = new System.Drawing.Size(253, 41);
-            this.btnInsert.TabIndex = 28;
-            this.btnInsert.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnInsert.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnInsert.TextMarginLeft = 0;
-            this.btnInsert.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btnInsert.UseDefaultRadiusAndThickness = true;
-            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(370, 88);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 25);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "Dus";
-            // 
-            // KODE
-            // 
-            this.KODE.HeaderText = "KODE";
-            this.KODE.Name = "KODE";
-            this.KODE.ReadOnly = true;
-            // 
-            // NAMA
-            // 
-            this.NAMA.HeaderText = "NAMA";
-            this.NAMA.Name = "NAMA";
-            this.NAMA.ReadOnly = true;
-            // 
-            // QTY
-            // 
-            this.QTY.HeaderText = "QTY";
-            this.QTY.Name = "QTY";
-            this.QTY.ReadOnly = true;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
             // Warehouse_Request
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -495,9 +495,9 @@
             this.Text = "Warehouse_Request";
             this.pl.ResumeLayout(false);
             this.pl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBarang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudQty)).EndInit();
             this.ResumeLayout(false);
 
         }
