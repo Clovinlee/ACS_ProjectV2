@@ -16,6 +16,18 @@ namespace Project_ACS.Manager
         {
             InitializeComponent();
             refreshData();
+            DataSet dtemp1 = new DataSet();
+            List<object[]> listParam = new List<object[]>();
+            listParam.Add(new object[] { User.User_login.Id_warehouse, "int32" });
+            DB.executeDataSet(dtemp1, "SELECT NAMA FROM WAREHOUSE WHERE ID = :0 ", listParam, "dtmp");
+            try
+            {
+                labelNamaWarehouse.Text = dtemp1.Tables["dtmp"].Rows[0].ItemArray[0].ToString();
+            }
+            catch (Exception)
+            {
+                labelNamaWarehouse.Text = "Warehouse " + User.User_login.Id_warehouse;
+            }
         }
 
         public void refreshData()

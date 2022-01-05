@@ -24,16 +24,58 @@ namespace Project_ACS.Manager
         }
 
         DataSet ds_keluarmasuk;
+        DataSet ds_adjust;
+        DataSet ds_delivery;
 
         public void refreshData()
         {
+            ds_adjust = new DataSet();
             ds_keluarmasuk = new DataSet();
-            DB.executeDataSet(ds_keluarmasuk, "SELECT NVL(tb1.bulan,tb2.bulan) AS bulan, NVL(tb1.totalqty,0) AS keluar, NVL(tb2.totalqty,0) AS masuk FROM(select SUM(QTY) AS totalqty, TO_CHAR(TANGGAL, 'MM') AS bulan from HISTORY_BARANG_KELUAR_MASUK WHERE TO_CHAR(TANGGAL, 'YYYY') = TO_CHAR(SYSDATE, 'YYYY') AND status = 0 GROUP BY TO_CHAR(TANGGAL, 'MM') ORDER BY 2) tb1 FULL OUTER JOIN (select SUM(QTY) AS totalqty, TO_CHAR(TANGGAL, 'MM') AS bulan from HISTORY_BARANG_KELUAR_MASUK WHERE TO_CHAR(TANGGAL, 'YYYY') = TO_CHAR(SYSDATE, 'YYYY') AND status = 1 GROUP BY TO_CHAR(TANGGAL, 'MM') ORDER BY 2) tb2 ON tb1.bulan = tb2.bulan ORDER BY 1 ASC", null, "data");
+            ds_delivery = new DataSet();
+            
             loadDgvKeluarMasuk();
+            loadDgvAdjust();
+            loadLateDelivery();
+            loadUpcomingDelivery();
+            loadWarehouseRequest();
+        }
+
+        public void loadWarehouseRequest()
+        {
+            int jml = Convert.ToInt32(DB.executeScalar($"select count(*) from H_PINDAH where TUJUAN = {User.User_login.Id_warehouse} AND status = 0", null));
+            lbl_warehouserequest.Text = jml.ToString();
+        }
+
+        public void loadUpcomingDelivery() 
+        {
+            DataRow dr = ds_delivery.Tables[0].Rows[0];
+            lbl_upcomingname.Text = dr[1].ToString();
+            DateTime arrival = Convert.ToDateTime(dr[2].ToString());
+            lbl_upcomingarrival.Text = arrival.ToString("dd MMMM yyyy");
+        }
+
+        public void loadLateDelivery()
+        {
+            DB.executeDataSet(ds_delivery, $"select h.kode, bp.nama, h.eta, h.status, h.qty, h.id_warehouse, h.grand_total from H_ORDER_SUPPLIER h, BUSINESS_PARTNER bp where h.id_partner = bp.id order by ETA desc",null,"delivery");
+
+            int jml = Convert.ToInt32(DB.executeScalar($"SELECT COUNT(*) FROM H_ORDER_SUPPLIER WHERE ETA < TO_DATE('{System.DateTime.Now.Date.ToShortDateString()}', 'DD/MM/YYYY')",null));
+            lbl_latedelivery.Text = jml.ToString();
+        }
+
+        public void loadDgvAdjust()
+        {
+            DB.executeDataSet(ds_adjust, $"select a.id, a.qty - a.real_qty AS perbedaan, a.qty, a.real_qty, b.kode, a.keterangan, a.id_barang, a.tanggal from adjustment a, barang b where a.id_barang = b.id and a.id_warehouse = {User.User_login.Id_warehouse} and a.tanggal > TO_DATE('{System.DateTime.Now.AddDays(-7).ToShortDateString()}','DD/MM/YYYY')order by a.id desc", null, "adj");
+            dgv_adjustment.DataSource = ds_adjust.Tables[0];
+            dgv_adjustment.Columns[2].Visible = false;
+            dgv_adjustment.Columns[3].Visible = false;
+            dgv_adjustment.Columns[6].Visible = false;
+
         }
 
         public void loadDgvKeluarMasuk()
         {
+            DB.executeDataSet(ds_keluarmasuk, $"SELECT NVL(tb1.bulan,tb2.bulan) AS bulan, NVL(tb1.totalqty,0) AS keluar, NVL(tb2.totalqty,0) AS masuk FROM(select SUM(QTY) AS totalqty, TO_CHAR(TANGGAL, 'MM') AS bulan from HISTORY_BARANG_KELUAR_MASUK WHERE ID_WAREHOUSE = {User.User_login.Id_warehouse} AND TO_CHAR(TANGGAL, 'YYYY') = TO_CHAR(SYSDATE, 'YYYY') AND status = 0 GROUP BY TO_CHAR(TANGGAL, 'MM') ORDER BY 2) tb1 FULL OUTER JOIN (select SUM(QTY) AS totalqty, TO_CHAR(TANGGAL, 'MM') AS bulan from HISTORY_BARANG_KELUAR_MASUK WHERE ID_WAREHOUSE = {User.User_login.Id_warehouse} AND TO_CHAR(TANGGAL, 'YYYY') = TO_CHAR(SYSDATE, 'YYYY') AND status = 1 GROUP BY TO_CHAR(TANGGAL, 'MM') ORDER BY 2) tb2 ON tb1.bulan = tb2.bulan ORDER BY 1 ASC", null, "data");
+
             List<string> listBulan = new List<string>();
             listBulan.Add("Januari");
             listBulan.Add("Februari");
@@ -56,7 +98,7 @@ namespace Project_ACS.Manager
                 {
                     if(Convert.ToInt32(dr[0].ToString()) == i + 1)
                     {
-                        listKeluarMasuk.Add(new int[] { Convert.ToInt32(dr[1]), Convert.ToInt32(dr[2]) });
+                        listKeluarMasuk.Add(new int[] { Convert.ToInt32(dr[1].ToString()), Convert.ToInt32(dr[2].ToString()) });
                         valid = true;
                     }
                 }
@@ -64,7 +106,7 @@ namespace Project_ACS.Manager
                 {
                     listKeluarMasuk.Add(new int[] { 0,0 });
                 }
-                dgv_keluarmasuk.Rows.Add(new object[] { listBulan[i], listKeluarMasuk });
+                dgv_keluarmasuk.Rows.Add(new object[] { listBulan[i], listKeluarMasuk[i][0], listKeluarMasuk[i][1] });
             }
         }
 

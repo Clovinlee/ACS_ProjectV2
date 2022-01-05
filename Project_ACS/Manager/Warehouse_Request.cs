@@ -68,7 +68,7 @@ namespace Project_ACS.Manager
             column4.Width = 100;
         }
 
-        void loadBarang()
+        public void loadBarang()
         {
             dataset = new DataSet();
             querystr = "SELECT DISTINCT B.KODE AS KODE, B.NAMA AS NAMA, BW.QTY AS QTY, B.ID FROM BARANG B, BARANG_WAREHOUSE BW, WAREHOUSE W WHERE B.ID = BW.ID_BARANG AND BW.ID_WAREHOUSE = :0";
@@ -83,6 +83,9 @@ namespace Project_ACS.Manager
             btn.HeaderText = "TAMBAH";
             btn.Text = "Tambah";
             btn.Name = "btn";
+            //btn.FlatStyle = FlatStyle.Popup;
+            //btn.DefaultCellStyle.BackColor = Color.FromArgb(0, 255, 153);
+            //btn.DefaultCellStyle.ForeColor = Color.FromArgb(0, 0, 0);
             btn.UseColumnTextForButtonValue = true;
 
             //dataset = new DataSet();
