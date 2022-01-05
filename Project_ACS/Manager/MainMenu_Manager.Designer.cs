@@ -870,7 +870,7 @@
             this.btn_delivery_history.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(63)))));
             this.btn_delivery_history.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_delivery_history.BackgroundImage")));
             this.btn_delivery_history.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_delivery_history.ButtonText = "History";
+            this.btn_delivery_history.ButtonText = "Delivery Order";
             this.btn_delivery_history.ButtonTextMarginLeft = 0;
             this.btn_delivery_history.ColorContrastOnClick = 45;
             this.btn_delivery_history.ColorContrastOnHover = 45;
