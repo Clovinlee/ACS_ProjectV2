@@ -83,6 +83,9 @@ namespace Project_ACS.Manager
             btn.HeaderText = "TAMBAH";
             btn.Text = "Tambah";
             btn.Name = "btn";
+            //btn.FlatStyle = FlatStyle.Popup;
+            //btn.DefaultCellStyle.BackColor = Color.FromArgb(0, 255, 153);
+            //btn.DefaultCellStyle.ForeColor = Color.FromArgb(0, 0, 0);
             btn.UseColumnTextForButtonValue = true;
 
             //dataset = new DataSet();
