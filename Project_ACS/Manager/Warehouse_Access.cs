@@ -31,7 +31,7 @@ namespace Project_ACS.Manager
         public void loadReq()
         {
             dataset = new DataSet();
-            querystr = "SELECT W1.NAMA AS ASAL, H.TOTAL_QTY || ' Dus' AS TOTAL, H.TANGGAL AS TANGGAL, H.KODE AS KODE FROM H_PINDAH H, WAREHOUSE W1, WAREHOUSE W2 WHERE H.ASAL = W1.ID AND W2.ID = "+ User.User_login.Id_warehouse + " AND H.STATUS = 0 AND H.ASAL != " + User.User_login.Id_warehouse + "";
+            querystr = "SELECT W1.NAMA AS ASAL, H.TOTAL_QTY || ' Dus' AS TOTAL, H.TANGGAL AS TANGGAL, H.KODE, H.ASAL AS KODE FROM H_PINDAH H, WAREHOUSE W1, WAREHOUSE W2 WHERE H.ASAL = W1.ID AND W2.ID = "+ User.User_login.Id_warehouse + " AND H.STATUS = 0 AND H.ASAL != " + User.User_login.Id_warehouse + "";
             //List<object[]> listParam = new List<object[]>();
             //listParam.Add(new object[] { User.User_login.Id_warehouse, "int32" });
             DB.executeDataSet(dataset, querystr, null, "WAREHOUSE");
@@ -52,7 +52,7 @@ namespace Project_ACS.Manager
             //column3.Width = 55;
             //DataGridViewColumn column5 = dgvBarang.Columns[3];
             //column5.Width = 140;
-            dgvWarehouse.Columns[3].Visible = false;
+            //dgvWarehouse.Columns[3].Visible = false;
 
             //dgvCart.DefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 102, 204);
             //dgvCart.DefaultCellStyle.SelectionForeColor = Color.White;
@@ -80,7 +80,7 @@ namespace Project_ACS.Manager
             dataset = new DataSet();
             idx = e.RowIndex;
             string kode = dgvWarehouse.Rows[idx].Cells[3].Value.ToString();
-            querystr = "SELECT B.KODE AS KODE, B.NAMA AS NAMA, D.QTY || ' Dus' AS QTY, B.ID FROM D_PINDAH D, BARANG B WHERE D.ID_BARANG = B.ID AND D.KODE_PINDAH = :0";
+            querystr = "SELECT B.KODE AS KODE, B.NAMA AS NAMA, D.QTY AS QTY, B.ID FROM D_PINDAH D, BARANG B WHERE D.ID_BARANG = B.ID AND D.KODE_PINDAH = :0";
             List<object[]> listParam = new List<object[]>();
             listParam.Add(new object[] { kode, "varchar" });
             DB.executeDataSet(dataset, querystr, listParam, "BARANG");
@@ -90,7 +90,7 @@ namespace Project_ACS.Manager
             dgvDetail.DefaultCellStyle.SelectionForeColor = Color.White;
             dgvDetail.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(44, 135, 224);
             dgvDetail.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(44, 135, 224);
-            dgvDetail.Columns[3].Visible = false;
+            //dgvDetail.Columns[3].Visible = false;
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
@@ -135,30 +135,32 @@ namespace Project_ACS.Manager
                     for (int i = 0; i < dgvDetail.Rows.Count; i++)
                     {
                         listParam.Clear();
-                        listParam.Add(new object[] { dgvDetail.Rows[i].Cells[3].Value.ToString(), "varchar" });
-                        listParam.Add(new object[] { User.User_login.Id_warehouse, "int32" });
+                        listParam.Add(new object[] { dgvDetail.Rows[i].Cells[3].Value.ToString(), "int32" });
+                        //listParam.Add(new object[] { User.User_login.Id_warehouse, "int32" });
+                        listParam.Add(new object[] { dgvWarehouse.Rows[idx].Cells[4].Value.ToString(), "int32" });
                         //AMBIL STOK LAMANYA DULU
-                        string qrystr = "SELECT QTY FROM BARANG_WAREHOUSE WHERE ID_BARANG = :0 AND ID_WAREHOUSE = :1";
-                        int qty = Convert.ToInt32(DB.executeScalar(qrystr, listParam));
-                        int qty_akhir = qty - Convert.ToInt32(dgvDetail.Rows[i].Cells[2].Value);
+                        querystr = "SELECT QTY FROM BARANG_WAREHOUSE WHERE ID_BARANG = :0 AND ID_WAREHOUSE = :1";
+                        int qty = Convert.ToInt32(DB.executeScalar(querystr, listParam));
+                        int qty_akhir = qty - Convert.ToInt32(dgvDetail.Rows[i].Cells[2].Value.ToString());
                         listParam.Add(new object[] { qty_akhir, "int32" });
-                        querystr = "UPDATE BARANG_WAREHOUSE SET QTY = :2 WHERE ID = :0";
-                        DB.executeDataSet(dataset, querystr, listParam, "BARANG");
+                        querystr = "UPDATE BARANG_WAREHOUSE SET QTY = :2 WHERE ID_BARANG = :0 AND ID_WAREHOUSE = :1";
+                        DB.executeDataSet(dataset, querystr, listParam, "BARANG_1");
                     }
 
                     //UPDATE STOK BARANG WAREHOUSE PENERIMA
                     for (int i = 0; i < dgvDetail.Rows.Count; i++)
                     {
                         listParam.Clear();
-                        listParam.Add(new object[] { dgvDetail.Rows[i].Cells[3].Value.ToString(), "varchar" });
+                        listParam.Add(new object[] { dgvDetail.Rows[i].Cells[3].Value.ToString(), "int32" });
                         listParam.Add(new object[] { User.User_login.Id_warehouse, "int32" });
+                        //listParam.Add(new object[] { dgvWarehouse.Rows[idx].Cells[4].Value.ToString(), "int32" });
                         //AMBIL STOK LAMANYA DULU
-                        string qrystr = "SELECT QTY FROM BARANG_WAREHOUSE WHERE ID_BARANG = :0 AND ID_WAREHOUSE = :1";
-                        int qty = Convert.ToInt32(DB.executeScalar(qrystr, listParam));
-                        int qty_akhir = qty + Convert.ToInt32(dgvDetail.Rows[i].Cells[2].Value);
+                        querystr = "SELECT QTY FROM BARANG_WAREHOUSE WHERE ID_BARANG = :0 AND ID_WAREHOUSE = :1";
+                        int qty = Convert.ToInt32(DB.executeScalar(querystr, listParam));
+                        int qty_akhir = qty + Convert.ToInt32(dgvDetail.Rows[i].Cells[2].Value.ToString());
                         listParam.Add(new object[] { qty_akhir, "int32" });
-                        querystr = "UPDATE BARANG_WAREHOUSE SET QTY = :2 WHERE ID = :0";
-                        DB.executeDataSet(dataset, querystr, listParam, "BARANG");
+                        querystr = "UPDATE BARANG_WAREHOUSE SET QTY = :2 WHERE ID_BARANG = :0 AND ID_WAREHOUSE = :1";
+                        DB.executeDataSet(dataset, querystr, listParam, "BARANG_2");
                     }
 
                     //MASUKIN DATA KE HISTORY BARANG KELUAR MASUK -> WAREHOUSE PENGIRIM
@@ -177,7 +179,7 @@ namespace Project_ACS.Manager
 
                     MessageBox.Show("Berhasil Diterima!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dgvDetail.DataMember = null;
-                    dgvDetail.DataSource = null;
+                    dgvDetail.DataSource = null;  
                 }
                 else
                 {
