@@ -29,14 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory_Barang));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.pl = new System.Windows.Forms.Panel();
-            this.cbb_rak = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.dgv_barang = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.labeljumlah = new System.Windows.Forms.Label();
             this.btn_refresh = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -56,8 +54,6 @@
             // pl
             // 
             this.pl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
-            this.pl.Controls.Add(this.cbb_rak);
-            this.pl.Controls.Add(this.label5);
             this.pl.Controls.Add(this.dgv_barang);
             this.pl.Controls.Add(this.labeljumlah);
             this.pl.Controls.Add(this.btn_refresh);
@@ -75,38 +71,14 @@
             this.pl.Size = new System.Drawing.Size(861, 571);
             this.pl.TabIndex = 0;
             // 
-            // cbb_rak
-            // 
-            this.cbb_rak.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.cbb_rak.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbb_rak.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbb_rak.FormattingEnabled = true;
-            this.cbb_rak.Location = new System.Drawing.Point(168, 116);
-            this.cbb_rak.Margin = new System.Windows.Forms.Padding(2);
-            this.cbb_rak.Name = "cbb_rak";
-            this.cbb_rak.Size = new System.Drawing.Size(126, 20);
-            this.cbb_rak.TabIndex = 39;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label5.Location = new System.Drawing.Point(165, 89);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(28, 15);
-            this.label5.TabIndex = 38;
-            this.label5.Text = "Rak";
-            // 
             // dgv_barang
             // 
             this.dgv_barang.AllowCustomTheming = false;
             this.dgv_barang.AllowUserToAddRows = false;
             this.dgv_barang.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgv_barang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dgv_barang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_barang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -114,14 +86,14 @@
             this.dgv_barang.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_barang.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_barang.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_barang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_barang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_barang.ColumnHeadersHeight = 40;
             this.dgv_barang.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dgv_barang.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -141,14 +113,14 @@
             this.dgv_barang.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgv_barang.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.dgv_barang.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_barang.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_barang.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_barang.EnableHeadersVisualStyles = false;
             this.dgv_barang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgv_barang.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -166,6 +138,7 @@
             this.dgv_barang.Size = new System.Drawing.Size(821, 330);
             this.dgv_barang.TabIndex = 37;
             this.dgv_barang.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.dgv_barang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_barang_CellClick);
             // 
             // labeljumlah
             // 
@@ -173,7 +146,7 @@
             this.labeljumlah.AutoSize = true;
             this.labeljumlah.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labeljumlah.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.labeljumlah.Location = new System.Drawing.Point(694, 497);
+            this.labeljumlah.Location = new System.Drawing.Point(678, 499);
             this.labeljumlah.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labeljumlah.Name = "labeljumlah";
             this.labeljumlah.Size = new System.Drawing.Size(144, 15);
@@ -199,11 +172,11 @@
             this.btn_refresh.ColorContrastOnClick = 45;
             this.btn_refresh.ColorContrastOnHover = 45;
             this.btn_refresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btn_refresh.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btn_refresh.CustomizableEdges = borderEdges2;
             this.btn_refresh.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_refresh.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_refresh.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -280,6 +253,7 @@
             this.textbox_searchkode.Name = "textbox_searchkode";
             this.textbox_searchkode.Size = new System.Drawing.Size(138, 21);
             this.textbox_searchkode.TabIndex = 34;
+            this.textbox_searchkode.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textbox_searchkode_KeyUp);
             // 
             // cbb_merk
             // 
@@ -287,18 +261,19 @@
             this.cbb_merk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb_merk.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbb_merk.FormattingEnabled = true;
-            this.cbb_merk.Location = new System.Drawing.Point(456, 116);
+            this.cbb_merk.Location = new System.Drawing.Point(345, 117);
             this.cbb_merk.Margin = new System.Windows.Forms.Padding(2);
             this.cbb_merk.Name = "cbb_merk";
             this.cbb_merk.Size = new System.Drawing.Size(126, 20);
             this.cbb_merk.TabIndex = 33;
+            this.cbb_merk.SelectedIndexChanged += new System.EventHandler(this.cbb_merk_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label4.Location = new System.Drawing.Point(453, 89);
+            this.label4.Location = new System.Drawing.Point(342, 90);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 15);
@@ -311,18 +286,19 @@
             this.cbb_kategori.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb_kategori.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbb_kategori.FormattingEnabled = true;
-            this.cbb_kategori.Location = new System.Drawing.Point(306, 116);
+            this.cbb_kategori.Location = new System.Drawing.Point(195, 117);
             this.cbb_kategori.Margin = new System.Windows.Forms.Padding(2);
             this.cbb_kategori.Name = "cbb_kategori";
             this.cbb_kategori.Size = new System.Drawing.Size(135, 20);
             this.cbb_kategori.TabIndex = 31;
+            this.cbb_kategori.SelectedIndexChanged += new System.EventHandler(this.cbb_kategori_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label3.Location = new System.Drawing.Point(303, 89);
+            this.label3.Location = new System.Drawing.Point(192, 90);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 15);
@@ -400,7 +376,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.ComboBox cbb_rak;
-        private System.Windows.Forms.Label label5;
     }
 }
