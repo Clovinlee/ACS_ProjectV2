@@ -15,10 +15,13 @@ namespace Project_ACS.Manager
         public Inventory_Opname()
         {
             InitializeComponent();
-            loadDgv();
             ds_adjustment = new DataSet();
+            ds_barang = new DataSet();
+            ds_barangwarehouse = new DataSet();
+            DB.executeDataSet(ds_adjustment, "select a.id, a.qty, a.real_qty, b.kode, a.keterangan from adjustment a, barang b where a.id_barang = b.id order by a.id desc", null, "adj");
             DB.executeDataSet(ds_barang, "select * from barang", null, "brg");
             DB.executeDataSet(ds_barangwarehouse, "select * from barang_warehouse", null, "brgwh");
+            loadDgv();
 
         }
 
@@ -42,7 +45,7 @@ namespace Project_ACS.Manager
         public void loadDgv()
         {
             ds_adjustment.Tables[0].Rows.Clear();
-            DB.executeDataSet(ds_adjustment, "select * from business_partner order by id DESC", null, "bp");
+            DB.executeDataSet(ds_adjustment, "select a.id, a.qty, a.real_qty, b.kode, a.keterangan from adjustment a, barang b where a.id_barang = b.id order by a.id desc", null, "adj");
             dgv_adjust.AllowUserToResizeRows = false;
             //ds_bp = new DataSet();
             //DB.executeDataSet(ds_bp, "select id,kode,nama,telepon,alamat from business_partner ORDER BY id DESC", null, "bp");
@@ -62,7 +65,7 @@ namespace Project_ACS.Manager
             {
                 id = dr[0][0].ToString();
             }
-            ds_adjustment.Tables["bp"].DefaultView.RowFilter = string.Format("ID LIKE '%{0}%' and ID_BARANG LIKE '%{1}%' and telepon LIKE '%{2}%'", tb_id.Text, id, tb_keterangan.Text);
+            //ds_adjustment.Tables[0].DefaultView.RowFilter = string.Format("CONVERT(ID, System.String) LIKE '%{0}%' and CONVERT(ID_BARANG, System.String) LIKE '%{1}%' and keterangan LIKE '%{2}%'", tb_id.Text, id, tb_keterangan.Text);
             dgv_adjust.ClearSelection();
             loadDgvColor();
         }
@@ -83,13 +86,20 @@ namespace Project_ACS.Manager
 
         private void btn_searchdate_Click(object sender, EventArgs e)
         {
-            ds_adjustment.Tables["bp"].DefaultView.RowFilter = string.Format("TANGGAL = {0}", dt_picker.Value.ToString());
+            //BUG
+            ds_adjustment.Tables[0].DefaultView.RowFilter = string.Format("CONVERT(TANGGAL,System.DateTime) = CONVERT({0}, System.DateTime)", dt_picker.Value.Date);
             dgv_adjust.ClearSelection();
         }
 
         private void btn_create_Click(object sender, EventArgs e)
         {
             Detail_Stock_Adjustment frm_adj = new Detail_Stock_Adjustment(ds_barang,ds_adjustment,ds_barangwarehouse);
+            frm_adj.Show();
+        }
+
+        private void tb_id_KeyUp(object sender, KeyEventArgs e)
+        {
+            search();
         }
     }
 }

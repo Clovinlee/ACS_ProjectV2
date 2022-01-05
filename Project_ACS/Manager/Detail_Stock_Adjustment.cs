@@ -40,20 +40,38 @@ namespace Project_ACS.Manager
             if(dr.Length == 1)
             {
                 string id = dr[0][0].ToString();
-                DataRow[] dr2 = ds_barangwarehouse.Tables[0].Select($"id = {id}");
+                DataRow[] dr2 = ds_barangwarehouse.Tables[0].Select($"id_barang = {id}");
                 if(dr2.Length == 1)
                 {
+                    gb_adjust.Enabled = true;
+                    gb_adjust.Text = dr[0][2].ToString();
+                    num_oldqty.Value = Convert.ToDecimal(dr2[0][2].ToString());
 
                 }
                 else
                 {
-
+                    MessageBox.Show("Barang tidak ter registrasi di warehouse!");
                 }
             }
             else
             {
                 MessageBox.Show("Barang tidak ditemukan!");
             }
+        }
+
+        private void btn_reset_Click(object sender, EventArgs e)
+        {
+            gb_adjust.Enabled = false;
+            num_newqty.Value = 1;
+            num_oldqty.Value = 1;
+            tb_keterangan.Text = "";
+            tb_kode.Text = "";
+            gb_adjust.Text = "Stock Adjustment";
+        }
+
+        private void btn_confirm_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
