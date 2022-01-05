@@ -39,13 +39,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_reset = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.gb_adjust = new System.Windows.Forms.GroupBox();
+            this.btn_confirm = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.label5 = new System.Windows.Forms.Label();
             this.tb_keterangan = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.num_newqty = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.num_oldqty = new System.Windows.Forms.NumericUpDown();
-            this.btn_confirm = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panel1.SuspendLayout();
             this.gb_adjust.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_newqty)).BeginInit();
@@ -294,6 +294,7 @@
             this.gb_adjust.Controls.Add(this.num_newqty);
             this.gb_adjust.Controls.Add(this.label2);
             this.gb_adjust.Controls.Add(this.num_oldqty);
+            this.gb_adjust.Enabled = false;
             this.gb_adjust.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
             this.gb_adjust.Location = new System.Drawing.Point(17, 159);
             this.gb_adjust.Name = "gb_adjust";
@@ -301,95 +302,6 @@
             this.gb_adjust.TabIndex = 29;
             this.gb_adjust.TabStop = false;
             this.gb_adjust.Text = "Stock Adjustment";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label5.Location = new System.Drawing.Point(5, 77);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 15);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "Keterangan";
-            // 
-            // tb_keterangan
-            // 
-            this.tb_keterangan.Location = new System.Drawing.Point(6, 95);
-            this.tb_keterangan.Multiline = true;
-            this.tb_keterangan.Name = "tb_keterangan";
-            this.tb_keterangan.Size = new System.Drawing.Size(310, 92);
-            this.tb_keterangan.TabIndex = 33;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label4.Location = new System.Drawing.Point(195, 22);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 15);
-            this.label4.TabIndex = 32;
-            this.label4.Text = "New Quantity";
-            // 
-            // num_newqty
-            // 
-            this.num_newqty.Location = new System.Drawing.Point(196, 40);
-            this.num_newqty.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.num_newqty.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.num_newqty.Name = "num_newqty";
-            this.num_newqty.Size = new System.Drawing.Size(120, 20);
-            this.num_newqty.TabIndex = 31;
-            this.num_newqty.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
-            this.label2.Location = new System.Drawing.Point(5, 22);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 15);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Old Quantity";
-            // 
-            // num_oldqty
-            // 
-            this.num_oldqty.Location = new System.Drawing.Point(6, 40);
-            this.num_oldqty.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.num_oldqty.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.num_oldqty.Name = "num_oldqty";
-            this.num_oldqty.ReadOnly = true;
-            this.num_oldqty.Size = new System.Drawing.Size(120, 20);
-            this.num_oldqty.TabIndex = 0;
-            this.num_oldqty.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // btn_confirm
             // 
@@ -480,6 +392,95 @@
             this.btn_confirm.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_confirm.UseDefaultRadiusAndThickness = true;
             this.btn_confirm.Click += new System.EventHandler(this.btn_confirm_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label5.Location = new System.Drawing.Point(5, 77);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 15);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Keterangan";
+            // 
+            // tb_keterangan
+            // 
+            this.tb_keterangan.Location = new System.Drawing.Point(6, 95);
+            this.tb_keterangan.Multiline = true;
+            this.tb_keterangan.Name = "tb_keterangan";
+            this.tb_keterangan.Size = new System.Drawing.Size(310, 92);
+            this.tb_keterangan.TabIndex = 33;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label4.Location = new System.Drawing.Point(195, 22);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(87, 15);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "New Quantity";
+            // 
+            // num_newqty
+            // 
+            this.num_newqty.Location = new System.Drawing.Point(196, 40);
+            this.num_newqty.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.num_newqty.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.num_newqty.Name = "num_newqty";
+            this.num_newqty.Size = new System.Drawing.Size(120, 20);
+            this.num_newqty.TabIndex = 31;
+            this.num_newqty.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label2.Location = new System.Drawing.Point(5, 22);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 15);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Old Quantity";
+            // 
+            // num_oldqty
+            // 
+            this.num_oldqty.Location = new System.Drawing.Point(6, 40);
+            this.num_oldqty.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.num_oldqty.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.num_oldqty.Name = "num_oldqty";
+            this.num_oldqty.ReadOnly = true;
+            this.num_oldqty.Size = new System.Drawing.Size(120, 20);
+            this.num_oldqty.TabIndex = 0;
+            this.num_oldqty.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // Detail_Stock_Adjustment
             // 

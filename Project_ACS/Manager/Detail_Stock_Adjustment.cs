@@ -17,13 +17,15 @@ namespace Project_ACS.Manager
             InitializeComponent();
         }
 
-        public Detail_Stock_Adjustment(DataSet ds_barang,DataSet ds_adjustment, DataSet ds_barangwarehouse) : this()
+        public Detail_Stock_Adjustment(DataSet ds_barang,DataSet ds_adjustment, DataSet ds_barangwarehouse, Inventory_Opname frm_adjust) : this()
         {
             this.ds_barang = ds_barang;
             this.ds_adjustment = ds_adjustment;
             this.ds_barangwarehouse = ds_barangwarehouse;
+            this.frm_adjust = frm_adjust;
         }
 
+        Inventory_Opname frm_adjust;
         DataSet ds_adjustment;
         DataSet ds_barang;
         DataSet ds_barangwarehouse;
@@ -33,19 +35,19 @@ namespace Project_ACS.Manager
             num_newqty.Controls[0].Visible = false;
             num_oldqty.Controls[0].Visible = false;
         }
-
+        DataRow[] dr2;
         private void btn_check_Click(object sender, EventArgs e)
         {
-            DataRow[] dr = ds_barang.Tables[0].Select($"kode = {tb_kode.Text}");
+            DataRow[] dr = ds_barang.Tables[0].Select($"kode = '{tb_kode.Text.ToUpper()}'");
             if(dr.Length == 1)
             {
                 string id = dr[0][0].ToString();
-                DataRow[] dr2 = ds_barangwarehouse.Tables[0].Select($"id_barang = {id}");
+                dr2 = ds_barangwarehouse.Tables[0].Select($"id_barang = '{id}'");
                 if(dr2.Length == 1)
                 {
                     gb_adjust.Enabled = true;
                     gb_adjust.Text = dr[0][2].ToString();
-                    num_oldqty.Value = Convert.ToDecimal(dr2[0][2].ToString());
+                    num_oldqty.Value = Convert.ToDecimal(dr2[0][3].ToString());
 
                 }
                 else
@@ -71,7 +73,19 @@ namespace Project_ACS.Manager
 
         private void btn_confirm_Click(object sender, EventArgs e)
         {
-
+            if(num_newqty.Value == num_oldqty.Value)
+            {
+                MessageBox.Show("Jumlah baru dan lama tidak boleh sama!");
+            }
+            else
+            {
+                int id_insert = Convert.ToInt32(DB.executeScalar("SELECT max(id)+1 from adjustment", null));
+                DB.executeQuery($"INSERT INTO ADJUSTMENT VALUES({id_insert},{num_newqty.Value},{num_oldqty.Value},TO_DATE('{System.DateTime.Now.ToShortDateString()}', 'DD/MM/YYYY'),{dr2[0][2]},{User.User_login.Id_warehouse},'{tb_keterangan.Text}')", null);
+                DB.executeQuery($"UPDATE BARANG_WAREHOUSE SET QTY = {num_newqty.Value} WHERE ID = {dr2[0][0]}", null);
+                frm_adjust.loadDgv();
+                MessageBox.Show("Sukses adjust stok!");
+                this.Close();
+            }
         }
     }
 }

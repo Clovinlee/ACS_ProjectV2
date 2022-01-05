@@ -18,9 +18,8 @@ namespace Project_ACS.Manager
             ds_adjustment = new DataSet();
             ds_barang = new DataSet();
             ds_barangwarehouse = new DataSet();
-            DB.executeDataSet(ds_adjustment, "select a.id, a.qty, a.real_qty, b.kode, a.keterangan from adjustment a, barang b where a.id_barang = b.id order by a.id desc", null, "adj");
+            DB.executeDataSet(ds_adjustment, $"select a.id, a.qty, a.real_qty, b.kode, a.keterangan, a.id_barang, a.tanggal from adjustment a, barang b where a.id_barang = b.id and a.id_warehouse = {User.User_login.Id_warehouse} order by a.id desc", null, "adj");
             DB.executeDataSet(ds_barang, "select * from barang", null, "brg");
-            DB.executeDataSet(ds_barangwarehouse, "select * from barang_warehouse", null, "brgwh");
             loadDgv();
 
         }
@@ -45,12 +44,16 @@ namespace Project_ACS.Manager
         public void loadDgv()
         {
             ds_adjustment.Tables[0].Rows.Clear();
-            DB.executeDataSet(ds_adjustment, "select a.id, a.qty, a.real_qty, b.kode, a.keterangan, a.id_barang, a.tanggal from adjustment a, barang b where a.id_barang = b.id order by a.id desc", null, "adj");
+            DB.executeDataSet(ds_adjustment, $"select a.id, a.qty, a.real_qty, b.kode, a.keterangan, a.id_barang, a.tanggal from adjustment a, barang b where a.id_barang = b.id and a.id_warehouse = {User.User_login.Id_warehouse} order by a.id desc", null, "adj");
             dgv_adjust.DataSource = ds_adjustment.Tables[0];
             dgv_adjust.AllowUserToResizeRows = false;
             dgv_adjust.Columns[5].Visible = false;
             //ds_bp = new DataSet();
             //DB.executeDataSet(ds_bp, "select id,kode,nama,telepon,alamat from business_partner ORDER BY id DESC", null, "bp");
+
+            ds_barangwarehouse = new DataSet();
+            DB.executeDataSet(ds_barangwarehouse, $"select * from barang_warehouse WHERE id_warehouse = '{User.User_login.Id_warehouse}'", null, "brgwh");
+
             lbl_jml.Text = "Showing " + dgv_adjust.RowCount + " data from Stock Adjustment";
             dgv_adjust.ClearSelection();
             loadDgvColor();
@@ -71,24 +74,26 @@ namespace Project_ACS.Manager
         
         public void clear()
         {
-            loadDgv();
             tb_id.Text = "";
             tb_keterangan.Text = "";
             tb_kodebarang.Text = "";
             dt_picker.Value = System.DateTime.Now;
+            loadDgv();
         }
 
         private void btn_searchdate_Click(object sender, EventArgs e)
         {
             //BUG
-            string st = dt_picker.Value.ToShortDateString();
-            ds_adjustment.Tables[0].DefaultView.RowFilter = string.Format("CONVERT(TANGGAL,System.DateTime) = CONVERT({0}, System.DateTime)", st);
+            ds_adjustment = new DataSet();
+            DB.executeDataSet(ds_adjustment, $"select a.id, a.qty, a.real_qty, b.kode, a.keterangan, a.id_barang, a.tanggal from adjustment a, barang b where a.id_barang = b.id AND a.tanggal = TO_DATE('{dt_picker.Value.ToShortDateString()}', 'DD/MM/YYYY') and a.id_warehouse = {User.User_login.Id_warehouse} order by a.id desc", null, "adj");
+            dgv_adjust.DataSource = ds_adjustment;
+            search();
             dgv_adjust.ClearSelection();
         }
 
         private void btn_create_Click(object sender, EventArgs e)
         {
-            Detail_Stock_Adjustment frm_adj = new Detail_Stock_Adjustment(ds_barang,ds_adjustment,ds_barangwarehouse);
+            Detail_Stock_Adjustment frm_adj = new Detail_Stock_Adjustment(ds_barang,ds_adjustment,ds_barangwarehouse,this);
             frm_adj.Show();
         }
 
