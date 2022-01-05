@@ -298,6 +298,7 @@ namespace Project_ACS.Manager
                     break;
                 case 9:
                     frm_warehouse_request.loadBarang();
+                    frm_warehouse_request.settingDgv();
                     break;
                 case 10:
                     frm_warehouse_history.loadHistory();

@@ -48,6 +48,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnAccept = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnDecline = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.lblWarehouse = new System.Windows.Forms.Label();
             this.pl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWarehouse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).BeginInit();
@@ -55,7 +56,8 @@
             // 
             // pl
             // 
-            this.pl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.pl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
+            this.pl.Controls.Add(this.lblWarehouse);
             this.pl.Controls.Add(this.btnDecline);
             this.pl.Controls.Add(this.btnAccept);
             this.pl.Controls.Add(this.label2);
@@ -272,7 +274,7 @@
             this.btnAccept.AutoSizeLeftIcon = true;
             this.btnAccept.AutoSizeRightIcon = true;
             this.btnAccept.BackColor = System.Drawing.Color.Transparent;
-            this.btnAccept.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.btnAccept.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
             this.btnAccept.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAccept.BackgroundImage")));
             this.btnAccept.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnAccept.ButtonText = "Accept";
@@ -304,7 +306,7 @@
             this.btnAccept.IdleBorderColor = System.Drawing.Color.White;
             this.btnAccept.IdleBorderRadius = 15;
             this.btnAccept.IdleBorderThickness = 1;
-            this.btnAccept.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.btnAccept.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
             this.btnAccept.IdleIconLeftImage = global::Project_ACS.res_icons.plus;
             this.btnAccept.IdleIconRightImage = null;
             this.btnAccept.IndicateFocus = false;
@@ -330,7 +332,7 @@
             this.btnAccept.OnIdleState.BorderRadius = 15;
             this.btnAccept.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnAccept.OnIdleState.BorderThickness = 1;
-            this.btnAccept.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.btnAccept.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
             this.btnAccept.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnAccept.OnIdleState.IconLeftImage = global::Project_ACS.res_icons.plus;
             this.btnAccept.OnIdleState.IconRightImage = null;
@@ -363,7 +365,7 @@
             this.btnDecline.AutoSizeLeftIcon = true;
             this.btnDecline.AutoSizeRightIcon = true;
             this.btnDecline.BackColor = System.Drawing.Color.Transparent;
-            this.btnDecline.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.btnDecline.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
             this.btnDecline.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDecline.BackgroundImage")));
             this.btnDecline.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnDecline.ButtonText = "Decline";
@@ -395,7 +397,7 @@
             this.btnDecline.IdleBorderColor = System.Drawing.Color.White;
             this.btnDecline.IdleBorderRadius = 15;
             this.btnDecline.IdleBorderThickness = 1;
-            this.btnDecline.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.btnDecline.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
             this.btnDecline.IdleIconLeftImage = global::Project_ACS.res_icons.plus;
             this.btnDecline.IdleIconRightImage = null;
             this.btnDecline.IndicateFocus = false;
@@ -421,7 +423,7 @@
             this.btnDecline.OnIdleState.BorderRadius = 15;
             this.btnDecline.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnDecline.OnIdleState.BorderThickness = 1;
-            this.btnDecline.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.btnDecline.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
             this.btnDecline.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnDecline.OnIdleState.IconLeftImage = global::Project_ACS.res_icons.plus;
             this.btnDecline.OnIdleState.IconRightImage = null;
@@ -441,6 +443,18 @@
             this.btnDecline.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnDecline.UseDefaultRadiusAndThickness = true;
             this.btnDecline.Click += new System.EventHandler(this.bunifuButton1_Click);
+            // 
+            // lblWarehouse
+            // 
+            this.lblWarehouse.AutoSize = true;
+            this.lblWarehouse.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWarehouse.ForeColor = System.Drawing.Color.White;
+            this.lblWarehouse.Location = new System.Drawing.Point(12, 40);
+            this.lblWarehouse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWarehouse.Name = "lblWarehouse";
+            this.lblWarehouse.Size = new System.Drawing.Size(165, 21);
+            this.lblWarehouse.TabIndex = 31;
+            this.lblWarehouse.Text = "Daftar Request Pindah";
             // 
             // Warehouse_Access
             // 
@@ -470,5 +484,6 @@
         private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAccept;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDecline;
+        private System.Windows.Forms.Label lblWarehouse;
     }
 }
