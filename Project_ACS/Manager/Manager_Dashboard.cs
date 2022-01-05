@@ -40,7 +40,6 @@ namespace Project_ACS.Manager
 
         public void loadLateDelivery()
         {
-            DB.executeDataSet(ds_delivery,$"SELECT * FROM DELIVERY WHERE ETA < TO_DATE()")
         }
 
         public void loadDgvAdjust()
