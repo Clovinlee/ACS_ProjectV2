@@ -259,11 +259,23 @@
     <Compile Include="Manager\Manager_Dashboard.Designer.cs">
       <DependentUpon>Manager_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manager\reportadjustment.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reportadjustment.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Manager\reportInventory.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>reportInventory.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Manager\Report_Adjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Report_Adjustment.Designer.cs">
+      <DependentUpon>Report_Adjustment.cs</DependentUpon>
     </Compile>
     <Compile Include="Manager\Report_Tracking.cs">
       <SubType>Form</SubType>
@@ -421,9 +433,16 @@
     <EmbeddedResource Include="Manager\Manager_Dashboard.resx">
       <DependentUpon>Manager_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Manager\reportadjustment.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reportadjustment.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Manager\reportInventory.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>reportInventory.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Report_Adjustment.resx">
+      <DependentUpon>Report_Adjustment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\Report_Tracking.resx">
       <DependentUpon>Report_Tracking.cs</DependentUpon>

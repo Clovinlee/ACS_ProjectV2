@@ -90,7 +90,8 @@ namespace Project_ACS.Manager
 
         public void loadDgvAdjust()
         {
-            DB.executeDataSet(ds_adjust, $"select a.id, a.qty - a.real_qty AS perbedaan, a.qty, a.real_qty, b.kode, a.keterangan, a.id_barang, a.tanggal from adjustment a, barang b where a.id_barang = b.id and a.id_warehouse = {User.User_login.Id_warehouse} and a.tanggal > TO_DATE('{System.DateTime.Now.AddDays(-7).ToShortDateString()}','DD/MM/YYYY')order by a.id desc", null, "adj");
+            string st = System.DateTime.Now.AddDays(-7).ToString("dd/MM/yyyy");
+            DB.executeDataSet(ds_adjust, $"select a.id, a.qty - a.real_qty AS perbedaan, a.qty, a.real_qty, b.kode, a.keterangan, a.id_barang, a.tanggal from adjustment a, barang b where a.id_barang = b.id and a.id_warehouse = {User.User_login.Id_warehouse} and a.tanggal > TO_DATE('{st}','DD/MM/YYYY')order by a.id desc", null, "adj");
             dgv_adjustment.DataSource = ds_adjust.Tables[0];
             dgv_adjustment.Columns[2].Visible = false;
             dgv_adjustment.Columns[3].Visible = false;
