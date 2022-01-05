@@ -23,7 +23,7 @@ namespace Project_ACS
 
         private void Login_Load(object sender, EventArgs e)
         {
-            string output = DB.init("MK", "MK"); // GANTI SESUAI ORACLE MASING2
+            string output = DB.init("chris", "clovinlee"); // GANTI SESUAI ORACLE MASING2
             if (output != "")
             {
                 MessageBox.Show(output, "Database Initialization Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
