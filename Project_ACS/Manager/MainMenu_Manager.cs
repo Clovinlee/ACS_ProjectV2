@@ -273,7 +273,7 @@ namespace Project_ACS.Manager
             switch (btag)
             {
                 case 1:
-
+                    frm_dashboard.refreshData();
                     break;
                 case 2:
 
