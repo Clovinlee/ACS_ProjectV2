@@ -29,22 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manager_Dashboard));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pl = new System.Windows.Forms.Panel();
             this.bunifuPanel9 = new Bunifu.UI.WinForms.BunifuPanel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.bunifuPanel8 = new Bunifu.UI.WinForms.BunifuPanel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.dgv_keluarmasuk = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.label5 = new System.Windows.Forms.Label();
             this.bunifuPanel6 = new Bunifu.UI.WinForms.BunifuPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.bunifuPanel7 = new Bunifu.UI.WinForms.BunifuPanel();
@@ -64,14 +58,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.chart_keluarmasuk = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pl.SuspendLayout();
             this.bunifuPanel9.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.bunifuPanel8.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_keluarmasuk)).BeginInit();
             this.bunifuPanel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.bunifuPanel7.SuspendLayout();
@@ -80,10 +74,6 @@
             this.bunifuPanel2.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart_keluarmasuk)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             this.SuspendLayout();
             // 
             // pl
@@ -124,7 +114,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
-            this.panel8.Controls.Add(this.chart2);
             this.panel8.Location = new System.Drawing.Point(14, 14);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(489, 167);
@@ -141,10 +130,10 @@
             this.bunifuPanel8.BorderRadius = 25;
             this.bunifuPanel8.BorderThickness = 1;
             this.bunifuPanel8.Controls.Add(this.panel7);
-            this.bunifuPanel8.Location = new System.Drawing.Point(16, 292);
+            this.bunifuPanel8.Location = new System.Drawing.Point(12, 292);
             this.bunifuPanel8.Name = "bunifuPanel8";
             this.bunifuPanel8.ShowBorders = true;
-            this.bunifuPanel8.Size = new System.Drawing.Size(298, 267);
+            this.bunifuPanel8.Size = new System.Drawing.Size(302, 267);
             this.bunifuPanel8.TabIndex = 11;
             // 
             // panel7
@@ -152,11 +141,96 @@
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
-            this.panel7.Controls.Add(this.chart3);
+            this.panel7.Controls.Add(this.dgv_keluarmasuk);
+            this.panel7.Controls.Add(this.label5);
             this.panel7.Location = new System.Drawing.Point(12, 12);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(273, 241);
+            this.panel7.Size = new System.Drawing.Size(273, 252);
             this.panel7.TabIndex = 1;
+            // 
+            // dgv_keluarmasuk
+            // 
+            this.dgv_keluarmasuk.AllowCustomTheming = false;
+            this.dgv_keluarmasuk.AllowUserToAddRows = false;
+            this.dgv_keluarmasuk.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgv_keluarmasuk.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_keluarmasuk.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_keluarmasuk.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_keluarmasuk.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_keluarmasuk.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv_keluarmasuk.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_keluarmasuk.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_keluarmasuk.ColumnHeadersHeight = 40;
+            this.dgv_keluarmasuk.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dgv_keluarmasuk.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.dgv_keluarmasuk.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgv_keluarmasuk.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgv_keluarmasuk.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgv_keluarmasuk.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgv_keluarmasuk.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.dgv_keluarmasuk.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgv_keluarmasuk.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.dgv_keluarmasuk.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.dgv_keluarmasuk.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgv_keluarmasuk.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.dgv_keluarmasuk.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv_keluarmasuk.CurrentTheme.Name = null;
+            this.dgv_keluarmasuk.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgv_keluarmasuk.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.dgv_keluarmasuk.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgv_keluarmasuk.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.dgv_keluarmasuk.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_keluarmasuk.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_keluarmasuk.EnableHeadersVisualStyles = false;
+            this.dgv_keluarmasuk.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.dgv_keluarmasuk.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.dgv_keluarmasuk.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dgv_keluarmasuk.HeaderForeColor = System.Drawing.Color.White;
+            this.dgv_keluarmasuk.Location = new System.Drawing.Point(12, 74);
+            this.dgv_keluarmasuk.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_keluarmasuk.MultiSelect = false;
+            this.dgv_keluarmasuk.Name = "dgv_keluarmasuk";
+            this.dgv_keluarmasuk.ReadOnly = true;
+            this.dgv_keluarmasuk.RowHeadersVisible = false;
+            this.dgv_keluarmasuk.RowHeadersWidth = 51;
+            this.dgv_keluarmasuk.RowTemplate.Height = 40;
+            this.dgv_keluarmasuk.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_keluarmasuk.Size = new System.Drawing.Size(256, 167);
+            this.dgv_keluarmasuk.TabIndex = 29;
+            this.dgv_keluarmasuk.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(220)))), ((int)(((byte)(228)))));
+            this.label5.Location = new System.Drawing.Point(3, 2);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(267, 62);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Jumlah Barang Keluar Masuk per Bulan";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuPanel6
             // 
@@ -227,6 +301,8 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.BackgroundImage = global::Project_ACS.res_icons.clipboard_list_solid;
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel6.Location = new System.Drawing.Point(13, 8);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(40, 40);
@@ -302,6 +378,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = global::Project_ACS.res_icons.truck_moving_solid;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Location = new System.Drawing.Point(13, 8);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(40, 40);
@@ -361,6 +439,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BackgroundImage = global::Project_ACS.res_icons.truck_moving_solid;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel2.Location = new System.Drawing.Point(10, 13);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(60, 60);
@@ -371,7 +452,7 @@
             this.bunifuPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.Empty;
             this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
             this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
@@ -389,73 +470,31 @@
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
-            this.panel4.Controls.Add(this.chart_keluarmasuk);
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
+            this.panel4.BackgroundImage = global::Project_ACS.res_images.logothanos;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel4.Location = new System.Drawing.Point(14, 10);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(489, 325);
             this.panel4.TabIndex = 0;
             // 
-            // chart_keluarmasuk
+            // Column1
             // 
-            this.chart_keluarmasuk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(93)))), ((int)(((byte)(156)))));
-            chartArea3.Name = "ChartArea1";
-            this.chart_keluarmasuk.ChartAreas.Add(chartArea3);
-            this.chart_keluarmasuk.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.chart_keluarmasuk.Legends.Add(legend3);
-            this.chart_keluarmasuk.Location = new System.Drawing.Point(0, 0);
-            this.chart_keluarmasuk.Name = "chart_keluarmasuk";
-            this.chart_keluarmasuk.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.Name = "Barang Keluar";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Legend = "Legend1";
-            series4.Name = "Barang Masuk";
-            this.chart_keluarmasuk.Series.Add(series3);
-            this.chart_keluarmasuk.Series.Add(series4);
-            this.chart_keluarmasuk.Size = new System.Drawing.Size(489, 325);
-            this.chart_keluarmasuk.TabIndex = 13;
-            title1.Name = "Title1";
-            title1.Text = "Grafik Barang Masuk Keluar";
-            this.chart_keluarmasuk.Titles.Add(title1);
+            this.Column1.HeaderText = "Bulan";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
-            // chart2
+            // Column2
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea1);
-            this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chart2.Legends.Add(legend1);
-            this.chart2.Location = new System.Drawing.Point(0, 0);
-            this.chart2.Name = "chart2";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart2.Series.Add(series1);
-            this.chart2.Size = new System.Drawing.Size(489, 167);
-            this.chart2.TabIndex = 0;
-            this.chart2.Text = "chart2";
+            this.Column2.HeaderText = "Masuk";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
-            // chart3
+            // Column3
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea2);
-            this.chart3.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chart3.Legends.Add(legend2);
-            this.chart3.Location = new System.Drawing.Point(0, 0);
-            this.chart3.Name = "chart3";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart3.Series.Add(series2);
-            this.chart3.Size = new System.Drawing.Size(273, 241);
-            this.chart3.TabIndex = 1;
-            this.chart3.Text = "chart3";
+            this.Column3.HeaderText = "Keluar";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Manager_Dashboard
             // 
@@ -467,9 +506,9 @@
             this.Text = "Manager_Dashboard";
             this.pl.ResumeLayout(false);
             this.bunifuPanel9.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
             this.bunifuPanel8.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_keluarmasuk)).EndInit();
             this.bunifuPanel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.bunifuPanel7.ResumeLayout(false);
@@ -478,10 +517,6 @@
             this.bunifuPanel2.ResumeLayout(false);
             this.bunifuPanel3.ResumeLayout(false);
             this.bunifuPanel1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart_keluarmasuk)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -501,7 +536,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel6;
         private System.Windows.Forms.Panel panel5;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel7;
@@ -512,8 +546,11 @@
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel8;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart_keluarmasuk;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label5;
+        private Bunifu.UI.WinForms.BunifuDataGridView dgv_keluarmasuk;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

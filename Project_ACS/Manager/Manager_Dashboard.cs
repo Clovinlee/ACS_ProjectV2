@@ -23,38 +23,49 @@ namespace Project_ACS.Manager
             return pl;
         }
 
-        DataSet ds_keluar;
-        DataSet ds_masuk;
+        DataSet ds_keluarmasuk;
 
         public void refreshData()
         {
-            ds_keluar = new DataSet();
-            ds_masuk = new DataSet();
+            ds_keluarmasuk = new DataSet();
+            DB.executeDataSet(ds_keluarmasuk, "SELECT NVL(tb1.bulan,tb2.bulan) AS bulan, NVL(tb1.totalqty,0) AS keluar, NVL(tb2.totalqty,0) AS masuk FROM(select SUM(QTY) AS totalqty, TO_CHAR(TANGGAL, 'MM') AS bulan from HISTORY_BARANG_KELUAR_MASUK WHERE TO_CHAR(TANGGAL, 'YYYY') = TO_CHAR(SYSDATE, 'YYYY') AND status = 0 GROUP BY TO_CHAR(TANGGAL, 'MM') ORDER BY 2) tb1 FULL OUTER JOIN (select SUM(QTY) AS totalqty, TO_CHAR(TANGGAL, 'MM') AS bulan from HISTORY_BARANG_KELUAR_MASUK WHERE TO_CHAR(TANGGAL, 'YYYY') = TO_CHAR(SYSDATE, 'YYYY') AND status = 1 GROUP BY TO_CHAR(TANGGAL, 'MM') ORDER BY 2) tb2 ON tb1.bulan = tb2.bulan ORDER BY 1 ASC", null, "data");
+            loadDgvKeluarMasuk();
+        }
 
-            DB.executeDataSet(ds_masuk, "SELECT * FROM HISTORY_BARANG_KELUAR_MASUK WHERE status = 1", null,"msk");
-            DB.executeDataSet(ds_keluar, "SELECT * FROM HISTORY_BARANG_KELUAR_MASUK WHERE status = 0", null, "klr");
+        public void loadDgvKeluarMasuk()
+        {
+            List<string> listBulan = new List<string>();
+            listBulan.Add("Januari");
+            listBulan.Add("Februari");
+            listBulan.Add("Maret");
+            listBulan.Add("April");
+            listBulan.Add("Mei");
+            listBulan.Add("Juni");
+            listBulan.Add("Juli");
+            listBulan.Add("Agustus");
+            listBulan.Add("September");
+            listBulan.Add("Oktober");
+            listBulan.Add("November");
+            listBulan.Add("Desember");
 
-
-            System.Windows.Forms.DataVisualization.Charting.Series masuk = chart_keluarmasuk.Series[1];
-            System.Windows.Forms.DataVisualization.Charting.Series keluar = chart_keluarmasuk.Series[0];
-            
-            for(int i = 0; i < 12; i++)
+            List<int[]> listKeluarMasuk = new List<int[]>();
+            for(int i = 0; i < listBulan.Count; i++)
             {
-                
+                bool valid = false;
+                foreach (DataRow dr in ds_keluarmasuk.Tables[0].Rows)
+                {
+                    if(Convert.ToInt32(dr[0].ToString()) == i + 1)
+                    {
+                        listKeluarMasuk.Add(new int[] { Convert.ToInt32(dr[1]), Convert.ToInt32(dr[2]) });
+                        valid = true;
+                    }
+                }
+                if(valid == false)
+                {
+                    listKeluarMasuk.Add(new int[] { 0,0 });
+                }
+                dgv_keluarmasuk.Rows.Add(new object[] { listBulan[i], listKeluarMasuk})
             }
-
-            masuk.Points.AddXY("Maeasuk1", 15);
-            masuk.Points.AddXY("Masuk2", 25);
-            masuk.Points.AddXY("Masuk3", 35);
-            masuk.Points.AddXY("Masuk4", 45);
-            masuk.Points.AddXY("Masuk5", 55);
-
-            keluar.Points.AddXY("Keluaras1", 50);
-            keluar.Points.AddXY("Keluar1", 150);
-            keluar.Points.AddXY("Keluar1", 250);
-            keluar.Points.AddXY("Keluar1", 350);
-            keluar.Points.AddXY("Keluar1", 450);
-
         }
 
         private void pl_Paint(object sender, PaintEventArgs e)
