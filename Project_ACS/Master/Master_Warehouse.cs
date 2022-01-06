@@ -109,11 +109,11 @@ namespace Project_ACS
             if (selectedRow >= 0 && selectedRow <= dgvWarehouse.Rows.Count)
             {
                 List<object[]> listParam = new List<object[]>();
-                listParam.Add(new object[] { dgvWarehouse.Rows[selectedRow].Cells[3].Value.ToString(), "int32" });
-                string querystr = "SELECT COUNT(*) FROM RAK_WAREHOUSE WHERE ID_WAREHOUSE = :0";
+                listParam.Add(new object[] { dgvWarehouse.Rows[selectedRow].Cells[0].Value.ToString(), "int32" });
+                //string querystr = "SELECT COUNT(*) FROM RAK_WAREHOUSE WHERE ID_WAREHOUSE = :0";
+                //int cekAda = Convert.ToInt32(DB.executeScalar(querystr, listParam));
+                string querystr = "SELECT COUNT(*) FROM H_PINDAH WHERE ASAL = :0";
                 int cekAda = Convert.ToInt32(DB.executeScalar(querystr, listParam));
-                querystr = "SELECT COUNT(*) FROM H_PINDAH WHERE ASAL = :0";
-                cekAda += Convert.ToInt32(DB.executeScalar(querystr, listParam));
                 querystr = "SELECT COUNT(*) FROM H_PINDAH WHERE TUJUAN = :0";
                 cekAda += Convert.ToInt32(DB.executeScalar(querystr, listParam));
                 querystr = "SELECT COUNT(*) FROM H_ORDER_SUPPLIER WHERE ID_WAREHOUSE = :0";

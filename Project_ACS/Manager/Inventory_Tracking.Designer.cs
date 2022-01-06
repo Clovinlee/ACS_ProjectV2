@@ -285,7 +285,7 @@
             this.dgv_barang1.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgv_barang1.HeaderForeColor = System.Drawing.Color.White;
             this.dgv_barang1.Location = new System.Drawing.Point(16, 155);
-            this.dgv_barang1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_barang1.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_barang1.MultiSelect = false;
             this.dgv_barang1.Name = "dgv_barang1";
             this.dgv_barang1.ReadOnly = true;
@@ -293,7 +293,7 @@
             this.dgv_barang1.RowHeadersWidth = 51;
             this.dgv_barang1.RowTemplate.Height = 40;
             this.dgv_barang1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_barang1.Size = new System.Drawing.Size(814, 327);
+            this.dgv_barang1.Size = new System.Drawing.Size(809, 327);
             this.dgv_barang1.TabIndex = 41;
             this.dgv_barang1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgv_barang1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_barang1_CellClick_1);
@@ -394,7 +394,7 @@
             this.textbox_searchkode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textbox_searchkode.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textbox_searchkode.Location = new System.Drawing.Point(17, 116);
-            this.textbox_searchkode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textbox_searchkode.Margin = new System.Windows.Forms.Padding(2);
             this.textbox_searchkode.Name = "textbox_searchkode";
             this.textbox_searchkode.Size = new System.Drawing.Size(138, 21);
             this.textbox_searchkode.TabIndex = 39;

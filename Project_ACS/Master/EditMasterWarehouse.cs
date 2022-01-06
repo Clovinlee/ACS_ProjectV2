@@ -66,8 +66,9 @@ namespace Project_ACS.Master
                     listParam.Add(new object[] { nama, "varchar" });
                     listParam.Add(new object[] { alamat, "varchar" });
                     listParam.Add(new object[] { telepon, "varchar" });
+                    listParam.Add(new object[] { User.User_login.Id, "int32" });
                     listParam.Add(new object[] { "1", "int32" });
-                    querystr = "INSERT INTO WAREHOUSE VALUES(:0, :1, :2, :3, :4)";
+                    querystr = "INSERT INTO WAREHOUSE VALUES(:0, :1, :2, :3, :4, :5)";
                     MessageBox.Show("Berhasil Insert!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
