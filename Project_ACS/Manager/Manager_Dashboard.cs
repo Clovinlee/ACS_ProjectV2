@@ -74,17 +74,26 @@ namespace Project_ACS.Manager
 
         public void loadUpcomingDelivery() 
         {
-            DataRow dr = ds_delivery.Tables[0].Rows[0];
-            lbl_upcomingname.Text = dr[1].ToString();
-            DateTime arrival = Convert.ToDateTime(dr[2].ToString());
-            lbl_upcomingarrival.Text = arrival.ToString("dd MMMM yyyy");
+            if(ds_delivery.Tables[0].Rows.Count > 0)
+            {
+                DataRow dr = ds_delivery.Tables[0].Rows[0];
+                lbl_upcomingname.Text = dr[1].ToString();
+                DateTime arrival = Convert.ToDateTime(dr[2].ToString());
+                lbl_upcomingarrival.Text = arrival.ToString("dd MMMM yyyy");
+            }
+            else
+            {
+                lbl_upcomingname.Text = "Tidak ada delivery";
+                lbl_upcomingarrival.Text = "";
+            }
+            
         }
 
         public void loadLateDelivery()
         {
-            DB.executeDataSet(ds_delivery, $"select h.kode, bp.nama, h.eta, h.status, h.qty, h.id_warehouse, h.grand_total from H_ORDER_SUPPLIER h, BUSINESS_PARTNER bp where h.id_partner = bp.id order by ETA desc",null,"delivery");
+            DB.executeDataSet(ds_delivery, $"select h.kode, bp.nama, h.eta, h.status, h.qty, h.id_warehouse, h.grand_total from H_ORDER_SUPPLIER h, BUSINESS_PARTNER bp where h.id_partner = bp.id AND id_warehouse = {User.User_login.Id_warehouse} order by ETA desc",null,"delivery");
 
-            int jml = Convert.ToInt32(DB.executeScalar($"SELECT COUNT(*) FROM H_ORDER_SUPPLIER WHERE status = 2",null));
+            int jml = Convert.ToInt32(DB.executeScalar($"SELECT COUNT(*) FROM H_ORDER_SUPPLIER WHERE status = 2 AND id_warehouse = {User.User_login.Id_warehouse}",null));
             lbl_latedelivery.Text = jml.ToString();
         }
 
