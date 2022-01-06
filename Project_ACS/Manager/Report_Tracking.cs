@@ -40,9 +40,11 @@ namespace Project_ACS.Manager
             }
             myDataSet dataset = new myDataSet();
             DB.executeDataSet(dataset, "SELECT * from BARANG", null, "barang");
-            DB.executeDataSet(dataset, "SELECT * from history_barang_keluar_masuk where id_warehouse = " + idw + " and TANGGAL>=TO_DATE('" + awal + "','DD-MM-YYYY') and TANGGAL <= TO_DATE('" + akhir + "','DD-MM-YYYY')", null, "history_barang_keluar_masuk");
+            DB.executeDataSet(dataset, "SELECT * FROM HISTORY_BARANG_KELUAR_MASUK h where h.id_warehouse = " + idw + " and h.TANGGAL>=TO_DATE('" + awal + "','DD-MM-YYYY') and h.TANGGAL <= TO_DATE('" + akhir + "','DD-MM-YYYY')", null, "history_barang_keluar_masuk");
             //where id_warehouse = "+idw+" and TANGGAL>=TO_DATE('"+awal+ "','DD-MM-YYYY') and TANGGAL <= TO_DATE('" + akhir + "','DD-MM-YYYY') " 
             DB.executeDataSet(dataset, "SELECT * from WAREHOUSE", null, "warehouse");
+            DB.executeDataSet(dataset, "SELECT * from BUSINESS_PARTNER", null, "BUSINESS_PARTNER");
+
             rpt = new reportInventory();
             rpt.SetDataSource(dataset);
             rpt.SetParameterValue("namaWarehouse", nama);
