@@ -41,5 +41,10 @@ namespace Project_ACS.Manager
                 this.Dispose();
             }
         }
+
+        private void Detail_Delivery_Load(object sender, EventArgs e)
+        {
+            tb_kodeorder.Text = kode;
+        }
     }
 }

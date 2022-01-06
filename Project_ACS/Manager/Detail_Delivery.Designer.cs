@@ -196,6 +196,7 @@ namespace Project_ACS.Manager
             this.Name = "Detail_Delivery";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detail_Delivery";
+            this.Load += new System.EventHandler(this.Detail_Delivery_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
