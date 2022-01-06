@@ -37,10 +37,6 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
@@ -48,7 +44,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pl = new System.Windows.Forms.Panel();
-            this.txtJabatan = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNama = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,6 +54,7 @@
             this.btnUpdate = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvAkun = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.cmbJabatan = new System.Windows.Forms.ComboBox();
             this.pl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAkun)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +62,7 @@
             // pl
             // 
             this.pl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
-            this.pl.Controls.Add(this.txtJabatan);
+            this.pl.Controls.Add(this.cmbJabatan);
             this.pl.Controls.Add(this.label4);
             this.pl.Controls.Add(this.txtNama);
             this.pl.Controls.Add(this.label2);
@@ -82,82 +78,6 @@
             this.pl.Name = "pl";
             this.pl.Size = new System.Drawing.Size(832, 453);
             this.pl.TabIndex = 0;
-            // 
-            // txtJabatan
-            // 
-            this.txtJabatan.AcceptsReturn = false;
-            this.txtJabatan.AcceptsTab = false;
-            this.txtJabatan.AnimationSpeed = 200;
-            this.txtJabatan.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtJabatan.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtJabatan.BackColor = System.Drawing.Color.Transparent;
-            this.txtJabatan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtJabatan.BackgroundImage")));
-            this.txtJabatan.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.txtJabatan.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtJabatan.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.txtJabatan.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtJabatan.BorderRadius = 1;
-            this.txtJabatan.BorderThickness = 1;
-            this.txtJabatan.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtJabatan.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtJabatan.DefaultFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtJabatan.DefaultText = "";
-            this.txtJabatan.FillColor = System.Drawing.Color.White;
-            this.txtJabatan.HideSelection = true;
-            this.txtJabatan.IconLeft = null;
-            this.txtJabatan.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtJabatan.IconPadding = 10;
-            this.txtJabatan.IconRight = null;
-            this.txtJabatan.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtJabatan.Lines = new string[0];
-            this.txtJabatan.Location = new System.Drawing.Point(379, 96);
-            this.txtJabatan.Margin = new System.Windows.Forms.Padding(2);
-            this.txtJabatan.MaxLength = 32767;
-            this.txtJabatan.MinimumSize = new System.Drawing.Size(1, 1);
-            this.txtJabatan.Modified = false;
-            this.txtJabatan.Multiline = false;
-            this.txtJabatan.Name = "txtJabatan";
-            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtJabatan.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtJabatan.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtJabatan.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Silver;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtJabatan.OnIdleState = stateProperties4;
-            this.txtJabatan.Padding = new System.Windows.Forms.Padding(2);
-            this.txtJabatan.PasswordChar = '\0';
-            this.txtJabatan.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtJabatan.PlaceholderText = "Enter text";
-            this.txtJabatan.ReadOnly = false;
-            this.txtJabatan.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtJabatan.SelectedText = "";
-            this.txtJabatan.SelectionLength = 0;
-            this.txtJabatan.SelectionStart = 0;
-            this.txtJabatan.ShortcutsEnabled = true;
-            this.txtJabatan.Size = new System.Drawing.Size(161, 27);
-            this.txtJabatan.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtJabatan.TabIndex = 27;
-            this.txtJabatan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtJabatan.TextMarginBottom = 0;
-            this.txtJabatan.TextMarginLeft = 3;
-            this.txtJabatan.TextMarginTop = 0;
-            this.txtJabatan.TextPlaceholder = "Enter text";
-            this.txtJabatan.UseSystemPasswordChar = false;
-            this.txtJabatan.WordWrap = true;
-            this.txtJabatan.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch);
             // 
             // label4
             // 
@@ -205,26 +125,26 @@
             this.txtNama.Modified = false;
             this.txtNama.Multiline = false;
             this.txtNama.Name = "txtNama";
-            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtNama.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtNama.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtNama.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.Silver;
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtNama.OnIdleState = stateProperties8;
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtNama.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtNama.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtNama.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtNama.OnIdleState = stateProperties4;
             this.txtNama.Padding = new System.Windows.Forms.Padding(2);
             this.txtNama.PasswordChar = '\0';
             this.txtNama.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -293,26 +213,26 @@
             this.txtUsername.Modified = false;
             this.txtUsername.Multiline = false;
             this.txtUsername.Name = "txtUsername";
-            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties9.FillColor = System.Drawing.Color.Empty;
-            stateProperties9.ForeColor = System.Drawing.Color.Empty;
-            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtUsername.OnActiveState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtUsername.OnDisabledState = stateProperties10;
-            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties11.FillColor = System.Drawing.Color.Empty;
-            stateProperties11.ForeColor = System.Drawing.Color.Empty;
-            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtUsername.OnHoverState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.Silver;
-            stateProperties12.FillColor = System.Drawing.Color.White;
-            stateProperties12.ForeColor = System.Drawing.Color.Empty;
-            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtUsername.OnIdleState = stateProperties12;
+            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtUsername.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtUsername.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtUsername.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.Silver;
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtUsername.OnIdleState = stateProperties8;
             this.txtUsername.Padding = new System.Windows.Forms.Padding(2);
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -707,6 +627,24 @@
             this.dgvAkun.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvAkun.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAkun_CellClick);
             // 
+            // cmbJabatan
+            // 
+            this.cmbJabatan.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.cmbJabatan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbJabatan.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbJabatan.FormattingEnabled = true;
+            this.cmbJabatan.Items.AddRange(new object[] {
+            "",
+            "Master Account",
+            "Warehouse Manager",
+            "Pegawai Warehouse"});
+            this.cmbJabatan.Location = new System.Drawing.Point(381, 96);
+            this.cmbJabatan.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbJabatan.Name = "cmbJabatan";
+            this.cmbJabatan.Size = new System.Drawing.Size(182, 28);
+            this.cmbJabatan.TabIndex = 28;
+            this.cmbJabatan.SelectedIndexChanged += new System.EventHandler(this.cmbJabatan_SelectedIndexChanged);
+            // 
             // Master_Akun
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -730,11 +668,11 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnInsert;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnDelete;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnUpdate;
-        private Bunifu.UI.WinForms.BunifuTextBox txtJabatan;
         private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuTextBox txtNama;
         private System.Windows.Forms.Label label2;
         private Bunifu.UI.WinForms.BunifuTextBox txtUsername;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cmbJabatan;
     }
 }

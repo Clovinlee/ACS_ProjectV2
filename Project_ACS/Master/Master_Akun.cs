@@ -49,7 +49,7 @@ namespace Project_ACS.Master
             int status = 0;
             string nama = txtNama.Text;
             string username = txtUsername.Text;
-            string jabatan = txtJabatan.Text;
+            string jabatan = cmbJabatan.Text.ToLower();
             List<object[]> listParam = new List<object[]>();
             if (nama == "" && username != "" && jabatan == "")
             {
@@ -150,6 +150,11 @@ namespace Project_ACS.Master
                 loadAkun();
             }
             
+        }
+
+        private void cmbJabatan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            keyUp();
         }
     }
 }
