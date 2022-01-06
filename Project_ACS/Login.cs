@@ -98,7 +98,7 @@ namespace Project_ACS
                     }
                     else //Pegawai
                     {
-                        MessageBox.Show("Jabatan ini tidak memiliki akses kepada program untuk saat ini");
+                        MessageBox.Show("Jabatan ini tidak memiliki akses kepada program untuk saat ini", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         // TODO : This
                         // MainMenu_Pegawai frm_pegawai= new MainMenu_Pegawai();
                         // frm_pegawai.ShowDialog();
