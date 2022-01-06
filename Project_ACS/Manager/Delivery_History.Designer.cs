@@ -47,7 +47,7 @@
             // 
             // pl
             // 
-            this.pl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.pl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
             this.pl.Controls.Add(this.btnUpdate);
             this.pl.Controls.Add(this.btn_refresh);
             this.pl.Controls.Add(this.dgv_barang);

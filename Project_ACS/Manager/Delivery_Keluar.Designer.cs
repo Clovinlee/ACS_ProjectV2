@@ -74,7 +74,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label6);
@@ -179,7 +179,7 @@
             this.btnInsert.IdleBorderRadius = 15;
             this.btnInsert.IdleBorderThickness = 1;
             this.btnInsert.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
-            this.btnInsert.IdleIconLeftImage = global::Project_ACS.res_icons.plus;
+            this.btnInsert.IdleIconLeftImage = global::Project_ACS.res_icons.check_solid;
             this.btnInsert.IdleIconRightImage = null;
             this.btnInsert.IndicateFocus = false;
             this.btnInsert.Location = new System.Drawing.Point(779, 18);
@@ -206,7 +206,7 @@
             this.btnInsert.OnIdleState.BorderThickness = 1;
             this.btnInsert.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
             this.btnInsert.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnInsert.OnIdleState.IconLeftImage = global::Project_ACS.res_icons.plus;
+            this.btnInsert.OnIdleState.IconLeftImage = global::Project_ACS.res_icons.check_solid;
             this.btnInsert.OnIdleState.IconRightImage = null;
             this.btnInsert.OnPressedState.BorderColor = System.Drawing.Color.White;
             this.btnInsert.OnPressedState.BorderRadius = 15;
