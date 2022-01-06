@@ -172,6 +172,7 @@ namespace Project_ACS.Manager
                     MessageBox.Show("Berhasil Insert!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     loaddgv();
                     totalbarang = 0;
+                    label9.Text = totalbarang.ToString();
                 }
             }
             

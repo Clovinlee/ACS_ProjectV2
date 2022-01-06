@@ -96,8 +96,9 @@ namespace Project_ACS
                         MainMenu_Manager frm_manager = new MainMenu_Manager(this);
                         frm_manager.ShowDialog();
                     }
-                    else if(id_j == "3") //Pegawai
+                    else //Pegawai
                     {
+                        MessageBox.Show("Jabatan ini tidak memiliki akses kepada program untuk saat ini", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         // TODO : This
                         // MainMenu_Pegawai frm_pegawai= new MainMenu_Pegawai();
                         // frm_pegawai.ShowDialog();
