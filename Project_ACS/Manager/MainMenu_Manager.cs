@@ -293,7 +293,7 @@ namespace Project_ACS.Manager
 
                     break;
                 case 7:
-
+                    frm_delivery_history.loaddgv();
                     break;
                 case 8:
                     frm_warehouse_access.loadReq();
