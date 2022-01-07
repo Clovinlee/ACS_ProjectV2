@@ -52,7 +52,6 @@ namespace Project_ACS.Manager
             //column3.Width = 55;
             //DataGridViewColumn column5 = dgvBarang.Columns[3];
             //column5.Width = 140;
-            //dgvWarehouse.Columns[3].Visible = false;
 
             //dgvCart.DefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 102, 204);
             //dgvCart.DefaultCellStyle.SelectionForeColor = Color.White;
@@ -90,7 +89,7 @@ namespace Project_ACS.Manager
             dgvDetail.DefaultCellStyle.SelectionForeColor = Color.White;
             dgvDetail.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(44, 135, 224);
             dgvDetail.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(44, 135, 224);
-            //dgvDetail.Columns[3].Visible = false;
+            dgvDetail.Columns[3].Visible = false;
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
@@ -202,8 +201,9 @@ namespace Project_ACS.Manager
                         listParam.Add(new object[] { dgvDetail.Rows[i].Cells[2].Value.ToString(), "int32" });
                         listParam.Add(new object[] { "P-" + User.User_login.Id_warehouse, "varchar" });
                         listParam.Add(new object[] { dgvWarehouse.Rows[idx].Cells[4].Value.ToString(), "int32" });
+                        listParam.Add(new object[] { dgvWarehouse.Rows[idx].Cells[0].Value.ToString(), "varchar" });
                         listParam.Add(new object[] { 0, "int32" });
-                        querystr = "INSERT INTO HISTORY_BARANG_KELUAR_MASUK VALUES(:0, :1, :2, :3, :4, :5)";
+                        querystr = "INSERT INTO HISTORY_BARANG_KELUAR_MASUK VALUES(:0, :1, :2, :3, :4, :5, :6)";
                         DB.executeQuery(querystr, listParam);
                     }
 
@@ -217,8 +217,9 @@ namespace Project_ACS.Manager
                         listParam.Add(new object[] { dgvDetail.Rows[i].Cells[2].Value.ToString(), "int32" });
                         listParam.Add(new object[] { "P-" + dgvWarehouse.Rows[idx].Cells[4].Value.ToString(), "varchar" });
                         listParam.Add(new object[] { User.User_login.Id_warehouse, "int32" });
+                        listParam.Add(new object[] { lblWarehouse.Text, "varchar" });
                         listParam.Add(new object[] { 1, "int32" });
-                        querystr = "INSERT INTO HISTORY_BARANG_KELUAR_MASUK VALUES(:0, :1, :2, :3, :4, :5)";
+                        querystr = "INSERT INTO HISTORY_BARANG_KELUAR_MASUK VALUES(:0, :1, :2, :3, :4, :5, :6)";
                         DB.executeQuery(querystr, listParam);
                     }
 
