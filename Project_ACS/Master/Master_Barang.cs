@@ -85,15 +85,15 @@ namespace Project_ACS.Master
             for (int i = 0; i < dgv_barang.ColumnCount; i++)
             {
                 dgv_barang.Columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
-            }
-            dgv_barang.Columns["harga"].DefaultCellStyle.Format = "Rp 0,000.00##";
+            } 
+            dgv_barang.Columns["harga"].DefaultCellStyle.Format = "Rp ##,0.00";
             dgv_barang.Columns["qty"].Width = 40;
         }
         private void pl_Paint(object sender, PaintEventArgs e)  { }
 
         private void btn_insert_Click(object sender, EventArgs e)
-        { 
-            DataSet dsUpdate = new DataSet();
+        {
+            DataSet dsUpdate = new DataSet(); 
             DB.executeDataSet(dsUpdate, "SELECT id from barang where rownum<2 order by 1 desc", null, "tupdate");
             int idd = Convert.ToInt32(dsUpdate.Tables["tupdate"].Rows[0].ItemArray[0].ToString()) + 1;
 
