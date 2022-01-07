@@ -30,13 +30,17 @@ namespace Project_ACS.Manager
                 {
                     dataset = new DataSet();
                     DB.executeQuery($"UPDATE H_ORDER_SUPPLIER SET STATUS = 3 WHERE KODE = '{kode}'", null);
-                    querystr = $"SELECT B.ID , B.QTY , DO.QTY FROM BARANG B ,  D_ORDER_SUPPLIER DO WHERE DO.KODE_ORDER = '{kode}' AND DO.ID_BARANG = B.ID";
+                    querystr = $"SELECT B.ID , B.QTY , DO.QTY , BW.QTY FROM BARANG B ,  D_ORDER_SUPPLIER DO , BARANG_WAREHOUSE BW WHERE DO.KODE_ORDER = '{kode}' AND DO.ID_BARANG = B.ID AND B.ID = BW.ID_BARANG";
                     DB.executeDataSet(dataset,querystr, null,"BARANG");
                     for (int n = 0; n < dataset.Tables["BARANG"].Rows.Count;n++)
                     {
-                        int tambahan = Convert.ToInt32(dataset.Tables["BARANG"].Rows[n].ItemArray[1].ToString()) + Convert.ToInt32(dataset.Tables["BARANG"].Rows[n].ItemArray[2].ToString());
+                        int tambahan = Convert.ToInt32(dataset.Tables["BARANG"].Rows[n].ItemArray[3].ToString()) + Convert.ToInt32(dataset.Tables["BARANG"].Rows[n].ItemArray[2].ToString());
                         String angkatambah = tambahan.ToString();
                         querystr = $"UPDATE BARANG_WAREHOUSE SET QTY = {angkatambah} WHERE ID_BARANG = {dataset.Tables["BARANG"].Rows[n].ItemArray[0].ToString()} AND ID_WAREHOUSE = {User.User_login.Id_warehouse}";
+                        DB.executeQuery(querystr, null);
+                        int tambahan1 = Convert.ToInt32(dataset.Tables["BARANG"].Rows[n].ItemArray[1].ToString()) + Convert.ToInt32(dataset.Tables["BARANG"].Rows[n].ItemArray[2].ToString());
+                        String angkatambah1 = tambahan1.ToString();
+                        querystr = $"UPDATE BARANG SET QTY = {angkatambah1} WHERE ID = {dataset.Tables["BARANG"].Rows[n].ItemArray[0].ToString()}";
                         DB.executeQuery(querystr, null);
                     }
                 }

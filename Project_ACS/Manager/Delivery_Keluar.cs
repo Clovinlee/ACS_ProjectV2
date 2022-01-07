@@ -58,40 +58,38 @@ namespace Project_ACS.Manager
         void loaddgv()
         {
             dataset = new DataSet();
-            querystr = "SELECT KODE AS Kode, NAMA AS Nama, QTY || ' Dus' AS Qty FROM BARANG";
+            querystr = "SELECT KODE AS Kode, NAMA AS Nama, QTY  AS Qty FROM BARANG";
             querystr = "SELECT DISTINCT B.KODE AS KODE, B.NAMA AS NAMA, BW.QTY || ' Dus' AS QTY FROM BARANG B, BARANG_WAREHOUSE BW, WAREHOUSE W WHERE B.ID = BW.ID_BARANG AND BW.ID_WAREHOUSE = :0";
             List<object[]> listParam = new List<object[]>();
             listParam.Add(new object[] { User.User_login.Id_warehouse, "int32" });
             DB.executeDataSet(dataset, querystr, listParam, "BARANG");
-            dgvBarang.DataMember = "BARANG";
-            dgvBarang.DataSource = dataset;
+            dgvBarang.DataSource = dataset.Tables["BARANG"];
 
-            
+
 
             dataset = new DataSet();
-            querystr = "SELECT KODE AS Kode, NAMA AS Nama, QTY || ' Dus' AS Qty FROM BARANG WHERE 1=2";
-            DB.executeDataSet(dataset, querystr, null, "BARANG");
-            dgvCart.DataMember = "BARANG";
-            dgvCart.DataSource = dataset;
+            querystr = "SELECT KODE AS Kode, NAMA AS Nama, QTY  AS Qty FROM BARANG WHERE 1=2";
+            DB.executeDataSet(dataset, querystr, null, "ORDER");
+            dgvCart.DataSource = dataset.Tables["ORDER"];
         }
         void loaddgv2()
         {
             dataset = new DataSet();
-            querystr = "SELECT KODE AS Kode, NAMA AS Nama, QTY || ' Dus' AS Qty FROM BARANG";
+            querystr = "SELECT KODE AS Kode, NAMA AS Nama, QTY  AS Qty FROM BARANG";
             querystr = "SELECT DISTINCT B.KODE AS KODE, B.NAMA AS NAMA, BW.QTY || ' Dus' AS QTY FROM BARANG B, BARANG_WAREHOUSE BW, WAREHOUSE W WHERE B.ID = BW.ID_BARANG AND BW.ID_WAREHOUSE = :0";
             List<object[]> listParam = new List<object[]>();
             listParam.Add(new object[] { User.User_login.Id_warehouse, "int32" });
             DB.executeDataSet(dataset, querystr, listParam, "BARANG");
-            
-            dgvBarang.DataSource = dataset;
+
+            dgvBarang.DataSource = dataset.Tables["BARANG"];
 
 
 
             dataset = new DataSet();
-            querystr = "SELECT KODE AS Kode, NAMA AS Nama, QTY || ' Dus' AS Qty FROM BARANG WHERE 1=2";
-            DB.executeDataSet(dataset, querystr, null, "BARANG");
-            
-            dgvCart.DataSource = dataset;
+            querystr = "SELECT KODE AS Kode, NAMA AS Nama, QTY  AS Qty FROM BARANG WHERE 1=2";
+            DB.executeDataSet(dataset, querystr, null, "ORDER");
+
+            dgvCart.DataSource = dataset.Tables["ORDER"];
         }
 
         private void Delivery_Keluar_Load(object sender, EventArgs e)
@@ -140,6 +138,21 @@ namespace Project_ACS.Manager
                         String keterangan = "D-" + Convert.ToString(cbb_partner.SelectedIndex + 1);
                         querystr = $"INSERT INTO HISTORY_BARANG_KELUAR_MASUK VALUES({idbarang},TO_DATE('{Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy"))}', 'DD/MM/YYYY'),{dgvCart.Rows[l].Cells[2].Value.ToString()},'{keterangan}',{User.User_login.Id_warehouse},0)";
                         DB.executeQuery(querystr, null);
+                        dataset = new DataSet();
+                        DB.executeQuery($"UPDATE H_ORDER_SUPPLIER SET STATUS = 3 WHERE KODE = '{kode}'", null);
+                        querystr = $"SELECT B.ID , B.QTY , DO.QTY , BW.QTY FROM BARANG B ,  D_ORDER_SUPPLIER DO , BARANG_WAREHOUSE BW WHERE DO.KODE_ORDER = '{kode}' AND DO.ID_BARANG = B.ID AND B.ID = BW.ID_BARANG";
+                        DB.executeDataSet(dataset, querystr, null, "TAMBAHAN");
+                        for (int n = 0; n < dataset.Tables["TAMBAHAN"].Rows.Count; n++)
+                        {
+                            int tambahan = Convert.ToInt32(dataset.Tables["TAMBAHAN"].Rows[n].ItemArray[3].ToString()) - Convert.ToInt32(dataset.Tables["TAMBAHAN"].Rows[n].ItemArray[2].ToString());
+                            String angkatambah = tambahan.ToString();
+                            querystr = $"UPDATE BARANG_WAREHOUSE SET QTY = {angkatambah} WHERE ID_BARANG = {dataset.Tables["TAMBAHAN"].Rows[n].ItemArray[0].ToString()} AND ID_WAREHOUSE = {User.User_login.Id_warehouse}";
+                            DB.executeQuery(querystr, null);
+                            int tambahan1 = Convert.ToInt32(dataset.Tables["TAMBAHAN"].Rows[n].ItemArray[1].ToString()) - Convert.ToInt32(dataset.Tables["TAMBAHAN"].Rows[n].ItemArray[2].ToString());
+                            String angkatambah1 = tambahan1.ToString();
+                            querystr = $"UPDATE BARANG SET QTY = {angkatambah1} WHERE ID = {dataset.Tables["TAMBAHAN"].Rows[n].ItemArray[0].ToString()}";
+                            DB.executeQuery(querystr, null);
+                        }
                     }
                     MessageBox.Show("Berhasil Insert!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     
@@ -189,9 +202,16 @@ namespace Project_ACS.Manager
                     }
                     else
                     {
-                        dataset.Tables["BARANG"].Rows.Add(dgvBarang.Rows[idx].Cells[0].Value.ToString(), dgvBarang.Rows[idx].Cells[1].Value.ToString(), Convert.ToInt32(nudQty.Value));
+                        if(nudQty.Value != 0)
+                        {
+                            dataset.Tables["ORDER"].Rows.Add(dgvBarang.Rows[idx].Cells[0].Value.ToString(), dgvBarang.Rows[idx].Cells[1].Value.ToString(), Convert.ToInt32(nudQty.Value));
 
-                        dgvCart.DataSource = dataset.Tables["BARANG"];
+                            dgvCart.DataSource = dataset.Tables["ORDER"];
+                        }
+                        else
+                        {
+                            MessageBox.Show("Quantity tidak boleh 0!");
+                        }
                     }
                 }
             }

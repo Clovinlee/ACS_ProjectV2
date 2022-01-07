@@ -104,9 +104,16 @@ namespace Project_ACS.Manager
                 }
                 else
                 {
-                    dataset.Tables["BARANG"].Rows.Add(dgvBarang.Rows[idx].Cells[0].Value.ToString(), dgvBarang.Rows[idx].Cells[1].Value.ToString(), Convert.ToInt32(nudQty.Value));
+                    if (nudQty.Value != 0)
+                    {
+                        dataset.Tables["BARANG"].Rows.Add(dgvBarang.Rows[idx].Cells[0].Value.ToString(), dgvBarang.Rows[idx].Cells[1].Value.ToString(), Convert.ToInt32(nudQty.Value));
 
-                    dgvCart.DataSource = dataset.Tables["BARANG"];
+                        dgvCart.DataSource = dataset.Tables["BARANG"];
+                    }
+                    else
+                    {
+                        MessageBox.Show("Quantity tidak boleh 0!");
+                    }
                 }
             }
             
