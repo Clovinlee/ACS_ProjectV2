@@ -40,7 +40,7 @@ namespace Project_ACS.Master
         public void loadAkun()
         {
             dataset = new DataSet();
-            querystr = "SELECT u.USERNAME AS \"Username\", u.NAMA AS \"Nama\", j.NAMA AS \"Jabatan\", u.ALAMAT AS \"Alamat\", u.EMAIL AS \"Email\" FROM USERS u , JABATAN j WHERE u.STATUS = 1 AND u.ID_JABATAN = j.ID";
+            querystr = "SELECT u.USERNAME AS \"Username\", u.NAMA AS \"Nama\", j.NAMA AS \"Jabatan\", u.ALAMAT AS \"Alamat\", u.EMAIL AS \"Email\" FROM USERS u , JABATAN j WHERE u.STATUS = 1 AND u.ID_JABATAN = j.ID ORDER BY u.id DESC";
             DB.executeDataSet(dataset, querystr, null, "USERS");
             dgvAkun.DataMember = "USERS";
             dgvAkun.DataSource = dataset;
@@ -66,42 +66,42 @@ namespace Project_ACS.Master
             if (nama == "" && username != "" && jabatan == "")
             {
                 listParam.Add(new object[] { username, "varchar" });
-                querystr = $"SELECT u.USERNAME AS \"Username\", u.NAMA AS \"Nama\", j.NAMA AS \"Jabatan\", u.ALAMAT AS \"Alamat\", u.EMAIL AS \"Email\" FROM USERS u , JABATAN j WHERE u.STATUS = 1 AND u.ID_JABATAN = j.ID AND LOWER(u.USERNAME) LIKE '%{username}%'";
+                querystr = $"SELECT u.USERNAME AS \"Username\", u.NAMA AS \"Nama\", j.NAMA AS \"Jabatan\", u.ALAMAT AS \"Alamat\", u.EMAIL AS \"Email\" FROM USERS u , JABATAN j WHERE u.STATUS = 1 AND u.ID_JABATAN = j.ID AND LOWER(u.USERNAME) LIKE '%{username}%' ORDER BY u.id DESC";
             }
             else if (nama != "" && username == "" && jabatan == "")
             {
                 listParam.Add(new object[] { nama, "varchar" });
-                querystr = $"SELECT u.USERNAME AS \"Username\", u.NAMA AS \"Nama\", j.NAMA AS \"Jabatan\", u.ALAMAT AS \"Alamat\", u.EMAIL AS \"Email\" FROM USERS u , JABATAN j WHERE u.STATUS = 1 AND u.ID_JABATAN = j.ID AND LOWER(u.NAMA) LIKE '%{nama}%'";
+                querystr = $"SELECT u.USERNAME AS \"Username\", u.NAMA AS \"Nama\", j.NAMA AS \"Jabatan\", u.ALAMAT AS \"Alamat\", u.EMAIL AS \"Email\" FROM USERS u , JABATAN j WHERE u.STATUS = 1 AND u.ID_JABATAN = j.ID AND LOWER(u.NAMA) LIKE '%{nama}%' ORDER BY u.id DESC";
             }
             else if (nama == "" && username == "" && jabatan != "")
             {
                 listParam.Add(new object[] { jabatan, "varchar" });
-                querystr = $"SELECT u.USERNAME AS \"Username\", u.NAMA AS \"Nama\", j.NAMA AS \"Jabatan\", u.ALAMAT AS \"Alamat\", u.EMAIL AS \"Email\" FROM USERS u , JABATAN j WHERE u.STATUS = 1 AND u.ID_JABATAN = j.ID AND LOWER(j.NAMA) LIKE '%{jabatan}%'";
+                querystr = $"SELECT u.USERNAME AS \"Username\", u.NAMA AS \"Nama\", j.NAMA AS \"Jabatan\", u.ALAMAT AS \"Alamat\", u.EMAIL AS \"Email\" FROM USERS u , JABATAN j WHERE u.STATUS = 1 AND u.ID_JABATAN = j.ID AND LOWER(j.NAMA) LIKE '%{jabatan}%' ORDER BY u.id DESC";
             }
             else if (nama != "" && username != "" && jabatan == "")
             {
                 listParam.Add(new object[] { nama, "varchar" });
                 listParam.Add(new object[] { username, "varchar" });
-                querystr = $"SELECT u.USERNAME AS \"Username\", u.NAMA AS \"Nama\", j.NAMA AS \"Jabatan\", u.ALAMAT AS \"Alamat\", u.EMAIL AS \"Email\" FROM USERS u , JABATAN j WHERE u.STATUS = 1 AND u.ID_JABATAN = j.ID AND LOWER(u.NAMA) LIKE '%{nama}%' AND LOWER(u.USERNAME) LIKE '%{username}%'";
+                querystr = $"SELECT u.USERNAME AS \"Username\", u.NAMA AS \"Nama\", j.NAMA AS \"Jabatan\", u.ALAMAT AS \"Alamat\", u.EMAIL AS \"Email\" FROM USERS u , JABATAN j WHERE u.STATUS = 1 AND u.ID_JABATAN = j.ID AND LOWER(u.NAMA) LIKE '%{nama}%' AND LOWER(u.USERNAME) LIKE '%{username}%' ORDER BY u.id DESC";
             }
             else if (nama != "" && username == "" && jabatan != "")
             {
                 listParam.Add(new object[] { nama, "varchar" });
                 listParam.Add(new object[] { jabatan, "varchar" });
-                querystr = $"SELECT u.USERNAME AS \"Username\", u.NAMA AS \"Nama\", j.NAMA AS \"Jabatan\", u.ALAMAT AS \"Alamat\", u.EMAIL AS \"Email\" FROM USERS u , JABATAN j WHERE u.STATUS = 1 AND u.ID_JABATAN = j.ID AND LOWER(u.NAMA) LIKE '%{nama}%' AND LOWER(j.NAMA) LIKE '%{jabatan}%'";
+                querystr = $"SELECT u.USERNAME AS \"Username\", u.NAMA AS \"Nama\", j.NAMA AS \"Jabatan\", u.ALAMAT AS \"Alamat\", u.EMAIL AS \"Email\" FROM USERS u , JABATAN j WHERE u.STATUS = 1 AND u.ID_JABATAN = j.ID AND LOWER(u.NAMA) LIKE '%{nama}%' AND LOWER(j.NAMA) LIKE '%{jabatan}%' ORDER BY u.id DESC";
             }
             else if (nama == "" && username != "" && jabatan != "")
             {
                 listParam.Add(new object[] { username, "varchar" });
                 listParam.Add(new object[] { jabatan, "varchar" });
-                querystr = $"SELECT u.USERNAME AS \"Username\", u.NAMA AS \"Nama\", j.NAMA AS \"Jabatan\", u.ALAMAT AS \"Alamat\", u.EMAIL AS \"Email\" FROM USERS u , JABATAN j WHERE u.STATUS = 1 AND u.ID_JABATAN = j.ID AND LOWER(u.USERNAME) LIKE '%{username}%' AND LOWER(j.NAMA) LIKE '%{jabatan}%'";
+                querystr = $"SELECT u.USERNAME AS \"Username\", u.NAMA AS \"Nama\", j.NAMA AS \"Jabatan\", u.ALAMAT AS \"Alamat\", u.EMAIL AS \"Email\" FROM USERS u , JABATAN j WHERE u.STATUS = 1 AND u.ID_JABATAN = j.ID AND LOWER(u.USERNAME) LIKE '%{username}%' AND LOWER(j.NAMA) LIKE '%{jabatan}%' ORDER BY u.id DESC";
             }
             else if (nama != "" && username != "" && jabatan != "")
             {
                 listParam.Add(new object[] { nama, "varchar" });
                 listParam.Add(new object[] { username, "varchar" });
                 listParam.Add(new object[] { jabatan, "varchar" });
-                querystr = $"SELECT u.USERNAME AS \"Username\", u.NAMA AS \"Nama\", j.NAMA AS \"Jabatan\", u.ALAMAT AS \"Alamat\", u.EMAIL AS \"Email\" FROM USERS u , JABATAN j WHERE u.STATUS = 1 AND u.ID_JABATAN = j.ID AND LOWER(u.NAMA) LIKE '%{nama}%' AND LOWER(u.USERNAME) LIKE '%{username}%' AND LOWER(j.NAMA) LIKE '%{jabatan}%'";
+                querystr = $"SELECT u.USERNAME AS \"Username\", u.NAMA AS \"Nama\", j.NAMA AS \"Jabatan\", u.ALAMAT AS \"Alamat\", u.EMAIL AS \"Email\" FROM USERS u , JABATAN j WHERE u.STATUS = 1 AND u.ID_JABATAN = j.ID AND LOWER(u.NAMA) LIKE '%{nama}%' AND LOWER(u.USERNAME) LIKE '%{username}%' AND LOWER(j.NAMA) LIKE '%{jabatan}%' ORDER BY u.id DESC";
             }
             else
             {
