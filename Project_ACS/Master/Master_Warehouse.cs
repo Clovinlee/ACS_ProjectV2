@@ -16,8 +16,6 @@ namespace Project_ACS
         public Master_Warehouse()
         {
             InitializeComponent();
-            loadWareHouse();
-            //cmbSort.SelectedIndex = 0;
         }
 
         public Master_Warehouse(DataSet dataset, MainMenu_Master frm_master) : this()
@@ -25,6 +23,7 @@ namespace Project_ACS
             InitializeComponent();
             this.dataset = dataset;
             this.frm_menumaster = frm_master;
+            loadWareHouse();
         }
 
         DataSet dataset;
@@ -40,11 +39,14 @@ namespace Project_ACS
 
         public void loadWareHouse()
         {
-            dataset = new DataSet();
-            querystr = "SELECT ID, NAMA AS \"Nama\", ALAMAT AS \"Alamat\", TELEPON AS \"Nomor Telepon\" FROM WAREHOUSE WHERE STATUS = 1 ORDER BY 1 DESC";
-            DB.executeDataSet(dataset, querystr, null, "WAREHOUSE");
+            dataset.Tables[0].Rows.Clear();
+            DB.executeDataSet(dataset, "SELECT ID, NAMA AS \"Nama\", ALAMAT AS \"Alamat\", TELEPON AS \"Nomor Telepon\" FROM WAREHOUSE WHERE STATUS = 1 ORDER BY 1 DESC", null, "WAREHOUSE");
+            //dataset = new DataSet();
+            //querystr = "SELECT ID, NAMA AS \"Nama\", ALAMAT AS \"Alamat\", TELEPON AS \"Nomor Telepon\" FROM WAREHOUSE WHERE STATUS = 1 ORDER BY 1 DESC";
+            //DB.executeDataSet(dataset, querystr, null, "WAREHOUSE");
             dgvWarehouse.DataMember = "WAREHOUSE";
             dgvWarehouse.DataSource = dataset;
+            frm_menumaster.frm_dashboard.loadData("warehouse");
             settingDgv();
         }
 

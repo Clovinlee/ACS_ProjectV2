@@ -177,7 +177,8 @@ namespace Project_ACS
 
             DB.executeDataSet(ds_bp, "select * from business_partner", null, "bp");
             DB.executeDataSet(ds_users, "select * from users where status = 1", null, "users");
-            DB.executeDataSet(ds_warehouse, "select * from warehouse where status = 1", null, "warehouse"); 
+            //DB.executeDataSet(ds_warehouse, "select * from warehouse where status = 1", null, "warehouse");
+            DB.executeDataSet(ds_warehouse, "SELECT ID, NAMA AS \"Nama\", ALAMAT AS \"Alamat\", TELEPON AS \"Nomor Telepon\" FROM WAREHOUSE WHERE STATUS = 1 ORDER BY 1 DESC", null, "WAREHOUSE");
             //DB.executeDataSet(ds_barang, "SELECT b.kode, b.nama, b.deskripsi, b.harga, k.nama as kategori, m.nama as merk, b.MULTIPLIER, b.QTY FROM barang b join kategori k on b.ID_KATEGORI = k.id join merk m on b.ID_MERK = m.id WHERE B.status <> 0 order by b.id desc", null, "barang");
             DB.executeDataSet(ds_kategori, "select * from kategori", null, "kategori");
             DB.executeDataSet(ds_merk, "select * from merk", null, "merk");
@@ -202,7 +203,7 @@ namespace Project_ACS
         public void initSubForm()
         {
             frm_dashboard = new Master_Dashboard(ds_bp, ds_users, ds_warehouse, ds_barang, ds_kategori,ds_merk);
-            frm_warehouse = new Master_Warehouse();
+            frm_warehouse = new Master_Warehouse(ds_warehouse, this);
             frm_akun = new Master_Akun(ds_users, this);
             frm_barang = new Master_Barang(ds_barang,this);
             frm_kategori = new Master_Kategori(ds_kategori,this);
