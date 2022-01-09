@@ -180,8 +180,8 @@ namespace Project_ACS
             //DB.executeDataSet(ds_warehouse, "select * from warehouse where status = 1", null, "warehouse");
             DB.executeDataSet(ds_warehouse, "SELECT ID, NAMA AS \"Nama\", ALAMAT AS \"Alamat\", TELEPON AS \"Nomor Telepon\" FROM WAREHOUSE WHERE STATUS = 1 ORDER BY 1 DESC", null, "WAREHOUSE");
             //DB.executeDataSet(ds_barang, "SELECT b.kode, b.nama, b.deskripsi, b.harga, k.nama as kategori, m.nama as merk, b.MULTIPLIER, b.QTY FROM barang b join kategori k on b.ID_KATEGORI = k.id join merk m on b.ID_MERK = m.id WHERE B.status <> 0 order by b.id desc", null, "barang");
-            DB.executeDataSet(ds_kategori, "select * from kategori", null, "kategori");
-            DB.executeDataSet(ds_merk, "select * from merk", null, "merk");
+            DB.executeDataSet(ds_kategori, "SELECT id,nama from kategori order by id desc", null, "tkategori");
+            DB.executeDataSet(ds_merk, "SELECT id,nama from merk order by id desc", null, "tmerk");
         }
 
         public Master_Dashboard frm_dashboard;
