@@ -70,6 +70,7 @@ namespace Project_ACS.Master
                     listParam.Add(new object[] { "1", "int32" });
                     querystr = "INSERT INTO WAREHOUSE VALUES(:0, :1, :2, :3, :4, :5)";
                     MessageBox.Show("Berhasil Insert!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
                 else
                 {
@@ -79,6 +80,7 @@ namespace Project_ACS.Master
                     listParam.Add(new object[] { id.ToString(), "int32" });
                     querystr = "UPDATE WAREHOUSE SET NAMA = :0, ALAMAT = :1, TELEPON = :2 WHERE ID = :3";
                     MessageBox.Show("Berhasil Update!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
                 DB.executeQuery(querystr, listParam);
                 mw.loadWareHouse();
