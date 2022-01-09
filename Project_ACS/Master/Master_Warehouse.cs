@@ -131,7 +131,8 @@ namespace Project_ACS
                     DialogResult dialogResult = MessageBox.Show("Anda yakin hapus warehouse?", "Delete Warehouse", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
                     {
-                        dataset = new DataSet();
+                        //dataset = new DataSet();
+                        dataset.Tables[0].Rows.Clear();
                         querystr = "UPDATE WAREHOUSE SET STATUS = 0 WHERE ID = :0";
                         DB.executeDataSet(dataset, querystr, listParam, "WAREHOUSE");
                         loadWareHouse();
