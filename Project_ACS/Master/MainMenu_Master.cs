@@ -203,7 +203,7 @@ namespace Project_ACS
         {
             frm_dashboard = new Master_Dashboard(ds_bp, ds_users, ds_warehouse, ds_barang, ds_kategori,ds_merk);
             frm_warehouse = new Master_Warehouse();
-            frm_akun = new Master_Akun();
+            frm_akun = new Master_Akun(ds_users, this);
             frm_barang = new Master_Barang(ds_barang,this);
             frm_kategori = new Master_Kategori(ds_kategori,this);
             frm_merk = new Master_Merk(ds_merk,this);
