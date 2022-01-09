@@ -136,19 +136,19 @@ namespace Project_ACS.Manager
                         querystr = $"INSERT INTO D_KELUAR_BARANG VALUES('{kode}',{idbarang},{dgvCart.Rows[l].Cells[2].Value.ToString()})";
                         DB.executeQuery(querystr, null);
                         String keterangan = "D-" + Convert.ToString(cbb_partner.SelectedIndex + 1);
-                        querystr = $"INSERT INTO HISTORY_BARANG_KELUAR_MASUK VALUES({idbarang},TO_DATE('{Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy"))}', 'DD/MM/YYYY'),{dgvCart.Rows[l].Cells[2].Value.ToString()},'{keterangan}',{User.User_login.Id_warehouse},0)";
+                        querystr = $"INSERT INTO HISTORY_BARANG_KELUAR_MASUK VALUES({idbarang},TO_DATE('{Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy"))}', 'DD/MM/YYYY'),{dgvCart.Rows[l].Cells[2].Value.ToString()},'{keterangan}',{User.User_login.Id_warehouse},'{cbb_partner.SelectedItem.ToString()}',0)";
                         DB.executeQuery(querystr, null);
                         dataset = new DataSet();
-                        DB.executeQuery($"UPDATE H_ORDER_SUPPLIER SET STATUS = 3 WHERE KODE = '{kode}'", null);
-                        querystr = $"SELECT B.ID , B.QTY , DO.QTY , BW.QTY FROM BARANG B ,  D_ORDER_SUPPLIER DO , BARANG_WAREHOUSE BW WHERE DO.KODE_ORDER = '{kode}' AND DO.ID_BARANG = B.ID AND B.ID = BW.ID_BARANG";
+                        
+                        querystr = $"SELECT B.ID , B.QTY  , BW.QTY FROM BARANG B ,  BARANG_WAREHOUSE BW WHERE B.ID = {idbarang} AND B.ID = BW.ID_BARANG";
                         DB.executeDataSet(dataset, querystr, null, "TAMBAHAN");
                         for (int n = 0; n < dataset.Tables["TAMBAHAN"].Rows.Count; n++)
                         {
-                            int tambahan = Convert.ToInt32(dataset.Tables["TAMBAHAN"].Rows[n].ItemArray[3].ToString()) - Convert.ToInt32(dataset.Tables["TAMBAHAN"].Rows[n].ItemArray[2].ToString());
+                            int tambahan = Convert.ToInt32(dataset.Tables["TAMBAHAN"].Rows[n].ItemArray[2].ToString()) - Convert.ToInt32(dgvCart.Rows[l].Cells[2].Value.ToString());
                             String angkatambah = tambahan.ToString();
                             querystr = $"UPDATE BARANG_WAREHOUSE SET QTY = {angkatambah} WHERE ID_BARANG = {dataset.Tables["TAMBAHAN"].Rows[n].ItemArray[0].ToString()} AND ID_WAREHOUSE = {User.User_login.Id_warehouse}";
                             DB.executeQuery(querystr, null);
-                            int tambahan1 = Convert.ToInt32(dataset.Tables["TAMBAHAN"].Rows[n].ItemArray[1].ToString()) - Convert.ToInt32(dataset.Tables["TAMBAHAN"].Rows[n].ItemArray[2].ToString());
+                            int tambahan1 = Convert.ToInt32(dataset.Tables["TAMBAHAN"].Rows[n].ItemArray[1].ToString()) - Convert.ToInt32(dgvCart.Rows[l].Cells[2].Value.ToString());
                             String angkatambah1 = tambahan1.ToString();
                             querystr = $"UPDATE BARANG SET QTY = {angkatambah1} WHERE ID = {dataset.Tables["TAMBAHAN"].Rows[n].ItemArray[0].ToString()}";
                             DB.executeQuery(querystr, null);

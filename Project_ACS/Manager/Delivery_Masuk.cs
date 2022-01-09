@@ -172,9 +172,7 @@ namespace Project_ACS.Manager
                         String idbarang = (string)DB.executeScalar($"select ID from Barang WHERE NAMA = '{dgvCart.Rows[l].Cells[1].Value.ToString()}'" , null).ToString();
                         querystr = $"INSERT INTO D_ORDER_SUPPLIER VALUES('{kode}',{idbarang},{dgvCart.Rows[l].Cells[2].Value.ToString()})";
                         DB.executeQuery(querystr, null);
-                        String keterangan = "D-" + Convert.ToString(cbb_partner.SelectedIndex + 1);
-                        querystr = $"INSERT INTO HISTORY_BARANG_KELUAR_MASUK VALUES({idbarang},TO_DATE('{Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy"))}', 'DD/MM/YYYY'),{dgvCart.Rows[l].Cells[2].Value.ToString()},'{keterangan}',{User.User_login.Id_warehouse},1)";
-                        DB.executeQuery(querystr, null);
+                        
                     }
                     MessageBox.Show("Berhasil Insert!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     loaddgv();
