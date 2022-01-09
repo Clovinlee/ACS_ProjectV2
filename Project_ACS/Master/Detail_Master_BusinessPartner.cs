@@ -32,7 +32,6 @@ namespace Project_ACS.Master
             if(editRow == null)
             {
                 btn_update.Text = "Insert";
-                btn_delete.Visible = false;
                 lbl_kode.Text = "";
             }
             else

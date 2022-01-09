@@ -15,8 +15,18 @@ namespace Project_ACS.Master
         public Master_Akun()
         {
             InitializeComponent();
+        }
+
+        public Master_Akun(DataSet ds_akun, MainMenu_Master frm_master) : this()
+        {
+            this.frm_master = frm_master;
+            this.ds_akun = ds_akun;
             loadAkun();
         }
+
+        DataSet ds_akun;
+        MainMenu_Master frm_master;
+
         DataSet dataset;
         string querystr = ""; int idxclicked = -1;
 
@@ -34,7 +44,9 @@ namespace Project_ACS.Master
             DB.executeDataSet(dataset, querystr, null, "USERS");
             dgvAkun.DataMember = "USERS";
             dgvAkun.DataSource = dataset;
+            frm_master.frm_dashboard.loadData("akun");
             settingDgv();
+            
         }
         void settingDgv()
         {

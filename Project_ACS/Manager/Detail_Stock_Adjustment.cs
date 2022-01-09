@@ -79,12 +79,20 @@ namespace Project_ACS.Manager
             }
             else
             {
-                int id_insert = Convert.ToInt32(DB.executeScalar("SELECT max(id)+1 from adjustment", null));
-                DB.executeQuery($"INSERT INTO ADJUSTMENT VALUES({id_insert},{num_newqty.Value},{num_oldqty.Value},TO_DATE('{System.DateTime.Now.ToShortDateString()}', 'DD/MM/YYYY'),{dr2[0][2]},{User.User_login.Id_warehouse},'{tb_keterangan.Text}')", null);
-                DB.executeQuery($"UPDATE BARANG_WAREHOUSE SET QTY = {num_newqty.Value} WHERE ID = {dr2[0][0]}", null);
-                frm_adjust.loadDgv();
-                MessageBox.Show("Sukses adjust stok!");
-                this.Close();
+                if(tb_keterangan.Text == "")
+                {
+                    MessageBox.Show("Keterangan tidak boleh kosong!");
+                }
+                else
+                {
+                    int id_insert = Convert.ToInt32(DB.executeScalar("SELECT max(id)+1 from adjustment", null));
+                    DB.executeQuery($"INSERT INTO ADJUSTMENT VALUES({id_insert},{num_newqty.Value},{num_oldqty.Value},TO_DATE('{System.DateTime.Now.ToShortDateString()}', 'DD/MM/YYYY'),{dr2[0][2]},{User.User_login.Id_warehouse},'{tb_keterangan.Text}')", null);
+                    DB.executeQuery($"UPDATE BARANG_WAREHOUSE SET QTY = {num_newqty.Value} WHERE ID = {dr2[0][0]}", null);
+                    frm_adjust.loadDgv();
+                    MessageBox.Show("Sukses adjust stok!");
+                    this.Close();
+                }
+                
             }
         }
     }

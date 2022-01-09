@@ -42,7 +42,6 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.label1 = new System.Windows.Forms.Label();
             this.tb_nama = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,7 +50,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tb_alamat = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btn_update = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btn_delete = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.lbl_kode = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -407,7 +405,7 @@
             this.btn_update.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn_update.OnPressedState.IconLeftImage = null;
             this.btn_update.OnPressedState.IconRightImage = null;
-            this.btn_update.Size = new System.Drawing.Size(124, 39);
+            this.btn_update.Size = new System.Drawing.Size(260, 39);
             this.btn_update.TabIndex = 41;
             this.btn_update.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_update.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -415,95 +413,6 @@
             this.btn_update.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_update.UseDefaultRadiusAndThickness = true;
             this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.AllowAnimations = true;
-            this.btn_delete.AllowMouseEffects = true;
-            this.btn_delete.AllowToggling = false;
-            this.btn_delete.AnimationSpeed = 200;
-            this.btn_delete.AutoGenerateColors = false;
-            this.btn_delete.AutoRoundBorders = false;
-            this.btn_delete.AutoSizeLeftIcon = true;
-            this.btn_delete.AutoSizeRightIcon = true;
-            this.btn_delete.BackColor = System.Drawing.Color.Transparent;
-            this.btn_delete.BackColor1 = System.Drawing.Color.DodgerBlue;
-            this.btn_delete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_delete.BackgroundImage")));
-            this.btn_delete.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_delete.ButtonText = "Delete";
-            this.btn_delete.ButtonTextMarginLeft = 0;
-            this.btn_delete.ColorContrastOnClick = 45;
-            this.btn_delete.ColorContrastOnHover = 45;
-            this.btn_delete.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btn_delete.CustomizableEdges = borderEdges2;
-            this.btn_delete.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_delete.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btn_delete.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btn_delete.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btn_delete.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btn_delete.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete.ForeColor = System.Drawing.Color.White;
-            this.btn_delete.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_delete.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btn_delete.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btn_delete.IconMarginLeft = 11;
-            this.btn_delete.IconPadding = 10;
-            this.btn_delete.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_delete.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btn_delete.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btn_delete.IconSize = 25;
-            this.btn_delete.IdleBorderColor = System.Drawing.Color.DodgerBlue;
-            this.btn_delete.IdleBorderRadius = 1;
-            this.btn_delete.IdleBorderThickness = 1;
-            this.btn_delete.IdleFillColor = System.Drawing.Color.DodgerBlue;
-            this.btn_delete.IdleIconLeftImage = null;
-            this.btn_delete.IdleIconRightImage = null;
-            this.btn_delete.IndicateFocus = false;
-            this.btn_delete.Location = new System.Drawing.Point(153, 352);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btn_delete.OnDisabledState.BorderRadius = 1;
-            this.btn_delete.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_delete.OnDisabledState.BorderThickness = 1;
-            this.btn_delete.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btn_delete.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btn_delete.OnDisabledState.IconLeftImage = null;
-            this.btn_delete.OnDisabledState.IconRightImage = null;
-            this.btn_delete.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btn_delete.onHoverState.BorderRadius = 1;
-            this.btn_delete.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_delete.onHoverState.BorderThickness = 1;
-            this.btn_delete.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btn_delete.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btn_delete.onHoverState.IconLeftImage = null;
-            this.btn_delete.onHoverState.IconRightImage = null;
-            this.btn_delete.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btn_delete.OnIdleState.BorderRadius = 1;
-            this.btn_delete.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_delete.OnIdleState.BorderThickness = 1;
-            this.btn_delete.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btn_delete.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btn_delete.OnIdleState.IconLeftImage = null;
-            this.btn_delete.OnIdleState.IconRightImage = null;
-            this.btn_delete.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btn_delete.OnPressedState.BorderRadius = 1;
-            this.btn_delete.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_delete.OnPressedState.BorderThickness = 1;
-            this.btn_delete.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btn_delete.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btn_delete.OnPressedState.IconLeftImage = null;
-            this.btn_delete.OnPressedState.IconRightImage = null;
-            this.btn_delete.Size = new System.Drawing.Size(124, 39);
-            this.btn_delete.TabIndex = 42;
-            this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_delete.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_delete.TextMarginLeft = 0;
-            this.btn_delete.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btn_delete.UseDefaultRadiusAndThickness = true;
             // 
             // lbl_kode
             // 
@@ -535,7 +444,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
             this.ClientSize = new System.Drawing.Size(293, 408);
-            this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tb_alamat);
@@ -565,7 +473,6 @@
         private System.Windows.Forms.Label label6;
         private Bunifu.UI.WinForms.BunifuTextBox tb_alamat;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_update;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_delete;
         private System.Windows.Forms.Label lbl_kode;
         private System.Windows.Forms.Label label2;
     }

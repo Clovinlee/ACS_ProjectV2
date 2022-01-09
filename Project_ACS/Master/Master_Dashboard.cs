@@ -83,6 +83,16 @@ namespace Project_ACS
                 lbl_lastbarang.Text = tmp[0][2].ToString();
                 lbl_lastbarangmerk.Text = (ds_merk.Tables[0].Select($"id = {tmp[0][6]}"))[0][1].ToString();
                 lbl_lastbarangkategori.Text = (ds_kategori.Tables[0].Select($"id = {tmp[0][5]}"))[0][1].ToString();
+
+                //DataSet ds_temp = new DataSet();
+                //DB.executeDataSet(ds_temp, "select * from barang", null, "brg");
+                //jml_barang = Convert.ToInt32(ds_temp.Tables[0].Compute("Count(id)", "5=5"));
+
+                //lbl_jmlbarang.Text = jml_barang.ToString();
+                //DataRow[] tmp = ds_temp.Tables[0].Select("id = max(id)");
+                //lbl_lastbarang.Text = tmp[0][2].ToString();
+                //lbl_lastbarangmerk.Text = (ds_merk.Tables[0].Select($"id = {tmp[0][6]}"))[0][1].ToString();
+                //lbl_lastbarangkategori.Text = (ds_kategori.Tables[0].Select($"id = {tmp[0][5]}"))[0][1].ToString();
             }
             else if(mode.ToLower() == "kategori")
             {
@@ -102,12 +112,23 @@ namespace Project_ACS
                 lbl_jmlwarehouse.Text = jml_warehouse.ToString();
                 DataRow[] tmp = ds_warehouse.Tables[0].Select("id = max(id)");
                 lbl_lastwarehouse.Text = tmp[0][1].ToString();
+
+                //DataSet ds_temp = new DataSet();
+                //DB.executeDataSet(ds_temp, "select * from warehouse where status = 1", null, "wh");
+                //jml_warehouse = Convert.ToInt32(ds_temp.Tables[0].Compute("Count(id)", "5=5"));
+
+                //lbl_jmlwarehouse.Text = jml_warehouse.ToString();
+                //DataRow[] tmp = ds_temp.Tables[0].Select("id = max(id)");
+                //lbl_lastwarehouse.Text = tmp[0][1].ToString();
             }else if(mode.ToLower() == "akun")
             {
-                jml_akun = Convert.ToInt32(ds_akun.Tables[0].Compute("Count(id)", "5=5"));
+                DataSet ds_temp = new DataSet();
+                DB.executeDataSet(ds_temp, "select * from users where status = 1", null, "akun");
+
+                jml_akun = Convert.ToInt32(ds_temp.Tables[0].Compute("Count(id)", "5=5"));
 
                 lbl_jmlakun.Text = jml_akun.ToString();
-                DataRow[] tmp = ds_akun.Tables[0].Select("id = max(id)");
+                DataRow[] tmp = ds_temp.Tables[0].Select("id = max(id)");
                 lbl_lastakun.Text = tmp[0][1].ToString();
             }
         }
