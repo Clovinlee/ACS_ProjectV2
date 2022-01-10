@@ -87,8 +87,8 @@ namespace Project_ACS.Manager
             } 
             dgv_barang1.Columns["qty"].Width = 40;
             dgv_barang1.Columns["id"].Visible = false;
-            //dgv_barang1.Columns[5].Visible = false;
-            //dgv_barang1.Columns[7].Visible = false;
+            dgv_barang1.Columns[5].Visible = false;
+            dgv_barang1.Columns[7].Visible = false;
             //DataGridViewColumn column1 = dgv_barang1.Columns[0];
             //column1.Width = 50;
             //DataGridViewColumn column2 = dgv_barang1.Columns[1];
