@@ -168,8 +168,9 @@ namespace Project_ACS.Manager
         {
             string kode = dgvBarang.Rows[idx].Cells[0].Value.ToString();
             String jumlah1 = dgvBarang.Rows[idx].Cells[2].Value.ToString();
-            jumlah1 = jumlah1.Substring(0, 1);
-            int jumlah = Convert.ToInt32(jumlah1);
+            //jumlah1 = jumlah1.Substring(0, 1);
+            //int jumlah = Convert.ToInt32(jumlah1);
+            int jumlah = Convert.ToInt32(jumlah1.Split(' ')[0].ToString());
             int qty = Convert.ToInt32(nudQty.Value);
             int idxAda = -1;
             for (int i = 0; i < dgvCart.Rows.Count; i++)
@@ -198,7 +199,15 @@ namespace Project_ACS.Manager
                     }
                     if (exist != -1)
                     {
-                        dgvCart.Rows[exist].Cells[2].Value = Convert.ToInt32(dgvCart.Rows[exist].Cells[2].Value.ToString()) + Convert.ToInt32(nudQty.Value);
+                        int jumlahtest = Convert.ToInt32(dgvCart.Rows[exist].Cells[2].Value.ToString()) + Convert.ToInt32(nudQty.Value);
+                        if(jumlahtest > jumlah)
+                        {
+                            MessageBox.Show("Quantity melebihi stok persediaan!", "Error!");
+                        }
+                        else
+                        {
+                            dgvCart.Rows[exist].Cells[2].Value = jumlahtest;
+                        }
                     }
                     else
                     {
@@ -215,6 +224,7 @@ namespace Project_ACS.Manager
                     }
                 }
             }
+            totalbarang = 0;
             for (int k = 0; k < dgvCart.Rows.Count; k++)
             {
                 totalbarang += Convert.ToInt32(dgvCart.Rows[k].Cells[2].Value.ToString());
@@ -225,6 +235,13 @@ namespace Project_ACS.Manager
         private void dgvBarang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             idx = e.RowIndex;
+        }
+
+        private void btn_refresh_Click(object sender, EventArgs e)
+        {
+            dataset.Tables["ORDER"].Rows.Clear();
+            totalbarang = 0;
+            label9.Text = totalbarang.ToString();
         }
     }
 }

@@ -116,8 +116,8 @@ namespace Project_ACS.Manager
                     }
                 }
             }
-            
-            for(int k = 0; k < dgvCart.Rows.Count; k++)
+            totalbarang = 0;
+            for (int k = 0; k < dgvCart.Rows.Count; k++)
             {
                 totalbarang += Convert.ToInt32(dgvCart.Rows[k].Cells[2].Value.ToString());
             }
@@ -181,6 +181,13 @@ namespace Project_ACS.Manager
                 }
             }
             
+        }
+
+        private void btn_refresh_Click(object sender, EventArgs e)
+        {
+            dataset.Tables["BARANG"].Rows.Clear();
+            totalbarang = 0;
+            label9.Text = totalbarang.ToString();
         }
     }
 }
