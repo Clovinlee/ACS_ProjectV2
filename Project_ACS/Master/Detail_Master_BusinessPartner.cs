@@ -45,7 +45,7 @@ namespace Project_ACS.Master
 
         private Boolean checkValid()
         {
-            if(tb_nama.Text == "")
+            if(tb_nama.Text == "" || tb_alamat.Text == "" || tb_telepon.Text == "")
             {
                 return false;
             }
@@ -96,7 +96,7 @@ namespace Project_ACS.Master
             }
             else
             {
-                MessageBox.Show("Nama tidak boleh kosong!", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Field tidak boleh kosong!", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             
         }
