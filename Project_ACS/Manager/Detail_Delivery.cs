@@ -43,7 +43,7 @@ namespace Project_ACS.Manager
                         querystr = $"UPDATE BARANG SET QTY = {angkatambah1} WHERE ID = {dataset.Tables["BARANG"].Rows[n].ItemArray[0].ToString()}";
                         DB.executeQuery(querystr, null);
                         String keterangan = "D-" + Convert.ToString(dataset.Tables["BARANG"].Rows[n].ItemArray[4].ToString());
-                        querystr = $"INSERT INTO HISTORY_BARANG_KELUAR_MASUK VALUES({dataset.Tables["BARANG"].Rows[n].ItemArray[0].ToString()},TO_DATE('{Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy"))}', 'DD/MM/YYYY'),{dataset.Tables["BARANG"].Rows[n].ItemArray[2].ToString()},'{keterangan}',{User.User_login.Id_warehouse},'{dataset.Tables["BARANG"].Rows[n].ItemArray[5].ToString()}',0)";
+                        querystr = $"INSERT INTO HISTORY_BARANG_KELUAR_MASUK VALUES({dataset.Tables["BARANG"].Rows[n].ItemArray[0].ToString()},TO_DATE('{Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy"))}', 'DD/MM/YYYY'),{dataset.Tables["BARANG"].Rows[n].ItemArray[2].ToString()},'{keterangan}',{User.User_login.Id_warehouse},'{dataset.Tables["BARANG"].Rows[n].ItemArray[5].ToString()}',1)";
                         DB.executeQuery(querystr, null);
                     }
                 }
