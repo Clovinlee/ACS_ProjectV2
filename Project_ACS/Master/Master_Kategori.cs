@@ -14,14 +14,11 @@ namespace Project_ACS.Master
     {
         public Master_Kategori()
         {
-            InitializeComponent();
-            queryDataset();
-            btn_close_Click(null, null);
+            InitializeComponent(); 
         }
          
         public Master_Kategori(DataSet ds_kategori, MainMenu_Master frm_master) : this()
-        {
-            InitializeComponent();
+        { 
             this.ds_kategori = ds_kategori;
             this.frm_menumaster = frm_master;
             queryDataset();
@@ -31,12 +28,12 @@ namespace Project_ACS.Master
         {
             return pl;
         }
-        public MainMenu_Master frm_menumaster;
-        DataSet ds_kategori = new DataSet(); int idxclicked = -1; 
+        public MainMenu_Master frm_menumaster = new MainMenu_Master();
+        DataSet ds_kategori; int idxclicked = -1; 
         public void queryDataset()
         {
             dgv_kategori.DataSource = null;
-            ds_kategori = new DataSet();
+            ds_kategori.Tables["tkategori"].Rows.Clear();
             DB.executeDataSet(ds_kategori, "SELECT id,nama from kategori order by id desc", null, "tkategori");
             dgv_kategori.DataSource = ds_kategori.Tables["tkategori"]; 
             settingDGV();
@@ -74,7 +71,7 @@ namespace Project_ACS.Master
                 int intsearch = Convert.ToInt32(textbox_searchkode.Text);
                 ds_kategori.Tables["tkategori"].DefaultView.RowFilter = string.Format("nama LIKE '%{0}%' or id = {1}", textbox_searchkode.Text, intsearch); 
             }
-            catch (Exception exc)
+            catch (Exception)
             {
                 ds_kategori.Tables["tkategori"].DefaultView.RowFilter = string.Format("nama LIKE '%{0}%'", textbox_searchkode.Text);
             }
@@ -153,7 +150,9 @@ namespace Project_ACS.Master
                 MessageBox.Show("Insert success!");
                 txtnama.Text = "";
                 frm_menumaster.refreshFormBarang();
-
+                queryDataset();
+                frm_menumaster.frm_dashboard.loadData("kategori");
+                frm_menumaster.frm_dashboard.loadData("barang");
             }
             else if (btnExe.Text=="Update")
             { 
@@ -167,7 +166,9 @@ namespace Project_ACS.Master
                 MessageBox.Show("Update success!");
                 frm_menumaster.refreshFormBarang();
                 modeCRUD("close");
-
+                queryDataset();
+                frm_menumaster.frm_dashboard.loadData("kategori");
+                frm_menumaster.frm_dashboard.loadData("barang");
             }
         }
 

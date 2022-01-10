@@ -14,19 +14,17 @@ namespace Project_ACS.Master
     {
         public Master_Barang()
         {
-            InitializeComponent();
-            queryDataset();
+            InitializeComponent(); 
         }
         public Master_Barang(DataSet ds_barang, MainMenu_Master frm_master) : this()
-        {
-            InitializeComponent();
+        { 
             this.ds_barang = ds_barang;
             this.frm_menumaster = frm_master;
             queryDataset();
         }
 
         DataSet ds_barang; 
-        public MainMenu_Master frm_menumaster;
+        public MainMenu_Master frm_menumaster = new MainMenu_Master();
         public Panel getPl()
         {
             return pl;
@@ -54,6 +52,14 @@ namespace Project_ACS.Master
             textbox_searchkode.Text = "";
             dgv_barang.ClearSelection();
             dgvDefColor();
+            try
+            { 
+                frm_menumaster.frm_dashboard.loadData("barang");
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
         }
         void dgvDefColor() { 
             dgv_barang.DefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 102, 204);

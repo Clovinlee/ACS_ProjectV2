@@ -34,7 +34,7 @@ namespace Project_ACS.Manager
             cmbWarehouse.Items.Clear();
             cmbWarehouse.Items.Add("");
             dataset = new DataSet();
-            querystr = "SELECT ID, INITCAP(NAMA) AS \"NAMA\" FROM WAREHOUSE WHERE STATUS != :0";
+            querystr = "SELECT ID, INITCAP(NAMA) AS \"NAMA\" FROM WAREHOUSE WHERE ID != :0 AND STATUS = 1";
             List<object[]> listParam = new List<object[]>();
             listParam.Add(new object[] { User.User_login.Id_warehouse, "int32" });
             DB.executeDataSet(dataset, querystr, listParam, "WAREHOUSE");

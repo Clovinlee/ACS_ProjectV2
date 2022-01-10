@@ -14,28 +14,25 @@ namespace Project_ACS.Master
     {
         public Master_Merk()
         {
-            InitializeComponent();
-            queryDataset();
-            btn_close_Click(null, null);
+            InitializeComponent();  
         }
         public Master_Merk(DataSet ds_merk, MainMenu_Master frm_master) : this()
-        {
-            InitializeComponent();
+        { 
             this.ds_merk = ds_merk;
             this.frm_menumaster = frm_master;
             queryDataset();
             btn_close_Click(null, null);
-        } 
-        public MainMenu_Master frm_menumaster;
+        }
+        public MainMenu_Master frm_menumaster = new MainMenu_Master();
         public Panel getPl()
         {
             return pl;
         }
-        DataSet ds_merk = new DataSet(); int idxclicked = -1;
+        DataSet ds_merk; int idxclicked = -1; 
         public void queryDataset()
         {
-            dgv_merk.DataSource = null;
-            ds_merk = new DataSet();
+            dgv_merk.DataSource = null; 
+            ds_merk.Tables["tmerk"].Rows.Clear();
             DB.executeDataSet(ds_merk, "SELECT id,nama from merk order by id desc", null, "tmerk");
             dgv_merk.DataSource = ds_merk.Tables["tmerk"];
             settingDGV();
@@ -123,7 +120,7 @@ namespace Project_ACS.Master
                 int intsearch = Convert.ToInt32(textbox_searchkode.Text);
                 ds_merk.Tables["tmerk"].DefaultView.RowFilter = string.Format("nama LIKE '%{0}%' or id = {1}", textbox_searchkode.Text, intsearch);
             }
-            catch (Exception exc)
+            catch (Exception)
             {
                 ds_merk.Tables["tmerk"].DefaultView.RowFilter = string.Format("nama LIKE '%{0}%'", textbox_searchkode.Text);
             }
@@ -154,7 +151,9 @@ namespace Project_ACS.Master
                 MessageBox.Show("Insert success!");
                 txtnama.Text = "";
                 frm_menumaster.refreshFormBarang();
-
+                queryDataset();
+                frm_menumaster.frm_dashboard.loadData("merk");
+                frm_menumaster.frm_dashboard.loadData("barang");
             }
             else if (btnExe.Text == "Update")
             {
@@ -168,6 +167,9 @@ namespace Project_ACS.Master
                 MessageBox.Show("Update success!");
                 modeCRUD("close");
                 frm_menumaster.refreshFormBarang();
+                queryDataset();
+                frm_menumaster.frm_dashboard.loadData("merk");
+                frm_menumaster.frm_dashboard.loadData("barang");
             }
 
         }
