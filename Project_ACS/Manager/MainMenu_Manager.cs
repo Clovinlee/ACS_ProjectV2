@@ -291,7 +291,7 @@ namespace Project_ACS.Manager
 
                     break;
                 case 6:
-
+                    frm_delivery_keluar.loaddgv();
                     break;
                 case 7:
                     frm_delivery_history.loaddgv();

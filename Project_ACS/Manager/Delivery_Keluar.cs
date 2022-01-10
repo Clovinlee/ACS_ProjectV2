@@ -55,7 +55,7 @@ namespace Project_ACS.Manager
 
         }
 
-        void loaddgv()
+        public void loaddgv()
         {
             dataset = new DataSet();
             querystr = "SELECT KODE AS Kode, NAMA AS Nama, QTY  AS Qty FROM BARANG";
