@@ -89,10 +89,10 @@
             this.pl_submenu_inventory.Controls.Add(this.btn_inventory_barang);
             this.pl_submenu_inventory.Dock = System.Windows.Forms.DockStyle.Top;
             this.pl_submenu_inventory.Location = new System.Drawing.Point(0, 182);
-            this.pl_submenu_inventory.MaximumSize = new System.Drawing.Size(200, 121);
+            this.pl_submenu_inventory.MaximumSize = new System.Drawing.Size(200, 117);
             this.pl_submenu_inventory.MinimumSize = new System.Drawing.Size(200, 0);
             this.pl_submenu_inventory.Name = "pl_submenu_inventory";
-            this.pl_submenu_inventory.Size = new System.Drawing.Size(200, 121);
+            this.pl_submenu_inventory.Size = new System.Drawing.Size(200, 117);
             this.pl_submenu_inventory.TabIndex = 7;
             this.pl_submenu_inventory.Tag = "-1";
             // 
@@ -466,7 +466,7 @@
             this.pl_submenu_warehouse.Controls.Add(this.btn_warehouse_request);
             this.pl_submenu_warehouse.Controls.Add(this.btn_warehouse_access);
             this.pl_submenu_warehouse.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_submenu_warehouse.Location = new System.Drawing.Point(0, 498);
+            this.pl_submenu_warehouse.Location = new System.Drawing.Point(0, 494);
             this.pl_submenu_warehouse.MaximumSize = new System.Drawing.Size(200, 117);
             this.pl_submenu_warehouse.MinimumSize = new System.Drawing.Size(200, 0);
             this.pl_submenu_warehouse.Name = "pl_submenu_warehouse";
@@ -798,7 +798,7 @@
             this.btn_warehouse.IdleIconLeftImage = global::Project_ACS.res_icons.warehouse_solid;
             this.btn_warehouse.IdleIconRightImage = global::Project_ACS.res_icons.caret_down_solid;
             this.btn_warehouse.IndicateFocus = false;
-            this.btn_warehouse.Location = new System.Drawing.Point(0, 459);
+            this.btn_warehouse.Location = new System.Drawing.Point(0, 455);
             this.btn_warehouse.Name = "btn_warehouse";
             this.btn_warehouse.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_warehouse.OnDisabledState.BorderRadius = 1;
@@ -849,7 +849,7 @@
             this.pl_submenu_delivery.Controls.Add(this.btn_delivery_keluar);
             this.pl_submenu_delivery.Controls.Add(this.btn_delivery_masuk);
             this.pl_submenu_delivery.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pl_submenu_delivery.Location = new System.Drawing.Point(0, 342);
+            this.pl_submenu_delivery.Location = new System.Drawing.Point(0, 338);
             this.pl_submenu_delivery.MaximumSize = new System.Drawing.Size(200, 117);
             this.pl_submenu_delivery.Name = "pl_submenu_delivery";
             this.pl_submenu_delivery.Size = new System.Drawing.Size(200, 117);
@@ -1180,7 +1180,7 @@
             this.btn_delivery.IdleIconLeftImage = global::Project_ACS.res_icons.truck_moving_solid;
             this.btn_delivery.IdleIconRightImage = global::Project_ACS.res_icons.caret_down_solid;
             this.btn_delivery.IndicateFocus = false;
-            this.btn_delivery.Location = new System.Drawing.Point(0, 303);
+            this.btn_delivery.Location = new System.Drawing.Point(0, 299);
             this.btn_delivery.Name = "btn_delivery";
             this.btn_delivery.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_delivery.OnDisabledState.BorderRadius = 1;
