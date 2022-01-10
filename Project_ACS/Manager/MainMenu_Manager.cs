@@ -23,6 +23,7 @@ namespace Project_ACS.Manager
         public MainMenu_Manager(Login frm_login) : this()
         {
             this.frm_login = frm_login;
+            DB.executeQuery("UPDATE H_ORDER_SUPPLIER SET STATUS = 2 WHERE ETA < SYSDATE AND STATUS = 1", null);
         }
 
         Timer delivery_collapse;
