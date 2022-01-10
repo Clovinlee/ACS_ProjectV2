@@ -136,7 +136,7 @@ namespace Project_ACS.Manager
                         querystr = $"INSERT INTO D_KELUAR_BARANG VALUES('{kode}',{idbarang},{dgvCart.Rows[l].Cells[2].Value.ToString()})";
                         DB.executeQuery(querystr, null);
                         String keterangan = "D-" + Convert.ToString(cbb_partner.SelectedIndex + 1);
-                        querystr = $"INSERT INTO HISTORY_BARANG_KELUAR_MASUK VALUES({idbarang},TO_DATE('{Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy"))}', 'DD/MM/YYYY'),{dgvCart.Rows[l].Cells[2].Value.ToString()},'{keterangan}',{User.User_login.Id_warehouse},'{cbb_partner.SelectedItem.ToString()}',0)";
+                        querystr = $"INSERT INTO HISTORY_BARANG_KELUAR_MASUK VALUES({idbarang},TO_DATE('{Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy"))}', 'DD/MM/YYYY'),{dgvCart.Rows[l].Cells[2].Value.ToString()},'{keterangan}',{User.User_login.Id_warehouse},'{cbb_partner.Text}',0)";
                         DB.executeQuery(querystr, null);
                         dataset = new DataSet();
                         
