@@ -444,7 +444,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\reportadjustment.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>reportadjustment.cs</LastGenOutput>
+      <LastGenOutput>reportadjustment1.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\reportInventory.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

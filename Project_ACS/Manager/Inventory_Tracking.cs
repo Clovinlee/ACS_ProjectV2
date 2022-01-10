@@ -43,7 +43,7 @@ namespace Project_ACS.Manager
             ds_barang = new DataSet();
             List<object[]> listParam = new List<object[]>();
             listParam.Add(new object[] { User.User_login.Id_warehouse, "int32" });
-            DB.executeDataSet(ds_barang, "SELECT H.TANGGAL, b.kode, b.nama, b.MULTIPLIER, H.QTY, h.status, b.id, H.KETERANGAN  FROM BARANG B JOIN HISTORY_BARANG_KELUAR_MASUK H ON B.ID = H.ID_BARANG WHERE H.ID_WAREHOUSE = :0 order by h.TANGGAL desc", listParam, "inv1barang");
+            DB.executeDataSet(ds_barang, "SELECT H.TANGGAL, b.kode, b.nama, b.MULTIPLIER, H.QTY, h.status, b.id, H.KETERANGAN, H.NAMA_TUJUAN AS \"TERAKHIR\" FROM BARANG B JOIN HISTORY_BARANG_KELUAR_MASUK H ON B.ID = H.ID_BARANG WHERE H.ID_WAREHOUSE = :0 order by h.TANGGAL desc", listParam, "inv1barang");
             //ds_barang.Tables["invbarang"].Columns.Add("Terakhir");
             loadDGV(); 
             AutoCompleteStringCollection cm = new AutoCompleteStringCollection();
@@ -87,61 +87,61 @@ namespace Project_ACS.Manager
             } 
             dgv_barang1.Columns["qty"].Width = 40;
             dgv_barang1.Columns["id"].Visible = false;
-            dgv_barang1.Columns[5].Visible = false;
-            dgv_barang1.Columns[7].Visible = false;
-            DataGridViewColumn column1 = dgv_barang1.Columns[0];
-            column1.Width = 50;
-            DataGridViewColumn column2 = dgv_barang1.Columns[1];
-            column2.Width = 40;
-            DataGridViewColumn column3 = dgv_barang1.Columns[2];
-            column3.Width = 70;
-            DataGridViewColumn column4 = dgv_barang1.Columns[3];
-            column4.Width = 60;
-            DataGridViewColumn column5 = dgv_barang1.Columns[4];
-            column5.Width = 60;
-            DataGridViewColumn column6 = dgv_barang1.Columns[5];
-            column6.Width = 60;
+            //dgv_barang1.Columns[5].Visible = false;
+            //dgv_barang1.Columns[7].Visible = false;
+            //DataGridViewColumn column1 = dgv_barang1.Columns[0];
+            //column1.Width = 50;
+            //DataGridViewColumn column2 = dgv_barang1.Columns[1];
+            //column2.Width = 40;
+            //DataGridViewColumn column3 = dgv_barang1.Columns[2];
+            //column3.Width = 70;
+            //DataGridViewColumn column4 = dgv_barang1.Columns[3];
+            //column4.Width = 60;
+            //DataGridViewColumn column5 = dgv_barang1.Columns[4];
+            //column5.Width = 60;
+            //DataGridViewColumn column6 = dgv_barang1.Columns[5];
+            //column6.Width = 60;
 
-            ds_barang.Tables["inv1barang"].Columns.Add("TERAKHIR");
-            for (int i = 0; i < dgv_barang1.RowCount; i++)
-            {
-                string[] list = dgv_barang1.Rows[i].Cells[7].Value.ToString().Split('-');
-                string detail = list[0];
-                int idx = Convert.ToInt32(list[1]);
-                String tujuan = "";
-                List<object[]> listParam = new List<object[]>();
-                listParam.Add(new object[] { idx, "int32" });
+            //ds_barang.Tables["inv1barang"].Columns.Add("TERAKHIR");
+            //for (int i = 0; i < dgv_barang1.RowCount; i++)
+            //{
+            //    string[] list = dgv_barang1.Rows[i].Cells[7].Value.ToString().Split('-');
+            //    string detail = list[0];
+            //    int idx = Convert.ToInt32(list[1]);
+            //    String tujuan = "";
+            //    List<object[]> listParam = new List<object[]>();
+            //    listParam.Add(new object[] { idx, "int32" });
 
-                if (dgv_barang1.Rows[i].Cells["status"].Value.ToString() == "0")
-                {
-                    dgv_barang1.Rows[i].Cells["TERAKHIR"].Value = dgv_barang1.Rows[i].Cells["NAMA"].Value.ToString();
+            //    if (dgv_barang1.Rows[i].Cells["status"].Value.ToString() == "0")
+            //    {
+            //        dgv_barang1.Rows[i].Cells["TERAKHIR"].Value = dgv_barang1.Rows[i].Cells["NAMA"].Value.ToString();
 
-                    if (detail == "P")
-                    {
-                        tujuan = DB.executeScalar("SELECT NAMA FROM WAREHOUSE WHERE ID = :0", listParam).ToString();
-                    }
-                    else
-                    {
-                        tujuan = DB.executeScalar("SELECT NAMA FROM BUSINESS_PARTNER WHERE ID = :0 ", listParam).ToString();
-                    }
-                    dgv_barang1.Rows[i].Cells["TERAKHIR"].Value = tujuan;
-                }
-                else
-                {
-                    dgv_barang1.Rows[i].Cells["TERAKHIR"].Value = dgv_barang1.Rows[i].Cells["NAMA"].Value.ToString();
+            //        if (detail == "P")
+            //        {
+            //            tujuan = DB.executeScalar("SELECT NAMA FROM WAREHOUSE WHERE ID = :0", listParam).ToString();
+            //        }
+            //        else
+            //        {
+            //            tujuan = DB.executeScalar("SELECT NAMA FROM BUSINESS_PARTNER WHERE ID = :0 ", listParam).ToString();
+            //        }
+            //        dgv_barang1.Rows[i].Cells["TERAKHIR"].Value = tujuan;
+            //    }
+            //    else
+            //    {
+            //        dgv_barang1.Rows[i].Cells["TERAKHIR"].Value = dgv_barang1.Rows[i].Cells["NAMA"].Value.ToString();
 
-                    if (detail == "P")
-                    {
-                        tujuan = DB.executeScalar("SELECT NAMA FROM WAREHOUSE WHERE ID = "+ User.User_login.Id_warehouse +"", null).ToString();
-                    }
-                    else
-                    {
-                        tujuan = DB.executeScalar("SELECT NAMA FROM BUSINESS_PARTNER WHERE ID = :0 ", listParam).ToString();
-                    }
-                    dgv_barang1.Rows[i].Cells["TERAKHIR"].Value = tujuan;
-                }
+            //        if (detail == "P")
+            //        {
+            //            tujuan = DB.executeScalar("SELECT NAMA FROM WAREHOUSE WHERE ID = "+ User.User_login.Id_warehouse +"", null).ToString();
+            //        }
+            //        else
+            //        {
+            //            tujuan = DB.executeScalar("SELECT NAMA FROM BUSINESS_PARTNER WHERE ID = :0 ", listParam).ToString();
+            //        }
+            //        dgv_barang1.Rows[i].Cells["TERAKHIR"].Value = tujuan;
+            //    }
 
-            }
+            //}
 
         }
         private void btn_refresh_Click(object sender, EventArgs e)
