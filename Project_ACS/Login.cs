@@ -21,7 +21,6 @@ namespace Project_ACS
         }
         //PROJECT BEGIN!
         // hello im underwater
-        // im from future
         // tes koneksi mirror
 
         private void Login_Load(object sender, EventArgs e)
