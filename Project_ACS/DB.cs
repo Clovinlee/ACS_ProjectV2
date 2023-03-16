@@ -15,10 +15,10 @@ namespace Project_ACS
         private static OracleCommand cmd;
         private static Dictionary<string, OracleDbType> oracle_type = new Dictionary<string, OracleDbType>();
 
-        public static string init(string usr, string pw)
+        public static string init()
         {
             string result = "";
-            conn = new OracleConnection($"USER ID={usr};PASSWORD={pw};DATA SOURCE=localhost:1521/XEPDB1;PERSIST SECURITY INFO=True");
+            conn = new OracleConnection(env.oracle_connection_string());
             try
             {
                 conn.Open();

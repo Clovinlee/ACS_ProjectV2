@@ -19,13 +19,14 @@ namespace Project_ACS
         {
             InitializeComponent();
         }
+        
         //PROJECT BEGIN!s
         // hello im underwater
         // tes koneksi mirror
 
         private void Login_Load(object sender, EventArgs e)
         {
-            string output = DB.init("chris", "clovinlee"); // GANTI SESUAI ORACLE MASING2
+            string output = DB.init();  
             if (output != "")
             {
                 MessageBox.Show(output, "Database Initialization Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);

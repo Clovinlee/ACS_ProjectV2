@@ -187,6 +187,7 @@
   <ItemGroup>
     <Compile Include="Barang.cs" />
     <Compile Include="DB.cs" />
+    <Compile Include="env.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
