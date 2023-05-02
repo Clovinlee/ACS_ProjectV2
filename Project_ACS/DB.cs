@@ -130,6 +130,27 @@ namespace Project_ACS
             }
             return data;
         }
+        public static List<String> convertDataTableToList(DataTable table, string rowname, string datatype)
+        { 
+            List<String> data = new List<String>();
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                DataRow dr = table.Rows[i];
+                if (datatype == "decimal")
+                {
+                    data.Add(dr.Field<Decimal>(rowname).ToString()); 
+                }
+                else if (datatype == "int")
+                {
+                    data.Add(dr.Field<int>(rowname).ToString());
+                }
+                else
+                {
+                    data.Add(dr.Field<string>(rowname).ToString()); 
+                }
+            }
+            return data;
+        }
     }
 }
 

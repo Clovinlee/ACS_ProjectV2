@@ -32,7 +32,7 @@ namespace Project_ACS.Master
             mw = pmw;
         }
 
-        string id;
+        string id="";
         string judul;
         string querystr;
         DataSet dataset;
@@ -66,7 +66,7 @@ namespace Project_ACS.Master
                     listParam.Add(new object[] { nama, "varchar" });
                     listParam.Add(new object[] { alamat, "varchar" });
                     listParam.Add(new object[] { telepon, "varchar" });
-                    listParam.Add(new object[] { User.User_login.Id, "int32" });
+                    listParam.Add(new object[] {  listUser.Rows[cbb_user.SelectedIndex].Field<decimal>("ID"), "int32" }) ;
                     listParam.Add(new object[] { "1", "int32" });
                     querystr = "INSERT INTO WAREHOUSE VALUES(:0, :1, :2, :3, :4, :5)";
                     MessageBox.Show("Berhasil Insert!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -77,14 +77,29 @@ namespace Project_ACS.Master
                     listParam.Add(new object[] { nama, "varchar" });
                     listParam.Add(new object[] { alamat, "varchar" });
                     listParam.Add(new object[] { telepon, "varchar" });
+                    listParam.Add(new object[] { listUser.Rows[cbb_user.SelectedIndex].Field<decimal>("ID"), "int32" });
                     listParam.Add(new object[] { id.ToString(), "int32" });
-                    querystr = "UPDATE WAREHOUSE SET NAMA = :0, ALAMAT = :1, TELEPON = :2 WHERE ID = :3";
+                    querystr = "UPDATE WAREHOUSE SET NAMA = :0, ALAMAT = :1, TELEPON = :2, ID_USER = :3 WHERE ID = :4";
                     MessageBox.Show("Berhasil Update!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
                 DB.executeQuery(querystr, listParam);
                 mw.loadWareHouse();
             }
+        }
+
+        DataTable listUser = new DataTable();
+        private void EditMasterWarehouse_Load(object sender, EventArgs e)
+        { 
+            listUser = DB.get("SELECT * FROM USERS where ID_JABATAN=2");
+            cbb_user.DataSource = DB.convertDataTableToList(listUser, "USERNAME", "string"); 
+            
+            if (id != "")
+            {
+                string choosed = DB.getScalar($"SELECT U.USERNAME FROM WAREHOUSE W JOIN USERS U ON U.ID = W.ID_USER WHERE W.ID={id}");
+                cbb_user.SelectedItem = choosed;
+                
+            } 
         }
     }
 }
