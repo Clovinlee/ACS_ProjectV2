@@ -100,6 +100,36 @@ namespace Project_ACS
             conn.Close();
             return r;
         }
+        public static DataTable get(string query)
+        {
+
+            OracleCommand cmd = new OracleCommand(query, DB.conn);
+            OracleDataAdapter adapter = new OracleDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+
+            return dt;
+        }
+        public static String getScalar(string query)
+        {
+            OracleCommand cmd = new OracleCommand(query, DB.conn);
+            conn.Open();
+            string res = cmd.ExecuteScalar().ToString();
+            conn.Close();
+            return res;
+        }
+        public static List<String> getList(string query, string rowname)
+        {
+            //ini buat dapetin ke list 
+            DataTable d = DB.get(query);
+            List<String> data = new List<string>();
+            for (int i = 0; i < d.Rows.Count; i++)
+            {
+                DataRow dr = d.Rows[i];
+                data.Add(dr.Field<string>(rowname));
+            }
+            return data;
+        }
     }
 }
 
