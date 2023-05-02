@@ -196,8 +196,7 @@ namespace Project_ACS.Master
             this.cbb_jabatan.FormattingEnabled = true;
             this.cbb_jabatan.Items.AddRange(new object[] {
             "Master Account",
-            "Warehouse Manager",
-            "Pegawai Warehouse"});
+            "Warehouse Manager"});
             this.cbb_jabatan.Location = new System.Drawing.Point(84, 278);
             this.cbb_jabatan.Margin = new System.Windows.Forms.Padding(2);
             this.cbb_jabatan.Name = "cbb_jabatan";
