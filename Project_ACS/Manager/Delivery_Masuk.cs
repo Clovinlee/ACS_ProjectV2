@@ -189,5 +189,15 @@ namespace Project_ACS.Manager
             totalbarang = 0;
             label9.Text = totalbarang.ToString();
         }
+         
+
+        private void dgvCart_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        { 
+            int idx = e.RowIndex;
+
+            dataset.Tables["BARANG"].Rows.RemoveAt(idx);
+
+            dgvCart.DataSource = dataset.Tables["BARANG"];
+        }
     }
 }

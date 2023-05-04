@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Delivery_Masuk));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -36,9 +38,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Delivery_Masuk));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.pl = new System.Windows.Forms.Panel();
+            this.btn_refresh = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dt_picker = new Bunifu.UI.WinForms.BunifuDatePicker();
@@ -55,7 +56,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cbb_partner = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_refresh = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
@@ -87,6 +87,97 @@
             this.pl.Name = "pl";
             this.pl.Size = new System.Drawing.Size(936, 571);
             this.pl.TabIndex = 0;
+            // 
+            // btn_refresh
+            // 
+            this.btn_refresh.AllowAnimations = true;
+            this.btn_refresh.AllowMouseEffects = true;
+            this.btn_refresh.AllowToggling = false;
+            this.btn_refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_refresh.AnimationSpeed = 200;
+            this.btn_refresh.AutoGenerateColors = false;
+            this.btn_refresh.AutoRoundBorders = false;
+            this.btn_refresh.AutoSizeLeftIcon = true;
+            this.btn_refresh.AutoSizeRightIcon = true;
+            this.btn_refresh.BackColor = System.Drawing.Color.Transparent;
+            this.btn_refresh.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.btn_refresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_refresh.BackgroundImage")));
+            this.btn_refresh.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn_refresh.ButtonText = "";
+            this.btn_refresh.ButtonTextMarginLeft = 0;
+            this.btn_refresh.ColorContrastOnClick = 45;
+            this.btn_refresh.ColorContrastOnHover = 45;
+            this.btn_refresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btn_refresh.CustomizableEdges = borderEdges1;
+            this.btn_refresh.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_refresh.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btn_refresh.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btn_refresh.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btn_refresh.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
+            this.btn_refresh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_refresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_refresh.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_refresh.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btn_refresh.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btn_refresh.IconMarginLeft = 11;
+            this.btn_refresh.IconPadding = 10;
+            this.btn_refresh.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_refresh.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btn_refresh.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btn_refresh.IconSize = 25;
+            this.btn_refresh.IdleBorderColor = System.Drawing.Color.White;
+            this.btn_refresh.IdleBorderRadius = 15;
+            this.btn_refresh.IdleBorderThickness = 1;
+            this.btn_refresh.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.btn_refresh.IdleIconLeftImage = global::Project_ACS.res_icons.history_solid;
+            this.btn_refresh.IdleIconRightImage = null;
+            this.btn_refresh.IndicateFocus = false;
+            this.btn_refresh.Location = new System.Drawing.Point(883, 121);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btn_refresh.OnDisabledState.BorderRadius = 15;
+            this.btn_refresh.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn_refresh.OnDisabledState.BorderThickness = 1;
+            this.btn_refresh.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btn_refresh.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btn_refresh.OnDisabledState.IconLeftImage = null;
+            this.btn_refresh.OnDisabledState.IconRightImage = null;
+            this.btn_refresh.onHoverState.BorderColor = System.Drawing.Color.White;
+            this.btn_refresh.onHoverState.BorderRadius = 15;
+            this.btn_refresh.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn_refresh.onHoverState.BorderThickness = 1;
+            this.btn_refresh.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btn_refresh.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btn_refresh.onHoverState.IconLeftImage = null;
+            this.btn_refresh.onHoverState.IconRightImage = null;
+            this.btn_refresh.OnIdleState.BorderColor = System.Drawing.Color.White;
+            this.btn_refresh.OnIdleState.BorderRadius = 15;
+            this.btn_refresh.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn_refresh.OnIdleState.BorderThickness = 1;
+            this.btn_refresh.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
+            this.btn_refresh.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_refresh.OnIdleState.IconLeftImage = global::Project_ACS.res_icons.history_solid;
+            this.btn_refresh.OnIdleState.IconRightImage = null;
+            this.btn_refresh.OnPressedState.BorderColor = System.Drawing.Color.White;
+            this.btn_refresh.OnPressedState.BorderRadius = 15;
+            this.btn_refresh.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn_refresh.OnPressedState.BorderThickness = 1;
+            this.btn_refresh.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(115)))));
+            this.btn_refresh.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btn_refresh.OnPressedState.IconLeftImage = null;
+            this.btn_refresh.OnPressedState.IconRightImage = null;
+            this.btn_refresh.Size = new System.Drawing.Size(40, 36);
+            this.btn_refresh.TabIndex = 57;
+            this.btn_refresh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_refresh.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_refresh.TextMarginLeft = 0;
+            this.btn_refresh.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btn_refresh.UseDefaultRadiusAndThickness = true;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
             // 
             // label9
             // 
@@ -459,6 +550,7 @@
             this.dgvCart.Size = new System.Drawing.Size(460, 393);
             this.dgvCart.TabIndex = 45;
             this.dgvCart.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.dgvCart.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCart_CellDoubleClick_1);
             // 
             // dgvBarang
             // 
@@ -570,97 +662,6 @@
             this.label1.Size = new System.Drawing.Size(173, 30);
             this.label1.TabIndex = 9;
             this.label1.Text = "Delivery Masuk";
-            // 
-            // btn_refresh
-            // 
-            this.btn_refresh.AllowAnimations = true;
-            this.btn_refresh.AllowMouseEffects = true;
-            this.btn_refresh.AllowToggling = false;
-            this.btn_refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_refresh.AnimationSpeed = 200;
-            this.btn_refresh.AutoGenerateColors = false;
-            this.btn_refresh.AutoRoundBorders = false;
-            this.btn_refresh.AutoSizeLeftIcon = true;
-            this.btn_refresh.AutoSizeRightIcon = true;
-            this.btn_refresh.BackColor = System.Drawing.Color.Transparent;
-            this.btn_refresh.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
-            this.btn_refresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_refresh.BackgroundImage")));
-            this.btn_refresh.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_refresh.ButtonText = "";
-            this.btn_refresh.ButtonTextMarginLeft = 0;
-            this.btn_refresh.ColorContrastOnClick = 45;
-            this.btn_refresh.ColorContrastOnHover = 45;
-            this.btn_refresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btn_refresh.CustomizableEdges = borderEdges1;
-            this.btn_refresh.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_refresh.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btn_refresh.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btn_refresh.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btn_refresh.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Idle;
-            this.btn_refresh.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_refresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_refresh.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_refresh.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btn_refresh.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btn_refresh.IconMarginLeft = 11;
-            this.btn_refresh.IconPadding = 10;
-            this.btn_refresh.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_refresh.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btn_refresh.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btn_refresh.IconSize = 25;
-            this.btn_refresh.IdleBorderColor = System.Drawing.Color.White;
-            this.btn_refresh.IdleBorderRadius = 15;
-            this.btn_refresh.IdleBorderThickness = 1;
-            this.btn_refresh.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
-            this.btn_refresh.IdleIconLeftImage = global::Project_ACS.res_icons.history_solid;
-            this.btn_refresh.IdleIconRightImage = null;
-            this.btn_refresh.IndicateFocus = false;
-            this.btn_refresh.Location = new System.Drawing.Point(883, 121);
-            this.btn_refresh.Name = "btn_refresh";
-            this.btn_refresh.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btn_refresh.OnDisabledState.BorderRadius = 15;
-            this.btn_refresh.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_refresh.OnDisabledState.BorderThickness = 1;
-            this.btn_refresh.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btn_refresh.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btn_refresh.OnDisabledState.IconLeftImage = null;
-            this.btn_refresh.OnDisabledState.IconRightImage = null;
-            this.btn_refresh.onHoverState.BorderColor = System.Drawing.Color.White;
-            this.btn_refresh.onHoverState.BorderRadius = 15;
-            this.btn_refresh.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_refresh.onHoverState.BorderThickness = 1;
-            this.btn_refresh.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.btn_refresh.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btn_refresh.onHoverState.IconLeftImage = null;
-            this.btn_refresh.onHoverState.IconRightImage = null;
-            this.btn_refresh.OnIdleState.BorderColor = System.Drawing.Color.White;
-            this.btn_refresh.OnIdleState.BorderRadius = 15;
-            this.btn_refresh.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_refresh.OnIdleState.BorderThickness = 1;
-            this.btn_refresh.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(73)))), ((int)(((byte)(139)))));
-            this.btn_refresh.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_refresh.OnIdleState.IconLeftImage = global::Project_ACS.res_icons.history_solid;
-            this.btn_refresh.OnIdleState.IconRightImage = null;
-            this.btn_refresh.OnPressedState.BorderColor = System.Drawing.Color.White;
-            this.btn_refresh.OnPressedState.BorderRadius = 15;
-            this.btn_refresh.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_refresh.OnPressedState.BorderThickness = 1;
-            this.btn_refresh.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(230)))), ((int)(((byte)(115)))));
-            this.btn_refresh.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btn_refresh.OnPressedState.IconLeftImage = null;
-            this.btn_refresh.OnPressedState.IconRightImage = null;
-            this.btn_refresh.Size = new System.Drawing.Size(40, 36);
-            this.btn_refresh.TabIndex = 57;
-            this.btn_refresh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_refresh.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_refresh.TextMarginLeft = 0;
-            this.btn_refresh.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btn_refresh.UseDefaultRadiusAndThickness = true;
-            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
             // 
             // Delivery_Masuk
             // 
