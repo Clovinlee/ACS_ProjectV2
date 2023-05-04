@@ -440,9 +440,19 @@
             // nudQty
             // 
             this.nudQty.Location = new System.Drawing.Point(407, 214);
+            this.nudQty.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudQty.Name = "nudQty";
             this.nudQty.Size = new System.Drawing.Size(38, 20);
             this.nudQty.TabIndex = 49;
+            this.nudQty.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label7
             // 

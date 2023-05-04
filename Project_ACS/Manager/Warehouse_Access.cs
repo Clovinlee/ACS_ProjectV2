@@ -232,9 +232,11 @@ namespace Project_ACS.Manager
                     dataset = new DataSet();
                     List<object[]> listParam = new List<object[]>();
                     listParam.Add(new object[] { dgvWarehouse.Rows[idx].Cells[3].Value.ToString(), "varchar" });
-                    querystr = "UPDATE H_PINDAH SET STATUS = 2 WHERE ID = :0";
+                    querystr = "UPDATE H_PINDAH SET STATUS = 2 WHERE KODE = :0";
                     DB.executeDataSet(dataset, querystr, listParam, "WAREHOUSE");
                     MessageBox.Show("Berhasil Ditolak!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvDetail.DataMember = null;
+                    dgvDetail.DataSource = null;
                 }
                 loadReq();
             }
