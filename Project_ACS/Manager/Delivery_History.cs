@@ -101,5 +101,17 @@ namespace Project_ACS.Manager
                 }
             }
         }
+
+        private void dgv_barang_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //munculkan form baru
+            Delivery_History_Detail d = new Delivery_History_Detail(dgv_barang.Rows[idx].Cells["Kode"].Value.ToString());
+            d.ShowDialog();
+        }
+
+        private void Delivery_History_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

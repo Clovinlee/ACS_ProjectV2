@@ -310,6 +310,7 @@
             this.dgv_barang.TabIndex = 46;
             this.dgv_barang.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgv_barang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_barang_CellClick);
+            this.dgv_barang.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_barang_CellDoubleClick);
             // 
             // label5
             // 
@@ -359,6 +360,7 @@
             this.Controls.Add(this.pl);
             this.Name = "Delivery_History";
             this.Text = "Delivery_History";
+            this.Load += new System.EventHandler(this.Delivery_History_Load);
             this.pl.ResumeLayout(false);
             this.pl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_barang)).EndInit();
