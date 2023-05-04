@@ -121,6 +121,7 @@
             this.dgvHistory.Size = new System.Drawing.Size(784, 216);
             this.dgvHistory.TabIndex = 4;
             this.dgvHistory.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.dgvHistory.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistory_CellDoubleClick);
             // 
             // label1
             // 

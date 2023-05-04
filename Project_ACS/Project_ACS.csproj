@@ -308,6 +308,12 @@
     <Compile Include="Manager\Warehouse_History.Designer.cs">
       <DependentUpon>Warehouse_History.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manager\Warehouse_History_Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Warehouse_History_Detail.Designer.cs">
+      <DependentUpon>Warehouse_History_Detail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager\Warehouse_Request.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -471,6 +477,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\Warehouse_History.resx">
       <DependentUpon>Warehouse_History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Warehouse_History_Detail.resx">
+      <DependentUpon>Warehouse_History_Detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\Warehouse_Request.resx">
       <DependentUpon>Warehouse_Request.cs</DependentUpon>

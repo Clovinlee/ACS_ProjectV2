@@ -297,7 +297,7 @@
             this.dgv_barang.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgv_barang.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgv_barang.HeaderForeColor = System.Drawing.Color.White;
-            this.dgv_barang.Location = new System.Drawing.Point(15, 156);
+            this.dgv_barang.Location = new System.Drawing.Point(15, 166);
             this.dgv_barang.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_barang.MultiSelect = false;
             this.dgv_barang.Name = "dgv_barang";
