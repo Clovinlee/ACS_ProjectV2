@@ -166,6 +166,11 @@ namespace Project_ACS.Manager
         int totalbarang = 0;
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
+            if (idx == -1)
+            {
+                MessageBox.Show("Silahkan memilih barang terlebih dahulu");
+                return;
+            }
             string kode = dgvBarang.Rows[idx].Cells[0].Value.ToString();
             String jumlah1 = dgvBarang.Rows[idx].Cells[2].Value.ToString();
             //jumlah1 = jumlah1.Substring(0, 1);
