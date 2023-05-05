@@ -28,6 +28,7 @@ namespace Project_ACS.Manager
             {
                 if (cbb_partner.SelectedIndex == 0)
                 {
+                    //FINISHED
                     dataset = new DataSet();
                     DB.executeQuery($"UPDATE H_ORDER_SUPPLIER SET STATUS = 3 WHERE KODE = '{kode}'", null);
                     querystr = $"SELECT B.ID , B.QTY , DO.QTY , BW.QTY , HO.ID_PARTNER , BP.NAMA FROM BARANG B ,  D_ORDER_SUPPLIER DO , BARANG_WAREHOUSE BW , BUSINESS_PARTNER BP , H_ORDER_SUPPLIER HO WHERE DO.KODE_ORDER = '{kode}' AND DO.ID_BARANG = B.ID AND B.ID = BW.ID_BARANG AND HO.KODE = DO.KODE_ORDER AND HO.ID_PARTNER = BP.ID";
@@ -61,10 +62,12 @@ namespace Project_ACS.Manager
                 }
                 else if (cbb_partner.SelectedIndex == 1)
                 {
+                    // RETURNED
                     DB.executeQuery($"UPDATE H_ORDER_SUPPLIER SET STATUS = 4 WHERE KODE = '{kode}'", null);
                 }
                 else if (cbb_partner.SelectedIndex == 2)
                 {
+                    // CANCELLED
                     DB.executeQuery($"UPDATE H_ORDER_SUPPLIER SET STATUS = 0 WHERE KODE = '{kode}'", null);
                 }
                 MessageBox.Show("Berhasil Diupdate!");
