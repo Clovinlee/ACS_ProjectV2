@@ -318,5 +318,14 @@ namespace Project_ACS.Manager
             frm_login.Show();
             this.Dispose();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        { 
+            DialogResult dr = MessageBox.Show("Apakah anda yakin ingin logout?", "Konfirmasi", MessageBoxButtons.YesNo);
+            if (dr == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }
