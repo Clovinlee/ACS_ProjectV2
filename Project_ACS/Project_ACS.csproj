@@ -664,5 +664,8 @@
   <ItemGroup>
     <None Include="Resources\check-solid.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-from-bracket-solid.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

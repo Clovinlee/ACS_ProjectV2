@@ -293,6 +293,16 @@ namespace Project_ACS {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap right_from_bracket_solid {
+            get {
+                object obj = ResourceManager.GetObject("right-from-bracket-solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap search_solid {
             get {
                 object obj = ResourceManager.GetObject("search_solid", resourceCulture);
