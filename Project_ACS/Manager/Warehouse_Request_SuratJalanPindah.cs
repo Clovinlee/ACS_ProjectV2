@@ -20,7 +20,7 @@ namespace Project_ACS.Manager
         string kode_pindah = "";
         private void Waarehouse_Request_SuratJalanPindah_Load(object sender, EventArgs e)
         {
-
+            //tes
         }
 
         private void btn_generateReport_Click(object sender, EventArgs e)

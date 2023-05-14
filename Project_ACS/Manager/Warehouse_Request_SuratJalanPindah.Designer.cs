@@ -93,7 +93,7 @@ namespace Project_ACS.Manager
             this.btn_generateReport.IdleIconLeftImage = null;
             this.btn_generateReport.IdleIconRightImage = null;
             this.btn_generateReport.IndicateFocus = false;
-            this.btn_generateReport.Location = new System.Drawing.Point(743, 22);
+            this.btn_generateReport.Location = new System.Drawing.Point(731, 19);
             this.btn_generateReport.Name = "btn_generateReport";
             this.btn_generateReport.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_generateReport.OnDisabledState.BorderRadius = 15;

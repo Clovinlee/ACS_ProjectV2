@@ -47,5 +47,10 @@ namespace Project_ACS.Manager
             crystalReportViewer1.ReportSource = rpt;
 
         }
+
+        private void Report_Adjustment_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

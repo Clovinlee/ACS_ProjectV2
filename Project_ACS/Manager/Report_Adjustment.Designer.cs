@@ -229,6 +229,7 @@
             this.Name = "Report_Adjustment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Report_Adjustment";
+            this.Load += new System.EventHandler(this.Report_Adjustment_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
