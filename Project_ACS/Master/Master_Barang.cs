@@ -91,8 +91,9 @@ namespace Project_ACS.Master
             for (int i = 0; i < dgv_barang.ColumnCount; i++)
             {
                 dgv_barang.Columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
-            } 
-            dgv_barang.Columns["harga"].DefaultCellStyle.Format = "Rp ##,0.00";
+            }
+            //dgv_barang.Columns["harga"].DefaultCellStyle.Format = "Rp ##,0.00";
+            dgv_barang.Columns["harga"].Visible = false;
             dgv_barang.Columns["qty"].Width = 40;
         }
         private void pl_Paint(object sender, PaintEventArgs e)  { }

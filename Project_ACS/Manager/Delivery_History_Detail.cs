@@ -28,9 +28,10 @@ namespace Project_ACS.Manager
             lblStatus.Text = d.Rows[0].Field<string>("statusString");
             lblQty.Text = d.Rows[0].Field<decimal>("QTY").ToString();
             lblWarehouse.Text = "Warehouse "+d.Rows[0].Field<decimal>("ID_WAREHOUSE").ToString();
-            lblTotal.Text = "Rp"+d.Rows[0].Field<decimal>("GRAND_TOTAL").ToString("N");
+            //lblTotal.Text = "Rp"+d.Rows[0].Field<decimal>("GRAND_TOTAL").ToString("N");
 
-            DataTable detail = DB.get($"SELECT B.KODE, B.NAMA, TO_CHAR(B.HARGA,'FM999,999,999') AS HARGA, DO.QTY, TO_CHAR((B.HARGA * DO.QTY),'FM999,999,999') AS SUBTOTAL FROM D_ORDER_SUPPLIER DO JOIN BARANG B ON DO.ID_BARANG = B.ID WHERE DO.KODE_ORDER='{kode}' ");
+            //DataTable detail = DB.get($"SELECT B.KODE, B.NAMA, TO_CHAR(B.HARGA,'FM999,999,999') AS HARGA, DO.QTY, TO_CHAR((B.HARGA * DO.QTY),'FM999,999,999') AS SUBTOTAL FROM D_ORDER_SUPPLIER DO JOIN BARANG B ON DO.ID_BARANG = B.ID WHERE DO.KODE_ORDER='{kode}' ");
+            DataTable detail = DB.get($"SELECT B.KODE, B.NAMA, DO.QTY FROM D_ORDER_SUPPLIER DO JOIN BARANG B ON DO.ID_BARANG = B.ID WHERE DO.KODE_ORDER='{kode}' ");
             dgv_barang.DataSource = detail;
         }
 

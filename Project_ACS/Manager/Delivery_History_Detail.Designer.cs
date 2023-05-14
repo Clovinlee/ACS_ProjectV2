@@ -39,13 +39,11 @@ namespace Project_ACS.Manager
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.lblKode = new System.Windows.Forms.Label();
             this.lblPartner = new System.Windows.Forms.Label();
             this.lblEstimasi = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblQty = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
             this.lblWarehouse = new System.Windows.Forms.Label();
             this.dgv_barang = new Bunifu.UI.WinForms.BunifuDataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_barang)).BeginInit();
@@ -139,19 +137,6 @@ namespace Project_ACS.Manager
             this.label7.TabIndex = 63;
             this.label7.Text = "Warehouse :";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Location = new System.Drawing.Point(342, 141);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 20);
-            this.label8.TabIndex = 64;
-            this.label8.Text = "Grand Total :";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
             // lblKode
             // 
             this.lblKode.AutoSize = true;
@@ -212,19 +197,6 @@ namespace Project_ACS.Manager
             this.lblQty.Size = new System.Drawing.Size(25, 20);
             this.lblQty.TabIndex = 69;
             this.lblQty.Text = "10";
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblTotal.Location = new System.Drawing.Point(450, 141);
-            this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(57, 20);
-            this.lblTotal.TabIndex = 70;
-            this.lblTotal.Text = "100000";
-            this.lblTotal.Click += new System.EventHandler(this.lblTotal_Click);
             // 
             // lblWarehouse
             // 
@@ -314,13 +286,11 @@ namespace Project_ACS.Manager
             this.ClientSize = new System.Drawing.Size(805, 505);
             this.Controls.Add(this.dgv_barang);
             this.Controls.Add(this.lblWarehouse);
-            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.lblQty);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.lblEstimasi);
             this.Controls.Add(this.lblPartner);
             this.Controls.Add(this.lblKode);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -346,13 +316,11 @@ namespace Project_ACS.Manager
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblKode;
         private System.Windows.Forms.Label lblPartner;
         private System.Windows.Forms.Label lblEstimasi;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label lblQty;
-        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label lblWarehouse;
         private Bunifu.UI.WinForms.BunifuDataGridView dgv_barang;
     }

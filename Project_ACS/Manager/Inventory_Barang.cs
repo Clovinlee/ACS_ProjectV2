@@ -41,7 +41,7 @@ namespace Project_ACS.Manager
             ds_barang = new DataSet();
             List<object[]> listParam = new List<object[]>();
             listParam.Add(new object[] { User.User_login.Id_warehouse, "int32" });
-            DB.executeDataSet(ds_barang, "SELECT b.kode as \"Kode\", b.nama, b.deskripsi, b.harga, k.nama as kategori, m.nama as merk, b.MULTIPLIER, BW.QTY as \"Qty\" FROM barang b join kategori k on b.ID_KATEGORI = k.id join merk m on b.ID_MERK = m.id JOIN BARANG_WAREHOUSE BW ON B.ID = BW.ID_BARANG WHERE BW.status <> 0 and BW.id_warehouse = :0 ", listParam, "invbarang");
+            DB.executeDataSet(ds_barang, "SELECT b.kode as \"Kode\", b.nama, b.deskripsi,  k.nama as kategori, m.nama as merk, b.MULTIPLIER, BW.QTY as \"Qty\" FROM barang b join kategori k on b.ID_KATEGORI = k.id join merk m on b.ID_MERK = m.id JOIN BARANG_WAREHOUSE BW ON B.ID = BW.ID_BARANG WHERE BW.status <> 0 and BW.id_warehouse = :0 ", listParam, "invbarang");
             loadDGV();
             DB.executeDataSet(ds_barang, "SELECT id,nama from kategori", null, "tkategori");
             DB.executeDataSet(ds_barang, "SELECT id,nama from merk", null, "tmerk");
@@ -94,7 +94,7 @@ namespace Project_ACS.Manager
             {
                 dgv_barang.Columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
             }
-            dgv_barang.Columns["harga"].DefaultCellStyle.Format = "Rp 0,000.00##";
+            //dgv_barang.Columns["harga"].DefaultCellStyle.Format = "Rp 0,000.00##";
             dgv_barang.Columns["qty"].Width = 40;
         }
         private void Inventory_Barang_Load(object sender, EventArgs e)

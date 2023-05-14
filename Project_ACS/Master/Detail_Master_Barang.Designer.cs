@@ -382,6 +382,7 @@ namespace Project_ACS.Master
             // 
             this.txtKode.AutoSize = true;
             this.txtKode.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKode.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtKode.Location = new System.Drawing.Point(111, 58);
             this.txtKode.Name = "txtKode";
             this.txtKode.Size = new System.Drawing.Size(15, 15);

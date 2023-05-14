@@ -8,7 +8,7 @@ namespace Project_ACS
 {
     class env
     {
-        //ganti di sini untuk oracle masing masing
+        //ganti di sini untuk oracle masing masing a
         private static string username = "chris";
         private static string password = "chris";
         static string oracle_version = "11g"; //diisi 11g atau 18c
