@@ -211,6 +211,10 @@ namespace Project_ACS.Manager
                     MessageBox.Show("Berhasil Request!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dgvCart.Rows.Clear();
                     lblTotal.Text = "0";
+
+                    //pindah ke form surat jalan
+                    Warehouse_Request_SuratJalanPindah f = new Warehouse_Request_SuratJalanPindah(kode);
+                    f.ShowDialog();
                 }
             }
         }
