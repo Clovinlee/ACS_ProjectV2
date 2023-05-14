@@ -31,7 +31,7 @@ namespace Project_ACS.Manager
         public void loadReq()
         {
             dataset = new DataSet();
-            querystr = "SELECT W1.NAMA AS ASAL, H.TOTAL_QTY || ' Dus' AS TOTAL, H.TANGGAL AS TANGGAL, H.KODE, H.ASAL AS KODE FROM H_PINDAH H, WAREHOUSE W1, WAREHOUSE W2 WHERE H.ASAL = W1.ID AND W2.ID = "+ User.User_login.Id_warehouse + " AND H.STATUS = 0 AND H.ASAL != " + User.User_login.Id_warehouse + "";
+            querystr = "SELECT W1.NAMA AS ASAL, H.TOTAL_QTY || ' Dus' AS TOTAL, H.TANGGAL AS TANGGAL, H.KODE, H.ASAL AS KODE, H.PLATE_NUMBER FROM H_PINDAH H, WAREHOUSE W1, WAREHOUSE W2 WHERE H.ASAL = W1.ID AND W2.ID = "+ User.User_login.Id_warehouse + " AND H.STATUS = 0 AND H.ASAL != " + User.User_login.Id_warehouse + "";
             //List<object[]> listParam = new List<object[]>();
             //listParam.Add(new object[] { User.User_login.Id_warehouse, "int32" });
             DB.executeDataSet(dataset, querystr, null, "WAREHOUSE");
@@ -78,6 +78,10 @@ namespace Project_ACS.Manager
             dgvDetail.DataSource = null;
             dataset = new DataSet();
             idx = e.RowIndex;
+            if(idx <= -1)
+            {
+                return;
+            }
             string kode = dgvWarehouse.Rows[idx].Cells[3].Value.ToString();
             querystr = "SELECT B.KODE AS KODE, B.NAMA AS NAMA, D.QTY AS QTY, B.ID FROM D_PINDAH D, BARANG B WHERE D.ID_BARANG = B.ID AND D.KODE_PINDAH = :0";
             List<object[]> listParam = new List<object[]>();

@@ -128,7 +128,7 @@ namespace Project_ACS.Manager
                     {
                         kode += "000" + countdown.ToString();
                     }
-                    querystr = $"INSERT INTO H_KELUAR_BARANG VALUES('{kode}',{cbb_partner.SelectedIndex + 1},TO_DATE('{Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy"))}', 'DD/MM/YYYY'),{User.User_login.Id_warehouse})";
+                    querystr = $"INSERT INTO H_KELUAR_BARANG VALUES('{kode}',{cbb_partner.SelectedIndex + 1},TO_DATE('{Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy"))}', 'DD/MM/YYYY'),{User.User_login.Id_warehouse}, '{tb_platnomor.Text}')";
                     DB.executeQuery(querystr, null);
                     for (int l = 0; l < dgvCart.Rows.Count; l++)
                     {

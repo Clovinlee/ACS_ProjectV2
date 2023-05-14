@@ -161,8 +161,8 @@ namespace Project_ACS.Manager
                 int keluar = Int32.Parse(dr[1].ToString());
                 int masuk = Int32.Parse(dr[2].ToString());
 
-                listKeluarMasuk[month - 1][0] += keluar;
-                listKeluarMasuk[month - 1][1] += masuk;
+                listKeluarMasuk[month - 1][0] += masuk;
+                listKeluarMasuk[month - 1][1] += keluar;
 
             }
             dgv_keluarmasuk.Rows.Clear();

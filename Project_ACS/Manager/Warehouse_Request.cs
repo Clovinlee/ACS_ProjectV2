@@ -194,7 +194,8 @@ namespace Project_ACS.Manager
                     listParam.Add(new object[] { lblTotal.Text, "int32" });
                     listParam.Add(new object[] { System.DateTime.Now.Date, "date" });
                     listParam.Add(new object[] { 0, "int32" });
-                    querystr = "INSERT INTO H_PINDAH VALUES(:0, :1, :2, :3, :4, :5)";
+                    listParam.Add(new object[] { tb_platnomor.Text, "varchar" });
+                    querystr = "INSERT INTO H_PINDAH VALUES(:0, :1, :2, :3, :4, :5, :6)";
                     DB.executeQuery(querystr, listParam);
 
                     for (int i = 0; i < dgvCart.Rows.Count; i++)
