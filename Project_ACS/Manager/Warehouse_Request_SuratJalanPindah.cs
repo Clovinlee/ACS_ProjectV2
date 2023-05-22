@@ -23,6 +23,11 @@ namespace Project_ACS.Manager
             suratJalanPindah s = new suratJalanPindah();
             DataTable dataT = DB.get($"SELECT * FROM H_PINDAH WHERE KODE='{kode_pindah}'");
             DataRow data = dataT.Rows[0];
+
+            myDataSet dataset = new myDataSet();
+            DB.executeDataSet(dataset, $"SELECT B.* from BARANG B join D_PINDAH D ON D.ID_BARANG = B.ID WHERE D.KODE_PINDAH='{kode_pindah}'", null, "barang");
+            DB.executeDataSet(dataset, $"SELECT * from D_PINDAH WHERE KODE_PINDAH='{kode_pindah}'", null, "d_pindah");
+            s.SetDataSource(dataset);
             s.SetParameterValue("paramKodePindah", kode_pindah);
             s.SetParameterValue("paramTanggal", data.Field<DateTime>("TANGGAL").ToString());
             s.SetParameterValue("paramPlat", data.Field<string>("PLATE_NUMBER"));
