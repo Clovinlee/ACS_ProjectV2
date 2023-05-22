@@ -21,8 +21,13 @@ namespace Project_ACS.Manager
         private void Waarehouse_Request_SuratJalanPindah_Load(object sender, EventArgs e)
         {
             suratJalanPindah s = new suratJalanPindah();
-
+            DataTable dataT = DB.get($"SELECT * FROM H_PINDAH WHERE KODE='{kode_pindah}'");
+            DataRow data = dataT.Rows[0];
             s.SetParameterValue("paramKodePindah", kode_pindah);
+            s.SetParameterValue("paramTanggal", data.Field<DateTime>("TANGGAL").ToString());
+            s.SetParameterValue("paramPlat", data.Field<string>("PLATE_NUMBER"));
+            s.SetParameterValue("paramAsal", "Warehouse "+data.Field<decimal>("ASAL").ToString());
+            s.SetParameterValue("paramTujuan", "Warehouse " + data.Field<decimal>("TUJUAN").ToString());
             crystalReportViewer1.ReportSource = null;
             crystalReportViewer1.ReportSource = s;
         }
