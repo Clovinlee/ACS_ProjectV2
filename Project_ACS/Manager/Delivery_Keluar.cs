@@ -159,6 +159,10 @@ namespace Project_ACS.Manager
                     loaddgv2();
                     totalbarang = 0;
                     label9.Text = totalbarang.ToString();
+
+                    //pindah ke form surat jalan
+                    Delivery_Keluar_SuratJalan f = new Delivery_Keluar_SuratJalan(kode);
+                    f.ShowDialog();
                 }
             }
         }
