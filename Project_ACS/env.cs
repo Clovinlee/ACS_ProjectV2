@@ -8,11 +8,11 @@ namespace Project_ACS
 {
     class env
     {
-        //ganti di sini untuk oracle masing masing a
+        //ganti di sini untuk oracle masing masing 
         private static string username = "chris";
         private static string password = "chris";
         static string oracle_version = "11g"; //diisi 11g atau 18c
-       
+
         public static string oracle_connection_string()
         {
             switch (oracle_version)
@@ -20,7 +20,7 @@ namespace Project_ACS
                 case "11g":
                     return $"USER ID={username};DATA SOURCE=XE;PASSWORD={password}";
                 default:
-                    return $"USER ID={username};PASSWORD={password};DATA SOURCE=localhost:1521/XEPDB1;PERSIST SECURITY INFO=True"; 
+                    return $"USER ID={username};PASSWORD={password};DATA SOURCE=localhost:1521/XEPDB1;PERSIST SECURITY INFO=True";
             }
         }
     }
