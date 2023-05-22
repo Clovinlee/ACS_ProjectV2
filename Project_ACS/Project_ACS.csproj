@@ -156,12 +156,13 @@
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="Oracle.DataAccess, Version=2.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
+    <Reference Include="Oracle.DataAccess, Version=4.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\app\Kevin\product\18.0.0\dbhomeXE\ODP.NET\bin\4\Oracle.DataAccess.dll</HintPath>
+      <HintPath>..\..\..\ACS_ProjectV2-db076d05a7b1e8e00ee04dcc3909f6f181c560dc\ACS_ProjectV2-db076d05a7b1e8e00ee04dcc3909f6f181c560dc\Project_ACS\bin\x64\Debug\Oracle.DataAccess.dll</HintPath>
     </Reference>
-    <Reference Include="Oracle.ManagedDataAccess">
-      <HintPath>..\..\..\..\..\..\..\..\..\program files (x86)\microsoft visual studio\2019\community\common7\ide\extensions\mb1caqb4.zzj\Assemblies\DataProviders\Oracle.ManagedDataAccess.dll</HintPath>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ACS_ProjectV2-db076d05a7b1e8e00ee04dcc3909f6f181c560dc\ACS_ProjectV2-db076d05a7b1e8e00ee04dcc3909f6f181c560dc\Project_ACS\bin\x64\Debug\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -295,6 +296,12 @@
     </Compile>
     <Compile Include="Manager\Report_Tracking.Designer.cs">
       <DependentUpon>Report_Tracking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\suratJalanPindah.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>suratJalanPindah.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Manager\Warehouse_Request_SuratJalanPindah.cs">
       <SubType>Form</SubType>
@@ -477,6 +484,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\Report_Tracking.resx">
       <DependentUpon>Report_Tracking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\suratJalanPindah.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>suratJalanPindah.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\Warehouse_Request_SuratJalanPindah.resx">
       <DependentUpon>Warehouse_Request_SuratJalanPindah.cs</DependentUpon>
