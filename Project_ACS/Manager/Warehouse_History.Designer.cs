@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pl = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.dgvHistory = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.elipseDgvWarehouse = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -43,6 +44,7 @@
             // pl
             // 
             this.pl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(106)))));
+            this.pl.Controls.Add(this.label3);
             this.pl.Controls.Add(this.dgvHistory);
             this.pl.Controls.Add(this.label1);
             this.pl.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -50,6 +52,19 @@
             this.pl.Name = "pl";
             this.pl.Size = new System.Drawing.Size(820, 372);
             this.pl.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(11, 300);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(245, 17);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Silahkan double click untuk melihat detail";
             // 
             // dgvHistory
             // 
@@ -164,5 +179,6 @@
         private System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvHistory;
         private Bunifu.Framework.UI.BunifuElipse elipseDgvWarehouse;
+        private System.Windows.Forms.Label label3;
     }
 }

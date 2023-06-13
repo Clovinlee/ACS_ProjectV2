@@ -52,10 +52,15 @@ namespace Project_ACS.Manager
         private void dgvHistory_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             //buat munculin detail
-            int idx = e.RowIndex;
-            string kode = dgvHistory.Rows[idx].Cells["KODE"].Value.ToString();
-            Warehouse_History_Detail w = new Warehouse_History_Detail(kode);
-            w.ShowDialog();
+
+            int idx = e.RowIndex; 
+            if (idx > -1)
+            {
+                string kode = dgvHistory.Rows[idx].Cells["KODE"].Value.ToString();
+                Warehouse_History_Detail w = new Warehouse_History_Detail(kode);
+                w.ShowDialog();
+
+            }
 
         }
     }

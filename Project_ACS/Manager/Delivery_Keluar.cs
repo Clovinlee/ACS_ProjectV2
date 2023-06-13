@@ -37,6 +37,9 @@ namespace Project_ACS.Manager
             cbb_partner.DisplayMember = "NAMA";
             loaddgv();
             settingDgv();
+
+            cbbPlat.DataSource = User.getListTransport("plat");
+            cbbSupir.DataSource = User.getListTransport("supir");
         }
 
         void settingDgv()
@@ -128,7 +131,7 @@ namespace Project_ACS.Manager
                     {
                         kode += "000" + countdown.ToString();
                     }
-                    querystr = $"INSERT INTO H_KELUAR_BARANG VALUES('{kode}',{cbb_partner.SelectedIndex + 1},TO_DATE('{Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy"))}', 'DD/MM/YYYY'),{User.User_login.Id_warehouse}, '{tb_platnomor.Text}')";
+                    querystr = $"INSERT INTO H_KELUAR_BARANG VALUES('{kode}',{cbb_partner.SelectedIndex + 1},TO_DATE('{Convert.ToString(DateTime.Now.ToString("dd/MM/yyyy"))}', 'DD/MM/YYYY'),{User.User_login.Id_warehouse}, '{cbbPlat.Text}')";
                     DB.executeQuery(querystr, null);
                     for (int l = 0; l < dgvCart.Rows.Count; l++)
                     {
@@ -161,7 +164,7 @@ namespace Project_ACS.Manager
                     label9.Text = totalbarang.ToString();
 
                     //pindah ke form surat jalan
-                    Delivery_Keluar_SuratJalan f = new Delivery_Keluar_SuratJalan(kode);
+                    Delivery_Keluar_SuratJalan f = new Delivery_Keluar_SuratJalan(kode,cbbSupir.Text);
                     f.ShowDialog();
                 }
             }

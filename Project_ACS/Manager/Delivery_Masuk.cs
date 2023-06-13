@@ -165,7 +165,7 @@ namespace Project_ACS.Manager
                         kode += "000" + countdown.ToString();
                     }
                     String eta = Convert.ToString(dt_picker.Value.ToString("dd/MM/yyyy"));
-                    querystr = $"INSERT INTO H_ORDER_SUPPLIER VALUES('{kode}',{cbb_partner.SelectedIndex+1},TO_DATE('{eta}', 'DD/MM/YYYY'),1,{totalbarang},{User.User_login.Id_warehouse},0)";
+                    querystr = $"INSERT INTO H_ORDER_SUPPLIER VALUES('{kode}',{cbb_partner.SelectedIndex+1},TO_DATE('{eta}', 'DD/MM/YYYY'),1,{totalbarang},{User.User_login.Id_warehouse},0,'')";
                     DB.executeQuery(querystr, null);
                     for (int l = 0; l < dgvCart.Rows.Count; l++)
                     {

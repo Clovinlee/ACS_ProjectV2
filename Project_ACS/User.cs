@@ -31,8 +31,7 @@ namespace Project_ACS
             this.email = email;
             this.status = status;
             getNamaJabatan();
-            getIdWarehouse();
-            Console.WriteLine(id_warehouse);
+            getIdWarehouse(); 
         }
 
         public void getIdWarehouse()
@@ -44,6 +43,37 @@ namespace Project_ACS
         {
             this.nama_jabatan = (string)DB.executeScalar("select nama from jabatan where id = " + this.id_jabatan,null);
         }
+
+        /// <summary>
+        /// There is 2 mode option to choose
+        /// supir, plat
+        /// </summary>
+        /// <param name="mode"></param>
+        /// <returns></returns>
+        public static List<string> getListTransport(string mode)
+        {
+            List<string> daftar = new List<string>();
+            if (mode == "supir")
+            {
+                daftar.Add("Dwi Ardiansyah");
+                daftar.Add("Budi Nugraha");
+                daftar.Add("Sakti Santoso");
+                daftar.Add("Andi Salim");
+                daftar.Add("Roi Hadianto");
+                daftar.Add("Ivan Wijaya");
+            }
+            else
+            {
+                daftar.Add("L 1234 AB");
+                daftar.Add("L 5526 RL");
+                daftar.Add("L 3728 HP");
+                daftar.Add("L 2019 CQ");
+                daftar.Add("L 2412 VW");
+                daftar.Add("L 3192 RX");  
+            }
+
+            return daftar;
+        } 
 
         public string Id_warehouse { get => id_warehouse; }
         public string Id { get => id; }
