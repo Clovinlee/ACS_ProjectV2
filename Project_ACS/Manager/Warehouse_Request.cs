@@ -216,7 +216,7 @@ namespace Project_ACS.Manager
                     lblTotal.Text = "0";
 
                     //pindah ke form surat jalan
-                    Warehouse_Request_SuratJalanPindah f = new Warehouse_Request_SuratJalanPindah(kode);
+                    Warehouse_Request_SuratJalanPindah f = new Warehouse_Request_SuratJalanPindah(kode,cbbSupir.Text);
                     f.ShowDialog();
                 }
             }

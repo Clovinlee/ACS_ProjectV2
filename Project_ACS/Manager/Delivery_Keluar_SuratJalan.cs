@@ -40,15 +40,14 @@ namespace Project_ACS.Manager
             DB.executeDataSet(dataset, $"SELECT * from D_KELUAR_BARANG WHERE KODE_KELUAR='{kode_keluar}'", null, "d_keluar_barang");
 
             s.SetDataSource(dataset);
-
-            //TODO
+             
             s.SetParameterValue("paramAlamatPenerima", data.Field<string>("ALAMATBP"));
             s.SetParameterValue("paramNamaPengirim", dataW.Field<string>("NAMA_PENGIRIM"));
             s.SetParameterValue("paramTeleponPenerima", data.Field<string>("TELEPONBP"));
 
             s.SetParameterValue("paramSupir", nama_supir );
             s.SetParameterValue("paramKode", kode_keluar);
-            s.SetParameterValue("paramTanggal", data.Field<DateTime>("TANGGAL").ToString("dd MM yyyy"));
+            s.SetParameterValue("paramTanggal", data.Field<DateTime>("TANGGAL").ToString("dd MMMM yyyy"));
             s.SetParameterValue("paramPlat", data.Field<string>("PLATE_NUMBER"));
             s.SetParameterValue("paramAsal", "Warehouse " + data.Field<decimal>("ID_WAREHOUSE").ToString());
             s.SetParameterValue("paramTujuan", data.Field<string>("NAMABP"));
